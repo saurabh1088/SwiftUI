@@ -42,6 +42,7 @@ struct BasicGeometryReaderView: View {
             }
 
         }
+        .navigationTitle("Geometry Reader")
     }
     
     @ViewBuilder

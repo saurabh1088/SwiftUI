@@ -11,7 +11,12 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         NavigationView {
-            NavigationLink("Geometry Reader", destination: BasicGeometryReaderView())
+            // Here if these NavigationLink's aren't put inside VStack and are
+            // directly inside NavigationView then only one will show up.
+            VStack {
+                NavigationLink("Geometry Reader", destination: BasicGeometryReaderView())
+                NavigationLink("Web Content Technologies", destination: BasicWebContentTechnologiesView())
+            }
         }
     }
 }

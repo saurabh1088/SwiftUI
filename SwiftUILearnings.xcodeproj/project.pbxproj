@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B74CEA7029B1D4A8002CB043 /* BasicGeometryReaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74CEA6F29B1D4A8002CB043 /* BasicGeometryReaderView.swift */; };
+		B76E261929B34F6D007977AB /* OpenURLsExternalBrowserExamplesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76E261829B34F6D007977AB /* OpenURLsExternalBrowserExamplesView.swift */; };
 		B787A2D929B115920090FCF7 /* SwiftUILearningsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B787A2D829B115920090FCF7 /* SwiftUILearningsApp.swift */; };
 		B787A2DB29B115920090FCF7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B787A2DA29B115920090FCF7 /* ContentView.swift */; };
 		B787A2DD29B115960090FCF7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B787A2DC29B115960090FCF7 /* Assets.xcassets */; };
@@ -15,6 +16,7 @@
 		B787A2EA29B115970090FCF7 /* SwiftUILearningsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B787A2E929B115970090FCF7 /* SwiftUILearningsTests.swift */; };
 		B787A2F429B115970090FCF7 /* SwiftUILearningsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B787A2F329B115970090FCF7 /* SwiftUILearningsUITests.swift */; };
 		B787A2F629B115970090FCF7 /* SwiftUILearningsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B787A2F529B115970090FCF7 /* SwiftUILearningsUITestsLaunchTests.swift */; };
+		B7A76AB429B2601F00163BDC /* BasicWebContentTechnologiesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A76AB329B2601F00163BDC /* BasicWebContentTechnologiesView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,8 @@
 
 /* Begin PBXFileReference section */
 		B74CEA6F29B1D4A8002CB043 /* BasicGeometryReaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicGeometryReaderView.swift; sourceTree = "<group>"; };
+		B76E261729B33D90007977AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		B76E261829B34F6D007977AB /* OpenURLsExternalBrowserExamplesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenURLsExternalBrowserExamplesView.swift; sourceTree = "<group>"; };
 		B787A2D529B115920090FCF7 /* SwiftUILearnings.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUILearnings.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B787A2D829B115920090FCF7 /* SwiftUILearningsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUILearningsApp.swift; sourceTree = "<group>"; };
 		B787A2DA29B115920090FCF7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -46,6 +50,7 @@
 		B787A2EF29B115970090FCF7 /* SwiftUILearningsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftUILearningsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B787A2F329B115970090FCF7 /* SwiftUILearningsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUILearningsUITests.swift; sourceTree = "<group>"; };
 		B787A2F529B115970090FCF7 /* SwiftUILearningsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUILearningsUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		B7A76AB329B2601F00163BDC /* BasicWebContentTechnologiesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicWebContentTechnologiesView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +109,8 @@
 		B787A2D729B115920090FCF7 /* SwiftUILearnings */ = {
 			isa = PBXGroup;
 			children = (
+				B76E261729B33D90007977AB /* Info.plist */,
+				B7A76AB229B25FA500163BDC /* WebContentTechnologies */,
 				B74CEA6C29B1CF31002CB043 /* GeometryReader */,
 				B787A2D829B115920090FCF7 /* SwiftUILearningsApp.swift */,
 				B787A2DA29B115920090FCF7 /* ContentView.swift */,
@@ -136,6 +143,15 @@
 				B787A2F529B115970090FCF7 /* SwiftUILearningsUITestsLaunchTests.swift */,
 			);
 			path = SwiftUILearningsUITests;
+			sourceTree = "<group>";
+		};
+		B7A76AB229B25FA500163BDC /* WebContentTechnologies */ = {
+			isa = PBXGroup;
+			children = (
+				B7A76AB329B2601F00163BDC /* BasicWebContentTechnologiesView.swift */,
+				B76E261829B34F6D007977AB /* OpenURLsExternalBrowserExamplesView.swift */,
+			);
+			path = WebContentTechnologies;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -268,8 +284,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B76E261929B34F6D007977AB /* OpenURLsExternalBrowserExamplesView.swift in Sources */,
 				B74CEA7029B1D4A8002CB043 /* BasicGeometryReaderView.swift in Sources */,
 				B787A2DB29B115920090FCF7 /* ContentView.swift in Sources */,
+				B7A76AB429B2601F00163BDC /* BasicWebContentTechnologiesView.swift in Sources */,
 				B787A2D929B115920090FCF7 /* SwiftUILearningsApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -431,7 +449,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"SwiftUILearnings/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_FILE = SwiftUILearnings/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -459,7 +477,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"SwiftUILearnings/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_FILE = SwiftUILearnings/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
