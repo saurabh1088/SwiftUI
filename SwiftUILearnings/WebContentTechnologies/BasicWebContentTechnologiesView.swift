@@ -34,8 +34,15 @@ import SwiftUI
 struct BasicWebContentTechnologiesView: View {
     
     var body: some View {
-        VStack {
-            OpenURLsExternalBrowserExamplesView()
+        VStack(alignment: .leading) {
+            
+            Section("External Browser") {
+                OpenURLsExternalBrowserExamplesView()
+            }
+            
+            Section("In-app Browser") {
+                OpenURLsInAppBrowserExamplesView()
+            }
         }
         .navigationTitle("Web Content Technologies")
     }
