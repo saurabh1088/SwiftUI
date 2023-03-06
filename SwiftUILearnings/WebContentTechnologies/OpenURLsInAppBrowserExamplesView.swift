@@ -11,8 +11,16 @@
 import SwiftUI
 
 struct OpenURLsInAppBrowserExamplesView: View {
+    
+    // State properties
     @State private var showSafariWebView: Bool = false
     @State private var showWKWebView: Bool = false
+    
+    // Computed properties
+    private var localHtmlContentUrl: URL {
+        return Bundle.main.url(forResource: "index", withExtension: "html")!
+    }
+    
     var body: some View {
         VStack {
             // SFSafariViewController example
@@ -72,6 +80,24 @@ struct OpenURLsInAppBrowserExamplesView: View {
                 
             } label: {
                 Text("WKWebView embedded with other views")
+            }
+            
+            // Here the WKWebView is given a url to load web content from local
+            // html in app bundle itself. This example shows how to load local
+            // html content in WKWebView
+            // The difference is to create a URL from Bundle and in WKWebView one
+            // needs to call loadFileURL method.
+            // 1. Important point to note is that one need to make sure that the html
+            // css files added locally are reflected in Project -> Build Phases -> Copy bundle resources
+            // if not visible there then these files won't get copied in bundle and
+            // will throw exception while trying to build URL from filepath.
+            // 2. Another point to make sure is that iOS will flatten structure so
+            // relative paths won't work so for example if css is being referred as
+            // href="style/styles.css" then this needs to change to href="styles.css"
+            NavigationLink {
+                SwiftUIWKWebView(url: localHtmlContentUrl, isLocal: true)
+            } label: {
+                Text("WKWebView loading local static html")
             }
 
         }

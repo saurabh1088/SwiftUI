@@ -15,6 +15,7 @@ struct SwiftUIWKWebView: UIViewRepresentable {
     
     typealias UIViewType = WKWebView
     var url: URL
+    var isLocal: Bool = false
     
     func makeUIView(context: Context) -> WKWebView {
         return WKWebView()
@@ -22,7 +23,11 @@ struct SwiftUIWKWebView: UIViewRepresentable {
     
     func updateUIView(_ uiView: WKWebView, context: Context) {
         let request = URLRequest(url: url)
-        uiView.load(request)
+        if isLocal {
+            uiView.loadFileURL(url, allowingReadAccessTo: url)
+        } else {
+            uiView.load(request)
+        }
     }
 }
 
