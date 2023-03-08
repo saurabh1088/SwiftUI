@@ -125,10 +125,10 @@
 			children = (
 				B787A2D829B115920090FCF7 /* SwiftUILearningsApp.swift */,
 				B787A2DA29B115920090FCF7 /* ContentView.swift */,
+				B74CEA6C29B1CF31002CB043 /* GeometryReader */,
+				B7A76AB229B25FA500163BDC /* WebContentTechnologies */,
 				B796FDC029B5FC72004B5F87 /* webcontent */,
 				B76E261729B33D90007977AB /* Info.plist */,
-				B7A76AB229B25FA500163BDC /* WebContentTechnologies */,
-				B74CEA6C29B1CF31002CB043 /* GeometryReader */,
 				B787A2DC29B115960090FCF7 /* Assets.xcassets */,
 				B787A2DE29B115960090FCF7 /* Preview Content */,
 			);
