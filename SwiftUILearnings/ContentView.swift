@@ -8,8 +8,42 @@
 
 import SwiftUI
 
+enum LearningTopics: String, CaseIterable {
+    case geometryReader = "Geometry Reader"
+    case webContentTechnologies = "Web Content Technologies"
+}
+
 struct ContentView: View {
+    
+    @State private var learningPaths: [LearningTopics] = []
+    
     var body: some View {
+        navigationUsingNewNavigationStackAPI
+    }
+    
+    /// `NavigationStack` is new API from SwiftUI framework replacing the older `NavigationView` one.
+    /// This is available from iOS 16 onwards. Here in this example a NavigationStack is set up.
+    @ViewBuilder
+    private var navigationUsingNewNavigationStackAPI: some View {
+        NavigationStack(path: $learningPaths) {
+            List {
+                ForEach(LearningTopics.allCases, id: \.rawValue) { item in
+                    NavigationLink(item.rawValue, value: item)
+                }
+            }
+            .navigationDestination(for: LearningTopics.self) { topic in
+                switch topic {
+                case .geometryReader:
+                    BasicGeometryReaderView()
+                case .webContentTechnologies:
+                    BasicWebContentTechnologiesView()
+                }
+            }
+        }
+    }
+    
+    @ViewBuilder
+    private var navigationUsingDeprecatedNavigationViewAPI: some View {
         NavigationView {
             // Here if these NavigationLink's aren't put inside VStack and are
             // directly inside NavigationView then only one will show up.
@@ -19,6 +53,7 @@ struct ContentView: View {
             }
         }
     }
+    
 }
 
 struct ContentView_Previews: PreviewProvider {
