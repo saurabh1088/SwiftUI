@@ -98,6 +98,13 @@
 			path = GeometryReader;
 			sourceTree = "<group>";
 		};
+		B76234BB29C0AE7E000EC447 /* ViewModifiers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModifiers;
+			sourceTree = "<group>";
+		};
 		B787A2CC29B115920090FCF7 = {
 			isa = PBXGroup;
 			children = (
@@ -123,6 +130,7 @@
 		B787A2D729B115920090FCF7 /* SwiftUILearnings */ = {
 			isa = PBXGroup;
 			children = (
+				B76234BB29C0AE7E000EC447 /* ViewModifiers */,
 				B787A2D829B115920090FCF7 /* SwiftUILearningsApp.swift */,
 				B787A2DA29B115920090FCF7 /* ContentView.swift */,
 				B74CEA6C29B1CF31002CB043 /* GeometryReader */,
