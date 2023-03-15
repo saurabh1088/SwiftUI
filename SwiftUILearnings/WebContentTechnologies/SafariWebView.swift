@@ -65,6 +65,3 @@ struct SafariWebView_Previews: PreviewProvider {
         SafariWebView(url: URL(string: "https://github.com/saurabh1088")!)
     }
 }
-
-//TODO: Private Click Measurement
-// https://webkit.org/blog/11529/introducing-private-click-measurement-pcm/

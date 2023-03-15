@@ -17,52 +17,68 @@ struct OpenURLsExternalBrowserExamplesView: View {
     
     var body: some View {
         VStack(alignment: .leading) {
-            
-            // SwiftUI's Link (source : https://developer.apple.com/documentation/swiftui/link)
-            // Example of using SwifUI's API Link to open a URL
-            Link(destination: URL(string: "https://developer.apple.com/documentation/swiftui/link")!) {
-                Text("SwiftUI Link")
-                    .font(.headline)
+            List {
+                swiftUILink
+                swiftUIOpenURLLink
+                openURLEnvironmentValueLink
+                uiApplicationSharedOpenURLLink
             }
-            
-            // Link again, but in this case default behaviour is overriden by setting
-            // openURL environment value and adding a custom logic (print statement in this case)
-            // before proceeding to open URL
-            Link(destination: URL(string: "https://github.com/saurabh1088")!) {
-                Text("SwiftUI Link openURL")
-                    .font(.headline)
-            }
-            .environment(\.openURL, OpenURLAction(handler: { url in
-                print("Opening url :: \(url)")
-                return .systemAction(url)
-            }))
-            
-            // This uses openURL environment value which holds instance of OpenURLAction
-            // which further opens the url
-            Button {
-                if let url = URL(string: "https://developer.apple.com/documentation/swiftui/openurlaction") {
-                    openURL(url) { accepted in
-                        // This action is optional, if provided the action gets called
-                        // before the URL is opened
-                        print("Can open URL :: \(accepted ? "Yes" : "No")")
-                    }
-                }
-            } label: {
-                Text("SwiftUI OpenURLAction")
-                    .font(.headline)
-            }
-            
-            Button {
-                if let url = URL(string: "https://github.com/saurabh1088") {
-                    UIApplication.shared.open(url)
-                }
-            } label: {
-                Text("UIApplication shared open")
-                    .font(.headline)
-            }
-
         }
     }
+    
+    // SwiftUI's Link (source : https://developer.apple.com/documentation/swiftui/link)
+    // Example of using SwifUI's API Link to open a URL
+    private var swiftUILink: some View {
+        Link(destination: URL(string: "https://developer.apple.com/documentation/swiftui/link")!) {
+            Text("SwiftUI Link")
+                .font(.headline)
+        }
+    }
+    
+    // Link again, but in this case default behaviour is overriden by setting
+    // openURL environment value and adding a custom logic (print statement in this case)
+    // before proceeding to open URL
+    private var swiftUIOpenURLLink: some View {
+        Link(destination: URL(string: "https://github.com/saurabh1088")!) {
+            Text("SwiftUI Link openURL")
+                .font(.headline)
+        }
+        .environment(\.openURL, OpenURLAction(handler: { url in
+            print("Opening url :: \(url)")
+            return .systemAction
+        }))
+    }
+    
+    // This uses openURL environment value which holds instance of OpenURLAction
+    // which further opens the url
+    private var openURLEnvironmentValueLink: some View {
+        Button {
+            if let url = URL(string: "https://developer.apple.com/documentation/swiftui/openurlaction") {
+                openURL(url) { accepted in
+                    // This action is optional, if provided the action gets called
+                    // before the URL is opened
+                    print("Can open URL :: \(accepted ? "Yes" : "No")")
+                }
+            }
+        } label: {
+            Text("SwiftUI OpenURLAction")
+                .font(.headline)
+        }
+    }
+    
+    // This uses UIApplication shared instance open method :
+    // `open(_ url: URL, options: [UIApplication.OpenExternalURLOptionsKey : Any] = [:]) async -> Bool`
+    private var uiApplicationSharedOpenURLLink: some View {
+        Button {
+            if let url = URL(string: "https://github.com/saurabh1088") {
+                UIApplication.shared.open(url)
+            }
+        } label: {
+            Text("UIApplication shared open")
+                .font(.headline)
+        }
+    }
+    
 }
 
 struct OpenURLsExternalBrowserExamplesView_Previews: PreviewProvider {

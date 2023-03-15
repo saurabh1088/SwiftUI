@@ -45,6 +45,7 @@ struct BasicWebContentTechnologiesView: View {
             }
         }
         .navigationTitle("Web Content Technologies")
+        .padding()
     }
 }
 
