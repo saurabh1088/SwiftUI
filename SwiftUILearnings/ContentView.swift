@@ -11,10 +11,12 @@ import SwiftUI
 enum LearningTopics: String, CaseIterable {
     case geometryReader = "Geometry Reader"
     case webContentTechnologies = "Web Content Technologies"
+    case dataEssentials = "Data Essentials"
 }
 
 struct ContentView: View {
     
+    @StateObject private var appStateData = AppStateObjectModel()
     @State private var learningPaths: [LearningTopics] = []
     
     var body: some View {
@@ -39,6 +41,8 @@ struct ContentView: View {
                     BasicGeometryReaderView()
                 case .webContentTechnologies:
                     BasicWebContentTechnologiesView()
+                case .dataEssentials:
+                    DataEssentialView()
                 }
             }
         }
