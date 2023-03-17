@@ -37,34 +37,62 @@ struct DataEssentialView: View {
     var body: some View {
         VStack {
             
-            Button {
-                viewColor = .red
-            } label: {
-                Text("Red")
-                    .foregroundColor(dataEssentialStateObject.themeColor)
+            VStack {
+                Text("Choose a color")
+                    .padding(40)
             }
+            .background(viewColor)
             
-            Button {
-                viewColor = .green
-            } label: {
-                Text("Green")
-                    .foregroundColor(dataEssentialStateObject.themeColor)
+            HStack {
+                
+                VStack {
+                    HStack {
+                        Button {
+                            viewColor = .red
+                        } label: {
+                            Text("Red")
+                        }
+                        
+                        Button {
+                            viewColor = .green
+                        } label: {
+                            Text("Green")
+                        }
+                    }
+                    
+                    Button {
+                        dataEssentialStateObject.themeColor = .yellow
+                    } label: {
+                        Text("Change theme")
+                    }
+                }
             }
-            
-            Button {
-                dataEssentialStateObject.themeColor = .black
-            } label: {
-                Text("Change theme")
-            }
-
 
         }
-        .background(viewColor)
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .background(dataEssentialStateObject.themeColor)
     }
 }
 
 struct DataEssentialView_Previews: PreviewProvider {
     static var previews: some View {
         DataEssentialView()
+    }
+}
+
+struct DataEssentialSecondaryLevelView: View {
+    
+    @ObservedObject var dataEssentialViewModel: DataEssentialStateObject
+    
+    var body: some View {
+        VStack {
+            Button {
+                dataEssentialViewModel.themeColor = .orange
+            } label: {
+                Text("Change theme")
+            }
+        }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .background(dataEssentialViewModel.themeColor)
     }
 }
