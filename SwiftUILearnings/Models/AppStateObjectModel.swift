@@ -10,4 +10,6 @@
 
 import Foundation
 
-class AppStateObjectModel: ObservableObject {}
+class AppStateObjectModel: ObservableObject {
+    @Published var learningPaths: [LearningTopics] = []
+}

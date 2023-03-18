@@ -33,6 +33,7 @@ struct DataEssentialView: View {
     @StateObject private var dataEssentialStateObject = DataEssentialStateObject()
     
     @State private var viewColor: Color = Color.white
+    @State private var showSecondaryLevel: Bool = false
     
     var body: some View {
         VStack {
@@ -65,10 +66,20 @@ struct DataEssentialView: View {
                     } label: {
                         Text("Change theme")
                     }
+                    
+                    Button {
+                        showSecondaryLevel = true
+                    } label: {
+                        Text("Next Level")
+                    }
                 }
             }
 
         }
+        .navigationTitle(Text("Data Essential View"))
+        .navigationDestination(isPresented: $showSecondaryLevel, destination: {
+            DataEssentialSecondaryLevelView(dataEssentialViewModel: dataEssentialStateObject)
+        })
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(dataEssentialStateObject.themeColor)
     }
@@ -83,6 +94,7 @@ struct DataEssentialView_Previews: PreviewProvider {
 struct DataEssentialSecondaryLevelView: View {
     
     @ObservedObject var dataEssentialViewModel: DataEssentialStateObject
+    @State private var showTertiaryLevel: Bool = false
     
     var body: some View {
         VStack {
@@ -91,7 +103,42 @@ struct DataEssentialSecondaryLevelView: View {
             } label: {
                 Text("Change theme")
             }
+            
+            Button {
+                showTertiaryLevel = true
+            } label: {
+                Text("Next Level")
+            }
         }
+        .navigationTitle(Text("Secondary Level View"))
+        .navigationDestination(isPresented: $showTertiaryLevel, destination: {
+            DataEssentialTertiaryLevelView(dataEssentialViewModel: dataEssentialViewModel)
+        })
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .background(dataEssentialViewModel.themeColor)
+    }
+}
+
+struct DataEssentialTertiaryLevelView: View {
+    
+    @ObservedObject var dataEssentialViewModel: DataEssentialStateObject
+    @EnvironmentObject var appStateObject: AppStateObjectModel
+    
+    var body: some View {
+        VStack {
+            Button {
+                dataEssentialViewModel.themeColor = .orange
+            } label: {
+                Text("Change theme")
+            }
+            
+            Button {
+                appStateObject.learningPaths = []
+            } label: {
+                Text("Pop to root")
+            }
+        }
+        .navigationTitle(Text("Tertiary Level View"))
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(dataEssentialViewModel.themeColor)
     }

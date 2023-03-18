@@ -17,10 +17,10 @@ enum LearningTopics: String, CaseIterable {
 struct ContentView: View {
     
     @StateObject private var appStateData = AppStateObjectModel()
-    @State private var learningPaths: [LearningTopics] = []
     
     var body: some View {
         navigationUsingNewNavigationStackAPI
+            .environmentObject(appStateData)
     }
     
     /// `NavigationStack` is new API from SwiftUI framework replacing the older `NavigationView` one.
@@ -29,7 +29,9 @@ struct ContentView: View {
     /// Coming back to root view will make this property back to empty.
     @ViewBuilder
     private var navigationUsingNewNavigationStackAPI: some View {
-        NavigationStack(path: $learningPaths) {
+        // learningPaths array is maintained as a stack of views in navigation.
+        // To pop to root view make this empty, refer DataEssentialTertiaryLevelView
+        NavigationStack(path: $appStateData.learningPaths) {
             List {
                 ForEach(LearningTopics.allCases, id: \.rawValue) { item in
                     NavigationLink(item.rawValue, value: item)
