@@ -30,24 +30,35 @@ struct DataEssentialView: View {
     ///
     /// `StateObject` can be shared by `EnvironmentObject` or by passing it through property having
     /// `ObservedObject` attribute.
+    ///
+    /// `Can we initialize StateObject using external data?`
+    ///
+    /// `StateObject` has below initializer which SwiftUI calls at appropriate time.
+    /// `init(wrappedValue thunk: @autoclosure @escaping () -> ObjectType)`
+    /// As per Apple's recommendation itself one shoudn't call this initializer directly.
+    /// There is no restriction however to call this if required BUT, Apple's documentation cautions doing this
+    /// as SwiftUI will only initialize object once for the lifetime of the view even if `StateObject` initializer
+    /// is called more than once. This might cause unexpected behaviour.
+    /// (source : https://developer.apple.com/documentation/swiftui/stateobject)
     @StateObject private var dataEssentialStateObject = DataEssentialStateObject()
     
     @State private var viewColor: Color = Color.white
     @State private var showSecondaryLevel: Bool = false
+    @State private var showExternalStateObjectView: Bool = false
     
     var body: some View {
         VStack {
             
             VStack {
-                Text("Choose a color")
+                Text("😜")
                     .padding(40)
             }
             .background(viewColor)
             
             HStack {
                 
-                VStack {
-                    HStack {
+                VStack(spacing: 10) {
+                    HStack(spacing: 20) {
                         Button {
                             viewColor = .red
                         } label: {
@@ -72,7 +83,34 @@ struct DataEssentialView: View {
                     } label: {
                         Text("Next Level")
                     }
+                    
+                    Button {
+                        showExternalStateObjectView.toggle()
+                    } label: {
+                        Text("Test Init View")
+                    }
+
                 }
+            }
+            
+            // Case 1: showExternalStateObjectView is false
+            // When showExternalStateObjectView is false no matter how many times
+            // body is called as this view isn't required in view hierarchy it won't
+            // get initialised.
+            //
+            // Case 2: showExternalStateObjectView is true
+            // When showExternalStateObjectView becomes true DataEssentialTestInitView
+            // is required so it get's initialised and it's @StateObject is also
+            // initialised. Now with showExternalStateObjectView as true if this body
+            // is called again then DataEssentialTestInitView will get initialised
+            // everytime it's parent's body gets called. But in all those instances
+            // it's @StateObject won't be initialised again.
+            //
+            // Case 3: showExternalStateObjectView was set true then false then true
+            // When showExternalStateObjectView is set to true once again from false
+            // then view as well as @StateObject are initialised again.
+            if showExternalStateObjectView {
+                DataEssentialTestInitView(themeColor: dataEssentialStateObject.themeColor)
             }
 
         }
@@ -97,7 +135,7 @@ struct DataEssentialSecondaryLevelView: View {
     @State private var showTertiaryLevel: Bool = false
     
     var body: some View {
-        VStack {
+        VStack(spacing: 10) {
             Button {
                 dataEssentialViewModel.themeColor = .orange
             } label: {
@@ -125,7 +163,7 @@ struct DataEssentialTertiaryLevelView: View {
     @EnvironmentObject var appStateObject: AppStateObjectModel
     
     var body: some View {
-        VStack {
+        VStack(spacing: 10) {
             Button {
                 dataEssentialViewModel.themeColor = .orange
             } label: {
@@ -141,5 +179,37 @@ struct DataEssentialTertiaryLevelView: View {
         .navigationTitle(Text("Tertiary Level View"))
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(dataEssentialViewModel.themeColor)
+    }
+}
+
+struct DataEssentialTestInitView: View {
+    
+    @StateObject private var dataEssentialExternalInit: ExternalInitStateObject
+    @State private var animate: Bool = false
+    
+    init(themeColor: Color) {
+        print("Calling init for view DataEssentialTestInitView")
+        _dataEssentialExternalInit = StateObject(wrappedValue: ExternalInitStateObject(themeColor: themeColor))
+        print("Completed init for view DataEssentialTestInitView")
+    }
+    
+    var body: some View {
+        VStack {
+            Text("🤡")
+                .font(.system(size: animate ? 100 : 24))
+            
+            Spacer()
+            
+            Button {
+                animate.toggle()
+            } label: {
+                Text("Click Me")
+            }
+
+        }
+        .padding()
+        .animation(.easeIn, value: animate)
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .background(dataEssentialExternalInit.themeColor)
     }
 }
