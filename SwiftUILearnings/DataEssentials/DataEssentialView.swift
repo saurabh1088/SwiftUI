@@ -40,6 +40,10 @@ struct DataEssentialView: View {
     /// as SwiftUI will only initialize object once for the lifetime of the view even if `StateObject` initializer
     /// is called more than once. This might cause unexpected behaviour.
     /// (source : https://developer.apple.com/documentation/swiftui/stateobject)
+    ///
+    /// `dataEssentialStateObject` in `DataEssentialView` is marked as `@StateObject`
+    /// and then passed to child views as `@ObservedObject`. Any change to published proprties of `dataEssentialStateObject`
+    /// should cause entire view hierarchy to update.
     @StateObject private var dataEssentialStateObject = DataEssentialStateObject()
     
     @State private var viewColor: Color = Color.white
@@ -133,6 +137,10 @@ struct DataEssentialSecondaryLevelView: View {
     
     @ObservedObject var dataEssentialViewModel: DataEssentialStateObject
     @State private var showTertiaryLevel: Bool = false
+    // This property is to test what happens when view's ObservedObject's published
+    // property gets updated from somewhere else in hierarchy (this could be parent view
+    // or some child view if this ObserverObject is further passed along)
+    @State private var stateCounter: Int = 0
     
     var body: some View {
         VStack(spacing: 10) {
@@ -147,6 +155,15 @@ struct DataEssentialSecondaryLevelView: View {
             } label: {
                 Text("Next Level")
             }
+            
+            Text("State : \(stateCounter)")
+            
+            Button {
+                stateCounter += 1
+            } label: {
+                Text("Change local state")
+            }
+
         }
         .navigationTitle(Text("Secondary Level View"))
         .navigationDestination(isPresented: $showTertiaryLevel, destination: {
