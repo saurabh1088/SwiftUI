@@ -33,9 +33,26 @@ import SwiftUI
 /// (NOTE : Explore this point of overriding main method implementation)
 @main
 struct SwiftUILearningsApp: App {
+    // TODO: Add comments and documentation for scene phase
+    @Environment(\.scenePhase) var scenePhase
     var body: some Scene {
         WindowGroup {
             ContentView()
+        }
+        .onChange(of: scenePhase) { (newScenePhase) in
+            switch newScenePhase {
+            case .background:
+                print("App lifecycle : Background")
+            case .inactive:
+                print("App lifecycle : Inactive")
+            case .active:
+                print("App lifecycle : Active")
+                UNUserNotificationCenter.current().requestAuthorization(options:   [.alert, .sound, .badge]) {(granted, error) in
+                        print("Permission granted: \(granted)")
+                }
+            @unknown default:
+                print("App lifecycle : Unknown")
+            }
         }
     }
 }
