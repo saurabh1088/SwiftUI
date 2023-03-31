@@ -1,0 +1,10 @@
+{
+    "aps" : {
+        "alert" : {
+            "title" : "Pushing a notification on simulator",
+            "body" : "Burning midnight oil and pushing notifications"
+        },
+        "badge" : 7
+    },
+    "Simulator Target Bundle" : "com.saurabh.SwiftUILearnings"
+}
