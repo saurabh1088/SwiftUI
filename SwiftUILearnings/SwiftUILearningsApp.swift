@@ -47,9 +47,6 @@ struct SwiftUILearningsApp: App {
                 print("App lifecycle : Inactive")
             case .active:
                 print("App lifecycle : Active")
-                UNUserNotificationCenter.current().requestAuthorization(options:   [.alert, .sound, .badge]) {(granted, error) in
-                        print("Permission granted: \(granted)")
-                }
             @unknown default:
                 print("App lifecycle : Unknown")
             }

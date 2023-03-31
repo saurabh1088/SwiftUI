@@ -10,6 +10,7 @@
 		B74CEA7029B1D4A8002CB043 /* BasicGeometryReaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74CEA6F29B1D4A8002CB043 /* BasicGeometryReaderView.swift */; };
 		B7605AD229C35D0A00602F8A /* AppStateObjectModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7605AD129C35D0A00602F8A /* AppStateObjectModel.swift */; };
 		B76E261929B34F6D007977AB /* OpenURLsExternalBrowserExamplesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76E261829B34F6D007977AB /* OpenURLsExternalBrowserExamplesView.swift */; };
+		B76FE8B029D7518E00BCAF51 /* NotificationsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76FE8AF29D7518E00BCAF51 /* NotificationsManager.swift */; };
 		B787A2D929B115920090FCF7 /* SwiftUILearningsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B787A2D829B115920090FCF7 /* SwiftUILearningsApp.swift */; };
 		B787A2DB29B115920090FCF7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B787A2DA29B115920090FCF7 /* ContentView.swift */; };
 		B787A2DD29B115960090FCF7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B787A2DC29B115960090FCF7 /* Assets.xcassets */; };
@@ -51,6 +52,7 @@
 		B7605AD129C35D0A00602F8A /* AppStateObjectModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStateObjectModel.swift; sourceTree = "<group>"; };
 		B76E261729B33D90007977AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		B76E261829B34F6D007977AB /* OpenURLsExternalBrowserExamplesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenURLsExternalBrowserExamplesView.swift; sourceTree = "<group>"; };
+		B76FE8AF29D7518E00BCAF51 /* NotificationsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsManager.swift; sourceTree = "<group>"; };
 		B787A2D529B115920090FCF7 /* SwiftUILearnings.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUILearnings.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B787A2D829B115920090FCF7 /* SwiftUILearningsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUILearningsApp.swift; sourceTree = "<group>"; };
 		B787A2DA29B115920090FCF7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -116,6 +118,14 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		B76FE8AE29D7516D00BCAF51 /* Notifications */ = {
+			isa = PBXGroup;
+			children = (
+				B76FE8AF29D7518E00BCAF51 /* NotificationsManager.swift */,
+			);
+			path = Notifications;
+			sourceTree = "<group>";
+		};
 		B787A2CC29B115920090FCF7 = {
 			isa = PBXGroup;
 			children = (
@@ -141,6 +151,7 @@
 		B787A2D729B115920090FCF7 /* SwiftUILearnings */ = {
 			isa = PBXGroup;
 			children = (
+				B76FE8AE29D7516D00BCAF51 /* Notifications */,
 				B7A183DE29C3849000B864DE /* DataEssentials */,
 				B7605AD029C35CC700602F8A /* Models */,
 				B787A2D829B115920090FCF7 /* SwiftUILearningsApp.swift */,
@@ -343,6 +354,7 @@
 				B7A183E229C385A600B864DE /* DataEssentialStateObject.swift in Sources */,
 				B7A76AB429B2601F00163BDC /* BasicWebContentTechnologiesView.swift in Sources */,
 				B787A2D929B115920090FCF7 /* SwiftUILearningsApp.swift in Sources */,
+				B76FE8B029D7518E00BCAF51 /* NotificationsManager.swift in Sources */,
 				B7B1DCBB29B3BFDB00FFC805 /* SafariWebView.swift in Sources */,
 				B7E129F729B4DEA7002E6B54 /* SwiftUIWKWebView.swift in Sources */,
 			);

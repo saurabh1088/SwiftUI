@@ -21,6 +21,9 @@ struct ContentView: View {
     var body: some View {
         navigationUsingNewNavigationStackAPI
             .environmentObject(appStateData)
+            .onAppear {
+                NotificationsManager.shared.requestPermission()
+            }
     }
     
     /// `NavigationStack` is new API from SwiftUI framework replacing the older `NavigationView` one.
