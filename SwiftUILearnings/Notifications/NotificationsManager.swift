@@ -29,6 +29,19 @@ class NotificationsManager {
     static let shared = NotificationsManager()
     private init() {}
     
+    /// User might consider notifications disruptive, so an app if wants to send notifications it needs to first obtain
+    /// permission from user to send those. Permissoin is obtained from `UNUserNotificationCenter` method
+    /// `requestAuthorization(options:completionHandler:)`
+    /// First time this authorization request is made system will show alert with verbiage to ask user for permission,
+    /// once permission is granted or denied subsequent call to this won't ask again, unless app ie deleted and
+    /// installed again.
+    ///
+    /// `Provisional authorization vs explicit`
+    /// - In explicit authorization user must decide whether to accept or deny the request, this without even seeing
+    /// the actual notification, so user may not have complete context how a notification looks for the app and if
+    /// that could be useful or not.
+    /// - In provisional authorization notifications are sent on a trial basis. User can then evaluate and decide
+    /// if they want to accept or deny those.
     func requestPermission() {
         UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge, .sound]) { granted, error in
             print("Permission granted: \(granted)")
