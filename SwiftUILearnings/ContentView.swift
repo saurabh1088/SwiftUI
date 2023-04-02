@@ -12,6 +12,7 @@ enum LearningTopics: String, CaseIterable {
     case geometryReader = "Geometry Reader"
     case webContentTechnologies = "Web Content Technologies"
     case dataEssentials = "Data Essentials"
+    case notifications = "Notifications"
 }
 
 struct ContentView: View {
@@ -48,6 +49,8 @@ struct ContentView: View {
                     BasicWebContentTechnologiesView()
                 case .dataEssentials:
                     DataEssentialView()
+                case .notifications:
+                    NotificationsView()
                 }
             }
         }

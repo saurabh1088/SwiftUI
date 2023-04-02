@@ -35,6 +35,11 @@ import SwiftUI
 struct SwiftUILearningsApp: App {
     // TODO: Add comments and documentation for scene phase
     @Environment(\.scenePhase) var scenePhase
+    
+    init() {
+        UNUserNotificationCenter.current().delegate = NotificationsManager.shared
+    }
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
