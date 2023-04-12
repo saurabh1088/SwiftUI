@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B7299E9B29E5D73800A3A989 /* AudioVideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7299E9A29E5D73800A3A989 /* AudioVideoView.swift */; };
 		B74CEA7029B1D4A8002CB043 /* BasicGeometryReaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74CEA6F29B1D4A8002CB043 /* BasicGeometryReaderView.swift */; };
 		B7605AD229C35D0A00602F8A /* AppStateObjectModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7605AD129C35D0A00602F8A /* AppStateObjectModel.swift */; };
 		B76E261929B34F6D007977AB /* OpenURLsExternalBrowserExamplesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76E261829B34F6D007977AB /* OpenURLsExternalBrowserExamplesView.swift */; };
@@ -26,6 +27,7 @@
 		B7A183E029C3856700B864DE /* DataEssentialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A183DF29C3856700B864DE /* DataEssentialView.swift */; };
 		B7A183E229C385A600B864DE /* DataEssentialStateObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A183E129C385A600B864DE /* DataEssentialStateObject.swift */; };
 		B7A76AB429B2601F00163BDC /* BasicWebContentTechnologiesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A76AB329B2601F00163BDC /* BasicWebContentTechnologiesView.swift */; };
+		B7B04BF329E72CA30015EA8D /* PDFFilesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B04BF229E72CA30015EA8D /* PDFFilesView.swift */; };
 		B7B1DCBB29B3BFDB00FFC805 /* SafariWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B1DCBA29B3BFDB00FFC805 /* SafariWebView.swift */; };
 		B7B1DCBD29B3C20700FFC805 /* OpenURLsInAppBrowserExamplesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B1DCBC29B3C20700FFC805 /* OpenURLsInAppBrowserExamplesView.swift */; };
 		B7E129F729B4DEA7002E6B54 /* SwiftUIWKWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E129F629B4DEA7002E6B54 /* SwiftUIWKWebView.swift */; };
@@ -50,6 +52,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B7299E9A29E5D73800A3A989 /* AudioVideoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioVideoView.swift; sourceTree = "<group>"; };
 		B74CEA6F29B1D4A8002CB043 /* BasicGeometryReaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicGeometryReaderView.swift; sourceTree = "<group>"; };
 		B7605AD129C35D0A00602F8A /* AppStateObjectModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStateObjectModel.swift; sourceTree = "<group>"; };
 		B76E261729B33D90007977AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
@@ -73,6 +76,8 @@
 		B7A183DF29C3856700B864DE /* DataEssentialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataEssentialView.swift; sourceTree = "<group>"; };
 		B7A183E129C385A600B864DE /* DataEssentialStateObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataEssentialStateObject.swift; sourceTree = "<group>"; };
 		B7A76AB329B2601F00163BDC /* BasicWebContentTechnologiesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicWebContentTechnologiesView.swift; sourceTree = "<group>"; };
+		B7B04BEE29E72A010015EA8D /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
+		B7B04BF229E72CA30015EA8D /* PDFFilesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFFilesView.swift; sourceTree = "<group>"; };
 		B7B1DCBA29B3BFDB00FFC805 /* SafariWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariWebView.swift; sourceTree = "<group>"; };
 		B7B1DCBC29B3C20700FFC805 /* OpenURLsInAppBrowserExamplesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenURLsInAppBrowserExamplesView.swift; sourceTree = "<group>"; };
 		B7E129F629B4DEA7002E6B54 /* SwiftUIWKWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIWKWebView.swift; sourceTree = "<group>"; };
@@ -148,6 +153,7 @@
 				B787A2E829B115970090FCF7 /* SwiftUILearningsTests */,
 				B787A2F229B115970090FCF7 /* SwiftUILearningsUITests */,
 				B787A2D629B115920090FCF7 /* Products */,
+				B7B04BED29E72A000015EA8D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -164,11 +170,11 @@
 		B787A2D729B115920090FCF7 /* SwiftUILearnings */ = {
 			isa = PBXGroup;
 			children = (
+				B787A2D829B115920090FCF7 /* SwiftUILearningsApp.swift */,
+				B787A2DA29B115920090FCF7 /* ContentView.swift */,
 				B76FE8AE29D7516D00BCAF51 /* Notifications */,
 				B7A183DE29C3849000B864DE /* DataEssentials */,
 				B7605AD029C35CC700602F8A /* Models */,
-				B787A2D829B115920090FCF7 /* SwiftUILearningsApp.swift */,
-				B787A2DA29B115920090FCF7 /* ContentView.swift */,
 				B74CEA6C29B1CF31002CB043 /* GeometryReader */,
 				B7A76AB229B25FA500163BDC /* WebContentTechnologies */,
 				B796FDC029B5FC72004B5F87 /* webcontent */,
@@ -176,6 +182,8 @@
 				B76FE8B229D7588E00BCAF51 /* Resources */,
 				B787A2DC29B115960090FCF7 /* Assets.xcassets */,
 				B787A2DE29B115960090FCF7 /* Preview Content */,
+				B7299E9A29E5D73800A3A989 /* AudioVideoView.swift */,
+				B7B04BF229E72CA30015EA8D /* PDFFilesView.swift */,
 			);
 			path = SwiftUILearnings;
 			sourceTree = "<group>";
@@ -223,6 +231,14 @@
 				B7E129F629B4DEA7002E6B54 /* SwiftUIWKWebView.swift */,
 			);
 			path = WebContentTechnologies;
+			sourceTree = "<group>";
+		};
+		B7B04BED29E72A000015EA8D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B7B04BEE29E72A010015EA8D /* AVKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -364,8 +380,10 @@
 				B7B1DCBD29B3C20700FFC805 /* OpenURLsInAppBrowserExamplesView.swift in Sources */,
 				B79E6F8629C723EC008B81BB /* ExternalInitStateObject.swift in Sources */,
 				B7A183E029C3856700B864DE /* DataEssentialView.swift in Sources */,
+				B7B04BF329E72CA30015EA8D /* PDFFilesView.swift in Sources */,
 				B74CEA7029B1D4A8002CB043 /* BasicGeometryReaderView.swift in Sources */,
 				B787A2DB29B115920090FCF7 /* ContentView.swift in Sources */,
+				B7299E9B29E5D73800A3A989 /* AudioVideoView.swift in Sources */,
 				B7A183E229C385A600B864DE /* DataEssentialStateObject.swift in Sources */,
 				B7A76AB429B2601F00163BDC /* BasicWebContentTechnologiesView.swift in Sources */,
 				B787A2D929B115920090FCF7 /* SwiftUILearningsApp.swift in Sources */,
