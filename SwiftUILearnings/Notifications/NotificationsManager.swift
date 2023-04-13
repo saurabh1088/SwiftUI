@@ -26,7 +26,22 @@
  the status.
  
  `Remote Notifications`
- Remote notifications are 
+ Remote notifications are trigerred from a provider via APNs i.e. Apple Push Notification service. If an app supports
+ remote notifications then app needs to have a provider server. This provider server will actually talk to APNs and
+ request for notification which APNs will further publish to App.
+ So when there is a notification to send, the provider server must construct a POST request and send it to APNs.
+ The POST request should contain following :
+ - JSON Payload
+ - Device token of user's device
+ - Request header fields
+ - Provider's current auth token (if token based authentication) This authentication is for provider server to be authenticated.
+ 
+ `Reasons for push notifications failure`
+ 1. Some failed logic at provider server.
+ 2. Push certificate expiry.
+ 3. Wrond device token.
+ 4. User has turned off permission to receive push notifications.
+ 
  */
 import Foundation
 import UserNotifications
