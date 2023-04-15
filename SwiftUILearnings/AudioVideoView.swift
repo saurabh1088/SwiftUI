@@ -14,11 +14,19 @@ import AVKit
 struct AudioVideoView: View {
     @State private var player = AVPlayer()
     var body: some View {
-        VideoPlayer(player: player)
-            .frame(height: 300)
-            .onAppear {
-                player = AVPlayer(url: URL(string: "http://localhost:8080/sample.mp4")!)
-            }
+        VStack {
+            VideoPlayerRepresentableView(url: URL(string: "http://localhost:8080/sample.mp4")!)
+            
+            /*
+             Doesn't works
+            VideoPlayer(player: player)
+                .frame(height: 300)
+                .onAppear {
+                    player = AVPlayer(url: URL(string: "http://localhost:8080/sample.mp4")!)
+                }
+             */
+        }
+        
     }
 }
 
@@ -28,3 +36,17 @@ struct AudioVideoView_Previews: PreviewProvider {
     }
 }
 
+struct VideoPlayerRepresentableView: UIViewControllerRepresentable {
+    typealias UIViewControllerType = AVPlayerViewController
+
+    let url: URL
+
+    func makeUIViewController(context: Context) -> AVPlayerViewController {
+        let player = AVPlayer(url: url)
+        let playerController = AVPlayerViewController()
+        playerController.player = player
+        return playerController
+    }
+    
+    func updateUIViewController(_ uiViewController: AVPlayerViewController, context: Context) { }
+}

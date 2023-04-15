@@ -18,12 +18,14 @@ struct NotificationsView: View {
             } label: {
                 Text("Schedule local notification")
             }
+            .buttonStyle(.fullWidth)
             
             Button {
                 NotificationsManager.shared.scheduleActionableLocalNotification()
             } label: {
                 Text("Schedule actionable local notification")
             }
+            .buttonStyle(.fullWidth)
         }
     }
 }
