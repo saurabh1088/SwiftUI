@@ -7,7 +7,6 @@
 //
 
 import SwiftUI
-import PDFKit
 
 enum LearningTopics: String, CaseIterable {
     case geometryReader = "Geometry Reader"
@@ -54,7 +53,7 @@ struct ContentView: View {
                 case .notifications:
                     NotificationsView()
                 case .pdfFiles:
-                    PDFFilesView(showing: PDFDocument(url: NSURL(string: "http://localhost:8080/0973_001.pdf") as! URL)!)
+                    PDFDocumentView()
                 }
             }
         }
