@@ -14,6 +14,7 @@ enum LearningTopics: String, CaseIterable {
     case dataEssentials = "Data Essentials"
     case notifications = "Notifications"
     case pdfFiles = "PDF Files"
+    case uiComponents = "UI Components"
 }
 
 struct ContentView: View {
@@ -54,6 +55,8 @@ struct ContentView: View {
                     NotificationsView()
                 case .pdfFiles:
                     PDFDocumentView()
+                case .uiComponents:
+                    UIComponentsView()
                 }
             }
         }
