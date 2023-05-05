@@ -59,6 +59,7 @@ struct ContentView: View {
                     UIComponentsView()
                 }
             }
+            .navigationTitle("Learnings")
         }
     }
     

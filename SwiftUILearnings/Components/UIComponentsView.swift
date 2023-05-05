@@ -10,10 +10,46 @@
 
 import SwiftUI
 
+enum Components: String, CaseIterable {
+    case bottomSheet = "Bottom Sheets"
+    case lazyVStack = "Lazy VStack"
+}
+
 struct UIComponentsView: View {
-    @State private var showBottomSheet: Bool = false
+    
+    @State private var pathComponents = [Components]()
+    
     var body: some View {
         // TODO: Modify to have a list and navigation to accomodate more components.
+        VStack {
+            NavigationStack(path: $pathComponents) {
+                List {
+                    ForEach(Components.allCases, id: \.rawValue) { component in
+                        NavigationLink(component.rawValue, value: component)
+                    }
+                }
+                .navigationDestination(for: Components.self) { component in
+                    switch component {
+                    case .bottomSheet:
+                        BottomSheetView()
+                    case .lazyVStack:
+                        BottomSheetView()
+                    }
+                }
+            }
+        }
+    }
+}
+
+struct UIComponentsView_Previews: PreviewProvider {
+    static var previews: some View {
+        UIComponentsView()
+    }
+}
+
+struct BottomSheetView: View {
+    @State private var showBottomSheet: Bool = false
+    var body: some View {
         VStack(spacing: 40) {
             Text("Bottom sheet example")
             
@@ -22,16 +58,10 @@ struct UIComponentsView: View {
             } label: {
                 Text("Open sheet")
             }
+            .sheet(isPresented: $showBottomSheet) {
+                Text("🤡")
+                    .presentationDetents([.medium, .large])
+            }
         }
-        .sheet(isPresented: $showBottomSheet) {
-            Text("🤡")
-                .presentationDetents([.medium, .large])
-        }
-    }
-}
-
-struct UIComponentsView_Previews: PreviewProvider {
-    static var previews: some View {
-        UIComponentsView()
     }
 }
