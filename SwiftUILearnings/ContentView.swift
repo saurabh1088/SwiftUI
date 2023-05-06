@@ -30,14 +30,14 @@ struct ContentView: View {
     }
     
     /// `NavigationStack` is new API from SwiftUI framework replacing the older `NavigationView` one.
-    /// This is available from iOS 16 onwards. Here in this example a NavigationStack is set up. `learningPaths`
-    /// state property given to `NavigationStack` will be stacked with topics as in when view is pushed.
+    /// This is available from iOS 16 onwards. Here in this example a NavigationStack is set up. `navigationPath`
+    /// binding property given to `NavigationStack` will be stacked with topics as in when view is pushed.
     /// Coming back to root view will make this property back to empty.
     @ViewBuilder
     private var navigationUsingNewNavigationStackAPI: some View {
-        // learningPaths array is maintained as a stack of views in navigation.
+        // navigationPath list is maintained as a stack of views in navigation.
         // To pop to root view make this empty, refer DataEssentialTertiaryLevelView
-        NavigationStack(path: $appStateData.learningPaths) {
+        NavigationStack(path: $appStateData.navigationPath) {
             List {
                 ForEach(LearningTopics.allCases, id: \.rawValue) { item in
                     NavigationLink(item.rawValue, value: item)

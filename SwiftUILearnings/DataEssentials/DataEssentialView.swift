@@ -188,7 +188,7 @@ struct DataEssentialTertiaryLevelView: View {
             }
             
             Button {
-                appStateObject.learningPaths = []
+                appStateObject.navigationPath = .init()
             } label: {
                 Text("Pop to root")
             }

@@ -17,24 +17,19 @@ enum Components: String, CaseIterable {
 
 struct UIComponentsView: View {
     
-    @State private var pathComponents = [Components]()
-    
     var body: some View {
-        // TODO: Modify to have a list and navigation to accomodate more components.
         VStack {
-            NavigationStack(path: $pathComponents) {
-                List {
-                    ForEach(Components.allCases, id: \.rawValue) { component in
-                        NavigationLink(component.rawValue, value: component)
-                    }
+            List {
+                ForEach(Components.allCases, id: \.rawValue) { component in
+                    NavigationLink(component.rawValue, value: component)
                 }
-                .navigationDestination(for: Components.self) { component in
-                    switch component {
-                    case .bottomSheet:
-                        BottomSheetView()
-                    case .lazyVStack:
-                        BottomSheetView()
-                    }
+            }
+            .navigationDestination(for: Components.self) { component in
+                switch component {
+                case .bottomSheet:
+                    BottomSheetView()
+                case .lazyVStack:
+                    BottomSheetView()
                 }
             }
         }

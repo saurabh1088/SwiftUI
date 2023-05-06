@@ -9,7 +9,8 @@
         
 
 import Foundation
+import SwiftUI
 
 class AppStateObjectModel: ObservableObject {
-    @Published var learningPaths: [LearningTopics] = []
+    @Published var navigationPath = NavigationPath()
 }
