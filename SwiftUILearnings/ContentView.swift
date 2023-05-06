@@ -33,6 +33,25 @@ struct ContentView: View {
     /// This is available from iOS 16 onwards. Here in this example a NavigationStack is set up. `navigationPath`
     /// binding property given to `NavigationStack` will be stacked with topics as in when view is pushed.
     /// Coming back to root view will make this property back to empty.
+    /// `NavigationStack` used here wraps a `List` so `List` here becomes root view. Using `NavigationStack`
+    /// further within hierarchy will cause issues.
+    ///
+    /// `NavigationStack` doesn't mandate to provide a binding to collection, so it's perfectly fine to do
+    /// something like below :
+    /// ```
+    ///     NavigationStack {
+    ///         List {
+    ///             ForEach(LearningTopics.allCases, id: \.rawValue) { item in
+    ///                 NavigationLink(item.rawValue, value: item)
+    ///             }
+    ///         }
+    ///     }
+    ///
+    /// ```
+    /// In this case by default `NavigationStack` will manage the state to keep track of views on stack.
+    /// We give binding to a collection so as to share control of the navigation view stack state.
+    /// This binding to a collection can be of any type, one can create an enum with all possible values of hierarchy
+    /// one expects in application. Or one can use `NavigationPath` (refer `AppStateObjectModel`)
     @ViewBuilder
     private var navigationUsingNewNavigationStackAPI: some View {
         // navigationPath list is maintained as a stack of views in navigation.
