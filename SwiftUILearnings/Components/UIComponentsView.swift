@@ -29,7 +29,7 @@ struct UIComponentsView: View {
                 case .bottomSheet:
                     BottomSheetView()
                 case .lazyVStack:
-                    BottomSheetView()
+                    LazyVStackView()
                 }
             }
         }
@@ -42,21 +42,3 @@ struct UIComponentsView_Previews: PreviewProvider {
     }
 }
 
-struct BottomSheetView: View {
-    @State private var showBottomSheet: Bool = false
-    var body: some View {
-        VStack(spacing: 40) {
-            Text("Bottom sheet example")
-            
-            Button {
-                showBottomSheet = true
-            } label: {
-                Text("Open sheet")
-            }
-            .sheet(isPresented: $showBottomSheet) {
-                Text("🤡")
-                    .presentationDetents([.medium, .large])
-            }
-        }
-    }
-}

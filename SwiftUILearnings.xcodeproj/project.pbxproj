@@ -12,6 +12,10 @@
 		B7299E9B29E5D73800A3A989 /* AudioVideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7299E9A29E5D73800A3A989 /* AudioVideoView.swift */; };
 		B74CEA7029B1D4A8002CB043 /* BasicGeometryReaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74CEA6F29B1D4A8002CB043 /* BasicGeometryReaderView.swift */; };
 		B7605AD229C35D0A00602F8A /* AppStateObjectModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7605AD129C35D0A00602F8A /* AppStateObjectModel.swift */; };
+		B76A06FB2A073FC100974AD3 /* BottomSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76A06FA2A073FC100974AD3 /* BottomSheetView.swift */; };
+		B76A06FD2A07400A00974AD3 /* LazyVStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76A06FC2A07400A00974AD3 /* LazyVStackView.swift */; };
+		B76A06FF2A07404100974AD3 /* SomeCustomRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76A06FE2A07404100974AD3 /* SomeCustomRowView.swift */; };
+		B76A07012A07407700974AD3 /* ViewBuilderMaxLimitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76A07002A07407700974AD3 /* ViewBuilderMaxLimitView.swift */; };
 		B76E261929B34F6D007977AB /* OpenURLsExternalBrowserExamplesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76E261829B34F6D007977AB /* OpenURLsExternalBrowserExamplesView.swift */; };
 		B76FE8B029D7518E00BCAF51 /* NotificationsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76FE8AF29D7518E00BCAF51 /* NotificationsManager.swift */; };
 		B76FE8B429D758C500BCAF51 /* payload.apns in Resources */ = {isa = PBXBuildFile; fileRef = B76FE8B329D758C500BCAF51 /* payload.apns */; };
@@ -63,6 +67,10 @@
 		B7299E9A29E5D73800A3A989 /* AudioVideoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioVideoView.swift; sourceTree = "<group>"; };
 		B74CEA6F29B1D4A8002CB043 /* BasicGeometryReaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicGeometryReaderView.swift; sourceTree = "<group>"; };
 		B7605AD129C35D0A00602F8A /* AppStateObjectModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStateObjectModel.swift; sourceTree = "<group>"; };
+		B76A06FA2A073FC100974AD3 /* BottomSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheetView.swift; sourceTree = "<group>"; };
+		B76A06FC2A07400A00974AD3 /* LazyVStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyVStackView.swift; sourceTree = "<group>"; };
+		B76A06FE2A07404100974AD3 /* SomeCustomRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SomeCustomRowView.swift; sourceTree = "<group>"; };
+		B76A07002A07407700974AD3 /* ViewBuilderMaxLimitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewBuilderMaxLimitView.swift; sourceTree = "<group>"; };
 		B76E261729B33D90007977AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		B76E261829B34F6D007977AB /* OpenURLsExternalBrowserExamplesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenURLsExternalBrowserExamplesView.swift; sourceTree = "<group>"; };
 		B76FE8AF29D7518E00BCAF51 /* NotificationsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsManager.swift; sourceTree = "<group>"; };
@@ -273,6 +281,10 @@
 			children = (
 				B7C7E24929E9C0B80089E0C1 /* Buttons */,
 				B7C795A72A022D3D0092619B /* UIComponentsView.swift */,
+				B76A06FA2A073FC100974AD3 /* BottomSheetView.swift */,
+				B76A06FC2A07400A00974AD3 /* LazyVStackView.swift */,
+				B76A06FE2A07404100974AD3 /* SomeCustomRowView.swift */,
+				B76A07002A07407700974AD3 /* ViewBuilderMaxLimitView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -431,6 +443,7 @@
 			files = (
 				B7C795A82A022D3D0092619B /* UIComponentsView.swift in Sources */,
 				B7605AD229C35D0A00602F8A /* AppStateObjectModel.swift in Sources */,
+				B76A06FF2A07404100974AD3 /* SomeCustomRowView.swift in Sources */,
 				B7AEDB6B29EABF35007D634E /* Color+Extension.swift in Sources */,
 				B76E261929B34F6D007977AB /* OpenURLsExternalBrowserExamplesView.swift in Sources */,
 				B7B1DCBD29B3C20700FFC805 /* OpenURLsInAppBrowserExamplesView.swift in Sources */,
@@ -438,12 +451,15 @@
 				B7A183E029C3856700B864DE /* DataEssentialView.swift in Sources */,
 				B7B04BF329E72CA30015EA8D /* PDFFilesView.swift in Sources */,
 				B74CEA7029B1D4A8002CB043 /* BasicGeometryReaderView.swift in Sources */,
+				B76A07012A07407700974AD3 /* ViewBuilderMaxLimitView.swift in Sources */,
 				B7C7E24D29E9C22A0089E0C1 /* CustomButtonStyles.swift in Sources */,
 				B787A2DB29B115920090FCF7 /* ContentView.swift in Sources */,
+				B76A06FB2A073FC100974AD3 /* BottomSheetView.swift in Sources */,
 				B7299E9B29E5D73800A3A989 /* AudioVideoView.swift in Sources */,
 				B7A183E229C385A600B864DE /* DataEssentialStateObject.swift in Sources */,
 				B7A76AB429B2601F00163BDC /* BasicWebContentTechnologiesView.swift in Sources */,
 				B787A2D929B115920090FCF7 /* SwiftUILearningsApp.swift in Sources */,
+				B76A06FD2A07400A00974AD3 /* LazyVStackView.swift in Sources */,
 				B76FE8B029D7518E00BCAF51 /* NotificationsManager.swift in Sources */,
 				B7B1DCBB29B3BFDB00FFC805 /* SafariWebView.swift in Sources */,
 				B7E129F729B4DEA7002E6B54 /* SwiftUIWKWebView.swift in Sources */,
