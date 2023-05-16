@@ -8,15 +8,6 @@
 
 import SwiftUI
 
-enum LearningTopics: String, CaseIterable {
-    case geometryReader = "Geometry Reader"
-    case webContentTechnologies = "Web Content Technologies"
-    case dataEssentials = "Data Essentials"
-    case notifications = "Notifications"
-    case pdfFiles = "PDF Files"
-    case uiComponents = "UI Components"
-}
-
 struct ContentView: View {
     
     @StateObject private var appStateData = AppStateObjectModel()

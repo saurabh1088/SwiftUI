@@ -10,11 +10,6 @@
 
 import SwiftUI
 
-enum Components: String, CaseIterable {
-    case bottomSheet = "Bottom Sheets"
-    case lazyVStack = "Lazy VStack"
-}
-
 struct UIComponentsView: View {
     
     var body: some View {
