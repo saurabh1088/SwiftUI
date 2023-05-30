@@ -25,6 +25,8 @@ struct UIComponentsView: View {
                     BottomSheetView()
                 case .lazyVStack:
                     LazyVStackView()
+                case .lists:
+                    ListView()
                 }
             }
         }
