@@ -12,9 +12,23 @@ import SwiftUI
 
 struct ListView: View {
     @State private var multiplier: Int = 1
+    @State private var listViewType: ListViewTypes = .simple
     
     var body: some View {
-        refreshableListView
+        VStack {
+            switch listViewType {
+            case .simple:
+                listView
+            case .refreshable:
+                listViewRefreshable
+            case .grouped:
+                listViewGroupedStyle
+            case .inset:
+                listViewInsetStyle
+            case .insetGrouped:
+                listViewInsetGroupedStyle
+            }
+        }
     }
     
     @ViewBuilder
@@ -27,7 +41,7 @@ struct ListView: View {
     }
     
     @ViewBuilder
-    private var refreshableListView: some View {
+    private var listViewRefreshable: some View {
         List(1..<100) { row in
             Text("List item \(row * multiplier)")
         }
@@ -35,6 +49,30 @@ struct ListView: View {
             print("Refresh action")
             multiplier = multiplier * 2
         }
+    }
+    
+    @ViewBuilder
+    private var listViewGroupedStyle: some View {
+        List(1..<10) { row in
+            Text("List item \(row)")
+        }
+        .listStyle(.grouped)
+    }
+    
+    @ViewBuilder
+    private var listViewInsetStyle: some View {
+        List(1..<10) { row in
+            Text("List item \(row)")
+        }
+        .listStyle(.inset)
+    }
+    
+    @ViewBuilder
+    private var listViewInsetGroupedStyle: some View {
+        List(1..<10) { row in
+            Text("List item \(row)")
+        }
+        .listStyle(.insetGrouped)
     }
 }
 

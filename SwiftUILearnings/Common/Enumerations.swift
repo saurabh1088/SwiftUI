@@ -24,3 +24,11 @@ enum Components: String, CaseIterable {
     case lazyVStack = "Lazy VStack"
     case lists = "Lists"
 }
+
+enum ListViewTypes: String {
+    case simple = "Simple"
+    case refreshable = "Refreshable"
+    case grouped = "Grouped"
+    case inset = "Inset"
+    case insetGrouped = "Inset Grouped"
+}
