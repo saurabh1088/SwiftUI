@@ -25,10 +25,12 @@ enum Components: String, CaseIterable {
     case lists = "Lists"
 }
 
-enum ListViewTypes: String {
+enum ListViewTypes: String, CaseIterable {
     case simple = "Simple"
     case refreshable = "Refreshable"
     case grouped = "Grouped"
     case inset = "Inset"
     case insetGrouped = "Inset Grouped"
+    case plain = "Plain"
+    case sidebar = "Sidebar"
 }
