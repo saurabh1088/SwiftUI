@@ -33,4 +33,5 @@ enum ListViewTypes: String, CaseIterable {
     case insetGrouped = "Inset Grouped"
     case plain = "Plain"
     case sidebar = "Sidebar"
+    case multipleSelection = "Multiple Selection"
 }

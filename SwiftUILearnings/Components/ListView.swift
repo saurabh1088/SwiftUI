@@ -14,6 +14,7 @@ struct ListView: View {
     @State private var multiplier: Int = 1
     @State private var listViewType: ListViewTypes = .simple
     @State private var selectedListViewIndex: Int = 0
+    @State private var listSelectedIndexes = Set<UUID>()
     
     var body: some View {
         VStack(spacing: 8) {
@@ -32,6 +33,8 @@ struct ListView: View {
                 listViewPlainStyle
             case .sidebar:
                 listViewSideBarStyle
+            case .multipleSelection:
+                listViewMultipleSelection
             }
             
             Text("List style : \(listViewType.rawValue)")
@@ -103,6 +106,29 @@ struct ListView: View {
             Text("List item \(row)")
         }
         .listStyle(.sidebar)
+    }
+    
+    @ViewBuilder
+    private var listViewMultipleSelection: some View {
+        VStack {
+            List(listItems, selection: $listSelectedIndexes) { row in
+                Text("\(row.selectedIndex)")
+            }
+            Text("Selections :: \(listSelectedIndexes.count)")
+        }
+        
+    }
+    
+    private var listItems: [SelectableListModel] {
+        return [SelectableListModel(selectedIndex: 1),
+                SelectableListModel(selectedIndex: 2),
+                SelectableListModel(selectedIndex: 3),
+                SelectableListModel(selectedIndex: 4),
+                SelectableListModel(selectedIndex: 5),
+                SelectableListModel(selectedIndex: 6),
+                SelectableListModel(selectedIndex: 7),
+                SelectableListModel(selectedIndex: 8),
+                SelectableListModel(selectedIndex: 9)]
     }
 }
 
