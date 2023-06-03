@@ -116,20 +116,20 @@ struct ListView: View {
             }
             Text("Selections :: \(listSelectedIndexes.count)")
         }
+        .navigationTitle("Items")
+        .toolbar { EditButton() }
         
     }
     
-    private var listItems: [SelectableListModel] {
-        return [SelectableListModel(selectedIndex: 1),
-                SelectableListModel(selectedIndex: 2),
-                SelectableListModel(selectedIndex: 3),
-                SelectableListModel(selectedIndex: 4),
-                SelectableListModel(selectedIndex: 5),
-                SelectableListModel(selectedIndex: 6),
-                SelectableListModel(selectedIndex: 7),
-                SelectableListModel(selectedIndex: 8),
-                SelectableListModel(selectedIndex: 9)]
-    }
+    private var listItems = [SelectableListModel(selectedIndex: 1),
+                             SelectableListModel(selectedIndex: 2),
+                             SelectableListModel(selectedIndex: 3),
+                             SelectableListModel(selectedIndex: 4),
+                             SelectableListModel(selectedIndex: 5),
+                             SelectableListModel(selectedIndex: 6),
+                             SelectableListModel(selectedIndex: 7),
+                             SelectableListModel(selectedIndex: 8),
+                             SelectableListModel(selectedIndex: 9)]
 }
 
 struct ListView_Previews: PreviewProvider {
