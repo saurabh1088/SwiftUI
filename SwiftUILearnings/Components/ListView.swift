@@ -7,6 +7,7 @@
 // Copyright © 2023 Saurabh Verma, (saurabh1088@gmail.com). All rights reserved.
 //
         
+// TODO: https://swiftwithmajid.com/2021/06/16/mastering-list-in-swiftui/
 
 import SwiftUI
 

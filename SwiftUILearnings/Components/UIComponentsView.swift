@@ -27,6 +27,8 @@ struct UIComponentsView: View {
                     LazyVStackView()
                 case .lists:
                     ListView()
+                case .hStack:
+                    HorizontalStackView()
                 }
             }
         }
