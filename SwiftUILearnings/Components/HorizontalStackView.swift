@@ -10,6 +10,12 @@
 
 import SwiftUI
 
+/**
+ `HStack`
+ HStack arranges subviews passed in horizontal line.
+ HStack will initialise and render all views passed to it, irrespective of wether App is currently showing those or
+ not. If there are many views instead LazyHStack should be used.
+ */
 struct HorizontalStackView: View {
     var body: some View {
         hStackWithCenterAlignment
