@@ -24,6 +24,7 @@ enum Components: String, CaseIterable {
     case lazyVStack = "Lazy VStack"
     case lists = "Lists"
     case hStack = "HStack"
+    case vStack = "VStack"
 }
 
 enum ListViewTypes: String, CaseIterable {

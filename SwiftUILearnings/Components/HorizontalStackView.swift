@@ -7,6 +7,7 @@
 // Copyright © 2023 Saurabh Verma, (saurabh1088@gmail.com). All rights reserved.
 //
         
+// TODO: https://www.appcoda.com/swiftui-anylayout/
 
 import SwiftUI
 
@@ -18,7 +19,7 @@ import SwiftUI
  */
 struct HorizontalStackView: View {
     var body: some View {
-        hStackWithCenterAlignment
+        hStackWithThreeSubviews
     }
     
     @ViewBuilder
@@ -63,6 +64,30 @@ struct HorizontalStackView: View {
             }
             Text("🚤")
         }
+    }
+    
+    @ViewBuilder
+    private var hStackWithThreeSubviews: some View {
+        VStack(spacing: 16) {
+            HStack {
+                Spacer()
+                Text("📱")
+            }
+            HStack {
+                Spacer()
+                Text("🖥")
+                Spacer()
+                Text("📱")
+            }
+            HStack {
+                Text("💻")
+                Spacer()
+                Text("🖥")
+                Spacer()
+                Text("📱")
+            }
+        }
+        .padding(16)
     }
 }
 

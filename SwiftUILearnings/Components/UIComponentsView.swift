@@ -29,6 +29,8 @@ struct UIComponentsView: View {
                     ListView()
                 case .hStack:
                     HorizontalStackView()
+                case .vStack:
+                    VerticalStackView()
                 }
             }
         }
