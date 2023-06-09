@@ -31,6 +31,8 @@ struct UIComponentsView: View {
                     HorizontalStackView()
                 case .vStack:
                     VerticalStackView()
+                case .textFields:
+                    TextInputView()
                 }
             }
         }
