@@ -13,6 +13,7 @@ import SwiftUI
 struct TextInputView: View {
     @State private var name = String()
     @State private var text = String()
+    @State private var track = String()
     var body: some View {
         Form {
             textField
@@ -20,6 +21,7 @@ struct TextInputView: View {
             textFieldWithPromptAndLabel
             textEditorView
             textFieldWithAxisVertical
+            textFieldWithTrackingChanges
         }
     }
     
@@ -55,6 +57,17 @@ struct TextInputView: View {
     @ViewBuilder
     private var textFieldWithAxisVertical: some View {
         TextField("Axis", text: $name, axis: .vertical)
+    }
+    
+    @ViewBuilder
+    private var textFieldWithTrackingChanges: some View {
+        TextField("Track", text: $track)
+            .onChange(of: track) { newValue in
+                print("Entered value :: \(newValue)")
+            }
+            .onSubmit {
+                print("Final value :: \(track)")
+            }
     }
     
     private var textEditorView: some View {
