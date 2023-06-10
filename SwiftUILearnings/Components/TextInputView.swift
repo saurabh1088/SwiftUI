@@ -17,8 +17,9 @@ struct TextInputView: View {
         Form {
             textField
             textFieldWithPrompt
-            testFieldWithPromptAndLabel
+            textFieldWithPromptAndLabel
             textEditorView
+            textFieldWithAxisVertical
         }
     }
     
@@ -40,10 +41,20 @@ struct TextInputView: View {
     
     // TODO: This doesn't shows label in iOS, check this on macOS.
     @ViewBuilder
-    private var testFieldWithPromptAndLabel: some View {
+    private var textFieldWithPromptAndLabel: some View {
         TextField(text: $name, prompt: Text("Prompt")) {
             Text("Label")
         }
+    }
+    
+    /// By default when we use `TextField` it's single line. `TextEditor` is the multiline alternative.
+    /// However `TextField` can take `axis` as parameter and then start as single line but grows
+    /// into multiline once text exceeds. One can also put a line limit to restrict text field height to grow only to
+    /// certain level based on number of lines its restricted to, with no restriction in place the height will continue
+    /// to grow.
+    @ViewBuilder
+    private var textFieldWithAxisVertical: some View {
+        TextField("Axis", text: $name, axis: .vertical)
     }
     
     private var textEditorView: some View {
