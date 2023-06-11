@@ -33,6 +33,8 @@ struct UIComponentsView: View {
                     VerticalStackView()
                 case .textFields:
                     TextInputView()
+                case .anyLayout:
+                    AnyLayoutView()
                 }
             }
         }

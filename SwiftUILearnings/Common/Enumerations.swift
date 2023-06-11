@@ -26,6 +26,7 @@ enum Components: String, CaseIterable {
     case hStack = "HStack"
     case vStack = "VStack"
     case textFields = "Text Fields"
+    case anyLayout = "Any Layout"
 }
 
 enum ListViewTypes: String, CaseIterable {
