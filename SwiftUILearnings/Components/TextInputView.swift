@@ -9,6 +9,7 @@
         
 
 import SwiftUI
+import OSLog
 
 struct TextInputView: View {
     @State private var name = String()
@@ -63,10 +64,10 @@ struct TextInputView: View {
     private var textFieldWithTrackingChanges: some View {
         TextField("Track", text: $track)
             .onChange(of: track) { newValue in
-                print("Entered value :: \(newValue)")
+                Logger.view.info("Entered value :: \(newValue)")
             }
             .onSubmit {
-                print("Final value :: \(track)")
+                Logger.view.info("Final value :: \(track)")
             }
     }
     

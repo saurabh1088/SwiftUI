@@ -7,6 +7,7 @@
 //
 
 import SwiftUI
+import OSLog
 
 /// @main here is an attribute. Source : https://docs.swift.org/swift-book/documentation/the-swift-programming-language/attributes
 /// Attributes gives us some additional information for the type or declarations on which those are applied.
@@ -47,13 +48,13 @@ struct SwiftUILearningsApp: App {
         .onChange(of: scenePhase) { (newScenePhase) in
             switch newScenePhase {
             case .background:
-                print("App lifecycle : Background")
+                Logger.appCycle.info("Background")
             case .inactive:
-                print("App lifecycle : Inactive")
+                Logger.appCycle.info("Inactive")
             case .active:
-                print("App lifecycle : Active")
+                Logger.appCycle.info("Active")
             @unknown default:
-                print("App lifecycle : Unknown")
+                Logger.appCycle.info("Unknown")
             }
         }
     }

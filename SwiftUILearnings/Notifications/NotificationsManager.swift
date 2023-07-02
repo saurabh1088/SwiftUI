@@ -45,6 +45,7 @@
  */
 import Foundation
 import UserNotifications
+import OSLog
 
 class NotificationsManager: NSObject {
     static let shared = NotificationsManager()
@@ -72,8 +73,9 @@ class NotificationsManager: NSObject {
     /// get an understanding of why and how the notification can be helpful to him/her and can take informed
     /// decision.
     func requestPermission() {
+        Logger.notifications.info("Requesting for user's persmission for notifications")
         UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge, .sound]) { granted, error in
-            print("Permission granted: \(granted)")
+            Logger.notifications.info("Permission granted: \(granted)")
         }
     }
     
@@ -83,8 +85,9 @@ class NotificationsManager: NSObject {
     /// When provisional authorization is requested, one can also request for authorization when app launches
     /// first time. The user is only asked his/her preference only when actual notification is received.
     func requestProvisionalPermission() {
+        Logger.notifications.info("Requesting for provisional persmission for notifications")
         UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge, .sound, .provisional]) { granted, error in
-            print("Provisional permission granted: \(granted)")
+            Logger.notifications.info("Provisional permission granted: \(granted)")
         }
     }
     
@@ -131,9 +134,9 @@ class NotificationsManager: NSObject {
 
 extension NotificationsManager: UNUserNotificationCenterDelegate {
     func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
-        print("Notification center did receive response : \(response.actionIdentifier)")
+        Logger.notifications.info("Notification center did receive response : \(response.actionIdentifier)")
         if response.actionIdentifier == "actionableLocalNotification.goodAction" {
-            print("Selection was Good")
+            Logger.notifications.info("Selection was Good")
         }
         completionHandler()
     }

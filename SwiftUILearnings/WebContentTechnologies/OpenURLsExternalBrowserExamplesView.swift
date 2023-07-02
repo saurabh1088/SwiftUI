@@ -9,6 +9,7 @@
         
 
 import SwiftUI
+import OSLog
 
 struct OpenURLsExternalBrowserExamplesView: View {
     
@@ -44,7 +45,7 @@ struct OpenURLsExternalBrowserExamplesView: View {
                 .font(.headline)
         }
         .environment(\.openURL, OpenURLAction(handler: { url in
-            print("Opening url :: \(url)")
+            Logger.view.info("Opening url :: \(url)")
             return .systemAction
         }))
     }
@@ -57,7 +58,7 @@ struct OpenURLsExternalBrowserExamplesView: View {
                 openURL(url) { accepted in
                     // This action is optional, if provided the action gets called
                     // before the URL is opened
-                    print("Can open URL :: \(accepted ? "Yes" : "No")")
+                    Logger.view.info("Can open URL :: \(accepted ? "Yes" : "No")")
                 }
             }
         } label: {

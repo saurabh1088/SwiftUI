@@ -10,6 +10,7 @@
 // TODO: https://swiftwithmajid.com/2021/06/16/mastering-list-in-swiftui/
 
 import SwiftUI
+import OSLog
 
 struct ListView: View {
     @State private var multiplier: Int = 1
@@ -64,7 +65,7 @@ struct ListView: View {
             Text("List item \(row * multiplier)")
         }
         .refreshable {
-            print("Refresh action")
+            Logger.view.info("Refresh action")
             multiplier = multiplier * 2
         }
     }

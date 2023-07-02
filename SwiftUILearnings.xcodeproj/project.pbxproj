@@ -24,6 +24,7 @@
 		B76E261929B34F6D007977AB /* OpenURLsExternalBrowserExamplesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76E261829B34F6D007977AB /* OpenURLsExternalBrowserExamplesView.swift */; };
 		B76FE8B029D7518E00BCAF51 /* NotificationsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76FE8AF29D7518E00BCAF51 /* NotificationsManager.swift */; };
 		B76FE8B429D758C500BCAF51 /* payload.apns in Resources */ = {isa = PBXBuildFile; fileRef = B76FE8B329D758C500BCAF51 /* payload.apns */; };
+		B772B3C72A517A2D00B78E73 /* Logger+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B772B3C62A517A2D00B78E73 /* Logger+Extension.swift */; };
 		B787A2D929B115920090FCF7 /* SwiftUILearningsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B787A2D829B115920090FCF7 /* SwiftUILearningsApp.swift */; };
 		B787A2DB29B115920090FCF7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B787A2DA29B115920090FCF7 /* ContentView.swift */; };
 		B787A2DD29B115960090FCF7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B787A2DC29B115960090FCF7 /* Assets.xcassets */; };
@@ -87,6 +88,7 @@
 		B76E261829B34F6D007977AB /* OpenURLsExternalBrowserExamplesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenURLsExternalBrowserExamplesView.swift; sourceTree = "<group>"; };
 		B76FE8AF29D7518E00BCAF51 /* NotificationsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsManager.swift; sourceTree = "<group>"; };
 		B76FE8B329D758C500BCAF51 /* payload.apns */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = payload.apns; sourceTree = "<group>"; };
+		B772B3C62A517A2D00B78E73 /* Logger+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Logger+Extension.swift"; sourceTree = "<group>"; };
 		B787A2D529B115920090FCF7 /* SwiftUILearnings.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUILearnings.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B787A2D829B115920090FCF7 /* SwiftUILearningsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUILearningsApp.swift; sourceTree = "<group>"; };
 		B787A2DA29B115920090FCF7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -279,6 +281,7 @@
 			isa = PBXGroup;
 			children = (
 				B7AEDB6A29EABF35007D634E /* Color+Extension.swift */,
+				B772B3C62A517A2D00B78E73 /* Logger+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -495,6 +498,7 @@
 				B7A183E229C385A600B864DE /* DataEssentialStateObject.swift in Sources */,
 				B7A76AB429B2601F00163BDC /* BasicWebContentTechnologiesView.swift in Sources */,
 				B787A2D929B115920090FCF7 /* SwiftUILearningsApp.swift in Sources */,
+				B772B3C72A517A2D00B78E73 /* Logger+Extension.swift in Sources */,
 				B76A06FD2A07400A00974AD3 /* LazyVStackView.swift in Sources */,
 				B76FE8B029D7518E00BCAF51 /* NotificationsManager.swift in Sources */,
 				B7B1DCBB29B3BFDB00FFC805 /* SafariWebView.swift in Sources */,

@@ -9,12 +9,13 @@
         
 
 import SwiftUI
+import OSLog
 
 struct SomeCustomRowView: View {
     var value: Int
     init(value: Int) {
         self.value = value
-        print("Initialised SomeCustomRowView with value : \(value)")
+        Logger.view.info("Initialised SomeCustomRowView with value : \(value)")
     }
     var body: some View {
         Text("Row \(value)")

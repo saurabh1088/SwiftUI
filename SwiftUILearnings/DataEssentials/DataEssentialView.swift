@@ -9,6 +9,7 @@
         
 
 import SwiftUI
+import OSLog
 
 struct DataEssentialView: View {
     
@@ -205,9 +206,9 @@ struct DataEssentialTestInitView: View {
     @State private var animate: Bool = false
     
     init(themeColor: Color) {
-        print("Calling init for view DataEssentialTestInitView")
+        Logger.view.info("Calling init for view DataEssentialTestInitView")
         _dataEssentialExternalInit = StateObject(wrappedValue: ExternalInitStateObject(themeColor: themeColor))
-        print("Completed init for view DataEssentialTestInitView")
+        Logger.view.info("Completed init for view DataEssentialTestInitView")
     }
     
     var body: some View {

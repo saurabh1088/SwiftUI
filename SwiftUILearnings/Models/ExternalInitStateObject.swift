@@ -10,12 +10,13 @@
 
 import Foundation
 import SwiftUI
+import OSLog
 
 class ExternalInitStateObject: ObservableObject {
     @Published var themeColor: Color
     
     init(themeColor: Color) {
-        print("Calling init for ExternalInitStateObject")
+        Logger.viewModel.info("Calling init for ExternalInitStateObject")
         self.themeColor = themeColor
     }
 }
