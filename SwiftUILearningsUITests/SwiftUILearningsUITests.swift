@@ -7,6 +7,7 @@
 //
 
 import XCTest
+import SwiftUILearnings
 
 final class SwiftUILearningsUITests: XCTestCase {
 
@@ -23,12 +24,26 @@ final class SwiftUILearningsUITests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testExample() throws {
+    func testAppLaunch() throws {
         // UI tests must launch the application that they test.
         let app = XCUIApplication()
         app.launch()
-
         // Use XCTAssert and related functions to verify your tests produce the correct results.
+    }
+    
+    func testAvailableOptions() throws {
+        let app = XCUIApplication()
+        app.launch()
+        
+        let geometryReader = app.collectionViews.buttons["Geometry Reader"]
+        XCTAssertTrue(geometryReader.waitForExistence(timeout: 2))
+        
+        XCTAssertTrue(app.collectionViews.buttons["Geometry Reader"].exists)
+        XCTAssertTrue(app.collectionViews.buttons["Web Content Technologies"].exists)
+        XCTAssertTrue(app.collectionViews.buttons["Data Essentials"].exists)
+        XCTAssertTrue(app.collectionViews.buttons["Notifications"].exists)
+        XCTAssertTrue(app.collectionViews.buttons["PDF Files"].exists)
+        XCTAssertTrue(app.collectionViews.buttons["UI Components"].exists)
     }
 
     func testLaunchPerformance() throws {
