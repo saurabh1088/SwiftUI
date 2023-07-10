@@ -31,6 +31,12 @@ final class SwiftUILearningsUITests: XCTestCase {
         // Use XCTAssert and related functions to verify your tests produce the correct results.
     }
     
+    func testLandingPageTitle() {
+        let app = XCUIApplication()
+        app.launch()
+        XCTAssertTrue(app.navigationBars["Learnings"].staticTexts["Learnings"].exists)
+    }
+    
     func testAvailableOptions() throws {
         let app = XCUIApplication()
         app.launch()
@@ -44,6 +50,14 @@ final class SwiftUILearningsUITests: XCTestCase {
         XCTAssertTrue(app.collectionViews.buttons["Notifications"].exists)
         XCTAssertTrue(app.collectionViews.buttons["PDF Files"].exists)
         XCTAssertTrue(app.collectionViews.buttons["UI Components"].exists)
+    }
+    
+    func test_SelectOption_GeometryReader() {
+        let app = XCUIApplication()
+        app.launch()
+        let geometryReader = app.collectionViews.buttons["Geometry Reader"]
+        XCTAssertTrue(geometryReader.exists)
+        geometryReader.tap()
     }
 
     func testLaunchPerformance() throws {
