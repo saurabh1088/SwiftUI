@@ -119,7 +119,7 @@ struct DataEssentialView: View {
             }
 
         }
-        .navigationTitle(Text("Data Essential View"))
+        .navigationTitle(Text(LearningTopics.dataEssentials.rawValue))
         .navigationDestination(isPresented: $showSecondaryLevel, destination: {
             DataEssentialSecondaryLevelView(dataEssentialViewModel: dataEssentialStateObject)
         })

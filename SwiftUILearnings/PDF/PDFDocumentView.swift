@@ -21,6 +21,7 @@ struct PDFDocumentView: View {
         VStack {
             PDFFilesView(showing: pdfDocument)
         }
+        .navigationTitle(SwiftUI.Text(LearningTopics.pdfFiles.rawValue))
     }
 }
 

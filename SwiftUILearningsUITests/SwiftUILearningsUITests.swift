@@ -55,9 +55,79 @@ final class SwiftUILearningsUITests: XCTestCase {
     func test_SelectOption_GeometryReader() {
         let app = XCUIApplication()
         app.launch()
-        let geometryReader = app.collectionViews.buttons["Geometry Reader"]
-        XCTAssertTrue(geometryReader.exists)
-        geometryReader.tap()
+        
+        let geometryReaderOption = app.collectionViews.buttons["Geometry Reader"]
+        XCTAssertTrue(geometryReaderOption.exists)
+        geometryReaderOption.tap()
+        
+        let backButtonToLearningsView = app.navigationBars["Geometry Reader"].buttons["Learnings"]
+        XCTAssertTrue(backButtonToLearningsView.exists)
+        backButtonToLearningsView.tap()
+    }
+    
+    func test_SelectOption_WebContentTechnologies() {
+        let app = XCUIApplication()
+        app.launch()
+        
+        let webContentTechnologiesOption = app.collectionViews.buttons["Web Content Technologies"]
+        XCTAssertTrue(webContentTechnologiesOption.exists)
+        webContentTechnologiesOption.tap()
+        
+        let backButtonToLearningsView = app.navigationBars["Web Content Technologies"].buttons["Learnings"]
+        XCTAssertTrue(backButtonToLearningsView.exists)
+        backButtonToLearningsView.tap()
+    }
+    
+    func test_SelectOption_DataEssentials() {
+        let app = XCUIApplication()
+        app.launch()
+        
+        let dataEssentialsOption = app.collectionViews.buttons["Data Essentials"]
+        XCTAssertTrue(dataEssentialsOption.exists)
+        dataEssentialsOption.tap()
+        
+        let backButtonToLearningsView = app.navigationBars["Data Essentials"].buttons["Learnings"]
+        XCTAssertTrue(backButtonToLearningsView.exists)
+        backButtonToLearningsView.tap()
+    }
+    
+    func test_SelectOption_Notifications() {
+        let app = XCUIApplication()
+        app.launch()
+        
+        let notificationsOption = app.collectionViews.buttons["Notifications"]
+        XCTAssertTrue(notificationsOption.exists)
+        notificationsOption.tap()
+        
+        let backButtonToLearningsView = app.navigationBars["Notifications"].buttons["Learnings"]
+        XCTAssertTrue(backButtonToLearningsView.exists)
+        backButtonToLearningsView.tap()
+    }
+    
+    func test_SelectOption_PDFFiles() {
+        let app = XCUIApplication()
+        app.launch()
+        
+        let pdfFilesOption = app.collectionViews.buttons["PDF Files"]
+        XCTAssertTrue(pdfFilesOption.exists)
+        pdfFilesOption.tap()
+        
+        let backButtonToLearningsView = app.navigationBars["PDF Files"].buttons["Learnings"]
+        XCTAssertTrue(backButtonToLearningsView.exists)
+        backButtonToLearningsView.tap()
+    }
+    
+    func test_SelectOption_UIComponents() {
+        let app = XCUIApplication()
+        app.launch()
+        
+        let uiComponentsOption = app.collectionViews.buttons["UI Components"]
+        XCTAssertTrue(uiComponentsOption.exists)
+        uiComponentsOption.tap()
+        
+        let backButtonToLearningsView = app.navigationBars["UI Components"].buttons["Learnings"]
+        XCTAssertTrue(backButtonToLearningsView.exists)
+        backButtonToLearningsView.tap()
     }
 
     func testLaunchPerformance() throws {

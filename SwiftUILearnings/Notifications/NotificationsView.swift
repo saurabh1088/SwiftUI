@@ -27,6 +27,7 @@ struct NotificationsView: View {
             }
             .buttonStyle(.fullWidth)
         }
+        .navigationTitle(Text(LearningTopics.notifications.rawValue))
     }
 }
 

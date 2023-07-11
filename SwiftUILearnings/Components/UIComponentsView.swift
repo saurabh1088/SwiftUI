@@ -38,6 +38,7 @@ struct UIComponentsView: View {
                 }
             }
         }
+        .navigationTitle(Text(LearningTopics.uiComponents.rawValue))
     }
 }
 
