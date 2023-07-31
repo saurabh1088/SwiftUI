@@ -35,6 +35,8 @@ struct UIComponentsView: View {
                     TextInputView()
                 case .anyLayout:
                     AnyLayoutView()
+                case .scrollView:
+                    ComponentScrollView()
                 }
             }
         }
