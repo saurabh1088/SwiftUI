@@ -17,6 +17,7 @@ enum LearningTopics: String, CaseIterable {
     case notifications = "Notifications"
     case pdfFiles = "PDF Files"
     case uiComponents = "UI Components"
+    case charts = "Charts"
 }
 
 enum Components: String, CaseIterable {

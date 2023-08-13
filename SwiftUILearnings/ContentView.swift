@@ -67,6 +67,8 @@ struct ContentView: View {
                     PDFDocumentView()
                 case .uiComponents:
                     UIComponentsView()
+                case .charts:
+                    ChartsView()
                 }
             }
             .navigationTitle("Learnings")
