@@ -24,3 +24,9 @@ struct VehicleSales: Identifiable {
     var count: Int
     var type: VehicleTypes
 }
+
+struct YearStocks: Identifiable {
+    var id = UUID()
+    var month: String
+    var price: Double
+}

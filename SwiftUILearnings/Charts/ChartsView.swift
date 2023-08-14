@@ -12,7 +12,19 @@ struct ChartsView: View {
     @StateObject var chartsViewModel = ChartsViewModel()
     
     var body: some View {
-        barChartView
+        lineChartView
+    }
+    
+    @ViewBuilder
+    private var lineChartView: some View {
+        Chart {
+            ForEach(chartsViewModel.companyStocks) { data in
+                LineMark(
+                    x: .value("Month", data.month),
+                    y: .value("Price", data.price)
+                )
+            }
+        }
     }
     
     @ViewBuilder
