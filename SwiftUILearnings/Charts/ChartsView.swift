@@ -12,31 +12,51 @@ struct ChartsView: View {
     @StateObject var chartsViewModel = ChartsViewModel()
     
     var body: some View {
-        lineChartView
+        VStack(spacing: 20) {
+            Button("Line Chart") {
+                chartsViewModel.showLineChartsView.toggle()
+            }
+            .sheet(isPresented: $chartsViewModel.showLineChartsView) {
+                lineChartView
+            }
+            
+            Button("Bar Chart") {
+                chartsViewModel.showBarChartsView.toggle()
+            }
+            .sheet(isPresented: $chartsViewModel.showBarChartsView) {
+                barChartView
+            }
+        }
     }
     
     @ViewBuilder
     private var lineChartView: some View {
-        Chart {
-            ForEach(chartsViewModel.companyStocks) { data in
-                LineMark(
-                    x: .value("Month", data.month),
-                    y: .value("Price", data.price)
-                )
+        VStack {
+            Chart {
+                ForEach(chartsViewModel.companyStocks) { data in
+                    LineMark(
+                        x: .value("Month", data.month),
+                        y: .value("Price", data.price)
+                    )
+                }
             }
         }
+        .padding([.top, .bottom], 20)
     }
     
     @ViewBuilder
     private var barChartView: some View {
-        Chart {
-            ForEach(chartsViewModel.vehicleSalesData) { data in
-                BarMark(
-                    x: .value("Vehicle Type", data.type.rawValue),
-                    y: .value("Sales", data.count)
-                )
+        VStack {
+            Chart {
+                ForEach(chartsViewModel.vehicleSalesData) { data in
+                    BarMark(
+                        x: .value("Vehicle Type", data.type.rawValue),
+                        y: .value("Sales", data.count)
+                    )
+                }
             }
         }
+        .padding([.top, .bottom], 20)
     }
 }
 

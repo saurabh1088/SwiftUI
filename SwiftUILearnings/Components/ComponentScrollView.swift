@@ -95,7 +95,6 @@ struct CustomScrollTargetBehavior: ScrollTargetBehavior {
     func updateTarget(_ target: inout ScrollTarget, context: TargetContext) {
         if context.velocity.dy > 0 {
             target.rect.origin.y = 820
-            print(target.anchor)
         } else if context.velocity.dy < 0 {
             target.rect.origin.y = 0
         }
