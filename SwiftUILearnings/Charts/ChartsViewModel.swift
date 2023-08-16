@@ -8,8 +8,10 @@
 import Foundation
 
 class ChartsViewModel: ObservableObject {
+    @Published var showPointChartsView: Bool = false
     @Published var showLineChartsView: Bool = false
     @Published var showBarChartsView: Bool = false
+    @Published var showRuleMark: Bool = false
     
     var vehicleSalesData: [VehicleSales] = [
         .init(month: "August", count: 20, type: .hatch),

@@ -35,6 +35,13 @@ struct ChartsView: View {
     
     var body: some View {
         VStack(spacing: 20) {
+            Button("Point Chart") {
+                chartsViewModel.showPointChartsView.toggle()
+            }
+            .sheet(isPresented: $chartsViewModel.showPointChartsView) {
+                pointChartView
+            }
+            
             Button("Line Chart") {
                 chartsViewModel.showLineChartsView.toggle()
             }
@@ -48,12 +55,38 @@ struct ChartsView: View {
             .sheet(isPresented: $chartsViewModel.showBarChartsView) {
                 barChartView
             }
+            
+            Toggle(isOn: $chartsViewModel.showRuleMark) {
+                Text("Show Rule Mark")
+            }
+            .padding(20)
         }
     }
 }
 
 #Preview {
     ChartsView()
+}
+
+// MARK: Extension for point charts
+extension ChartsView {
+    @ViewBuilder
+    private var pointChartView: some View {
+        VStack {
+            Chart(chartsViewModel.companyStocks, id: \.id, content: { stock in
+                
+                if chartsViewModel.showRuleMark {
+                    RuleMark(y: .value("Limit", 120))
+                }
+                
+                PointMark(
+                    x: .value("Month", stock.month),
+                    y: .value("Price", stock.price)
+                )
+            })
+        }
+        .padding([.top, .bottom], 20)
+    }
 }
 
 // MARK: Extension for line charts
@@ -64,6 +97,11 @@ extension ChartsView {
     private var lineChartView: some View {
         VStack {
             Chart(chartsViewModel.companyStocks, id: \.id, content: { stock in
+                
+                if chartsViewModel.showRuleMark {
+                    RuleMark(y: .value("Limit", 120))
+                }
+                
                 LineMark(
                     x: .value("Month", stock.month),
                     y: .value("Price", stock.price)
@@ -77,6 +115,11 @@ extension ChartsView {
     private var lineChartUsingForEachView: some View {
         VStack {
             Chart {
+                
+                if chartsViewModel.showRuleMark {
+                    RuleMark(y: .value("Limit", 120))
+                }
+                
                 ForEach(chartsViewModel.companyStocks) { data in
                     LineMark(
                         x: .value("Month", data.month),
@@ -95,6 +138,11 @@ extension ChartsView {
     private var barChartView: some View {
         VStack {
             Chart {
+                
+                if chartsViewModel.showRuleMark {
+                    RuleMark(y: .value("Limit", 5))
+                }
+                
                 ForEach(chartsViewModel.vehicleSalesData) { data in
                     BarMark(
                         x: .value("Vehicle Type", data.type.rawValue),
