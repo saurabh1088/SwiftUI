@@ -69,6 +69,8 @@ struct ContentView: View {
                     UIComponentsView()
                 case .charts:
                     ChartsView()
+                case .augmentedReality:
+                    AugmentedRealityContainerView()
                 }
             }
             .navigationTitle("Learnings")

@@ -64,9 +64,6 @@ struct ChartsView: View {
     }
 }
 
-#Preview {
-    ChartsView()
-}
 
 // MARK: Extension for point charts
 extension ChartsView {

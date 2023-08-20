@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+/*
 struct ComponentScrollView: View {
     @State private var showModal: Bool = false
     var colors: [Color] = [.red, .green, .orange, .blue, .cyan, .yellow, .purple, .pink, .brown, .mint]
@@ -115,3 +116,5 @@ struct CustomScrollTargetBehavior: ScrollTargetBehavior {
 extension ScrollTargetBehavior where Self == CustomScrollTargetBehavior {
     static var custom: CustomScrollTargetBehavior { .init() }
 }
+
+*/

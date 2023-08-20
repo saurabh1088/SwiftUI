@@ -18,6 +18,7 @@ enum LearningTopics: String, CaseIterable {
     case pdfFiles = "PDF Files"
     case uiComponents = "UI Components"
     case charts = "Charts"
+    case augmentedReality = "Augmented Reality"
 }
 
 enum Components: String, CaseIterable {
