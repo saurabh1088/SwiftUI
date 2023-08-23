@@ -70,7 +70,7 @@ struct ContentView: View {
                 case .charts:
                     ChartsView()
                 case .augmentedReality:
-                    AugmentedRealityContainerView()
+                    AugmentedRealityView()
                 }
             }
             .navigationTitle("Learnings")
