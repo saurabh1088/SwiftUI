@@ -58,6 +58,7 @@
 		B7E24D632A8901A600790D1A /* ChartsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E24D622A8901A600790D1A /* ChartsModel.swift */; };
 		B7E24D652A89037900790D1A /* ChartsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E24D642A89037900790D1A /* ChartsViewModel.swift */; };
 		B7E9414529D89C820021B952 /* NotificationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E9414429D89C820021B952 /* NotificationsView.swift */; };
+		B7FAFB362A97C3F10009DE51 /* plant.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = B7FAFB352A97C3F10009DE51 /* plant.rcproject */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -133,6 +134,7 @@
 		B7E24D622A8901A600790D1A /* ChartsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsModel.swift; sourceTree = "<group>"; };
 		B7E24D642A89037900790D1A /* ChartsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsViewModel.swift; sourceTree = "<group>"; };
 		B7E9414429D89C820021B952 /* NotificationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsView.swift; sourceTree = "<group>"; };
+		B7FAFB352A97C3F10009DE51 /* plant.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = plant.rcproject; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -193,6 +195,7 @@
 		B76FE8B229D7588E00BCAF51 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				B7FAFB322A97C0DF0009DE51 /* Reality */,
 				B76FE8B329D758C500BCAF51 /* payload.apns */,
 				B7AEDB6729EABD77007D634E /* Colors.xcassets */,
 			);
@@ -202,6 +205,7 @@
 		B787A2CC29B115920090FCF7 = {
 			isa = PBXGroup;
 			children = (
+				B7FAFB352A97C3F10009DE51 /* plant.rcproject */,
 				B796FDC429B602C4004B5F87 /* style.css */,
 				B796FDC229B6029A004B5F87 /* index.html */,
 				B787A2D729B115920090FCF7 /* SwiftUILearnings */,
@@ -375,6 +379,13 @@
 			path = Charts;
 			sourceTree = "<group>";
 		};
+		B7FAFB322A97C0DF0009DE51 /* Reality */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Reality;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -526,6 +537,7 @@
 				B7046C852A967F5A00F9A95C /* AugmentedRealityView.swift in Sources */,
 				B7B04BF329E72CA30015EA8D /* PDFFilesView.swift in Sources */,
 				B74CEA7029B1D4A8002CB043 /* BasicGeometryReaderView.swift in Sources */,
+				B7FAFB362A97C3F10009DE51 /* plant.rcproject in Sources */,
 				B7E24D5F2A89000700790D1A /* ChartsView.swift in Sources */,
 				B72C5D2D2A30CA2600E77866 /* HorizontalStackView.swift in Sources */,
 				B7E24D632A8901A600790D1A /* ChartsModel.swift in Sources */,
