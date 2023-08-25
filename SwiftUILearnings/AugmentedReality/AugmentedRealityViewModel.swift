@@ -36,9 +36,9 @@ class AugmentedRealityViewModel: NSObject,
         boxNode.position = SCNVector3(0, 0, -0.2)
         
         arSCNView?.delegate = self
-        let scene = SCNScene()
-        scene.rootNode.addChildNode(boxNode)
-        arSCNView?.scene = scene
+        let scene = SCNScene(named: "sampleScene")
+        scene?.rootNode.addChildNode(boxNode)
+        arSCNView?.scene = scene ?? SCNScene()
         
         arSCNView?.session.run(worldTrackingConfig())
     }
