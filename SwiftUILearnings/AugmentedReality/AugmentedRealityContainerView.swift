@@ -7,19 +7,19 @@
 
 import Foundation
 import SwiftUI
-import ARKit
+import RealityKit
 
 // TODO: Check this one https://www.gfrigerio.com/arkit-in-a-swiftui-app/
 struct AugmentedRealityContainerView: UIViewRepresentable {
-    typealias UIViewType = ARSCNView
+    typealias UIViewType = ARView
     
     let arSCNDelegate: AugmentedRealityViewModel
     
-    func makeUIView(context: Context) -> ARSCNView {
-        let augmentedRealitySceneView = ARSCNView(frame: .zero)
+    func makeUIView(context: Context) -> ARView {
+        let augmentedRealitySceneView = ARView(frame: .zero)
         arSCNDelegate.setARSCNView(augmentedRealitySceneView)
         return augmentedRealitySceneView
     }
     
-    func updateUIView(_ uiView: ARSCNView, context: Context) { }
+    func updateUIView(_ uiView: ARView, context: Context) { }
 }

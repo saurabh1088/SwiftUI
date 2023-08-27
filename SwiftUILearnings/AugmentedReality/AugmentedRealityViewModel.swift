@@ -14,45 +14,39 @@ class AugmentedRealityViewModel: NSObject,
                                  ARSCNViewDelegate,
                                  ObservableObject {
     
-    private var arSCNView: ARSCNView?
+    private var arView: ARView?
     private var streams = [Combine.AnyCancellable]()
     
-    func setARSCNView(_ view: ARSCNView) {
-        arSCNView = view
+    func setARSCNView(_ view: ARView) {
+        arView = view
+        arView?.session.run(worldTrackingConfig())
         
-        /// SCNBox here defines a box as name suggests, more precisely, it defines a six sided polyhedron
-        /// as mentioned in Apple documentation.
-        /// width, height and length are self explanatory.
-        ///
-        /// `chamferRadius`
-        /// - chamferRadius provides rounded "edges and corners" to the box.
-        /// - Maximum corner radius is half the box’s smallest dimension. This is reason, below value is in
-        /// range of 0.0s. If this value is more than half of box's smallest dimension messes up the shape and
-        /// it appears more like a sphere/cylinder etc.
-        let box = SCNBox(width: 0.1, height: 0.1, length: 0.1, chamferRadius: 0)
+        Plant.loadSceneAsync { result in
+            do {
+                print("Loaded plant scene")
+                let plantScene = try result.get()
+                self.arView?.scene.anchors.append(plantScene)
+            } catch {
+                print("Failed to load plant scene")
+            }
+        }
         
-        let boxNode = SCNNode()
-        boxNode.geometry = box
-        boxNode.position = SCNVector3(0, 0, -0.2)
-        
-        arSCNView?.delegate = self
-        let scene = SCNScene(named: "sampleScene")
-        scene?.rootNode.addChildNode(boxNode)
-        arSCNView?.scene = scene ?? SCNScene()
-        
-        arSCNView?.session.run(worldTrackingConfig())
+        // TODO: Investigate relevance of below logic, without this scene isn't rendered.
+        let camera = PerspectiveCamera()
+        let cameraAnchor = AnchorEntity(world: [0, 0.2, 0.5])
+        cameraAnchor.addChild(camera)
+        arView?.scene.addAnchor(cameraAnchor)
     }
     
     func addTapGesture() {
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(tap))
-        arSCNView?.addGestureRecognizer(tapGesture)
+        arView?.addGestureRecognizer(tapGesture)
     }
     
     @objc func tap(sender: UITapGestureRecognizer) {
-        guard let arSCNView = arSCNView else { return }
-        let location = sender.location(in: arSCNView)
-        let result = arSCNView.hitTest(location, options: nil)
-        let node = result.first?.node
+        guard let arView = arView else { return }
+        let location = sender.location(in: arView)
+        let result = arView.hitTest(location, with: nil)
     }
     
     private func worldTrackingConfig() -> ARWorldTrackingConfiguration {
