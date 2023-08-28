@@ -10,17 +10,19 @@ import Combine
 import Foundation
 import RealityKit
 
-class AugmentedRealityViewModel: NSObject,
-                                 ARSCNViewDelegate,
-                                 ObservableObject {
+class AugmentedRealityViewModel: ObservableObject {
     
     private var arView: ARView?
     private var streams = [Combine.AnyCancellable]()
     
-    func setARSCNView(_ view: ARView) {
+    func pauseSession() {
+        arView?.session.pause()
+    }
+    
+    func setARView(_ view: ARView) {
         arView = view
         arView?.session.run(worldTrackingConfig())
-        
+
         Plant.loadSceneAsync { result in
             do {
                 print("Loaded plant scene")
@@ -30,12 +32,6 @@ class AugmentedRealityViewModel: NSObject,
                 print("Failed to load plant scene")
             }
         }
-        
-        // TODO: Investigate relevance of below logic, without this scene isn't rendered.
-        let camera = PerspectiveCamera()
-        let cameraAnchor = AnchorEntity(world: [0, 0.2, 0.5])
-        cameraAnchor.addChild(camera)
-        arView?.scene.addAnchor(cameraAnchor)
     }
     
     func addTapGesture() {
@@ -49,11 +45,7 @@ class AugmentedRealityViewModel: NSObject,
         let result = arView.hitTest(location, with: nil)
     }
     
-    private func worldTrackingConfig() -> ARWorldTrackingConfiguration {
-        let configuration = ARWorldTrackingConfiguration()
-        configuration.planeDetection = .horizontal
-        return configuration
-    }
+    
     
     // TODO: Debug: Not working
     func createRealityURL(filename: String,
@@ -92,5 +84,23 @@ class AugmentedRealityViewModel: NSObject,
             completion(.success(entity))
         })
         cancellable.store(in: &streams)
+    }
+}
+
+// MARK: Extension AugmentedRealityViewModel : World tracking configuration
+extension AugmentedRealityViewModel {
+    private func worldTrackingConfig() -> ARWorldTrackingConfiguration {
+        let configuration = ARWorldTrackingConfiguration()
+        configuration.planeDetection = .horizontal
+        return configuration
+    }
+}
+
+extension AugmentedRealityViewModel {
+    private func addPerspectiveCamera() {
+        let camera = PerspectiveCamera()
+        let cameraAnchor = AnchorEntity(world: [0, 0.2, 0.5])
+        cameraAnchor.addChild(camera)
+        arView?.scene.addAnchor(cameraAnchor)
     }
 }

@@ -11,7 +11,10 @@ struct AugmentedRealityView: View {
     @StateObject private var arViewModel = AugmentedRealityViewModel()
     
     var body: some View {
-        AugmentedRealityContainerView(arSCNDelegate: arViewModel)
+        AugmentedRealityContainerView(arViewModel: arViewModel)
+            .onDisappear {
+                arViewModel.pauseSession()
+            }
     }
 }
 

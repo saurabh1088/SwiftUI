@@ -13,11 +13,11 @@ import RealityKit
 struct AugmentedRealityContainerView: UIViewRepresentable {
     typealias UIViewType = ARView
     
-    let arSCNDelegate: AugmentedRealityViewModel
+    let arViewModel: AugmentedRealityViewModel
     
     func makeUIView(context: Context) -> ARView {
         let augmentedRealitySceneView = ARView(frame: .zero)
-        arSCNDelegate.setARSCNView(augmentedRealitySceneView)
+        arViewModel.setARView(augmentedRealitySceneView)
         return augmentedRealitySceneView
     }
     
