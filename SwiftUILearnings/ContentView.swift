@@ -71,6 +71,8 @@ struct ContentView: View {
                     ChartsView()
                 case .augmentedReality:
                     AugmentedRealityView()
+                case .gestures:
+                    GesturesView()
                 }
             }
             .navigationTitle("Learnings")

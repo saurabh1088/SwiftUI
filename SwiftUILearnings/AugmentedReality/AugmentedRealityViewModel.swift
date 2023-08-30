@@ -23,6 +23,9 @@ class AugmentedRealityViewModel: ObservableObject {
         arView = view
         arView?.session.run(worldTrackingConfig())
 
+        /// Here Plant refers to Plant.rcproject file added to project. Plant.rcproject is file generated from
+        /// Reality Composer. When added to Xcode a boilerplate code is generated which gives below APIs
+        /// which is called bellow(Plant.loadSceneAsync) to load a scene as designed in the file.
         Plant.loadSceneAsync { result in
             do {
                 print("Loaded plant scene")
