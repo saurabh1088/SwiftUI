@@ -8,6 +8,7 @@
 import ARKit
 import Combine
 import Foundation
+import OSLog
 import RealityKit
 
 class AugmentedRealityViewModel: ObservableObject {
@@ -28,7 +29,7 @@ class AugmentedRealityViewModel: ObservableObject {
         /// which is called bellow(Plant.loadSceneAsync) to load a scene as designed in the file.
         Plant.loadSceneAsync { result in
             do {
-                print("Loaded plant scene")
+                Logger.augmentedReality.info("Loaded plant scene")
                 let plantScene = try result.get()
                 self.arView?.scene.anchors.append(plantScene)
             } catch {
