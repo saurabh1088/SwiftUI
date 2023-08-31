@@ -20,4 +20,5 @@ extension Logger {
     static let appCycle = Logger(subsystem: subsystem, category: "appCycle")
     static let view = Logger(subsystem: subsystem, category: "view")
     static let viewModel = Logger(subsystem: subsystem, category: "viewModel")
+    static let augmentedReality = Logger(subsystem: subsystem, category: "augmentedReality")
 }
