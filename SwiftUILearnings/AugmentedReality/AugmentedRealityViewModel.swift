@@ -33,7 +33,7 @@ class AugmentedRealityViewModel: ObservableObject {
                 let plantScene = try result.get()
                 self.arView?.scene.anchors.append(plantScene)
             } catch {
-                print("Failed to load plant scene")
+                Logger.augmentedReality.error("Failed to load plant scene")
             }
         }
     }
