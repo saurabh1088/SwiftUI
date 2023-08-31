@@ -58,7 +58,7 @@ class AugmentedRealityViewModel: ObservableObject {
         // Create a URL that points to the specified Reality file.
         guard let realityFileURL = Bundle.main.url(forResource: filename,
                                                    withExtension: fileExtension) else {
-            print("Error finding Reality file \(filename).\(fileExtension)")
+            Logger.augmentedReality.error("Error finding Reality file \(filename).\(fileExtension)")
             return nil
         }
 
