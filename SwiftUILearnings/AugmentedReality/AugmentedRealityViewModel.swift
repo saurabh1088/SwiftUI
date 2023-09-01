@@ -46,7 +46,7 @@ class AugmentedRealityViewModel: ObservableObject {
     @objc func tap(sender: UITapGestureRecognizer) {
         guard let arView = arView else { return }
         let location = sender.location(in: arView)
-        let result = arView.hitTest(location, with: nil)
+        _ = arView.hitTest(location, with: nil)
     }
     
     
@@ -75,7 +75,7 @@ class AugmentedRealityViewModel: ObservableObject {
                                         sceneName: String,
                                         completion: @escaping (Swift.Result<(Entity & HasAnchoring)?, Swift.Error>) -> Void) {
         guard let realityFileSceneURL = createRealityURL(filename: filename, fileExtension: fileExtension, sceneName: sceneName) else {
-            print("Error: Unable to find specified file in application bundle")
+            Logger.augmentedReality.error("Error: Unable to find specified file in application bundle")
             return
         }
 
