@@ -31,6 +31,7 @@ enum Components: String, CaseIterable {
     case textFields = "Text Fields"
     case anyLayout = "Any Layout"
     case scrollView = "Scroll View"
+    case carousel = "Carousels"
 }
 
 enum ListViewTypes: String, CaseIterable {
