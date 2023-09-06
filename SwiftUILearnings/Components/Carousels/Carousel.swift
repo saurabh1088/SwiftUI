@@ -37,7 +37,8 @@ struct Carousel<Cards: View>: View {
                         }
                     })
             )
-            .animation(.spring, value: viewModel.currentCard)
+            // TODO: Not working pre-iOS17.0
+//            .animation(.spring, value: viewModel.currentCard)
             
             HStack {
                 ForEach(0..<viewModel.numberOfCards) { index in
