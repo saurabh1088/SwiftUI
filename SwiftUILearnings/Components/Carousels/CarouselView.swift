@@ -8,23 +8,21 @@
 import SwiftUI
 
 struct CarouselView: View {
-    let widthOfCards = 300.0
+    var widthOfCards: CGFloat {
+        UIScreen.main.bounds.size.width - 48.0
+    }
     
     var body: some View {
         let viewModel = CarouselViewModel(cardWidth: widthOfCards,
                                           numberOfCards: 5,
-                                          spacing: 16.0)
+                                          spacing: 16.0,
+                                          peekWidth: 8.0)
         Carousel(viewModel: viewModel) {
             card
-                .background(Color.primaryRed)
             card
-                .background(Color.primaryGreen)
             card
-                .background(Color.primaryOrange)
             card
-                .background(Color.primaryYellow)
             card
-                .background(Color.primaryVeryDarkBlue)
         }
     }
     
@@ -44,7 +42,6 @@ struct CarouselView: View {
             .padding(.leading, 16)
         }
         .padding(20)
-        .frame(width: widthOfCards)
     }
 }
 

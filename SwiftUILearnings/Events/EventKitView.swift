@@ -15,62 +15,79 @@ struct EventKitView: View {
     
     var body: some View {
         VStack(spacing: 16.0) {
-            Button {
-                if eventManager.eventsAccessStatus != .authorized {
-                    eventManager.requestEventAccess { status, error in
-                        if let error = error {
-                            Logger.eventKit.error("Error occurred while requesting event access : \(error)")
-                        } else {
-                            Logger.eventKit.info("requestEventAccess result : \(status)")
-                        }
-                    }
-                }
-            } label: {
-                Text("Request Event Access")
-            }
-            
-            Button {
-                if eventManager.remindersAccessStatus != .authorized {
-                    eventManager.requestReminderAccess { status, error in
-                        if let error = error {
-                            Logger.eventKit.error("Error occurred while requesting reminder access : \(error)")
-                        } else {
-                            Logger.eventKit.info("requestReminderAccess result : \(status)")
-                        }
-                    }
-                }
-            } label: {
-                Text("Request Reminder Access")
-            }
-            
-            Button {
-                isAnyEventPresent = eventManager.isAnyEventPresent()
-            } label: {
-                Text("Is any event present?")
-                    .alert(Text("Is any event present?"), isPresented: $isAnyEventPresent, actions: {
-                        Button("OK", role: .cancel) {
-                            isAnyEventPresent.toggle()
-                        }
-                    })
-            }
-            
-            
-            Button {
-                isAnyReminderPresent = eventManager.isAnyReminderPresent()
-            } label: {
-                Text("Is any reminder present?")
-                    .alert(Text("Is any reminder present?"), isPresented: $isAnyEventPresent, actions: {
-                        Button("OK", role: .cancel) {
-                            isAnyReminderPresent.toggle()
-                        }
-                    })
-            }
-
+            requestEventAccessButton
+            requestReminderAccessButton
+            isAnyEventPresentButton
+            isAnyReminderPresentButton
         }
     }
     
+    @ViewBuilder
+    private var requestEventAccessButton: some View {
+        Button {
+            if eventManager.eventsAccessStatus != .authorized {
+                eventManager.requestEventAccess { status, error in
+                    if let error = error {
+                        Logger.eventKit.error("Error occurred while requesting event access : \(error)")
+                    } else {
+                        Logger.eventKit.info("requestEventAccess result : \(status)")
+                    }
+                }
+            }
+        } label: {
+            Text("Request Event Access")
+        }
+        .buttonStyle(.fullWidth)
+    }
+    
+    @ViewBuilder
+    private var requestReminderAccessButton: some View {
+        Button {
+            if eventManager.remindersAccessStatus != .authorized {
+                eventManager.requestReminderAccess { status, error in
+                    if let error = error {
+                        Logger.eventKit.error("Error occurred while requesting reminder access : \(error)")
+                    } else {
+                        Logger.eventKit.info("requestReminderAccess result : \(status)")
+                    }
+                }
+            }
+        } label: {
+            Text("Request Reminder Access")
+        }
+        .buttonStyle(.fullWidth)
+    }
+    
+    @ViewBuilder
+    private var isAnyEventPresentButton: some View {
+        Button {
+            isAnyEventPresent = eventManager.isAnyEventPresent()
+        } label: {
+            Text("Is any event present?")
+                .alert(Text("Is any event present?"), isPresented: $isAnyEventPresent, actions: {
+                    Button("OK", role: .cancel) {
+                        isAnyEventPresent.toggle()
+                    }
+                })
+        }
+        .buttonStyle(.fullWidth)
+    }
+    
+    @ViewBuilder
+    private var isAnyReminderPresentButton: some View {
+        Button {
+            isAnyReminderPresent = eventManager.isAnyReminderPresent()
+        } label: {
+            Text("Is any reminder present?")
+                .alert(Text("Is any reminder present?"), isPresented: $isAnyEventPresent, actions: {
+                    Button("OK", role: .cancel) {
+                        isAnyReminderPresent.toggle()
+                    }
+                })
+        }
+        .buttonStyle(.fullWidth)
+    }
 }
-
 
 //#Preview {
 //    EventKitView()

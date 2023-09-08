@@ -18,8 +18,10 @@ struct Carousel<Cards: View>: View {
     
     var body: some View {
         VStack {
-            HStack(alignment: .center, spacing: 16) {
+            HStack(alignment: .center, spacing: viewModel.spacing) {
                 cards
+                    .frame(width: viewModel.cardWidth)
+                    .background(Color.primaryRed)
             }
             .offset(x: viewModel.xOffset * CGFloat(viewModel.currentCard + 1), y: 0)
             .gesture(
@@ -37,8 +39,7 @@ struct Carousel<Cards: View>: View {
                         }
                     })
             )
-            // TODO: Not working pre-iOS17.0
-//            .animation(.spring, value: viewModel.currentCard)
+            .animation(.easeInOut, value: viewModel.currentCard)
             
             HStack {
                 ForEach(0..<viewModel.numberOfCards) { index in
@@ -58,19 +59,22 @@ class CarouselViewModel: ObservableObject {
     let cardWidth: CGFloat
     let numberOfCards: Int
     let spacing: CGFloat
+    let peekWidth: CGFloat
     
-    init(cardWidth: CGFloat, numberOfCards: Int, spacing: CGFloat) {
+    init(cardWidth: CGFloat, numberOfCards: Int, spacing: CGFloat, peekWidth: CGFloat) {
         self.cardWidth = cardWidth
         self.numberOfCards = numberOfCards
         self.spacing = spacing
+        self.peekWidth = peekWidth
     }
+    
     
     var canvasWidth: CGFloat {
         return (cardWidth * CGFloat(numberOfCards)) + (spacing * CGFloat(numberOfCards - 1))
     }
     
     var xOffset: CGFloat {
-        ((canvasWidth - UIScreen.main.bounds.width) / 2) + spacing
+        ((canvasWidth - UIScreen.main.bounds.width) / 2) + spacing + peekWidth
     }
     
     var singleCardMovement: CGFloat {
@@ -82,7 +86,8 @@ struct Carousel_Previews: PreviewProvider {
     static var previews: some View {
         let viewModel = CarouselViewModel(cardWidth: 200.0,
                                           numberOfCards: 5,
-                                          spacing: 16.0)
+                                          spacing: 16.0,
+                                          peekWidth: 8.0)
         Carousel(viewModel: viewModel) {
             Text("Card 1")
             Text("Card 2")
