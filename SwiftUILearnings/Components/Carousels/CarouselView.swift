@@ -14,34 +14,16 @@ struct CarouselView: View {
     
     var body: some View {
         let viewModel = CarouselViewModel(cardWidth: widthOfCards,
-                                          numberOfCards: 5,
+                                          numberOfCards: 3,
                                           spacing: 16.0,
                                           peekWidth: 8.0)
         Carousel(viewModel: viewModel) {
-            card
-            card
-            card
-            card
-            card
+            EmojiCard(emoji: .smilling)
+            EmojiCard(emoji: .grinning)
+            EmojiCard(emoji: .rofl)
+            EmojiCard(emoji: .heartEyes)
+            EmojiCard(emoji: .upsideDown)
         }
-    }
-    
-    @ViewBuilder
-    private var card: some View {
-        HStack {
-            Image(systemName: "smiley.fill")
-                .resizable()
-                .frame(width: 40, height: 40)
-                .foregroundColor(.primaryYellow)
-            VStack(alignment: .leading) {
-                Text("Smile")
-                    .font(.system(size: 20))
-                Text("It's a beautiful day!")
-                    .font(.system(size: 12))
-            }
-            .padding(.leading, 16)
-        }
-        .padding(20)
     }
 }
 
