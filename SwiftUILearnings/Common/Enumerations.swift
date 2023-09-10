@@ -11,16 +11,16 @@
 import Foundation
 
 enum LearningTopics: String, CaseIterable {
-    case geometryReader = "Geometry Reader"
-    case webContentTechnologies = "Web Content Technologies"
+    case augmentedReality = "Augmented Reality"
+    case charts = "Charts"
     case dataEssentials = "Data Essentials"
+    case eventsKit = "Events"
+    case geometryReader = "Geometry Reader"
     case notifications = "Notifications"
     case pdfFiles = "PDF Files"
     case uiComponents = "UI Components"
-    case charts = "Charts"
-    case augmentedReality = "Augmented Reality"
-    case uiGestures = "Gestures"
-    case eventsKit = "Events"
+    case uiGestures = "UI Gestures"
+    case webContentTechnologies = "Web Content Technologies"
 }
 
 enum Components: String, CaseIterable {

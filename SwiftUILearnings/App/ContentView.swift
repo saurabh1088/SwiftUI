@@ -49,8 +49,10 @@ struct ContentView: View {
         // To pop to root view make this empty, refer DataEssentialTertiaryLevelView
         NavigationStack(path: $appStateData.navigationPath) {
             List {
-                ForEach(LearningTopics.allCases, id: \.rawValue) { item in
-                    NavigationLink(item.rawValue, value: item)
+                Section {
+                    ForEach(LearningTopics.allCases, id: \.rawValue) { item in
+                        NavigationLink(item.rawValue, value: item)
+                    }
                 }
             }
             .navigationDestination(for: LearningTopics.self) { topic in
