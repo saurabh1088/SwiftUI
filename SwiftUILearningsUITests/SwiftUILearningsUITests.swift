@@ -41,15 +41,34 @@ final class SwiftUILearningsUITests: XCTestCase {
         let app = XCUIApplication()
         app.launch()
         
-        let geometryReader = app.collectionViews.buttons["Geometry Reader"]
+        let geometryReader = app.collectionViews.buttons["Augmented Reality"]
         XCTAssertTrue(geometryReader.waitForExistence(timeout: 2))
         
-        XCTAssertTrue(app.collectionViews.buttons["Geometry Reader"].exists)
-        XCTAssertTrue(app.collectionViews.buttons["Web Content Technologies"].exists)
+        XCTAssertTrue(app.collectionViews.buttons["Augmented Reality"].exists)
+        XCTAssertTrue(app.collectionViews.buttons["Charts"].exists)
         XCTAssertTrue(app.collectionViews.buttons["Data Essentials"].exists)
+        XCTAssertTrue(app.collectionViews.buttons["Events"].exists)
+        XCTAssertTrue(app.collectionViews.buttons["Geometry Reader"].exists)
         XCTAssertTrue(app.collectionViews.buttons["Notifications"].exists)
         XCTAssertTrue(app.collectionViews.buttons["PDF Files"].exists)
         XCTAssertTrue(app.collectionViews.buttons["UI Components"].exists)
+        XCTAssertTrue(app.collectionViews.buttons["UI Gestures"].exists)
+        XCTAssertTrue(app.collectionViews.buttons["Web Content Technologies"].exists)
+        
+        XCTAssertEqual(10, app.collectionViews.buttons.count)
+    }
+    
+    func test_SelectOption_AugmentedReality() {
+        let app = XCUIApplication()
+        app.launch()
+        
+        let augmentedRealityOption = app.collectionViews.buttons["Augmented Reality"]
+        XCTAssertTrue(augmentedRealityOption.exists)
+        augmentedRealityOption.tap()
+        
+        let backButtonToLearningsView = app.navigationBars["Augmented Reality"].buttons["Learnings"]
+        XCTAssertTrue(backButtonToLearningsView.exists)
+        backButtonToLearningsView.tap()
     }
     
     func test_SelectOption_GeometryReader() {

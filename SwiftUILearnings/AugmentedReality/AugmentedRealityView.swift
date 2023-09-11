@@ -12,6 +12,7 @@ struct AugmentedRealityView: View {
     
     var body: some View {
         AugmentedRealityContainerView(arViewModel: arViewModel)
+            .navigationTitle(LearningTopics.augmentedReality.rawValue)
             .onDisappear {
                 arViewModel.pauseSession()
             }
