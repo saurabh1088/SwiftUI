@@ -14,7 +14,7 @@ struct CarouselView: View {
     
     var body: some View {
         let viewModel = CarouselViewModel(cardWidth: widthOfCards,
-                                          numberOfCards: 3,
+                                          numberOfCards: 5,
                                           spacing: 16.0,
                                           peekWidth: 8.0)
         Carousel(viewModel: viewModel) {

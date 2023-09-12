@@ -23,7 +23,7 @@ struct Carousel<Cards: View>: View {
                     .frame(width: viewModel.cardWidth)
                     .background(Color.primaryRed)
             }
-            .offset(x: viewModel.xOffset * CGFloat(viewModel.currentCard + 1), y: 0)
+            .offset(x: viewModel.relevantXOffset, y: 0)
             .gesture(
                 DragGesture()
                     .onChanged({ value in
@@ -78,7 +78,11 @@ class CarouselViewModel: ObservableObject {
     }
     
     var singleCardMovement: CGFloat {
-        cardWidth + spacing
+        cardWidth + peekWidth + peekWidth
+    }
+    
+    var relevantXOffset: CGFloat {
+        xOffset + (singleCardMovement * CGFloat(currentCard))
     }
 }
 
