@@ -12,6 +12,7 @@ struct EventKitView: View {
     @StateObject private var eventManager = EventsManager()
     @State private var isAnyEventPresent = false
     @State private var isAnyReminderPresent = false
+    @State private var showEditEventView = false
     
     var body: some View {
         VStack(spacing: 16.0) {
@@ -19,6 +20,7 @@ struct EventKitView: View {
             requestReminderAccessButton
             isAnyEventPresentButton
             isAnyReminderPresentButton
+            showEditEventViewButton
         }
     }
     
@@ -86,6 +88,19 @@ struct EventKitView: View {
                 })
         }
         .buttonStyle(.fullWidth)
+    }
+    
+    @ViewBuilder
+    private var showEditEventViewButton: some View {
+        Button {
+            showEditEventView.toggle()
+        } label: {
+            Text("Show edit event view")
+        }
+        .sheet(isPresented: $showEditEventView) {
+            EventEditViewRepresentable(eventStore: eventManager.eventStore)
+        }
+
     }
 }
 

@@ -11,7 +11,7 @@ import Foundation
 
 class EventsManager: ObservableObject {
     
-    private var eventStore: EKEventStore = EKEventStore()
+    var eventStore: EKEventStore = EKEventStore()
     
     var eventsAccessStatus: EKAuthorizationStatus {
         return EKEventStore.authorizationStatus(for: .event)
