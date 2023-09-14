@@ -11,12 +11,16 @@ import SwiftUI
 
 struct EventEditViewRepresentable: UIViewControllerRepresentable {
     typealias UIViewControllerType = EKEventEditViewController
-    let eventStore: EKEventStore
+    let eventManager: EventsManager
     @Environment(\.presentationMode) var presentationMode
     
     func makeUIViewController(context: UIViewControllerRepresentableContext<EventEditViewRepresentable>) -> EKEventEditViewController {
         let ekEventEditViewController = EKEventEditViewController()
-        ekEventEditViewController.eventStore = eventStore
+        ekEventEditViewController.eventStore = eventManager.eventStore
+        ekEventEditViewController.editViewDelegate = context.coordinator
+        ekEventEditViewController.event = eventManager.createEvent(title: "New event",
+                                                                   startDate: Date(),
+                                                                   endDate: Date())
         return ekEventEditViewController
     }
     

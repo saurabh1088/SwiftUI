@@ -66,10 +66,8 @@ struct EventKitView: View {
             isAnyEventPresent = eventManager.isAnyEventPresent()
         } label: {
             Text("Is any event present?")
-                .alert(Text("Is any event present?"), isPresented: $isAnyEventPresent, actions: {
-                    Button("OK", role: .cancel) {
-                        isAnyEventPresent.toggle()
-                    }
+                .sheet(isPresented: $isAnyEventPresent, content: {
+                    showEvents
                 })
         }
         .buttonStyle(.fullWidth)
@@ -81,7 +79,7 @@ struct EventKitView: View {
             isAnyReminderPresent = eventManager.isAnyReminderPresent()
         } label: {
             Text("Is any reminder present?")
-                .alert(Text("Is any reminder present?"), isPresented: $isAnyEventPresent, actions: {
+                .alert(Text("Is any reminder present?"), isPresented: $isAnyReminderPresent, actions: {
                     Button("OK", role: .cancel) {
                         isAnyReminderPresent.toggle()
                     }
@@ -97,10 +95,18 @@ struct EventKitView: View {
         } label: {
             Text("Show edit event view")
         }
+        .buttonStyle(.fullWidth)
         .sheet(isPresented: $showEditEventView) {
-            EventEditViewRepresentable(eventStore: eventManager.eventStore)
+            EventEditViewRepresentable(eventManager: eventManager)
         }
 
+    }
+    
+    @ViewBuilder
+    private var showEvents: some View {
+        VStack {
+            Text("Yes, some events are present")
+        }
     }
 }
 

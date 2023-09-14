@@ -8,15 +8,12 @@
 import SwiftUI
 
 struct CarouselView: View {
-    var widthOfCards: CGFloat {
-        UIScreen.main.bounds.size.width - 48.0
-    }
+    @StateObject private var viewModel = CarouselViewModel(singleCardWidth: UIScreen.main.bounds.size.width - 48.0,
+                                                           numberOfCards: 5,
+                                                           spacingBetweenCards: 16.0,
+                                                           visibleWidthOfHiddenCardAroundEdges: 8.0)
     
     var body: some View {
-        let viewModel = CarouselViewModel(cardWidth: widthOfCards,
-                                          numberOfCards: 5,
-                                          spacing: 16.0,
-                                          peekWidth: 8.0)
         Carousel(viewModel: viewModel) {
             EmojiCard(emoji: .smilling)
             EmojiCard(emoji: .grinning)

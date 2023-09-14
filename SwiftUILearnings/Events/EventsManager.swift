@@ -17,18 +17,8 @@ class EventsManager: ObservableObject {
         return EKEventStore.authorizationStatus(for: .event)
     }
     
-    var remindersAccessStatus: EKAuthorizationStatus {
-        return EKEventStore.authorizationStatus(for: .reminder)
-    }
-    
     func requestEventAccess(completion: @escaping EKEventStoreRequestAccessCompletionHandler) {
         eventStore.requestAccess(to: EKEntityType.event) { (accessGranted, error) in
-            completion(accessGranted, error)
-        }
-    }
-    
-    func requestReminderAccess(completion: @escaping EKEventStoreRequestAccessCompletionHandler) {
-        eventStore.requestAccess(to: EKEntityType.reminder) { (accessGranted, error) in
             completion(accessGranted, error)
         }
     }
@@ -40,20 +30,8 @@ class EventsManager: ObservableObject {
         return !eventStore.events(matching: eventPredicate).isEmpty
     }
     
-    func isAnyReminderPresent() -> Bool {
-        var isAnyReminderPresent = false
-        if let calendar = eventStore.defaultCalendarForNewReminders() {
-            let reminderPredicate = eventStore.predicateForReminders(in: [calendar])
-            eventStore.fetchReminders(matching: reminderPredicate) { reminders in
-                guard let reminders = reminders else { return }
-                isAnyReminderPresent = !reminders.isEmpty
-            }
-        }
-        return isAnyReminderPresent
-    }
-    
     func createEvent(title: String, startDate: Date, endDate: Date) -> EKEvent {
-        var event = EKEvent(eventStore: eventStore)
+        let event = EKEvent(eventStore: eventStore)
         event.calendar = eventStore.defaultCalendarForNewEvents
         event.title = title
         event.startDate = startDate
@@ -75,8 +53,34 @@ class EventsManager: ObservableObject {
             } catch {
                 Logger.eventKit.error("Error occurred while saving event to eventStore")
             }
-            
+        @unknown default:
+            fatalError()
+        }
+    }
+}
+
+// MARK: EventsManager extension - Reminders
+extension EventsManager {
+    
+    var remindersAccessStatus: EKAuthorizationStatus {
+        return EKEventStore.authorizationStatus(for: .reminder)
+    }
+    
+    func requestReminderAccess(completion: @escaping EKEventStoreRequestAccessCompletionHandler) {
+        eventStore.requestAccess(to: EKEntityType.reminder) { (accessGranted, error) in
+            completion(accessGranted, error)
         }
     }
     
+    func isAnyReminderPresent() -> Bool {
+        var isAnyReminderPresent = false
+        if let calendar = eventStore.defaultCalendarForNewReminders() {
+            let reminderPredicate = eventStore.predicateForReminders(in: [calendar])
+            eventStore.fetchReminders(matching: reminderPredicate) { reminders in
+                guard let reminders = reminders else { return }
+                isAnyReminderPresent = !reminders.isEmpty
+            }
+        }
+        return isAnyReminderPresent
+    }
 }

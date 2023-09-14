@@ -18,9 +18,9 @@ struct Carousel<Cards: View>: View {
     
     var body: some View {
         VStack {
-            HStack(alignment: .center, spacing: viewModel.spacing) {
+            HStack(alignment: .center, spacing: viewModel.spacingBetweenCards) {
                 cards
-                    .frame(width: viewModel.cardWidth)
+                    .frame(width: viewModel.singleCardWidth)
                     .background(Color.primaryRed)
             }
             .offset(x: viewModel.relevantXOffset, y: 0)
@@ -31,71 +31,31 @@ struct Carousel<Cards: View>: View {
                     })
                     .onEnded({ value in
                         if value.translation.width > 20 {
-                            viewModel.currentCard = viewModel.currentCard + 1
+                            viewModel.displayedCardIndex = viewModel.displayedCardIndex - 1
                         }
                         
                         if value.translation.width < -20 {
-                            viewModel.currentCard = viewModel.currentCard - 1
+                            viewModel.displayedCardIndex = viewModel.displayedCardIndex + 1
                         }
                     })
             )
-            .animation(.easeInOut, value: viewModel.currentCard)
-            
-            HStack {
-                ForEach(0..<viewModel.numberOfCards) { index in
-                    Circle()
-                        .frame(width: 10, height: 10)
-                        .onTapGesture {
-                            viewModel.currentCard = index
-                        }
-                }
-            }
+            .animation(.easeInOut, value: viewModel.displayedCardIndex)
         }
-    }
-}
-
-class CarouselViewModel: ObservableObject {
-    @Published var currentCard = 0
-    let cardWidth: CGFloat
-    let numberOfCards: Int
-    let spacing: CGFloat
-    let peekWidth: CGFloat
-    
-    init(cardWidth: CGFloat, numberOfCards: Int, spacing: CGFloat, peekWidth: CGFloat) {
-        self.cardWidth = cardWidth
-        self.numberOfCards = numberOfCards
-        self.spacing = spacing
-        self.peekWidth = peekWidth
-    }
-    
-    
-    var canvasWidth: CGFloat {
-        return (cardWidth * CGFloat(numberOfCards)) + (spacing * CGFloat(numberOfCards - 1))
-    }
-    
-    var xOffset: CGFloat {
-        ((canvasWidth - UIScreen.main.bounds.width) / 2) + spacing + peekWidth
-    }
-    
-    var singleCardMovement: CGFloat {
-        cardWidth + peekWidth + peekWidth
-    }
-    
-    var relevantXOffset: CGFloat {
-        xOffset + (singleCardMovement * CGFloat(currentCard))
     }
 }
 
 struct Carousel_Previews: PreviewProvider {
     static var previews: some View {
-        let viewModel = CarouselViewModel(cardWidth: 200.0,
+        let viewModel = CarouselViewModel(singleCardWidth: 200.0,
                                           numberOfCards: 5,
-                                          spacing: 16.0,
-                                          peekWidth: 8.0)
+                                          spacingBetweenCards: 20.0,
+                                          visibleWidthOfHiddenCardAroundEdges: 5.0)
         Carousel(viewModel: viewModel) {
-            Text("Card 1")
-            Text("Card 2")
-            Text("Card 3")
+            EmojiCard(emoji: .smilling)
+            EmojiCard(emoji: .grinning)
+            EmojiCard(emoji: .rofl)
+            EmojiCard(emoji: .heartEyes)
+            EmojiCard(emoji: .upsideDown)
         }
     }
 }

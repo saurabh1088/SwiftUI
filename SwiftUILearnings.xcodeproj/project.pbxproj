@@ -62,6 +62,7 @@
 		B7C7E24D29E9C22A0089E0C1 /* CustomButtonStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C7E24C29E9C22A0089E0C1 /* CustomButtonStyles.swift */; };
 		B7D9AAED29FAF0C2001F5BFC /* PDFDocumentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D9AAEC29FAF0C2001F5BFC /* PDFDocumentView.swift */; };
 		B7E129F729B4DEA7002E6B54 /* SwiftUIWKWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E129F629B4DEA7002E6B54 /* SwiftUIWKWebView.swift */; };
+		B7E136EC2AB33D0300674C1F /* CarouselViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E136EB2AB33D0300674C1F /* CarouselViewModel.swift */; };
 		B7E24D5F2A89000700790D1A /* ChartsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E24D5E2A89000700790D1A /* ChartsView.swift */; };
 		B7E24D632A8901A600790D1A /* ChartsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E24D622A8901A600790D1A /* ChartsModel.swift */; };
 		B7E24D652A89037900790D1A /* ChartsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E24D642A89037900790D1A /* ChartsViewModel.swift */; };
@@ -146,6 +147,7 @@
 		B7C7E24C29E9C22A0089E0C1 /* CustomButtonStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButtonStyles.swift; sourceTree = "<group>"; };
 		B7D9AAEC29FAF0C2001F5BFC /* PDFDocumentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFDocumentView.swift; sourceTree = "<group>"; };
 		B7E129F629B4DEA7002E6B54 /* SwiftUIWKWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIWKWebView.swift; sourceTree = "<group>"; };
+		B7E136EB2AB33D0300674C1F /* CarouselViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselViewModel.swift; sourceTree = "<group>"; };
 		B7E24D5E2A89000700790D1A /* ChartsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsView.swift; sourceTree = "<group>"; };
 		B7E24D622A8901A600790D1A /* ChartsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsModel.swift; sourceTree = "<group>"; };
 		B7E24D642A89037900790D1A /* ChartsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsViewModel.swift; sourceTree = "<group>"; };
@@ -186,6 +188,7 @@
 				B72C59A42AA6273300C9824E /* CarouselView.swift */,
 				B7B189E22AA6E3B00046AE65 /* Carousel.swift */,
 				B7BDAB962AAC451A007D237B /* EmojiCard.swift */,
+				B7E136EB2AB33D0300674C1F /* CarouselViewModel.swift */,
 			);
 			path = Carousels;
 			sourceTree = "<group>";
@@ -614,6 +617,7 @@
 				B72C5D2D2A30CA2600E77866 /* HorizontalStackView.swift in Sources */,
 				B7E24D632A8901A600790D1A /* ChartsModel.swift in Sources */,
 				B76A07012A07407700974AD3 /* ViewBuilderMaxLimitView.swift in Sources */,
+				B7E136EC2AB33D0300674C1F /* CarouselViewModel.swift in Sources */,
 				B7C7E24D29E9C22A0089E0C1 /* CustomButtonStyles.swift in Sources */,
 				B787A2DB29B115920090FCF7 /* ContentView.swift in Sources */,
 				B7C05D392A12A90C00AD7912 /* Enumerations.swift in Sources */,
