@@ -9,10 +9,22 @@ import OSLog
 import EventKit
 import Foundation
 
+/// `EventKit` is framework provided by Apple for helping apps in cases where requirement is to :
+/// - Create
+/// - View
+/// - Edit
+/// a Calendar OR Reminder Event
+///
+/// Using `EventKit` framework one can get access to calendar and reminders data. This data can be retrieved
+/// to view or edit, or one can also add events to calendar or reminders as per apps requirements.
 class EventsManager: ObservableObject {
     
+    /// `EKEventStore` is the point of contact for the app which wants to access calendat or reminders data.
+    /// So here our SwiftUILearnings app needs to request calendat and reminders data and for that purpose
+    /// it needs to contact `EKEventStore`
     var eventStore: EKEventStore = EKEventStore()
     
+    /// `EKAuthorizationStatus` represents the current authorization status for the app.
     var eventsAccessStatus: EKAuthorizationStatus {
         return EKEventStore.authorizationStatus(for: .event)
     }
