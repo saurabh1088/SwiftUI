@@ -16,30 +16,24 @@ struct EventKitView: View {
     
     var body: some View {
         VStack(spacing: 16.0) {
-            requestEventAccessButton
-            requestReminderAccessButton
+            addEventToCalendarButton
             isAnyEventPresentButton
             isAnyReminderPresentButton
-            showEditEventViewButton
         }
     }
     
     @ViewBuilder
-    private var requestEventAccessButton: some View {
+    private var addEventToCalendarButton: some View {
         Button {
-            if eventManager.eventsAccessStatus != .authorized {
-                eventManager.requestEventAccess { status, error in
-                    if let error = error {
-                        Logger.eventKit.error("Error occurred while requesting event access : \(error)")
-                    } else {
-                        Logger.eventKit.info("requestEventAccess result : \(status)")
-                    }
-                }
-            }
+            showEditEventView = eventManager.canAddEventsToCalendar()
         } label: {
-            Text("Request Event Access")
+            Text("Add event to calendar")
         }
         .buttonStyle(.fullWidth)
+        .sheet(isPresented: $showEditEventView) {
+            EventEditViewRepresentable(eventManager: eventManager)
+        }
+
     }
     
     @ViewBuilder
@@ -86,20 +80,6 @@ struct EventKitView: View {
                 })
         }
         .buttonStyle(.fullWidth)
-    }
-    
-    @ViewBuilder
-    private var showEditEventViewButton: some View {
-        Button {
-            showEditEventView.toggle()
-        } label: {
-            Text("Show edit event view")
-        }
-        .buttonStyle(.fullWidth)
-        .sheet(isPresented: $showEditEventView) {
-            EventEditViewRepresentable(eventManager: eventManager)
-        }
-
     }
     
     @ViewBuilder

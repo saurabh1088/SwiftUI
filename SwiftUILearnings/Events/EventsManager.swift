@@ -29,17 +29,55 @@ class EventsManager: ObservableObject {
         return EKEventStore.authorizationStatus(for: .event)
     }
     
+    func canAddEventsToCalendar() -> Bool {
+        var canAddToCalendar = false
+        switch eventsAccessStatus {
+        case .notDetermined:
+            requestEventAccess { status, error in
+                if let error = error {
+                    Logger.eventKit.error("Error occurred while requesting event access : \(error)")
+                    canAddToCalendar = false
+                } else {
+                    Logger.eventKit.info("requestEventAccess result : \(status)")
+                    canAddToCalendar = true
+                }
+            }
+            return canAddToCalendar
+        case .restricted:
+            return canAddToCalendar
+        case .denied:
+            return canAddToCalendar
+        case .authorized:
+            return canAddToCalendar
+        @unknown default:
+            return canAddToCalendar
+        }
+    }
+    
     func requestEventAccess(completion: @escaping EKEventStoreRequestAccessCompletionHandler) {
-        eventStore.requestAccess(to: EKEntityType.event) { (accessGranted, error) in
-            completion(accessGranted, error)
+        if eventsAccessStatus != .authorized {
+            eventStore.requestAccess(to: EKEntityType.event) { (accessGranted, error) in
+                completion(accessGranted, error)
+            }
         }
     }
     
     func isAnyEventPresent() -> Bool {
-        let eventPredicate = eventStore.predicateForEvents(withStart: Calendar.current.date(byAdding: .day, value: -10, to: Date())!,
-                                                      end: Calendar.current.date(byAdding: .day, value: 10, to: Date())!,
-                                                      calendars: nil)
-        return !eventStore.events(matching: eventPredicate).isEmpty
+        switch eventsAccessStatus {
+        case .notDetermined:
+            return false
+        case .restricted:
+            return false
+        case .denied:
+            return false
+        case .authorized:
+            let eventPredicate = eventStore.predicateForEvents(withStart: Calendar.current.date(byAdding: .day, value: -10, to: Date())!,
+                                                          end: Calendar.current.date(byAdding: .day, value: 10, to: Date())!,
+                                                          calendars: nil)
+            return !eventStore.events(matching: eventPredicate).isEmpty
+        @unknown default:
+            return false
+        }
     }
     
     func createEvent(title: String, startDate: Date, endDate: Date) -> EKEvent {
@@ -54,7 +92,15 @@ class EventsManager: ObservableObject {
     func addToCalendar(event: EKEvent) {
         switch eventsAccessStatus {
         case .notDetermined:
-            Logger.eventKit.info("eventsAccessStatus is notDetermined can't add event to calendar")
+            Logger.eventKit.info("eventsAccessStatus is notDetermined. Requesting user for access")
+            requestEventAccess { status, error in
+                if let error = error {
+                    Logger.eventKit.error("Error occurred while requesting event access : \(error)")
+                } else {
+                    Logger.eventKit.info("requestEventAccess result : \(status)")
+                    self.addToCalendar(event: event)
+                }
+            }
         case .restricted:
             Logger.eventKit.info("eventsAccessStatus is restricted can't add event to calendar")
         case .denied:
