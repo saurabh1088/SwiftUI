@@ -13,6 +13,7 @@ struct EventKitView: View {
     @State private var isAnyEventPresent = false
     @State private var isAnyReminderPresent = false
     @State private var showEditEventView = false
+    @State private var showAddEventAlert = false
     
     var body: some View {
         VStack(spacing: 16.0) {
@@ -25,13 +26,25 @@ struct EventKitView: View {
     @ViewBuilder
     private var addEventToCalendarButton: some View {
         Button {
-            showEditEventView = eventManager.canAddEventsToCalendar()
+            eventManager.addEventToCalendar()
         } label: {
             Text("Add event to calendar")
         }
         .buttonStyle(.fullWidth)
         .sheet(isPresented: $showEditEventView) {
             EventEditViewRepresentable(eventManager: eventManager)
+        }
+        .alert(eventManager.addEventToCalendarStatus.alertTitle, isPresented: $showAddEventAlert, actions: {
+            Button("OK", role: .cancel) { }
+        }, message: {
+            Text(eventManager.addEventToCalendarStatus.alertMessage)
+        })
+        .onChange(of: eventManager.addEventToCalendarStatus) { newValue in
+            if newValue == .success {
+                showEditEventView.toggle()
+            } else {
+                showAddEventAlert.toggle()
+            }
         }
 
     }

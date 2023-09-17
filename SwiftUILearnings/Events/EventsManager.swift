@@ -19,6 +19,8 @@ import Foundation
 /// to view or edit, or one can also add events to calendar or reminders as per apps requirements.
 class EventsManager: ObservableObject {
     
+    @Published var addEventToCalendarStatus: AddEventToCalendarStatus = .none
+    
     /// `EKEventStore` is the point of contact for the app which wants to access calendat or reminders data.
     /// So here our SwiftUILearnings app needs to request calendat and reminders data and for that purpose
     /// it needs to contact `EKEventStore`
@@ -89,6 +91,28 @@ class EventsManager: ObservableObject {
         return event
     }
     
+    func addEventToCalendar() {
+        switch eventsAccessStatus {
+        case .notDetermined:
+            requestEventAccess { status, error in
+                if let error = error {
+                    Logger.eventKit.error("Error occurred while requesting event access : \(error)")
+                    self.addEventToCalendarStatus = .accessAttemptFailed
+                } else {
+                    Logger.eventKit.info("requestEventAccess result : \(status)")
+                }
+            }
+        case .restricted:
+            addEventToCalendarStatus = .accessRestricted
+        case .denied:
+            addEventToCalendarStatus = .accessDenied
+        case .authorized:
+            addEventToCalendarStatus = .success
+        @unknown default:
+            fatalError()
+        }
+    }
+    
     func addToCalendar(event: EKEvent) {
         switch eventsAccessStatus {
         case .notDetermined:
@@ -141,4 +165,29 @@ extension EventsManager {
         }
         return isAnyReminderPresent
     }
+}
+
+enum AddEventToCalendarStatus {
+    case accessRestricted
+    case accessDenied
+    case accessAttemptFailed
+    case none
+    case success
+    
+    var alertMessage: String {
+        switch self {
+        case .accessRestricted:
+            return "SwiftUILearnings is restricted to access calendar"
+        case .accessDenied:
+            return "SwiftUILearnings is denied access to calendar"
+        case .accessAttemptFailed:
+            return "SwiftUILearnings tried requesting access to calendar but attempt failed"
+        case .success:
+            return "SwiftUILearnings successfully requested access"
+        case .none:
+            return String()
+        }
+    }
+    
+    var alertTitle: String { "Add event to calendar" }
 }
