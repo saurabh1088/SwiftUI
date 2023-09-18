@@ -18,7 +18,7 @@ struct EventKitView: View {
     var body: some View {
         VStack(spacing: 16.0) {
             addEventToCalendarButton
-            isAnyEventPresentButton
+            showEventsAddedToCalendar
             isAnyReminderPresentButton
         }
     }
@@ -68,11 +68,11 @@ struct EventKitView: View {
     }
     
     @ViewBuilder
-    private var isAnyEventPresentButton: some View {
+    private var showEventsAddedToCalendar: some View {
         Button {
             isAnyEventPresent = eventManager.isAnyEventPresent()
         } label: {
-            Text("Is any event present?")
+            Text("Events in 🗓️")
                 .sheet(isPresented: $isAnyEventPresent, content: {
                     showEvents
                 })
@@ -98,7 +98,26 @@ struct EventKitView: View {
     @ViewBuilder
     private var showEvents: some View {
         VStack {
-            Text("Yes, some events are present")
+            ForEach(eventManager.allEventsInRange(), id: \.self) { event in
+                HStack(alignment: .top, spacing: 20) {
+                    Image(systemName: "calendar")
+                        .resizable()
+                        .frame(width: 100, height: 100)
+                        .foregroundColor(.primaryRed)
+                    Spacer()
+                    VStack(alignment: .leading) {
+                        Text(event.title)
+                            .font(.system(size: 30))
+                        Text(event.startDateString)
+                            .font(.system(size: 20))
+                        Text(event.endDateString)
+                            .font(.system(size: 20))
+                    }
+                }
+                .padding(20)
+                .frame(width: UIScreen.main.bounds.size.width - 32)
+                .background(Color.primaryYellow)
+            }
         }
     }
 }

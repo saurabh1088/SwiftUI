@@ -64,6 +64,15 @@ class EventsManager: ObservableObject {
         }
     }
     
+    func allEventsInRange() -> [EKEvent] {
+        let startDate = Calendar.current.date(byAdding: .day, value: -10, to: Date())!
+        let endDate = Calendar.current.date(byAdding: .day, value: 10, to: Date())!
+        let eventPredicate = eventStore.predicateForEvents(withStart: startDate,
+                                                           end: endDate,
+                                                           calendars: nil)
+        return eventStore.events(matching: eventPredicate)
+    }
+    
     func isAnyEventPresent() -> Bool {
         switch eventsAccessStatus {
         case .notDetermined:
@@ -73,10 +82,7 @@ class EventsManager: ObservableObject {
         case .denied:
             return false
         case .authorized:
-            let eventPredicate = eventStore.predicateForEvents(withStart: Calendar.current.date(byAdding: .day, value: -10, to: Date())!,
-                                                          end: Calendar.current.date(byAdding: .day, value: 10, to: Date())!,
-                                                          calendars: nil)
-            return !eventStore.events(matching: eventPredicate).isEmpty
+            return !allEventsInRange().isEmpty
         @unknown default:
             return false
         }
@@ -190,4 +196,20 @@ enum AddEventToCalendarStatus {
     }
     
     var alertTitle: String { "Add event to calendar" }
+}
+
+extension EKEvent {
+    var dateFormatter: DateFormatter {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "MMM d, h:mm a"
+        return formatter
+    }
+    
+    var endDateString: String {
+        dateFormatter.string(from: endDate)
+    }
+    
+    var startDateString: String {
+        dateFormatter.string(from: startDate)
+    }
 }
