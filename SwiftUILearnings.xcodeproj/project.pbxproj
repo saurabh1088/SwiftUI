@@ -242,8 +242,8 @@
 		B782F7CC2AA8797100FB7751 /* App */ = {
 			isa = PBXGroup;
 			children = (
-				B787A2D829B115920090FCF7 /* SwiftUILearningsApp.swift */,
 				B787A2DA29B115920090FCF7 /* ContentView.swift */,
+				B787A2D829B115920090FCF7 /* SwiftUILearningsApp.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -251,9 +251,9 @@
 		B782F7CD2AA8C0DE00FB7751 /* Events */ = {
 			isa = PBXGroup;
 			children = (
+				B740FD702AB0E0C2009835D9 /* EventEditViewRepresentable.swift */,
 				B782F7CE2AA8C10000FB7751 /* EventKitView.swift */,
 				B782F7D02AA8C5AB00FB7751 /* EventsManager.swift */,
-				B740FD702AB0E0C2009835D9 /* EventEditViewRepresentable.swift */,
 			);
 			path = Events;
 			sourceTree = "<group>";
@@ -358,8 +358,8 @@
 			children = (
 				B7A76AB329B2601F00163BDC /* BasicWebContentTechnologiesView.swift */,
 				B76E261829B34F6D007977AB /* OpenURLsExternalBrowserExamplesView.swift */,
-				B7B1DCBA29B3BFDB00FFC805 /* SafariWebView.swift */,
 				B7B1DCBC29B3C20700FFC805 /* OpenURLsInAppBrowserExamplesView.swift */,
+				B7B1DCBA29B3BFDB00FFC805 /* SafariWebView.swift */,
 				B7E129F629B4DEA7002E6B54 /* SwiftUIWKWebView.swift */,
 			);
 			path = WebContentTechnologies;
@@ -394,14 +394,14 @@
 		B7C7E24829E9C0920089E0C1 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				B76A06FA2A073FC100974AD3 /* BottomSheetView.swift */,
 				B7C7E24929E9C0B80089E0C1 /* Buttons */,
 				B72C59A32AA6271200C9824E /* Carousels */,
-				B7E4BE242AAE14F6003C8392 /* Stacks */,
-				B7C795A72A022D3D0092619B /* UIComponentsView.swift */,
-				B76A06FA2A073FC100974AD3 /* BottomSheetView.swift */,
-				B7B8F7EB2A26744F00FE32A7 /* ListView.swift */,
-				B72067662A333394009A785D /* TextInputView.swift */,
 				B73FBB382A780D47004A5334 /* ComponentScrollView.swift */,
+				B7B8F7EB2A26744F00FE32A7 /* ListView.swift */,
+				B7E4BE242AAE14F6003C8392 /* Stacks */,
+				B72067662A333394009A785D /* TextInputView.swift */,
+				B7C795A72A022D3D0092619B /* UIComponentsView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -426,8 +426,8 @@
 		B7E24D5D2A88FFED00790D1A /* Charts */ = {
 			isa = PBXGroup;
 			children = (
-				B7E24D5E2A89000700790D1A /* ChartsView.swift */,
 				B7E24D622A8901A600790D1A /* ChartsModel.swift */,
+				B7E24D5E2A89000700790D1A /* ChartsView.swift */,
 				B7E24D642A89037900790D1A /* ChartsViewModel.swift */,
 			);
 			path = Charts;
