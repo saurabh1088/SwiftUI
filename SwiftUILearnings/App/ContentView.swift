@@ -77,6 +77,8 @@ struct ContentView: View {
                     GesturesView()
                 case .eventsKit:
                     EventKitView()
+                case .testPitch:
+                    TestPitchView()
                 }
             }
             .navigationTitle("Learnings")
