@@ -18,6 +18,7 @@
 		B7299E9B29E5D73800A3A989 /* AudioVideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7299E9A29E5D73800A3A989 /* AudioVideoView.swift */; };
 		B72C59A52AA6273300C9824E /* CarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72C59A42AA6273300C9824E /* CarouselView.swift */; };
 		B72C5D2D2A30CA2600E77866 /* HorizontalStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72C5D2C2A30CA2600E77866 /* HorizontalStackView.swift */; };
+		B73A9EAB2ACF32760032E6E5 /* SpeechViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73A9EAA2ACF32760032E6E5 /* SpeechViewModel.swift */; };
 		B73FBB392A780D47004A5334 /* ComponentScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73FBB382A780D47004A5334 /* ComponentScrollView.swift */; };
 		B740FD712AB0E0C2009835D9 /* EventEditViewRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B740FD702AB0E0C2009835D9 /* EventEditViewRepresentable.swift */; };
 		B74A6B4F2ACDEC8200CA5C35 /* SpeechView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74A6B4E2ACDEC8200CA5C35 /* SpeechView.swift */; };
@@ -130,6 +131,7 @@
 		B7299E9A29E5D73800A3A989 /* AudioVideoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioVideoView.swift; sourceTree = "<group>"; };
 		B72C59A42AA6273300C9824E /* CarouselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselView.swift; sourceTree = "<group>"; };
 		B72C5D2C2A30CA2600E77866 /* HorizontalStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalStackView.swift; sourceTree = "<group>"; };
+		B73A9EAA2ACF32760032E6E5 /* SpeechViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechViewModel.swift; sourceTree = "<group>"; };
 		B73FBB382A780D47004A5334 /* ComponentScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComponentScrollView.swift; sourceTree = "<group>"; };
 		B740FD702AB0E0C2009835D9 /* EventEditViewRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventEditViewRepresentable.swift; sourceTree = "<group>"; };
 		B74A6B4E2ACDEC8200CA5C35 /* SpeechView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechView.swift; sourceTree = "<group>"; };
@@ -250,6 +252,7 @@
 			isa = PBXGroup;
 			children = (
 				B74A6B4E2ACDEC8200CA5C35 /* SpeechView.swift */,
+				B73A9EAA2ACF32760032E6E5 /* SpeechViewModel.swift */,
 			);
 			path = Speech;
 			sourceTree = "<group>";
@@ -745,6 +748,7 @@
 				B7E24D5F2A89000700790D1A /* ChartsView.swift in Sources */,
 				B72C5D2D2A30CA2600E77866 /* HorizontalStackView.swift in Sources */,
 				B7E24D632A8901A600790D1A /* ChartsModel.swift in Sources */,
+				B73A9EAB2ACF32760032E6E5 /* SpeechViewModel.swift in Sources */,
 				B76A07012A07407700974AD3 /* ViewBuilderMaxLimitView.swift in Sources */,
 				B7E136EC2AB33D0300674C1F /* CarouselViewModel.swift in Sources */,
 				B7C7E24D29E9C22A0089E0C1 /* CustomButtonStyles.swift in Sources */,
@@ -949,7 +953,9 @@
 				INFOPLIST_FILE = SwiftUILearnings/Info.plist;
 				INFOPLIST_KEY_NSCalendarsUsageDescription = 1.0;
 				INFOPLIST_KEY_NSCameraUsageDescription = "Using camera to explore ARKit";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Audio is recorded to convert speech to text.";
 				INFOPLIST_KEY_NSRemindersUsageDescription = "Reminders Usage Description";
+				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "Show recognized speech to text on view.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -983,7 +989,9 @@
 				INFOPLIST_FILE = SwiftUILearnings/Info.plist;
 				INFOPLIST_KEY_NSCalendarsUsageDescription = 1.0;
 				INFOPLIST_KEY_NSCameraUsageDescription = "Using camera to explore ARKit";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Audio is recorded to convert speech to text.";
 				INFOPLIST_KEY_NSRemindersUsageDescription = "Reminders Usage Description";
+				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "Show recognized speech to text on view.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
