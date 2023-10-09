@@ -129,6 +129,8 @@
 		B72067662A333394009A785D /* TextInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextInputView.swift; sourceTree = "<group>"; };
 		B72395BD2A98FDB1005BD060 /* sampleScene.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = sampleScene.scn; sourceTree = "<group>"; };
 		B7299E9A29E5D73800A3A989 /* AudioVideoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioVideoView.swift; sourceTree = "<group>"; };
+		B72A56452AD47BA800301595 /* SwiftUILearnings.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SwiftUILearnings.entitlements; sourceTree = "<group>"; };
+		B72A56462AD47BEC00301595 /* SwiftUILearningsWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SwiftUILearningsWidgetExtension.entitlements; sourceTree = "<group>"; };
 		B72C59A42AA6273300C9824E /* CarouselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselView.swift; sourceTree = "<group>"; };
 		B72C5D2C2A30CA2600E77866 /* HorizontalStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalStackView.swift; sourceTree = "<group>"; };
 		B73A9EAA2ACF32760032E6E5 /* SpeechViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechViewModel.swift; sourceTree = "<group>"; };
@@ -333,6 +335,7 @@
 		B787A2CC29B115920090FCF7 = {
 			isa = PBXGroup;
 			children = (
+				B72A56462AD47BEC00301595 /* SwiftUILearningsWidgetExtension.entitlements */,
 				B7FAFB352A97C3F10009DE51 /* Plant.rcproject */,
 				B796FDC429B602C4004B5F87 /* style.css */,
 				B796FDC229B6029A004B5F87 /* index.html */,
@@ -359,6 +362,7 @@
 		B787A2D729B115920090FCF7 /* SwiftUILearnings */ = {
 			isa = PBXGroup;
 			children = (
+				B72A56452AD47BA800301595 /* SwiftUILearnings.entitlements */,
 				B74A6B4D2ACDEC3300CA5C35 /* Speech */,
 				B782F7CC2AA8797100FB7751 /* App */,
 				B7A2D3B62A925C4C004E2988 /* AugmentedReality */,
@@ -944,6 +948,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SwiftUILearnings/SwiftUILearnings.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SwiftUILearnings/Preview Content\"";
@@ -980,6 +985,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SwiftUILearnings/SwiftUILearnings.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SwiftUILearnings/Preview Content\"";
@@ -1088,6 +1094,7 @@
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = SwiftUILearningsWidgetExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = E7LWH9PU9H;
@@ -1121,6 +1128,7 @@
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = SwiftUILearningsWidgetExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = E7LWH9PU9H;
