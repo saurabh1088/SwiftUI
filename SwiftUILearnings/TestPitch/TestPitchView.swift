@@ -7,6 +7,10 @@
 
 import SwiftUI
 
+class UserDefaultsProvider {
+    static let defaults = UserDefaults(suiteName: "group.com.saurabh.SwiftUILearnings")!
+}
+
 struct TestPitchView: View {
     @State private var animationWithDispatchTest = false
     @State private var offset = 0.0
@@ -30,6 +34,19 @@ struct TestPitchView: View {
             } label: {
                 Text("Sample Pitch Fullscreen")
             }
+            
+            Button {
+                UserDefaultsProvider.defaults.set("Happy", forKey: "mood")
+            } label: {
+                Text("Happy")
+            }
+            
+            Button {
+                UserDefaultsProvider.defaults.set("Sad", forKey: "mood")
+            } label: {
+                Text("Sad")
+            }
+
         }
         .onChange(of: animationWithDispatchTest) { newValue in
             DispatchQueue.main.async {
