@@ -21,6 +21,7 @@
 		B73A9EAB2ACF32760032E6E5 /* SpeechViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73A9EAA2ACF32760032E6E5 /* SpeechViewModel.swift */; };
 		B73FBB392A780D47004A5334 /* ComponentScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73FBB382A780D47004A5334 /* ComponentScrollView.swift */; };
 		B740FD712AB0E0C2009835D9 /* EventEditViewRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B740FD702AB0E0C2009835D9 /* EventEditViewRepresentable.swift */; };
+		B7493C442AD5B76A00D30D5F /* WidgetUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7493C432AD5B76900D30D5F /* WidgetUIView.swift */; };
 		B74A6B4F2ACDEC8200CA5C35 /* SpeechView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74A6B4E2ACDEC8200CA5C35 /* SpeechView.swift */; };
 		B74CEA7029B1D4A8002CB043 /* BasicGeometryReaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74CEA6F29B1D4A8002CB043 /* BasicGeometryReaderView.swift */; };
 		B753A85E2A358469003958AE /* AnyLayoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B753A85D2A358469003958AE /* AnyLayoutView.swift */; };
@@ -136,6 +137,7 @@
 		B73A9EAA2ACF32760032E6E5 /* SpeechViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechViewModel.swift; sourceTree = "<group>"; };
 		B73FBB382A780D47004A5334 /* ComponentScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComponentScrollView.swift; sourceTree = "<group>"; };
 		B740FD702AB0E0C2009835D9 /* EventEditViewRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventEditViewRepresentable.swift; sourceTree = "<group>"; };
+		B7493C432AD5B76900D30D5F /* WidgetUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetUIView.swift; sourceTree = "<group>"; };
 		B74A6B4E2ACDEC8200CA5C35 /* SpeechView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechView.swift; sourceTree = "<group>"; };
 		B74CEA6F29B1D4A8002CB043 /* BasicGeometryReaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicGeometryReaderView.swift; sourceTree = "<group>"; };
 		B753A85D2A358469003958AE /* AnyLayoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyLayoutView.swift; sourceTree = "<group>"; };
@@ -248,6 +250,14 @@
 				B7E136EB2AB33D0300674C1F /* CarouselViewModel.swift */,
 			);
 			path = Carousels;
+			sourceTree = "<group>";
+		};
+		B7493C422AD5B73D00D30D5F /* Widget */ = {
+			isa = PBXGroup;
+			children = (
+				B7493C432AD5B76900D30D5F /* WidgetUIView.swift */,
+			);
+			path = Widget;
 			sourceTree = "<group>";
 		};
 		B74A6B4D2ACDEC3300CA5C35 /* Speech */ = {
@@ -363,7 +373,6 @@
 			isa = PBXGroup;
 			children = (
 				B72A56452AD47BA800301595 /* SwiftUILearnings.entitlements */,
-				B74A6B4D2ACDEC3300CA5C35 /* Speech */,
 				B782F7CC2AA8797100FB7751 /* App */,
 				B7A2D3B62A925C4C004E2988 /* AugmentedReality */,
 				B7E24D5D2A88FFED00790D1A /* Charts */,
@@ -377,8 +386,10 @@
 				B7605AD029C35CC700602F8A /* Models */,
 				B76FE8AE29D7516D00BCAF51 /* Notifications */,
 				B7D9AAEB29FAF095001F5BFC /* PDF */,
+				B74A6B4D2ACDEC3300CA5C35 /* Speech */,
 				B77950A02ABB572900DFC92F /* TestPitch */,
 				B7A76AB229B25FA500163BDC /* WebContentTechnologies */,
+				B7493C422AD5B73D00D30D5F /* Widget */,
 				B796FDC029B5FC72004B5F87 /* webcontent */,
 				B76E261729B33D90007977AB /* Info.plist */,
 				B76FE8B229D7588E00BCAF51 /* Resources */,
@@ -730,6 +741,7 @@
 				B7C795A82A022D3D0092619B /* UIComponentsView.swift in Sources */,
 				B782F7D12AA8C5AB00FB7751 /* EventsManager.swift in Sources */,
 				B7605AD229C35D0A00602F8A /* AppStateObjectModel.swift in Sources */,
+				B7493C442AD5B76A00D30D5F /* WidgetUIView.swift in Sources */,
 				B72C59A52AA6273300C9824E /* CarouselView.swift in Sources */,
 				B76A06FF2A07404100974AD3 /* SomeCustomRowView.swift in Sources */,
 				B782F7CF2AA8C10000FB7751 /* EventKitView.swift in Sources */,

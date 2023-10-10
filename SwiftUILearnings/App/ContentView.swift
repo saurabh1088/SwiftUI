@@ -81,6 +81,8 @@ struct ContentView: View {
                     TestPitchView()
                 case .speech:
                     SpeechView()
+                case .widgetExtension:
+                    WidgetUIView()
                 }
             }
             .navigationTitle("Learnings")
