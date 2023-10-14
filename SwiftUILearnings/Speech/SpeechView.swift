@@ -35,6 +35,9 @@ struct SpeechView: View {
             .buttonStyle(.fullWidth)
             .background(isListening ? Color.red : Color.blue)
         }
+        .onDisappear {
+            speechViewModel.stopTranscribing()
+        }
     }
 }
 

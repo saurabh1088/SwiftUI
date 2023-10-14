@@ -9,6 +9,7 @@ import AVFoundation
 import Foundation
 import Speech
 import SwiftUI
+import OSLog
 
 class SpeechViewModel: ObservableObject {
     enum RecognizerError: Error {
@@ -39,15 +40,19 @@ class SpeechViewModel: ObservableObject {
         Task(priority: .background) {
             do {
                 guard recognizer != nil else {
+                    Logger.speech.error("Error while initialising SpeechViewModel, SFSpeechRecognizer was found nil")
                     throw RecognizerError.nilRecognizer
                 }
                 guard await SFSpeechRecognizer.hasAuthorizationToRecognize() else {
+                    Logger.speech.error("Error while initialising SpeechViewModel, no authorization for recognization found")
                     throw RecognizerError.notAuthorizedToRecognize
                 }
                 guard await AVAudioSession.sharedInstance().hasPermissionToRecord() else {
+                    Logger.speech.error("Error while initialising SpeechViewModel, no permission for recording found")
                     throw RecognizerError.notPermittedToRecord
                 }
             } catch {
+                Logger.speech.error("Error while initialising SpeechViewModel : \(error.localizedDescription)")
                 speakError(error)
             }
         }
