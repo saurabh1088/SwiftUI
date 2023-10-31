@@ -34,6 +34,7 @@
 		B76FE8B029D7518E00BCAF51 /* NotificationsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76FE8AF29D7518E00BCAF51 /* NotificationsManager.swift */; };
 		B76FE8B429D758C500BCAF51 /* payload.apns in Resources */ = {isa = PBXBuildFile; fileRef = B76FE8B329D758C500BCAF51 /* payload.apns */; };
 		B772B3C72A517A2D00B78E73 /* Logger+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B772B3C62A517A2D00B78E73 /* Logger+Extension.swift */; };
+		B77651F62AF16D5300656B45 /* NetworkingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77651F52AF16D5300656B45 /* NetworkingService.swift */; };
 		B7775E122A9F93E900DA37B2 /* GesturesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7775E112A9F93E900DA37B2 /* GesturesView.swift */; };
 		B77950A42ABB579300DFC92F /* TestPitchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77950A32ABB579300DFC92F /* TestPitchView.swift */; };
 		B782F7CF2AA8C10000FB7751 /* EventKitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B782F7CE2AA8C10000FB7751 /* EventKitView.swift */; };
@@ -151,6 +152,7 @@
 		B76FE8AF29D7518E00BCAF51 /* NotificationsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsManager.swift; sourceTree = "<group>"; };
 		B76FE8B329D758C500BCAF51 /* payload.apns */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = payload.apns; sourceTree = "<group>"; };
 		B772B3C62A517A2D00B78E73 /* Logger+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Logger+Extension.swift"; sourceTree = "<group>"; };
+		B77651F52AF16D5300656B45 /* NetworkingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingService.swift; sourceTree = "<group>"; };
 		B7775E112A9F93E900DA37B2 /* GesturesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GesturesView.swift; sourceTree = "<group>"; };
 		B77950A32ABB579300DFC92F /* TestPitchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestPitchView.swift; sourceTree = "<group>"; };
 		B782F7CE2AA8C10000FB7751 /* EventKitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventKitView.swift; sourceTree = "<group>"; };
@@ -307,6 +309,14 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		B77651F42AF11C9300656B45 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				B77651F52AF16D5300656B45 /* NetworkingService.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
 		B7775E102A9F93CB00DA37B2 /* Gestures */ = {
 			isa = PBXGroup;
 			children = (
@@ -372,6 +382,7 @@
 		B787A2D729B115920090FCF7 /* SwiftUILearnings */ = {
 			isa = PBXGroup;
 			children = (
+				B77651F42AF11C9300656B45 /* Networking */,
 				B72A56452AD47BA800301595 /* SwiftUILearnings.entitlements */,
 				B782F7CC2AA8797100FB7751 /* App */,
 				B7A2D3B62A925C4C004E2988 /* AugmentedReality */,
@@ -738,6 +749,7 @@
 				B753A85E2A358469003958AE /* AnyLayoutView.swift in Sources */,
 				B7E24D652A89037900790D1A /* ChartsViewModel.swift in Sources */,
 				B796C7772ABD5E5E00E70028 /* ScrollWithReaderView.swift in Sources */,
+				B77651F62AF16D5300656B45 /* NetworkingService.swift in Sources */,
 				B7C795A82A022D3D0092619B /* UIComponentsView.swift in Sources */,
 				B782F7D12AA8C5AB00FB7751 /* EventsManager.swift in Sources */,
 				B7605AD229C35D0A00602F8A /* AppStateObjectModel.swift in Sources */,
