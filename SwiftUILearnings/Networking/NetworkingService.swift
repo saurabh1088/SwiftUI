@@ -43,9 +43,13 @@ enum HTTPMethods: String {
     case PATCH
 }
 
-protocol NetworkingService {
+protocol ServiceRequest {
     var baseURL: String { get }
     var path: String { get }
     var params: [String: Any]? { get }
     var httpMethod: HTTPMethods { get }
+}
+
+protocol NetworkingServiceProvider {
+    
 }
