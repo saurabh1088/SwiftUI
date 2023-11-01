@@ -21,10 +21,23 @@ enum HTTPMethods: String {
     /// - The last modified time/date of the resource
     /// - Validity of a cached resource
     case HEAD
+    
+    /// http method POST submits an entity to a specified resource, this may lead to change in state for the
+    /// server, because of this POST operation is not considered a safe operation.
     case POST
+    
+    /// http method PUT completely replaces the resource identified by URL. Resource if present is replaced
+    /// completely else if not present then it gets created.
     case PUT
+    
+    
     case DELETE
+    
+    /// http method CONNECT is used to create a tunnel with server, which eventually could be used to forward
+    /// data in both directions.
     case CONNECT
+    
+    
     case OPTIONS
     case TRACE
     case PATCH
