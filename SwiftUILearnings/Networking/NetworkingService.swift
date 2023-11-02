@@ -43,6 +43,11 @@ enum HTTPMethods: String {
     case PATCH
 }
 
+enum Result<T> {
+    case success(T)
+    case failure(Error)
+}
+
 protocol ServiceRequest {
     var baseURL: String { get }
     var path: String { get }
@@ -51,5 +56,7 @@ protocol ServiceRequest {
 }
 
 protocol NetworkingServiceProvider {
+    associatedtype T: ServiceRequest
     
+    func load(request: T, completion: @escaping (Result<Data>) -> Void)
 }
