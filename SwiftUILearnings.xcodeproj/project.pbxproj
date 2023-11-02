@@ -25,6 +25,8 @@
 		B74A6B4F2ACDEC8200CA5C35 /* SpeechView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74A6B4E2ACDEC8200CA5C35 /* SpeechView.swift */; };
 		B74CEA7029B1D4A8002CB043 /* BasicGeometryReaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74CEA6F29B1D4A8002CB043 /* BasicGeometryReaderView.swift */; };
 		B753A85E2A358469003958AE /* AnyLayoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B753A85D2A358469003958AE /* AnyLayoutView.swift */; };
+		B75C13E22AF40F880065F0C4 /* HTTPMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75C13E12AF40F880065F0C4 /* HTTPMethods.swift */; };
+		B75C13E42AF410600065F0C4 /* ServiceRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75C13E32AF410600065F0C4 /* ServiceRequest.swift */; };
 		B7605AD229C35D0A00602F8A /* AppStateObjectModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7605AD129C35D0A00602F8A /* AppStateObjectModel.swift */; };
 		B76A06FB2A073FC100974AD3 /* BottomSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76A06FA2A073FC100974AD3 /* BottomSheetView.swift */; };
 		B76A06FD2A07400A00974AD3 /* LazyVStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76A06FC2A07400A00974AD3 /* LazyVStackView.swift */; };
@@ -142,6 +144,8 @@
 		B74A6B4E2ACDEC8200CA5C35 /* SpeechView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechView.swift; sourceTree = "<group>"; };
 		B74CEA6F29B1D4A8002CB043 /* BasicGeometryReaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicGeometryReaderView.swift; sourceTree = "<group>"; };
 		B753A85D2A358469003958AE /* AnyLayoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyLayoutView.swift; sourceTree = "<group>"; };
+		B75C13E12AF40F880065F0C4 /* HTTPMethods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethods.swift; sourceTree = "<group>"; };
+		B75C13E32AF410600065F0C4 /* ServiceRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceRequest.swift; sourceTree = "<group>"; };
 		B7605AD129C35D0A00602F8A /* AppStateObjectModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStateObjectModel.swift; sourceTree = "<group>"; };
 		B76A06FA2A073FC100974AD3 /* BottomSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheetView.swift; sourceTree = "<group>"; };
 		B76A06FC2A07400A00974AD3 /* LazyVStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyVStackView.swift; sourceTree = "<group>"; };
@@ -313,6 +317,8 @@
 			isa = PBXGroup;
 			children = (
 				B77651F52AF16D5300656B45 /* NetworkingService.swift */,
+				B75C13E12AF40F880065F0C4 /* HTTPMethods.swift */,
+				B75C13E32AF410600065F0C4 /* ServiceRequest.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -756,6 +762,7 @@
 				B7493C442AD5B76A00D30D5F /* WidgetUIView.swift in Sources */,
 				B72C59A52AA6273300C9824E /* CarouselView.swift in Sources */,
 				B76A06FF2A07404100974AD3 /* SomeCustomRowView.swift in Sources */,
+				B75C13E22AF40F880065F0C4 /* HTTPMethods.swift in Sources */,
 				B782F7CF2AA8C10000FB7751 /* EventKitView.swift in Sources */,
 				B7AEDB6B29EABF35007D634E /* Color+Extension.swift in Sources */,
 				B7027C032A2A601A007D64D6 /* SelectableListModel.swift in Sources */,
@@ -794,6 +801,7 @@
 				B787A2D929B115920090FCF7 /* SwiftUILearningsApp.swift in Sources */,
 				B772B3C72A517A2D00B78E73 /* Logger+Extension.swift in Sources */,
 				B76A06FD2A07400A00974AD3 /* LazyVStackView.swift in Sources */,
+				B75C13E42AF410600065F0C4 /* ServiceRequest.swift in Sources */,
 				B76FE8B029D7518E00BCAF51 /* NotificationsManager.swift in Sources */,
 				B7B1DCBB29B3BFDB00FFC805 /* SafariWebView.swift in Sources */,
 				B7E129F729B4DEA7002E6B54 /* SwiftUIWKWebView.swift in Sources */,
