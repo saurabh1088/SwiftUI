@@ -37,8 +37,14 @@ enum HTTPMethods: String {
     /// data in both directions.
     case CONNECT
     
-    
+    /// http method OPTIONS gives the methods supported and allowed by server. The server does not have
+    /// to support every HTTP method for every resource it manages.
     case OPTIONS
+    
     case TRACE
+    
+    /// http method PATCH helps to update a resource by sending a small payload rather than a complete
+    /// resource representation to server which could be a costly operation if the resource is huge and PUT
+    /// is used.
     case PATCH
 }
