@@ -41,6 +41,8 @@ enum HTTPMethods: String {
     /// to support every HTTP method for every resource it manages.
     case OPTIONS
     
+    /// http method TRACE often gives a content which is just an echo back from the server of the various
+    /// request headers that the client sent.
     case TRACE
     
     /// http method PATCH helps to update a resource by sending a small payload rather than a complete
