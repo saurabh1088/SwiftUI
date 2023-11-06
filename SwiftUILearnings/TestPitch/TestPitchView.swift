@@ -48,6 +48,10 @@ struct TestPitchView: View {
             }
 
         }
+        .onAppear(perform: {
+            let catProvider = TheCatService()
+            catProvider.fetchCats()
+        })
         .onChange(of: animationWithDispatchTest) { newValue in
             DispatchQueue.main.async {
                 withAnimation {
