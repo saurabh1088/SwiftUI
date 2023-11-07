@@ -7,6 +7,8 @@
 
 import Foundation
 
+/// API documentation available at :
+/// https://developers.thecatapi.com/view-account/ylX4blBYT9FaoVd6OhvR?report=FJkYOq9tW
 enum TheCatAPI {
     case search(quantity: String)
 }
