@@ -24,6 +24,7 @@ enum LearningTopics: String, CaseIterable {
     case uiGestures = "UI Gestures"
     case webContentTechnologies = "Web Content Technologies"
     case widgetExtension = "Widget Extension"
+    case apis = "APIs"
 }
 
 enum Components: String, CaseIterable {

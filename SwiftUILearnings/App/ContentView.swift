@@ -83,6 +83,8 @@ struct ContentView: View {
                     SpeechView()
                 case .widgetExtension:
                     WidgetUIView()
+                case .apis:
+                    TheCatAPIView()
                 }
             }
             .navigationTitle("Learnings")
