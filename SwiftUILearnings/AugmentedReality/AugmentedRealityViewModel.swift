@@ -20,7 +20,11 @@ class AugmentedRealityViewModel: ObservableObject {
         arView?.session.pause()
     }
     
-    func setARView(_ view: ARView) {
+    /// `Why @MainActor is required here?`
+    ///
+    /// Call to main actor-isolated static method 'loadSceneAsync(completion:)' in a synchronous nonisolated context.
+    /// Add '@MainActor' to make instance method 'setARView' part of global actor 'MainActor'
+    @MainActor func setARView(_ view: ARView) {
         arView = view
         arView?.session.run(worldTrackingConfig())
 
