@@ -12,6 +12,7 @@ enum Result<T> {
     case failure(Error)
 }
 
+// TODO: This is not being used as of now, assess and remove if required.
 protocol NetworkingServiceProvider {
     associatedtype T: ServiceRequest
     associatedtype U: Codable
