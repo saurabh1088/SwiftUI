@@ -36,9 +36,7 @@ struct UIComponentsView: View {
                 case .anyLayout:
                     AnyLayoutView()
                 case .scrollView:
-                    // TODO: Enable ComponentScrollView once iOS 17 is released
-                    // ComponentScrollView()
-                    Text("In Progress")
+                    ComponentScrollView()
                 case .carousel:
                     CarouselView()
                 }
