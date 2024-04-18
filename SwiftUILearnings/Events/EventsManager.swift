@@ -51,6 +51,10 @@ class EventsManager: ObservableObject {
             return canAddToCalendar
         case .authorized:
             return canAddToCalendar
+        case .fullAccess:
+            return canAddToCalendar
+        case .writeOnly:
+            return canAddToCalendar
         @unknown default:
             return canAddToCalendar
         }
@@ -83,6 +87,10 @@ class EventsManager: ObservableObject {
             return false
         case .authorized:
             return !allEventsInRange().isEmpty
+        case .fullAccess:
+            return !allEventsInRange().isEmpty
+        case .writeOnly:
+            return !allEventsInRange().isEmpty
         @unknown default:
             return false
         }
@@ -114,6 +122,12 @@ class EventsManager: ObservableObject {
             addEventToCalendarStatus = .accessDenied
         case .authorized:
             addEventToCalendarStatus = .success
+        case .fullAccess:
+            // TODO: Fix this by adding more options in AddEventToCalendarStatus
+            addEventToCalendarStatus = .none
+        case .writeOnly:
+            // TODO: Fix this by adding more options in AddEventToCalendarStatus
+            addEventToCalendarStatus = .none
         @unknown default:
             fatalError()
         }
@@ -141,6 +155,12 @@ class EventsManager: ObservableObject {
             } catch {
                 Logger.eventKit.error("Error occurred while saving event to eventStore")
             }
+        case .fullAccess:
+            // TODO: Test this scenario
+            self.addToCalendar(event: event)
+        case .writeOnly:
+            // TODO: Test this scenario
+            self.addToCalendar(event: event)
         @unknown default:
             fatalError()
         }
