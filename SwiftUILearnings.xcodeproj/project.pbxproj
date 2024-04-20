@@ -408,7 +408,6 @@
 		B787A2D729B115920090FCF7 /* SwiftUILearnings */ = {
 			isa = PBXGroup;
 			children = (
-				B77651F42AF11C9300656B45 /* Networking */,
 				B72A56452AD47BA800301595 /* SwiftUILearnings.entitlements */,
 				B782F7CC2AA8797100FB7751 /* App */,
 				B7A2D3B62A925C4C004E2988 /* AugmentedReality */,
@@ -421,6 +420,7 @@
 				B74CEA6C29B1CF31002CB043 /* GeometryReader */,
 				B7775E102A9F93CB00DA37B2 /* Gestures */,
 				B7605AD029C35CC700602F8A /* Models */,
+				B77651F42AF11C9300656B45 /* Networking */,
 				B76FE8AE29D7516D00BCAF51 /* Notifications */,
 				B7D9AAEB29FAF095001F5BFC /* PDF */,
 				B74A6B4D2ACDEC3300CA5C35 /* Speech */,
