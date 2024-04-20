@@ -19,7 +19,50 @@ import SwiftUI
  */
 struct HorizontalStackView: View {
     var body: some View {
-        hStackWithThreeSubviews
+        if #available(iOS 17.0, *) {
+            ScrollView(.horizontal) {
+                LazyHStack {
+                    ForEach(0..<5) { i in
+                        switch i {
+                        case 0:
+                            simpleHStackView
+                                .background(Color(hue: Double(i) / 10, saturation: 1, brightness: 1).gradient)
+                                .frame(width: 300, height: 100)
+                        case 1:
+                            hStackWithBottomAlignment
+                                .background(Color(hue: Double(i) / 10, saturation: 1, brightness: 1).gradient)
+                                .frame(width: 300, height: 100)
+
+                        case 2:
+                            hStackWithTopAlignment
+                                .background(Color(hue: Double(i) / 10, saturation: 1, brightness: 1).gradient)
+                                .frame(width: 300, height: 100)
+
+                        case 3:
+                            hStackWithCenterAlignment
+                                .background(Color(hue: Double(i) / 10, saturation: 1, brightness: 1).gradient)
+                                .frame(width: 300, height: 100)
+
+                        case 4:
+                            hStackWithThreeSubviews
+                                .background(Color(hue: Double(i) / 10, saturation: 1, brightness: 1).gradient)
+                                .frame(width: 300, height: 100)
+
+                        default:
+                            simpleHStackView
+                                .background(Color(hue: Double(i) / 10, saturation: 1, brightness: 1).gradient)
+                                .frame(width: 300, height: 100)
+
+                        }
+                    }
+                }
+                .scrollTargetLayout()
+            }
+            .scrollTargetBehavior(.viewAligned)
+            .safeAreaPadding(.horizontal, 40)
+        } else {
+            hStackWithThreeSubviews
+        }
     }
     
     @ViewBuilder
