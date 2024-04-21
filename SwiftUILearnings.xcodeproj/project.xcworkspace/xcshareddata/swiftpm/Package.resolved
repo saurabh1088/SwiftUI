@@ -1,0 +1,15 @@
+{
+  "originHash" : "a88f628c7d64f13ef85b7d717413e7de36aea6b1aa11349883fbc2d8321a364e",
+  "pins" : [
+    {
+      "identity" : "swift-ui-views-helper",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/saurabh1088/swift-ui-views-helper.git",
+      "state" : {
+        "branch" : "main",
+        "revision" : "c177a323e018a9bc362dfc342cb74b92ad0511c0"
+      }
+    }
+  ],
+  "version" : 3
+}
