@@ -7,6 +7,7 @@
 
 import SwiftUI
 import Charts
+import SwiftUIViewsHelper
 
 /**
  Swift Charts as imported above is a new framework provided from Apple which provides API to visualize data in
@@ -38,6 +39,7 @@ struct ChartsView: View {
             Button("Point Chart") {
                 chartsViewModel.showPointChartsView.toggle()
             }
+            .buttonStyle(.fullScreenWide)
             .sheet(isPresented: $chartsViewModel.showPointChartsView) {
                 pointChartView
             }
@@ -45,6 +47,7 @@ struct ChartsView: View {
             Button("Line Chart") {
                 chartsViewModel.showLineChartsView.toggle()
             }
+            .buttonStyle(.fullScreenWide)
             .sheet(isPresented: $chartsViewModel.showLineChartsView) {
                 lineChartView
             }
@@ -52,6 +55,7 @@ struct ChartsView: View {
             Button("Bar Chart") {
                 chartsViewModel.showBarChartsView.toggle()
             }
+            .buttonStyle(.fullScreenWide)
             .sheet(isPresented: $chartsViewModel.showBarChartsView) {
                 barChartView
             }

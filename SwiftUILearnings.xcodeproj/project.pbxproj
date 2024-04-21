@@ -56,6 +56,7 @@
 		B796FDC129B5FC73004B5F87 /* webcontent in Resources */ = {isa = PBXBuildFile; fileRef = B796FDC029B5FC72004B5F87 /* webcontent */; };
 		B796FDC329B6029A004B5F87 /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = B796FDC229B6029A004B5F87 /* index.html */; };
 		B796FDC529B602C4004B5F87 /* style.css in Resources */ = {isa = PBXBuildFile; fileRef = B796FDC429B602C4004B5F87 /* style.css */; };
+		B79C60AC2BD49BE8005C0226 /* SwiftUIViewsHelper in Frameworks */ = {isa = PBXBuildFile; productRef = B79C60AB2BD49BE8005C0226 /* SwiftUIViewsHelper */; };
 		B79E6F8629C723EC008B81BB /* ExternalInitStateObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79E6F8529C723EC008B81BB /* ExternalInitStateObject.swift */; };
 		B7A183E029C3856700B864DE /* DataEssentialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A183DF29C3856700B864DE /* DataEssentialView.swift */; };
 		B7A183E229C385A600B864DE /* DataEssentialStateObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A183E129C385A600B864DE /* DataEssentialStateObject.swift */; };
@@ -224,6 +225,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B79C60AC2BD49BE8005C0226 /* SwiftUIViewsHelper in Frameworks */,
 				B712ED822A02C96700BF84D0 /* AVFoundation.framework in Frameworks */,
 				B712ED802A02C95B00BF84D0 /* AVKit.framework in Frameworks */,
 			);
@@ -623,6 +625,9 @@
 				B7A963EC2AC82B2200EB6A12 /* PBXTargetDependency */,
 			);
 			name = SwiftUILearnings;
+			packageProductDependencies = (
+				B79C60AB2BD49BE8005C0226 /* SwiftUIViewsHelper */,
+			);
 			productName = SwiftUILearnings;
 			productReference = B787A2D529B115920090FCF7 /* SwiftUILearnings.app */;
 			productType = "com.apple.product-type.application";
@@ -715,6 +720,9 @@
 				Base,
 			);
 			mainGroup = B787A2CC29B115920090FCF7;
+			packageReferences = (
+				B79C60AA2BD49BE8005C0226 /* XCRemoteSwiftPackageReference "swift-ui-views-helper" */,
+			);
 			productRefGroup = B787A2D629B115920090FCF7 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -1260,6 +1268,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B79C60AA2BD49BE8005C0226 /* XCRemoteSwiftPackageReference "swift-ui-views-helper" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/saurabh1088/swift-ui-views-helper.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B79C60AB2BD49BE8005C0226 /* SwiftUIViewsHelper */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B79C60AA2BD49BE8005C0226 /* XCRemoteSwiftPackageReference "swift-ui-views-helper" */;
+			productName = SwiftUIViewsHelper;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B787A2CD29B115920090FCF7 /* Project object */;
 }
