@@ -1,6 +1,15 @@
 {
-  "originHash" : "a88f628c7d64f13ef85b7d717413e7de36aea6b1aa11349883fbc2d8321a364e",
+  "originHash" : "d6f57a5260e7f97829cc728be1a3f94ffbda9b5d4bf526d901c1bf7d641ff6d4",
   "pins" : [
+    {
+      "identity" : "swift-algorithms",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/saurabh1088/swift-algorithms.git",
+      "state" : {
+        "branch" : "main",
+        "revision" : "70b5fc6c3beff4c81144a5f675f881575fda88ee"
+      }
+    },
     {
       "identity" : "swift-ui-views-helper",
       "kind" : "remoteSourceControl",

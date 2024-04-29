@@ -722,6 +722,7 @@
 			mainGroup = B787A2CC29B115920090FCF7;
 			packageReferences = (
 				B79C60AA2BD49BE8005C0226 /* XCRemoteSwiftPackageReference "swift-ui-views-helper" */,
+				B7E70E462BDFB3E9002760F1 /* XCRemoteSwiftPackageReference "swift-algorithms" */,
 			);
 			productRefGroup = B787A2D629B115920090FCF7 /* Products */;
 			projectDirPath = "";
@@ -1273,6 +1274,14 @@
 		B79C60AA2BD49BE8005C0226 /* XCRemoteSwiftPackageReference "swift-ui-views-helper" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/saurabh1088/swift-ui-views-helper.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+		B7E70E462BDFB3E9002760F1 /* XCRemoteSwiftPackageReference "swift-algorithms" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/saurabh1088/swift-algorithms.git";
 			requirement = {
 				branch = main;
 				kind = branch;
