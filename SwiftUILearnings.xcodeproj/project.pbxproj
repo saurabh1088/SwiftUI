@@ -31,6 +31,9 @@
 		B75C13E92AF92F840065F0C4 /* TheCatModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75C13E82AF92F840065F0C4 /* TheCatModel.swift */; };
 		B75C13ED2AF9E8CB0065F0C4 /* TheCatAPIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75C13EC2AF9E8CB0065F0C4 /* TheCatAPIView.swift */; };
 		B75C13EF2AF9E9FB0065F0C4 /* TheCatAPIViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75C13EE2AF9E9FB0065F0C4 /* TheCatAPIViewModel.swift */; };
+		B75D6AC32BE3C32F0047BB21 /* DebugView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75D6AC22BE3C32F0047BB21 /* DebugView.swift */; };
+		B75D6AC52BE3C7EF0047BB21 /* DebugViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75D6AC42BE3C7EF0047BB21 /* DebugViewModel.swift */; };
+		B75D6AC72BE3CF6B0047BB21 /* DebugModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75D6AC62BE3CF6B0047BB21 /* DebugModel.swift */; };
 		B7605AD229C35D0A00602F8A /* AppStateObjectModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7605AD129C35D0A00602F8A /* AppStateObjectModel.swift */; };
 		B76A06FB2A073FC100974AD3 /* BottomSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76A06FA2A073FC100974AD3 /* BottomSheetView.swift */; };
 		B76A06FD2A07400A00974AD3 /* LazyVStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76A06FC2A07400A00974AD3 /* LazyVStackView.swift */; };
@@ -155,6 +158,9 @@
 		B75C13E82AF92F840065F0C4 /* TheCatModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheCatModel.swift; sourceTree = "<group>"; };
 		B75C13EC2AF9E8CB0065F0C4 /* TheCatAPIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheCatAPIView.swift; sourceTree = "<group>"; };
 		B75C13EE2AF9E9FB0065F0C4 /* TheCatAPIViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheCatAPIViewModel.swift; sourceTree = "<group>"; };
+		B75D6AC22BE3C32F0047BB21 /* DebugView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugView.swift; sourceTree = "<group>"; };
+		B75D6AC42BE3C7EF0047BB21 /* DebugViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugViewModel.swift; sourceTree = "<group>"; };
+		B75D6AC62BE3CF6B0047BB21 /* DebugModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugModel.swift; sourceTree = "<group>"; };
 		B7605AD129C35D0A00602F8A /* AppStateObjectModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStateObjectModel.swift; sourceTree = "<group>"; };
 		B76A06FA2A073FC100974AD3 /* BottomSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheetView.swift; sourceTree = "<group>"; };
 		B76A06FC2A07400A00974AD3 /* LazyVStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyVStackView.swift; sourceTree = "<group>"; };
@@ -304,6 +310,16 @@
 			path = Examples;
 			sourceTree = "<group>";
 		};
+		B75D6AC12BE3C30F0047BB21 /* Debug */ = {
+			isa = PBXGroup;
+			children = (
+				B75D6AC22BE3C32F0047BB21 /* DebugView.swift */,
+				B75D6AC42BE3C7EF0047BB21 /* DebugViewModel.swift */,
+				B75D6AC62BE3CF6B0047BB21 /* DebugModel.swift */,
+			);
+			path = Debug;
+			sourceTree = "<group>";
+		};
 		B7605AD029C35CC700602F8A /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -417,6 +433,7 @@
 				B7C05D372A12A7F500AD7912 /* Common */,
 				B7C7E24829E9C0920089E0C1 /* Components */,
 				B7A183DE29C3849000B864DE /* DataEssentials */,
+				B75D6AC12BE3C30F0047BB21 /* Debug */,
 				B782F7CD2AA8C0DE00FB7751 /* Events */,
 				B7AEDB6929EABF09007D634E /* Extensions */,
 				B74CEA6C29B1CF31002CB043 /* GeometryReader */,
@@ -793,6 +810,7 @@
 				B76A06FF2A07404100974AD3 /* SomeCustomRowView.swift in Sources */,
 				B75C13E72AF8B3190065F0C4 /* TheCatAPI.swift in Sources */,
 				B75C13E22AF40F880065F0C4 /* HTTPMethods.swift in Sources */,
+				B75D6AC52BE3C7EF0047BB21 /* DebugViewModel.swift in Sources */,
 				B782F7CF2AA8C10000FB7751 /* EventKitView.swift in Sources */,
 				B7AEDB6B29EABF35007D634E /* Color+Extension.swift in Sources */,
 				B7027C032A2A601A007D64D6 /* SelectableListModel.swift in Sources */,
@@ -812,6 +830,7 @@
 				B74CEA7029B1D4A8002CB043 /* BasicGeometryReaderView.swift in Sources */,
 				B7FAFB362A97C3F10009DE51 /* Plant.rcproject in Sources */,
 				B7E24D5F2A89000700790D1A /* ChartsView.swift in Sources */,
+				B75D6AC72BE3CF6B0047BB21 /* DebugModel.swift in Sources */,
 				B72C5D2D2A30CA2600E77866 /* HorizontalStackView.swift in Sources */,
 				B7E24D632A8901A600790D1A /* ChartsModel.swift in Sources */,
 				B73A9EAB2ACF32760032E6E5 /* SpeechViewModel.swift in Sources */,
@@ -833,6 +852,7 @@
 				B73FBB392A780D47004A5334 /* ComponentScrollView.swift in Sources */,
 				B787A2D929B115920090FCF7 /* SwiftUILearningsApp.swift in Sources */,
 				B772B3C72A517A2D00B78E73 /* Logger+Extension.swift in Sources */,
+				B75D6AC32BE3C32F0047BB21 /* DebugView.swift in Sources */,
 				B76A06FD2A07400A00974AD3 /* LazyVStackView.swift in Sources */,
 				B75C13E42AF410600065F0C4 /* ServiceRequest.swift in Sources */,
 				B76FE8B029D7518E00BCAF51 /* NotificationsManager.swift in Sources */,

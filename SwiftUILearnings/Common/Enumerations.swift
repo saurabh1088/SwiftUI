@@ -12,8 +12,10 @@ import Foundation
 
 enum LearningTopics: String, CaseIterable {
     case augmentedReality = "Augmented Reality"
+    case apis = "APIs"
     case charts = "Charts"
     case dataEssentials = "Data Essentials"
+    case debug = "Debug"
     case eventsKit = "Events"
     case geometryReader = "Geometry Reader"
     case notifications = "Notifications"
@@ -24,7 +26,6 @@ enum LearningTopics: String, CaseIterable {
     case uiGestures = "UI Gestures"
     case webContentTechnologies = "Web Content Technologies"
     case widgetExtension = "Widget Extension"
-    case apis = "APIs"
 }
 
 enum Components: String, CaseIterable {

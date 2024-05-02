@@ -85,6 +85,8 @@ struct ContentView: View {
                     WidgetUIView()
                 case .apis:
                     TheCatAPIView()
+                case .debug:
+                    DebugView(viewModel: DebugViewModel())
                 }
             }
             .navigationTitle("Learnings")
