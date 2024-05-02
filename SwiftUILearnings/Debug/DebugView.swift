@@ -20,6 +20,13 @@ struct DebugView: View {
                 Text("LLDB - po")
             }
             .buttonStyle(.fullScreenWide)
+            
+            Button {
+                viewModel.crashWithException()
+            } label: {
+                Text("Crash")
+            }
+            .buttonStyle(.fullScreenWide)
         }
     }
 }
