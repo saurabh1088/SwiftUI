@@ -79,3 +79,18 @@ extension DebugViewModel {
         throw DebugError.crashError
     }
 }
+
+extension DebugViewModel {
+    /// Having a label for queue is great way to debug. Once app crashes when crashInBackgroundThread()
+    /// gets called, one can see in the Xcode debugger that the thread which crashed is labeled as below.
+    /// It's great way to identify if crash is happening in any of the queue being created and maged in the app
+    /// itself. Then one can idenfiey the tasks performed on the queue leading to possibly root cause.
+    func crashInBackgroundThread() {
+        let queueIdentifier = "com.apple.saurabh.crash-in-background-thread.serial-queue"
+        let queue = DispatchQueue(label: queueIdentifier,
+                                  qos: .background)
+        queue.async {
+            _ = self.crash!
+        }
+    }
+}

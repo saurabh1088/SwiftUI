@@ -22,7 +22,7 @@ struct DebugView: View {
             .buttonStyle(.fullScreenWide)
             
             Button {
-                viewModel.crashWithException()
+                viewModel.crashInBackgroundThread()
             } label: {
                 Text("Crash")
             }
