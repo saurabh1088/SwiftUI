@@ -30,6 +30,7 @@ enum LearningTopics: String, CaseIterable {
 
 enum Components: String, CaseIterable {
     case bottomSheet = "Bottom Sheets"
+    case buttons = "Buttons"
     case lazyVStack = "Lazy VStack"
     case lists = "Lists"
     case hStack = "HStack"

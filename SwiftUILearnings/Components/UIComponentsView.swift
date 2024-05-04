@@ -39,6 +39,8 @@ struct UIComponentsView: View {
                     ComponentScrollView()
                 case .carousel:
                     CarouselView()
+                case .buttons:
+                    ButtonsView()
                 }
             }
         }

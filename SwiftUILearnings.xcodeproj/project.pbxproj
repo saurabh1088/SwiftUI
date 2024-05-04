@@ -79,6 +79,7 @@
 		B7B189E32AA6E3B00046AE65 /* Carousel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B189E22AA6E3B00046AE65 /* Carousel.swift */; };
 		B7B1DCBB29B3BFDB00FFC805 /* SafariWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B1DCBA29B3BFDB00FFC805 /* SafariWebView.swift */; };
 		B7B1DCBD29B3C20700FFC805 /* OpenURLsInAppBrowserExamplesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B1DCBC29B3C20700FFC805 /* OpenURLsInAppBrowserExamplesView.swift */; };
+		B7B30A6C2BE6231000C08830 /* ButtonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B30A6B2BE6231000C08830 /* ButtonsView.swift */; };
 		B7B531462BE5F9A900678328 /* LearningOptionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B531452BE5F9A900678328 /* LearningOptionsView.swift */; };
 		B7B8F7EC2A26744F00FE32A7 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B8F7EB2A26744F00FE32A7 /* ListView.swift */; };
 		B7BDAB972AAC451A007D237B /* EmojiCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7BDAB962AAC451A007D237B /* EmojiCard.swift */; };
@@ -212,6 +213,7 @@
 		B7B189E22AA6E3B00046AE65 /* Carousel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Carousel.swift; sourceTree = "<group>"; };
 		B7B1DCBA29B3BFDB00FFC805 /* SafariWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariWebView.swift; sourceTree = "<group>"; };
 		B7B1DCBC29B3C20700FFC805 /* OpenURLsInAppBrowserExamplesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenURLsInAppBrowserExamplesView.swift; sourceTree = "<group>"; };
+		B7B30A6B2BE6231000C08830 /* ButtonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonsView.swift; sourceTree = "<group>"; };
 		B7B531452BE5F9A900678328 /* LearningOptionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearningOptionsView.swift; sourceTree = "<group>"; };
 		B7B8F7EB2A26744F00FE32A7 /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
 		B7BDAB962AAC451A007D237B /* EmojiCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiCard.swift; sourceTree = "<group>"; };
@@ -584,6 +586,7 @@
 			isa = PBXGroup;
 			children = (
 				B7C7E24C29E9C22A0089E0C1 /* CustomButtonStyles.swift */,
+				B7B30A6B2BE6231000C08830 /* ButtonsView.swift */,
 			);
 			path = Buttons;
 			sourceTree = "<group>";
@@ -807,6 +810,7 @@
 				B77651F62AF16D5300656B45 /* NetworkingService.swift in Sources */,
 				B7C795A82A022D3D0092619B /* UIComponentsView.swift in Sources */,
 				B782F7D12AA8C5AB00FB7751 /* EventsManager.swift in Sources */,
+				B7B30A6C2BE6231000C08830 /* ButtonsView.swift in Sources */,
 				B7605AD229C35D0A00602F8A /* AppStateObjectModel.swift in Sources */,
 				B7493C442AD5B76A00D30D5F /* WidgetUIView.swift in Sources */,
 				B72C59A52AA6273300C9824E /* CarouselView.swift in Sources */,
