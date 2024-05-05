@@ -12,6 +12,7 @@ import SwiftUIViewsHelper
 // MARK: ComponentScrollView definition
 struct ComponentScrollView: View {
     @State private var showScrollView = false
+    @State private var showReadableScrollView = false
     private var colors: [Color] = [.red,
                                    .green,
                                    .orange,
@@ -26,6 +27,7 @@ struct ComponentScrollView: View {
     var body: some View {
         VStack {
             showSimpleScrollViewButton
+            showReadableScrollViewButton
         }
     }
 }
@@ -165,6 +167,65 @@ extension ComponentScrollView {
                         .frame(width: 300, height: 100)
                 }
             }
+        }
+    }
+}
+
+// MARK: -----------------------------------------------------------------------
+// MARK: Extension ComponentScrollView for readable scroll view
+extension ComponentScrollView {
+    @ViewBuilder
+    private var showReadableScrollViewButton: some View {
+        VStack {
+            Button("Show Scroll View Reader") {
+                showReadableScrollView = true
+            }
+            .buttonStyle(.fullScreenWide)
+        }
+        .fullScreenCover(isPresented: $showReadableScrollView) {
+            if #available(iOS 17.0, *) {
+                readableScrollView
+            } else {
+                scrollViewIOS16OrBelow
+            }
+        }
+    }
+    
+    @available(iOS 17.0, *)
+    @ViewBuilder
+    private var readableScrollView: some View {
+        ScrollViewReader { proxy in
+            ScrollView {
+                Button {
+                    withAnimation {
+                        proxy.scrollTo(1)
+                    }
+                } label: {
+                    Text("Scroll to bottom ⬇")
+                }
+                .buttonStyle(.fullScreenWide)
+                .id(0)
+
+                
+                LazyVStack {
+                    ForEach(0..<10) { index in
+                        Text("Value : \(index)")
+                            .frame(width: 200, height: 200)
+                            .background(colors[index])
+                    }
+                }
+                
+                Button {
+                    withAnimation {
+                        proxy.scrollTo(0)
+                    }
+                } label: {
+                    Text("Scroll to top ⬆")
+                }
+                .buttonStyle(.fullScreenWide)
+                .id(1)
+            }
+            .background(Color.secondary)
         }
     }
 }

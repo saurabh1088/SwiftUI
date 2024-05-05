@@ -487,6 +487,7 @@
 		B796C7752ABD5E0500E70028 /* ScrollViews */ = {
 			isa = PBXGroup;
 			children = (
+				B73FBB382A780D47004A5334 /* ComponentScrollView.swift */,
 				B796C7762ABD5E5E00E70028 /* ScrollWithReaderView.swift */,
 			);
 			path = ScrollViews;
@@ -571,7 +572,6 @@
 				B76A06FA2A073FC100974AD3 /* BottomSheetView.swift */,
 				B7C7E24929E9C0B80089E0C1 /* Buttons */,
 				B72C59A32AA6271200C9824E /* Carousels */,
-				B73FBB382A780D47004A5334 /* ComponentScrollView.swift */,
 				B7B8F7EB2A26744F00FE32A7 /* ListView.swift */,
 				B7E4BE242AAE14F6003C8392 /* Stacks */,
 				B72067662A333394009A785D /* TextInputView.swift */,
