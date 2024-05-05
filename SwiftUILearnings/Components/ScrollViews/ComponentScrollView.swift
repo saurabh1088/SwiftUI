@@ -86,10 +86,12 @@ extension ComponentScrollView {
             .buttonStyle(.fullScreenWide)
         }
         .fullScreenCover(isPresented: $showScrollView) {
-            if #available(iOS 17.0, *) {
-                simpleScrollView
-            } else {
-                scrollViewIOS16OrBelow
+            DismissibleView {
+                if #available(iOS 17.0, *) {
+                    simpleScrollView
+                } else {
+                    scrollViewIOS16OrBelow
+                }
             }
         }
     }
@@ -183,10 +185,12 @@ extension ComponentScrollView {
             .buttonStyle(.fullScreenWide)
         }
         .fullScreenCover(isPresented: $showReadableScrollView) {
-            if #available(iOS 17.0, *) {
-                readableScrollView
-            } else {
-                scrollViewIOS16OrBelow
+            DismissibleView {
+                if #available(iOS 17.0, *) {
+                    readableScrollView
+                } else {
+                    scrollViewIOS16OrBelow
+                }
             }
         }
     }
