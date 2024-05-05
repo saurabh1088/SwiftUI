@@ -6,79 +6,35 @@
 //
 
 import SwiftUI
+import SwiftUIViewsHelper
 
+// MARK: -----------------------------------------------------------------------
+// MARK: ComponentScrollView definition
 struct ComponentScrollView: View {
-    @State private var showModal: Bool = false
-    var colors: [Color] = [.red, .green, .orange, .blue, .cyan, .yellow, .purple, .pink, .brown, .mint]
+    @State private var showScrollView = false
+    private var colors: [Color] = [.red,
+                                   .green,
+                                   .orange,
+                                   .blue,
+                                   .cyan,
+                                   .yellow,
+                                   .purple,
+                                   .pink,
+                                   .brown,
+                                   .mint]
+    
     var body: some View {
         VStack {
-            Button("Show Scroll View") {
-                showModal = true
-            }
-        }
-        .fullScreenCover(isPresented: $showModal) {
-            if #available(iOS 17.0, *) {
-                scrollViewWithPagingVertical
-            } else {
-                scrollViewIOS16OrBelow
-            }
-        }
-    }
-    
-    @available(iOS 17.0, *)
-    @ViewBuilder
-    private var scrollViewWithPagingHorizontal: some View {
-        ScrollView(.horizontal) {
-            LazyHStack {
-                ForEach(0..<10) { i in
-                    RoundedRectangle(cornerRadius: 25)
-                        .fill(Color(hue: Double(i) / 10, saturation: 1, brightness: 1).gradient)
-                        .frame(width: 300, height: 100)
-                }
-            }
-            .scrollTargetLayout()
-        }
-        .scrollTargetBehavior(.paging)
-        .safeAreaPadding(.horizontal, 40)
-    }
-    
-    @available(iOS 17.0, *)
-    @ViewBuilder
-    private var scrollViewWithPagingVertical: some View {
-        ScrollView {
-            ForEach(0..<10) { i in
-                Text("Card \(i)")
-                    .font(.largeTitle)
-                    .frame(maxWidth: .infinity)
-                    .frame(height: 800)
-                    .background(colors[i])
-                    .foregroundStyle(.white)
-                    .clipShape(.rect(cornerRadius: 0))
-                    .scrollTargetLayout()
-            }
-        }
-        .frame(height: UIScreen.main.bounds.size.height)
-        .scrollTargetBehavior(.paging)
-    }
-    
-    @ViewBuilder
-    private var scrollViewIOS16OrBelow: some View {
-        ScrollView {
-            LazyHStack {
-                ForEach(0..<10) { i in
-                    RoundedRectangle(cornerRadius: 25)
-                        .fill(Color(hue: Double(i) / 10, saturation: 1, brightness: 1).gradient)
-                        .frame(width: 300, height: 100)
-                }
-            }
+            showSimpleScrollViewButton
         }
     }
 }
 
+// MARK: -----------------------------------------------------------------------
+// MARK: Preview
 #Preview {
     ComponentScrollView()
 }
-
 
 @available(iOS 17.0, *)
 struct CustomScrollTargetBehavior: ScrollTargetBehavior {
@@ -114,4 +70,101 @@ struct CustomScrollTargetBehavior: ScrollTargetBehavior {
 @available(iOS 17.0, *)
 extension ScrollTargetBehavior where Self == CustomScrollTargetBehavior {
     static var custom: CustomScrollTargetBehavior { .init() }
+}
+
+// MARK: -----------------------------------------------------------------------
+// MARK: Extension ComponentScrollView for simple scroll view
+extension ComponentScrollView {
+    @ViewBuilder
+    private var showSimpleScrollViewButton: some View {
+        VStack {
+            Button("Show Scroll View") {
+                showScrollView = true
+            }
+            .buttonStyle(.fullScreenWide)
+        }
+        .fullScreenCover(isPresented: $showScrollView) {
+            if #available(iOS 17.0, *) {
+                simpleScrollView
+            } else {
+                scrollViewIOS16OrBelow
+            }
+        }
+    }
+    
+    @available(iOS 17.0, *)
+    @ViewBuilder
+    private var simpleScrollView: some View {
+        ScrollView {
+            LazyVStack {
+                ForEach(0..<10) { index in
+                    Text("Value : \(index)")
+                        .frame(width: 200, height: 200)
+                        .background(colors[index])
+                }
+            }
+        }
+        .background(Color.secondary)
+    }
+}
+
+// MARK: -----------------------------------------------------------------------
+// MARK: Extension ComponentScrollView for horizontal paging scroll view
+extension ComponentScrollView {
+    @available(iOS 17.0, *)
+    @ViewBuilder
+    private var scrollViewWithPagingHorizontal: some View {
+        ScrollView(.horizontal) {
+            LazyHStack {
+                ForEach(0..<10) { i in
+                    RoundedRectangle(cornerRadius: 25)
+                        .fill(Color(hue: Double(i) / 10, saturation: 1, brightness: 1).gradient)
+                        .frame(width: 300, height: 100)
+                }
+            }
+            .scrollTargetLayout()
+        }
+        .scrollTargetBehavior(.paging)
+        .safeAreaPadding(.horizontal, 40)
+    }
+}
+
+// MARK: -----------------------------------------------------------------------
+// MARK: Extension ComponentScrollView for vertical paging scroll view
+extension ComponentScrollView {
+    @available(iOS 17.0, *)
+    @ViewBuilder
+    private var scrollViewWithPagingVertical: some View {
+        ScrollView {
+            ForEach(0..<10) { i in
+                Text("Card \(i)")
+                    .font(.largeTitle)
+                    .frame(maxWidth: .infinity)
+                    .frame(height: 800)
+                    .background(colors[i])
+                    .foregroundStyle(.white)
+                    .clipShape(.rect(cornerRadius: 0))
+                    .scrollTargetLayout()
+            }
+        }
+        .frame(height: UIScreen.main.bounds.size.height)
+        .scrollTargetBehavior(.paging)
+    }
+}
+
+// MARK: -----------------------------------------------------------------------
+// MARK: Extension ComponentScrollView for scroll view below iOS 16 versions
+extension ComponentScrollView {
+    @ViewBuilder
+    private var scrollViewIOS16OrBelow: some View {
+        ScrollView {
+            LazyHStack {
+                ForEach(0..<10) { i in
+                    RoundedRectangle(cornerRadius: 25)
+                        .fill(Color(hue: Double(i) / 10, saturation: 1, brightness: 1).gradient)
+                        .frame(width: 300, height: 100)
+                }
+            }
+        }
+    }
 }

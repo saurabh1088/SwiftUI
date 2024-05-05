@@ -7,6 +7,7 @@
 
 import SwiftUI
 import OSLog
+import SwiftUIViewsHelper
 
 struct EventKitView: View {
     @StateObject private var eventManager = EventsManager()
@@ -30,7 +31,7 @@ struct EventKitView: View {
         } label: {
             Text("Add event to calendar")
         }
-        .buttonStyle(.fullWidth)
+        .buttonStyle(.fullScreenWide)
         .sheet(isPresented: $showEditEventView) {
             EventEditViewRepresentable(eventManager: eventManager)
         }
@@ -64,7 +65,7 @@ struct EventKitView: View {
         } label: {
             Text("Request Reminder Access")
         }
-        .buttonStyle(.fullWidth)
+        .buttonStyle(.fullScreenWide)
     }
     
     @ViewBuilder
@@ -77,7 +78,7 @@ struct EventKitView: View {
                     showEvents
                 })
         }
-        .buttonStyle(.fullWidth)
+        .buttonStyle(.fullScreenWide)
     }
     
     @ViewBuilder
@@ -92,7 +93,7 @@ struct EventKitView: View {
                     }
                 })
         }
-        .buttonStyle(.fullWidth)
+        .buttonStyle(.fullScreenWide)
     }
     
     @ViewBuilder

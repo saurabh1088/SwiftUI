@@ -9,6 +9,7 @@
         
 
 import SwiftUI
+import SwiftUIViewsHelper
 
 struct NotificationsView: View {
     var body: some View {
@@ -18,14 +19,14 @@ struct NotificationsView: View {
             } label: {
                 Text("Schedule local notification")
             }
-            .buttonStyle(.fullWidth)
+            .buttonStyle(.fullScreenWide)
             
             Button {
                 NotificationsManager.shared.scheduleActionableLocalNotification()
             } label: {
                 Text("Schedule actionable local notification")
             }
-            .buttonStyle(.fullWidth)
+            .buttonStyle(.fullScreenWide)
         }
         .navigationTitle(Text(LearningTopics.notifications.rawValue))
     }

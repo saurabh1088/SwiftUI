@@ -85,7 +85,6 @@
 		B7BDAB972AAC451A007D237B /* EmojiCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7BDAB962AAC451A007D237B /* EmojiCard.swift */; };
 		B7C05D392A12A90C00AD7912 /* Enumerations.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C05D382A12A90C00AD7912 /* Enumerations.swift */; };
 		B7C795A82A022D3D0092619B /* UIComponentsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C795A72A022D3D0092619B /* UIComponentsView.swift */; };
-		B7C7E24D29E9C22A0089E0C1 /* CustomButtonStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C7E24C29E9C22A0089E0C1 /* CustomButtonStyles.swift */; };
 		B7D9AAED29FAF0C2001F5BFC /* PDFDocumentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D9AAEC29FAF0C2001F5BFC /* PDFDocumentView.swift */; };
 		B7E129F729B4DEA7002E6B54 /* SwiftUIWKWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E129F629B4DEA7002E6B54 /* SwiftUIWKWebView.swift */; };
 		B7E136EC2AB33D0300674C1F /* CarouselViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E136EB2AB33D0300674C1F /* CarouselViewModel.swift */; };
@@ -219,7 +218,6 @@
 		B7BDAB962AAC451A007D237B /* EmojiCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiCard.swift; sourceTree = "<group>"; };
 		B7C05D382A12A90C00AD7912 /* Enumerations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enumerations.swift; sourceTree = "<group>"; };
 		B7C795A72A022D3D0092619B /* UIComponentsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIComponentsView.swift; sourceTree = "<group>"; };
-		B7C7E24C29E9C22A0089E0C1 /* CustomButtonStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButtonStyles.swift; sourceTree = "<group>"; };
 		B7D9AAEC29FAF0C2001F5BFC /* PDFDocumentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFDocumentView.swift; sourceTree = "<group>"; };
 		B7E129F629B4DEA7002E6B54 /* SwiftUIWKWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIWKWebView.swift; sourceTree = "<group>"; };
 		B7E136EB2AB33D0300674C1F /* CarouselViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselViewModel.swift; sourceTree = "<group>"; };
@@ -585,7 +583,6 @@
 		B7C7E24929E9C0B80089E0C1 /* Buttons */ = {
 			isa = PBXGroup;
 			children = (
-				B7C7E24C29E9C22A0089E0C1 /* CustomButtonStyles.swift */,
 				B7B30A6B2BE6231000C08830 /* ButtonsView.swift */,
 			);
 			path = Buttons;
@@ -843,7 +840,6 @@
 				B73A9EAB2ACF32760032E6E5 /* SpeechViewModel.swift in Sources */,
 				B76A07012A07407700974AD3 /* ViewBuilderMaxLimitView.swift in Sources */,
 				B7E136EC2AB33D0300674C1F /* CarouselViewModel.swift in Sources */,
-				B7C7E24D29E9C22A0089E0C1 /* CustomButtonStyles.swift in Sources */,
 				B787A2DB29B115920090FCF7 /* ContentView.swift in Sources */,
 				B7C05D392A12A90C00AD7912 /* Enumerations.swift in Sources */,
 				B7B8F7EC2A26744F00FE32A7 /* ListView.swift in Sources */,

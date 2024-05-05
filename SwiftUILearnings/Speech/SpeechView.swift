@@ -7,6 +7,7 @@
 
 import SwiftUI
 import Speech
+import SwiftUIViewsHelper
 
 /// Steps
 ///
@@ -32,7 +33,7 @@ struct SpeechView: View {
             } label: {
                 Text(isListening ? "Stop" : "Say")
             }
-            .buttonStyle(.fullWidth)
+            .buttonStyle(.fullScreenWide)
             .background(isListening ? Color.red : Color.blue)
         }
         .onDisappear {
