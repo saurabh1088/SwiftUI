@@ -86,7 +86,7 @@ extension ComponentScrollView {
             .buttonStyle(.fullScreenWide)
         }
         .fullScreenCover(isPresented: $showScrollView) {
-            DismissibleView {
+            DismissibleModalView {
                 if #available(iOS 17.0, *) {
                     simpleScrollView
                 } else {
@@ -185,7 +185,7 @@ extension ComponentScrollView {
             .buttonStyle(.fullScreenWide)
         }
         .fullScreenCover(isPresented: $showReadableScrollView) {
-            DismissibleView {
+            DismissibleModalView {
                 if #available(iOS 17.0, *) {
                     readableScrollView
                 } else {
