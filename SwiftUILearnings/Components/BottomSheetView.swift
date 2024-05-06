@@ -11,6 +11,8 @@
 import SwiftUI
 import SwiftUIViewsHelper
 
+// MARK: -----------------------------------------------------------------------
+// MARK: BottomSheetView definition
 struct BottomSheetView: View {
     @State private var showBottomSheet = false
     @State private var showColoredBottomSheet = false
@@ -32,6 +34,24 @@ struct BottomSheetView: View {
         .background(viewBackgroundColor)
     }
     
+    
+}
+
+// MARK: -----------------------------------------------------------------------
+// MARK: Previews
+#Preview("Dark Mode") {
+    BottomSheetView()
+        .preferredColorScheme(.dark)
+}
+
+#Preview("Light Mode") {
+    BottomSheetView()
+        .preferredColorScheme(.light)
+}
+
+// MARK: -----------------------------------------------------------------------
+// MARK: Extensions
+extension BottomSheetView {
     @ViewBuilder
     private var bottomSheetButton: some View {
         Button {
@@ -45,7 +65,9 @@ struct BottomSheetView: View {
                 .presentationDetents([.medium, .large])
         }
     }
-    
+}
+
+extension BottomSheetView {
     @available(iOS 16.4, *)
     @ViewBuilder
     private var bottomSheetWithBackgroundColor: some View {
@@ -60,7 +82,9 @@ struct BottomSheetView: View {
                 .presentationBackground(.yellow)
         }
     }
-    
+}
+
+extension BottomSheetView {
     @available(iOS 16.4, *)
     @ViewBuilder
     private var bottomSheetWithBackgroundMaterial: some View {
@@ -75,7 +99,9 @@ struct BottomSheetView: View {
                 .presentationBackground(.ultraThinMaterial)
         }
     }
-    
+}
+
+extension BottomSheetView {
     @ViewBuilder
     private var switchBackgroundColor: some View {
         Button {
@@ -85,7 +111,9 @@ struct BottomSheetView: View {
         }
         .buttonStyle(.fullScreenWide)
     }
-    
+}
+
+extension BottomSheetView {
     /// NOTE : `.presentationBackgroundInteraction(.enabled)` doesn't works
     @available(iOS 16.4, *)
     @ViewBuilder
@@ -102,11 +130,5 @@ struct BottomSheetView: View {
                 .presentationBackground(.ultraThinMaterial)
                 .presentationBackgroundInteraction(.enabled(upThrough: .medium))
         }
-    }
-}
-
-struct BottomSheetView_Previews: PreviewProvider {
-    static var previews: some View {
-        BottomSheetView()
     }
 }
