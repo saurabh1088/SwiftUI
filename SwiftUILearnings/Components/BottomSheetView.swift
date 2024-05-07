@@ -39,6 +39,11 @@ struct BottomSheetView: View {
 
 // MARK: -----------------------------------------------------------------------
 // MARK: Previews
+/// One can't add these previews to say an extension of BottomSheetView for organising the code. The canvas
+/// simply won't show anything, actually won't open at all. Possibly the previews need to be part of file and not
+/// inside any type definition.
+/// One can also have a file containing only previews check below example :
+/// https://github.com/saurabh1088/swift-ui-views-helper/blob/main/Sources/SwiftUIViewsHelper/Previews/Previews.swift
 #Preview("Dark Mode") {
     BottomSheetView()
         .preferredColorScheme(.dark)
@@ -47,6 +52,16 @@ struct BottomSheetView: View {
 #Preview("Light Mode") {
     BottomSheetView()
         .preferredColorScheme(.light)
+}
+
+@available(iOS 17.0, *)
+#Preview("Landscape Left", traits: .landscapeLeft) {
+    BottomSheetView()
+}
+
+@available(iOS 17.0, *)
+#Preview("Landscape Right", traits: .landscapeRight) {
+    BottomSheetView()
 }
 
 // MARK: -----------------------------------------------------------------------
