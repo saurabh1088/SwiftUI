@@ -11,6 +11,7 @@
 import Foundation
 
 enum LearningTopics: String, CaseIterable {
+    case animations = "Animations"
     case augmentedReality = "Augmented Reality"
     case apis = "APIs"
     case charts = "Charts"
@@ -50,4 +51,9 @@ enum ListViewTypes: String, CaseIterable {
     case plain = "Plain"
     case sidebar = "Sidebar"
     case multipleSelection = "Multiple Selection"
+}
+
+enum AnimationScenarios: String, CaseIterable {
+    case swiftUI = "SwiftUI"
+    case lottie = "Lottie"
 }

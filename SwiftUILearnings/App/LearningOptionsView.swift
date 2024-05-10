@@ -85,6 +85,8 @@ extension LearningOptionsView {
     @ViewBuilder
     private func learningDestinationViewFor(topic: LearningTopics) -> some View {
         switch topic {
+        case .animations:
+            AnimationExamplesView()
         case .augmentedReality:
             AugmentedRealityView()
         case .apis:

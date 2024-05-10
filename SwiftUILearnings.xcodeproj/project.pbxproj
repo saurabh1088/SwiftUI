@@ -42,6 +42,7 @@
 		B76E261929B34F6D007977AB /* OpenURLsExternalBrowserExamplesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76E261829B34F6D007977AB /* OpenURLsExternalBrowserExamplesView.swift */; };
 		B76FE8B029D7518E00BCAF51 /* NotificationsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76FE8AF29D7518E00BCAF51 /* NotificationsManager.swift */; };
 		B76FE8B429D758C500BCAF51 /* payload.apns in Resources */ = {isa = PBXBuildFile; fileRef = B76FE8B329D758C500BCAF51 /* payload.apns */; };
+		B7724CB62BEDAE450077F650 /* AnimationExamplesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7724CB52BEDAE450077F650 /* AnimationExamplesView.swift */; };
 		B772B3C72A517A2D00B78E73 /* Logger+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B772B3C62A517A2D00B78E73 /* Logger+Extension.swift */; };
 		B77651F62AF16D5300656B45 /* NetworkingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77651F52AF16D5300656B45 /* NetworkingService.swift */; };
 		B7775E122A9F93E900DA37B2 /* GesturesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7775E112A9F93E900DA37B2 /* GesturesView.swift */; };
@@ -171,6 +172,7 @@
 		B76E261829B34F6D007977AB /* OpenURLsExternalBrowserExamplesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenURLsExternalBrowserExamplesView.swift; sourceTree = "<group>"; };
 		B76FE8AF29D7518E00BCAF51 /* NotificationsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsManager.swift; sourceTree = "<group>"; };
 		B76FE8B329D758C500BCAF51 /* payload.apns */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = payload.apns; sourceTree = "<group>"; };
+		B7724CB52BEDAE450077F650 /* AnimationExamplesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationExamplesView.swift; sourceTree = "<group>"; };
 		B772B3C62A517A2D00B78E73 /* Logger+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Logger+Extension.swift"; sourceTree = "<group>"; };
 		B77651F52AF16D5300656B45 /* NetworkingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingService.swift; sourceTree = "<group>"; };
 		B7775E112A9F93E900DA37B2 /* GesturesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GesturesView.swift; sourceTree = "<group>"; };
@@ -352,6 +354,14 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		B7724CB42BEDAE1B0077F650 /* Animations */ = {
+			isa = PBXGroup;
+			children = (
+				B7724CB52BEDAE450077F650 /* AnimationExamplesView.swift */,
+			);
+			path = Animations;
+			sourceTree = "<group>";
+		};
 		B77651F42AF11C9300656B45 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
@@ -431,6 +441,7 @@
 			children = (
 				B72A56452AD47BA800301595 /* SwiftUILearnings.entitlements */,
 				B782F7CC2AA8797100FB7751 /* App */,
+				B7724CB42BEDAE1B0077F650 /* Animations */,
 				B7A2D3B62A925C4C004E2988 /* AugmentedReality */,
 				B7E24D5D2A88FFED00790D1A /* Charts */,
 				B7C05D372A12A7F500AD7912 /* Common */,
@@ -864,6 +875,7 @@
 				B7E129F729B4DEA7002E6B54 /* SwiftUIWKWebView.swift in Sources */,
 				B7D9AAED29FAF0C2001F5BFC /* PDFDocumentView.swift in Sources */,
 				B7A2D3B82A925CE0004E2988 /* AugmentedRealityContainerView.swift in Sources */,
+				B7724CB62BEDAE450077F650 /* AnimationExamplesView.swift in Sources */,
 				B7E9414529D89C820021B952 /* NotificationsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
