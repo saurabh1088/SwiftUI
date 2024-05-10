@@ -18,9 +18,9 @@ struct AnimationExamplesView: View {
             .navigationDestination(for: AnimationScenarios.self) { scenario in
                 switch scenario {
                 case .swiftUI:
-                    Text(scenario.rawValue)
+                    SwiftUIAnimationsView()
                 case .lottie:
-                    Text(scenario.rawValue)
+                    LottieAnimationsView()
                 }
             }
         }

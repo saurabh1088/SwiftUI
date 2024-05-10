@@ -13,6 +13,8 @@
 		B7046C872A9680D900F9A95C /* AugmentedRealityViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7046C862A9680D900F9A95C /* AugmentedRealityViewModel.swift */; };
 		B712ED802A02C95B00BF84D0 /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7B04BEE29E72A010015EA8D /* AVKit.framework */; };
 		B712ED822A02C96700BF84D0 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B712ED812A02C96700BF84D0 /* AVFoundation.framework */; };
+		B71646282BEDE0BA000FAD76 /* SwiftUIAnimationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71646272BEDE0BA000FAD76 /* SwiftUIAnimationsView.swift */; };
+		B716462A2BEDE0E0000FAD76 /* LottieAnimationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71646292BEDE0E0000FAD76 /* LottieAnimationsView.swift */; };
 		B72067672A333394009A785D /* TextInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72067662A333394009A785D /* TextInputView.swift */; };
 		B72395BE2A98FDB1005BD060 /* sampleScene.scn in Resources */ = {isa = PBXBuildFile; fileRef = B72395BD2A98FDB1005BD060 /* sampleScene.scn */; };
 		B7299E9B29E5D73800A3A989 /* AudioVideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7299E9A29E5D73800A3A989 /* AudioVideoView.swift */; };
@@ -140,6 +142,8 @@
 		B7046C842A967F5A00F9A95C /* AugmentedRealityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AugmentedRealityView.swift; sourceTree = "<group>"; };
 		B7046C862A9680D900F9A95C /* AugmentedRealityViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AugmentedRealityViewModel.swift; sourceTree = "<group>"; };
 		B712ED812A02C96700BF84D0 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		B71646272BEDE0BA000FAD76 /* SwiftUIAnimationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIAnimationsView.swift; sourceTree = "<group>"; };
+		B71646292BEDE0E0000FAD76 /* LottieAnimationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieAnimationsView.swift; sourceTree = "<group>"; };
 		B72067662A333394009A785D /* TextInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextInputView.swift; sourceTree = "<group>"; };
 		B72395BD2A98FDB1005BD060 /* sampleScene.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = sampleScene.scn; sourceTree = "<group>"; };
 		B7299E9A29E5D73800A3A989 /* AudioVideoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioVideoView.swift; sourceTree = "<group>"; };
@@ -358,6 +362,8 @@
 			isa = PBXGroup;
 			children = (
 				B7724CB52BEDAE450077F650 /* AnimationExamplesView.swift */,
+				B71646272BEDE0BA000FAD76 /* SwiftUIAnimationsView.swift */,
+				B71646292BEDE0E0000FAD76 /* LottieAnimationsView.swift */,
 			);
 			path = Animations;
 			sourceTree = "<group>";
@@ -817,6 +823,7 @@
 				B796C7772ABD5E5E00E70028 /* ScrollWithReaderView.swift in Sources */,
 				B77651F62AF16D5300656B45 /* NetworkingService.swift in Sources */,
 				B7C795A82A022D3D0092619B /* UIComponentsView.swift in Sources */,
+				B71646282BEDE0BA000FAD76 /* SwiftUIAnimationsView.swift in Sources */,
 				B782F7D12AA8C5AB00FB7751 /* EventsManager.swift in Sources */,
 				B7B30A6C2BE6231000C08830 /* ButtonsView.swift in Sources */,
 				B7605AD229C35D0A00602F8A /* AppStateObjectModel.swift in Sources */,
@@ -870,6 +877,7 @@
 				B75D6AC32BE3C32F0047BB21 /* DebugView.swift in Sources */,
 				B76A06FD2A07400A00974AD3 /* LazyVStackView.swift in Sources */,
 				B75C13E42AF410600065F0C4 /* ServiceRequest.swift in Sources */,
+				B716462A2BEDE0E0000FAD76 /* LottieAnimationsView.swift in Sources */,
 				B76FE8B029D7518E00BCAF51 /* NotificationsManager.swift in Sources */,
 				B7B1DCBB29B3BFDB00FFC805 /* SafariWebView.swift in Sources */,
 				B7E129F729B4DEA7002E6B54 /* SwiftUIWKWebView.swift in Sources */,
