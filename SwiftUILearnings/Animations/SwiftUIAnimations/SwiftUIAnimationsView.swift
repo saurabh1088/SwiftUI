@@ -19,6 +19,8 @@ struct SwiftUIAnimationsView: View {
                 switch destination {
                 case .withAnimation:
                     WithAnimationsView()
+                case .withAnimationViewModifier:
+                    AnimationModifierExampleView()
                 }
             }
         }

@@ -96,6 +96,7 @@
 		B7E24D632A8901A600790D1A /* ChartsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E24D622A8901A600790D1A /* ChartsModel.swift */; };
 		B7E24D652A89037900790D1A /* ChartsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E24D642A89037900790D1A /* ChartsViewModel.swift */; };
 		B7E9414529D89C820021B952 /* NotificationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E9414429D89C820021B952 /* NotificationsView.swift */; };
+		B7F70FF42BEFA0A500320691 /* AnimationModifierExampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F70FF32BEFA0A500320691 /* AnimationModifierExampleView.swift */; };
 		B7FAFB362A97C3F10009DE51 /* Plant.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = B7FAFB352A97C3F10009DE51 /* Plant.rcproject */; };
 /* End PBXBuildFile section */
 
@@ -233,6 +234,7 @@
 		B7E24D622A8901A600790D1A /* ChartsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsModel.swift; sourceTree = "<group>"; };
 		B7E24D642A89037900790D1A /* ChartsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsViewModel.swift; sourceTree = "<group>"; };
 		B7E9414429D89C820021B952 /* NotificationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsView.swift; sourceTree = "<group>"; };
+		B7F70FF32BEFA0A500320691 /* AnimationModifierExampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationModifierExampleView.swift; sourceTree = "<group>"; };
 		B7FAFB352A97C3F10009DE51 /* Plant.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = Plant.rcproject; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -536,6 +538,7 @@
 			children = (
 				B71646272BEDE0BA000FAD76 /* SwiftUIAnimationsView.swift */,
 				B7A6F2C02BEF024300112BEF /* WithAnimationsView.swift */,
+				B7F70FF32BEFA0A500320691 /* AnimationModifierExampleView.swift */,
 			);
 			path = SwiftUIAnimations;
 			sourceTree = "<group>";
@@ -847,6 +850,7 @@
 				B782F7CF2AA8C10000FB7751 /* EventKitView.swift in Sources */,
 				B7AEDB6B29EABF35007D634E /* Color+Extension.swift in Sources */,
 				B7027C032A2A601A007D64D6 /* SelectableListModel.swift in Sources */,
+				B7F70FF42BEFA0A500320691 /* AnimationModifierExampleView.swift in Sources */,
 				B740FD712AB0E0C2009835D9 /* EventEditViewRepresentable.swift in Sources */,
 				B7008EF22A32254A003E2E01 /* VerticalStackView.swift in Sources */,
 				B7775E122A9F93E900DA37B2 /* GesturesView.swift in Sources */,

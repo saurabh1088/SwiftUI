@@ -13,10 +13,26 @@ struct WithAnimationsView: View {
     
     var body: some View {
         VStack {
-            
+            animationsView
+            Spacer()
+        }
+        .sheet(isPresented: .constant(true)) {
+            animationSelectorSheet
+                .presentationDetents([.height(100), .medium])
+        }
+    }
+    
+    @ViewBuilder
+    private var animationsView: some View {
+        VStack {
             Text("🤡")
                 .font(.system(size: animate ? 200 : 2))
-            
+        }
+    }
+    
+    @ViewBuilder
+    private var animationSelectorSheet: some View {
+        VStack {
             Button {
                 withAnimation {
                     animate.toggle()
