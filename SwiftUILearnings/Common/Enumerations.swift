@@ -57,3 +57,7 @@ enum AnimationScenarios: String, CaseIterable {
     case swiftUI = "SwiftUI"
     case lottie = "Lottie"
 }
+
+enum SwiftUIAnimationScenarios: String, CaseIterable {
+    case withAnimation = "With Animation"
+}

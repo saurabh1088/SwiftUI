@@ -67,6 +67,7 @@
 		B7A183E029C3856700B864DE /* DataEssentialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A183DF29C3856700B864DE /* DataEssentialView.swift */; };
 		B7A183E229C385A600B864DE /* DataEssentialStateObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A183E129C385A600B864DE /* DataEssentialStateObject.swift */; };
 		B7A2D3B82A925CE0004E2988 /* AugmentedRealityContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A2D3B72A925CE0004E2988 /* AugmentedRealityContainerView.swift */; };
+		B7A6F2C12BEF024300112BEF /* WithAnimationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A6F2C02BEF024300112BEF /* WithAnimationsView.swift */; };
 		B7A76AB429B2601F00163BDC /* BasicWebContentTechnologiesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A76AB329B2601F00163BDC /* BasicWebContentTechnologiesView.swift */; };
 		B7A963DC2AC82B2100EB6A12 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7A963DB2AC82B2100EB6A12 /* WidgetKit.framework */; };
 		B7A963DE2AC82B2100EB6A12 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7A963DD2AC82B2100EB6A12 /* SwiftUI.framework */; };
@@ -201,6 +202,7 @@
 		B7A183DF29C3856700B864DE /* DataEssentialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataEssentialView.swift; sourceTree = "<group>"; };
 		B7A183E129C385A600B864DE /* DataEssentialStateObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataEssentialStateObject.swift; sourceTree = "<group>"; };
 		B7A2D3B72A925CE0004E2988 /* AugmentedRealityContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AugmentedRealityContainerView.swift; sourceTree = "<group>"; };
+		B7A6F2C02BEF024300112BEF /* WithAnimationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WithAnimationsView.swift; sourceTree = "<group>"; };
 		B7A76AB329B2601F00163BDC /* BasicWebContentTechnologiesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicWebContentTechnologiesView.swift; sourceTree = "<group>"; };
 		B7A963DA2AC82B2100EB6A12 /* SwiftUILearningsWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = SwiftUILearningsWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7A963DB2AC82B2100EB6A12 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
@@ -361,8 +363,8 @@
 		B7724CB42BEDAE1B0077F650 /* Animations */ = {
 			isa = PBXGroup;
 			children = (
+				B7A6F2BF2BEF020700112BEF /* SwiftUIAnimations */,
 				B7724CB52BEDAE450077F650 /* AnimationExamplesView.swift */,
-				B71646272BEDE0BA000FAD76 /* SwiftUIAnimationsView.swift */,
 				B71646292BEDE0E0000FAD76 /* LottieAnimationsView.swift */,
 			);
 			path = Animations;
@@ -527,6 +529,15 @@
 				B72395BD2A98FDB1005BD060 /* sampleScene.scn */,
 			);
 			path = AugmentedReality;
+			sourceTree = "<group>";
+		};
+		B7A6F2BF2BEF020700112BEF /* SwiftUIAnimations */ = {
+			isa = PBXGroup;
+			children = (
+				B71646272BEDE0BA000FAD76 /* SwiftUIAnimationsView.swift */,
+				B7A6F2C02BEF024300112BEF /* WithAnimationsView.swift */,
+			);
+			path = SwiftUIAnimations;
 			sourceTree = "<group>";
 		};
 		B7A76AB229B25FA500163BDC /* WebContentTechnologies */ = {
@@ -875,6 +886,7 @@
 				B787A2D929B115920090FCF7 /* SwiftUILearningsApp.swift in Sources */,
 				B772B3C72A517A2D00B78E73 /* Logger+Extension.swift in Sources */,
 				B75D6AC32BE3C32F0047BB21 /* DebugView.swift in Sources */,
+				B7A6F2C12BEF024300112BEF /* WithAnimationsView.swift in Sources */,
 				B76A06FD2A07400A00974AD3 /* LazyVStackView.swift in Sources */,
 				B75C13E42AF410600065F0C4 /* ServiceRequest.swift in Sources */,
 				B716462A2BEDE0E0000FAD76 /* LottieAnimationsView.swift in Sources */,
