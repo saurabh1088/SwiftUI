@@ -234,6 +234,7 @@
 		B7E24D622A8901A600790D1A /* ChartsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsModel.swift; sourceTree = "<group>"; };
 		B7E24D642A89037900790D1A /* ChartsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsViewModel.swift; sourceTree = "<group>"; };
 		B7E9414429D89C820021B952 /* NotificationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsView.swift; sourceTree = "<group>"; };
+		B7EAE7592BF0BAE000206041 /* pushNotification.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; name = pushNotification.sh; path = Scripts/pushNotification.sh; sourceTree = "<group>"; };
 		B7F70FF32BEFA0A500320691 /* AnimationModifierExampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationModifierExampleView.swift; sourceTree = "<group>"; };
 		B7FAFB352A97C3F10009DE51 /* Plant.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = Plant.rcproject; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -422,6 +423,7 @@
 		B787A2CC29B115920090FCF7 = {
 			isa = PBXGroup;
 			children = (
+				B7EAE7592BF0BAE000206041 /* pushNotification.sh */,
 				B72A56462AD47BEC00301595 /* SwiftUILearningsWidgetExtension.entitlements */,
 				B7FAFB352A97C3F10009DE51 /* Plant.rcproject */,
 				B796FDC429B602C4004B5F87 /* style.css */,
