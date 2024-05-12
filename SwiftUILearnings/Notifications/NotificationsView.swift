@@ -14,6 +14,8 @@ import SwiftUIViewsHelper
 struct NotificationsView: View {
     var body: some View {
         VStack(spacing: 10) {
+            /// NOTE: Local and Remote notifications by design won't show if the app is already in foreground.
+            /// After tapping on this button, app needs to be put to background.
             Button {
                 NotificationsManager.shared.scheduleLocalNotification()
             } label: {
@@ -21,6 +23,7 @@ struct NotificationsView: View {
             }
             .buttonStyle(.fullScreenWide)
             
+            /// NOTE: Local and Remote notifications by design won't show if the app is already in foreground.
             Button {
                 NotificationsManager.shared.scheduleActionableLocalNotification()
             } label: {

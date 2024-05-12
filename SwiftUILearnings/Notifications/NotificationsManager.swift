@@ -39,7 +39,7 @@
  `Reasons for push notifications failure`
  1. Some failed logic at provider server.
  2. Push certificate expiry.
- 3. Wrond device token.
+ 3. Wrong device token.
  4. User has turned off permission to receive push notifications.
  
  */
@@ -105,6 +105,7 @@ class NotificationsManager: NSObject {
                                                         content: notificationContent,
                                                         trigger: notificationTrigger)
         UNUserNotificationCenter.current().add(notificationRequest)
+        Logger.notifications.info("Scheduled local notifications")
     }
     
     /// To create an actionable notification one needs to create an action using `UNNotificationAction`
@@ -129,6 +130,7 @@ class NotificationsManager: NSObject {
                                                         trigger: notificationTrigger)
         
         UNUserNotificationCenter.current().add(notificationRequest)
+        Logger.notifications.info("Scheduled actionable local notification")
     }
 }
 
@@ -139,5 +141,9 @@ extension NotificationsManager: UNUserNotificationCenterDelegate {
             Logger.notifications.info("Selection was Good")
         }
         completionHandler()
+    }
+    
+    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        Logger.notifications.info("Notification center will present notification")
     }
 }
