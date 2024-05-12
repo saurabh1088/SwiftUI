@@ -80,7 +80,7 @@ class NotificationsManager: NSObject {
     }
     
     /// This code will request for a provisional permission for notifications. When used this is not going to show
-    /// any alert asking for authorization. In fact authorization is granted by default with status maintaied as
+    /// any alert asking for authorization. In fact authorization is granted by default with status maintained as
     /// provisional unless user keeps or turns off the notification.
     /// When provisional authorization is requested, one can also request for authorization when app launches
     /// first time. The user is only asked his/her preference only when actual notification is received.
