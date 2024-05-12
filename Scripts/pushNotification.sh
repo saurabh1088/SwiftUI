@@ -26,14 +26,14 @@
 # Only application remote push notifications are supported.
 # VoIP, Complication, File Provider, and other types are not supported.
 
-# Project Name
-PROJECT_NAME="SwiftUILearnings"
+# Notification payload filename
+PAYLOAD_FILENAME="payload.apns"
 
-# Project's Info.plist path, from this script's context
-INFO_PLIST_PATH="../SwiftUILearnings/Info.plist"
+# Switch to project directory having .xcodeproj file
+cd ..
 
-# Fetch bundle identifier for the project
-BUNDLE_IDENTIFIER=$(/usr/libexec/PlistBuddy -c "Print :CFBundleIdentifier" "$INFO_PLIST_PATH")
+# Fetch bundle identifier value
+BUNDLE_IDENTIFIER=`xcodebuild -showBuildSettings | grep PRODUCT_BUNDLE_IDENTIFIER | awk -F ' = ' '{ print $2 }'`
 
 # Check if bundle identifier fetched is success or not
 if [ -z "$BUNDLE_IDENTIFIER" ]; then
@@ -44,5 +44,5 @@ fi
 # Print the bundle identifier
 echo "Bundle Identifier: $BUNDLE_IDENTIFIER"
 
-cd ../SwiftUILearnings/Resources
-xcrun simctl  push booted com.saurabh.SwiftUILearnings payload.apns
+cd SwiftUILearnings/Resources
+xcrun simctl  push booted "$BUNDLE_IDENTIFIER" "$PAYLOAD_FILENAME"
