@@ -48,13 +48,13 @@ struct SwiftUILearningsApp: App {
         .onChange(of: scenePhase) { (newScenePhase) in
             switch newScenePhase {
             case .background:
-                Logger.appCycle.info("Background")
+                Logger.appCycle.info("SwiftUILearnings scenePhase : Background")
             case .inactive:
-                Logger.appCycle.info("Inactive")
+                Logger.appCycle.info("SwiftUILearnings scenePhase : Inactive")
             case .active:
-                Logger.appCycle.info("Active")
+                Logger.appCycle.info("SwiftUILearnings scenePhase : Active")
             @unknown default:
-                Logger.appCycle.info("Unknown")
+                Logger.appCycle.info("SwiftUILearnings scenePhase : Unknown")
             }
         }
     }

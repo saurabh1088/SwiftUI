@@ -96,6 +96,7 @@
 		B7E24D632A8901A600790D1A /* ChartsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E24D622A8901A600790D1A /* ChartsModel.swift */; };
 		B7E24D652A89037900790D1A /* ChartsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E24D642A89037900790D1A /* ChartsViewModel.swift */; };
 		B7E9414529D89C820021B952 /* NotificationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E9414429D89C820021B952 /* NotificationsView.swift */; };
+		B7F3FB082BF316C7001E8093 /* silent_payload.apns in Resources */ = {isa = PBXBuildFile; fileRef = B7F3FB072BF316C7001E8093 /* silent_payload.apns */; };
 		B7F70FF42BEFA0A500320691 /* AnimationModifierExampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F70FF32BEFA0A500320691 /* AnimationModifierExampleView.swift */; };
 		B7FAFB362A97C3F10009DE51 /* Plant.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = B7FAFB352A97C3F10009DE51 /* Plant.rcproject */; };
 /* End PBXBuildFile section */
@@ -235,6 +236,7 @@
 		B7E24D642A89037900790D1A /* ChartsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsViewModel.swift; sourceTree = "<group>"; };
 		B7E9414429D89C820021B952 /* NotificationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsView.swift; sourceTree = "<group>"; };
 		B7EAE7592BF0BAE000206041 /* pushNotification.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; name = pushNotification.sh; path = Scripts/pushNotification.sh; sourceTree = "<group>"; };
+		B7F3FB072BF316C7001E8093 /* silent_payload.apns */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = silent_payload.apns; sourceTree = "<group>"; };
 		B7F70FF32BEFA0A500320691 /* AnimationModifierExampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationModifierExampleView.swift; sourceTree = "<group>"; };
 		B7FAFB352A97C3F10009DE51 /* Plant.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = Plant.rcproject; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -358,6 +360,7 @@
 			children = (
 				B7FAFB322A97C0DF0009DE51 /* Reality */,
 				B76FE8B329D758C500BCAF51 /* payload.apns */,
+				B7F3FB072BF316C7001E8093 /* silent_payload.apns */,
 				B7AEDB6729EABD77007D634E /* Colors.xcassets */,
 			);
 			path = Resources;
@@ -794,6 +797,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B7F3FB082BF316C7001E8093 /* silent_payload.apns in Resources */,
 				B76FE8B429D758C500BCAF51 /* payload.apns in Resources */,
 				B72395BE2A98FDB1005BD060 /* sampleScene.scn in Resources */,
 				B796FDC529B602C4004B5F87 /* style.css in Resources */,

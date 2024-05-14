@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import OSLog
 
 struct LearningOptionsView: View {
     @EnvironmentObject var appStateData: AppStateObjectModel
@@ -60,7 +61,8 @@ extension LearningOptionsView {
                 }
             }
             .navigationDestination(for: LearningTopics.self) { topic in
-                learningDestinationViewFor(topic: topic)
+                Logger.navigation.info("Navigating to topic : \(topic.rawValue)")
+                return learningDestinationViewFor(topic: topic)
             }
             .navigationTitle("Learnings")
         }

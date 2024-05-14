@@ -45,4 +45,4 @@ fi
 echo "Bundle Identifier: $BUNDLE_IDENTIFIER"
 
 cd SwiftUILearnings/Resources
-xcrun simctl  push booted "$BUNDLE_IDENTIFIER" "$PAYLOAD_FILENAME"
+xcrun simctl push booted "$BUNDLE_IDENTIFIER" "$PAYLOAD_FILENAME"

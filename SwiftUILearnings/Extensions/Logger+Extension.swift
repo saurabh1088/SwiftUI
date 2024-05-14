@@ -16,11 +16,12 @@ extension Logger {
 }
 
 extension Logger {
-    static let notifications = Logger(subsystem: subsystem, category: "notifications")
     static let appCycle = Logger(subsystem: subsystem, category: "appCycle")
-    static let view = Logger(subsystem: subsystem, category: "view")
-    static let viewModel = Logger(subsystem: subsystem, category: "viewModel")
     static let augmentedReality = Logger(subsystem: subsystem, category: "augmentedReality")
     static let eventKit = Logger(subsystem: subsystem, category: "eventKit")
+    static let navigation = Logger(subsystem: subsystem, category: "navigation")
+    static let notifications = Logger(subsystem: subsystem, category: "notifications")
     static let speech = Logger(subsystem: subsystem, category: "speech")
+    static let view = Logger(subsystem: subsystem, category: "view")
+    static let viewModel = Logger(subsystem: subsystem, category: "viewModel")
 }

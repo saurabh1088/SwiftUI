@@ -75,7 +75,7 @@ class NotificationsManager: NSObject {
     func requestPermission() {
         Logger.notifications.info("Requesting for user's persmission for notifications")
         UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge, .sound]) { granted, error in
-            Logger.notifications.info("Permission granted: \(granted)")
+            Logger.notifications.info("Notifications Permission granted: \(granted)")
         }
     }
     
@@ -105,7 +105,7 @@ class NotificationsManager: NSObject {
                                                         content: notificationContent,
                                                         trigger: notificationTrigger)
         UNUserNotificationCenter.current().add(notificationRequest)
-        Logger.notifications.info("Scheduled local notifications")
+        Logger.notifications.info("Scheduled a local notifications 10 seconds from now")
     }
     
     /// To create an actionable notification one needs to create an action using `UNNotificationAction`
@@ -130,7 +130,7 @@ class NotificationsManager: NSObject {
                                                         trigger: notificationTrigger)
         
         UNUserNotificationCenter.current().add(notificationRequest)
-        Logger.notifications.info("Scheduled actionable local notification")
+        Logger.notifications.info("Scheduled actionable local notification 10 seconds from now")
     }
 }
 
@@ -139,6 +139,8 @@ extension NotificationsManager: UNUserNotificationCenterDelegate {
         Logger.notifications.info("Notification center did receive response : \(response.actionIdentifier)")
         if response.actionIdentifier == "actionableLocalNotification.goodAction" {
             Logger.notifications.info("Selection was Good")
+        } else if response.actionIdentifier == "actionableLocalNotification.badAction" {
+            Logger.notifications.info("Selection was Bad")
         }
         completionHandler()
     }
