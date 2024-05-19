@@ -12,14 +12,11 @@ import SwiftUI
 import PDFKit
 
 struct PDFDocumentView: View {
-    
-    var pdfDocument: PDFDocument {
-        return PDFDocument(url: NSURL(string: "http://localhost:8080/0973_001.pdf")! as URL)!
-    }
+    @ObservedObject var viewModel: PDFDocumentViewModel
     
     var body: some View {
         VStack {
-            PDFFilesView(showing: pdfDocument)
+            PDFFilesView(showing: viewModel.pdfDocument)
         }
         .navigationTitle(SwiftUI.Text(LearningTopics.pdfFiles.rawValue))
     }
@@ -27,6 +24,7 @@ struct PDFDocumentView: View {
 
 struct PDFDocumentView_Previews: PreviewProvider {
     static var previews: some View {
-        PDFDocumentView()
+        let fileURLString = "https://sample-videos.com/pdf/Sample-pdf-5mb.pdf"
+        PDFDocumentView(viewModel: PDFDocumentViewModel(fileURLString: fileURLString))
     }
 }

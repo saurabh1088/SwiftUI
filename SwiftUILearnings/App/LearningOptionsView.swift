@@ -106,7 +106,7 @@ extension LearningOptionsView {
         case .notifications:
             NotificationsView()
         case .pdfFiles:
-            PDFDocumentView()
+            PDFDocumentView(viewModel: PDFDocumentViewModel(fileURLString: "https://sample-videos.com/pdf/Sample-pdf-5mb.pdf"))
         case .speech:
             SpeechView()
         case .testPitch:

@@ -77,6 +77,7 @@
 		B7A963E72AC82B2100EB6A12 /* AppIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A963E62AC82B2100EB6A12 /* AppIntent.swift */; };
 		B7A963E92AC82B2200EB6A12 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B7A963E82AC82B2200EB6A12 /* Assets.xcassets */; };
 		B7A963ED2AC82B2200EB6A12 /* SwiftUILearningsWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = B7A963DA2AC82B2100EB6A12 /* SwiftUILearningsWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		B7AB49DD2BF99367004551A1 /* PDFDocumentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7AB49DC2BF99367004551A1 /* PDFDocumentViewModel.swift */; };
 		B7AEDB6829EABD77007D634E /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B7AEDB6729EABD77007D634E /* Colors.xcassets */; };
 		B7AEDB6B29EABF35007D634E /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7AEDB6A29EABF35007D634E /* Color+Extension.swift */; };
 		B7B04BF329E72CA30015EA8D /* PDFFilesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B04BF229E72CA30015EA8D /* PDFFilesView.swift */; };
@@ -215,6 +216,7 @@
 		B7A963E62AC82B2100EB6A12 /* AppIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIntent.swift; sourceTree = "<group>"; };
 		B7A963E82AC82B2200EB6A12 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B7A963EA2AC82B2200EB6A12 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B7AB49DC2BF99367004551A1 /* PDFDocumentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFDocumentViewModel.swift; sourceTree = "<group>"; };
 		B7AEDB6729EABD77007D634E /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		B7AEDB6A29EABF35007D634E /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
 		B7B04BEE29E72A010015EA8D /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
@@ -629,6 +631,7 @@
 			children = (
 				B7B04BF229E72CA30015EA8D /* PDFFilesView.swift */,
 				B7D9AAEC29FAF0C2001F5BFC /* PDFDocumentView.swift */,
+				B7AB49DC2BF99367004551A1 /* PDFDocumentViewModel.swift */,
 			);
 			path = PDF;
 			sourceTree = "<group>";
@@ -858,6 +861,7 @@
 				B7027C032A2A601A007D64D6 /* SelectableListModel.swift in Sources */,
 				B7F70FF42BEFA0A500320691 /* AnimationModifierExampleView.swift in Sources */,
 				B740FD712AB0E0C2009835D9 /* EventEditViewRepresentable.swift in Sources */,
+				B7AB49DD2BF99367004551A1 /* PDFDocumentViewModel.swift in Sources */,
 				B7008EF22A32254A003E2E01 /* VerticalStackView.swift in Sources */,
 				B7775E122A9F93E900DA37B2 /* GesturesView.swift in Sources */,
 				B7BDAB972AAC451A007D237B /* EmojiCard.swift in Sources */,
