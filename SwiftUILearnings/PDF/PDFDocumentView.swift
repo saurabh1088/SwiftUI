@@ -16,9 +16,19 @@ struct PDFDocumentView: View {
     
     var body: some View {
         VStack {
-            PDFFilesView(showing: viewModel.pdfDocument)
+            if viewModel.pdfDocumentDidLoad,
+               let pdfDocument = viewModel.pdfDocument {
+                PDFFilesView(showing: pdfDocument)
+            } else {
+                ProgressView {
+                    Text("Loading...")
+                }
+            }
         }
         .navigationTitle(SwiftUI.Text(LearningTopics.pdfFiles.rawValue))
+        .task {
+            viewModel.loadPDFDocument()
+        }
     }
 }
 

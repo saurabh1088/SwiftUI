@@ -21,6 +21,7 @@ extension Logger {
     static let eventKit = Logger(subsystem: subsystem, category: "eventKit")
     static let navigation = Logger(subsystem: subsystem, category: "navigation")
     static let notifications = Logger(subsystem: subsystem, category: "notifications")
+    static let pdf = Logger(subsystem: subsystem, category: "pdf")
     static let speech = Logger(subsystem: subsystem, category: "speech")
     static let view = Logger(subsystem: subsystem, category: "view")
     static let viewModel = Logger(subsystem: subsystem, category: "viewModel")
