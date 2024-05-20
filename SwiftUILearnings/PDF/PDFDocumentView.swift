@@ -13,6 +13,7 @@ import PDFKit
 
 struct PDFDocumentView: View {
     @ObservedObject var viewModel: PDFDocumentViewModel
+    @State private var searchText = String()
     
     var body: some View {
         VStack {
@@ -25,9 +26,19 @@ struct PDFDocumentView: View {
                 }
             }
         }
+        .searchable(text: $searchText)
+        .onSubmit(of: .search, {
+            print("Searched :: \(searchText)")
+            viewModel.pdfDocument?.findString(searchText)
+        })
         .navigationTitle(SwiftUI.Text(LearningTopics.pdfFiles.rawValue))
         .task {
             viewModel.loadPDFDocument()
+        }
+        .onReceive(viewModel.$pdfDocumentDidLoad) { value in
+            if value {
+                viewModel.setDelegate()
+            }
         }
     }
 }

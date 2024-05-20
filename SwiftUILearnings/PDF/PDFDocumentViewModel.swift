@@ -33,6 +33,7 @@ final class PDFDocumentViewModel: ObservableObject {
         }
     }
     private let queue = DispatchQueue.global(qos: .background)
+    private let delegate = PDFDocumentViewDelegate()
     
     init(fileURLString: String = "https://sample-videos.com/pdf/Sample-pdf-5mb.pdf") {
         self.fileURLString = fileURLString
@@ -44,5 +45,17 @@ final class PDFDocumentViewModel: ObservableObject {
             Logger.pdf.info("Fetching PDF document...")
             pdfDocument = PDFDocument(url: NSURL(string: fileURLString)! as URL)!
         }
+    }
+    
+    func setDelegate() {
+        pdfDocument?.delegate = delegate
+    }
+}
+
+// TODO: Continue on the search feature.
+class PDFDocumentViewDelegate: NSObject, PDFDocumentDelegate {
+    func didMatchString(_ instance: PDFSelection) {
+        Logger.pdf.info("PDF didMatchString called")
+        instance.color = .red
     }
 }
