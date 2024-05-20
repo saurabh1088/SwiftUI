@@ -1,0 +1,24 @@
+{
+  "configurations" : [
+    {
+      "id" : "8D436520-94F5-4039-9C65-6A956A47416D",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "testTimeoutsEnabled" : true
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:SwiftUILearnings.xcodeproj",
+        "identifier" : "B787A2EE29B115970090FCF7",
+        "name" : "SwiftUILearningsUITests"
+      }
+    }
+  ],
+  "version" : 1
+}

@@ -142,6 +142,8 @@
 
 /* Begin PBXFileReference section */
 		B7008EF12A32254A003E2E01 /* VerticalStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalStackView.swift; sourceTree = "<group>"; };
+		B700BBF62BFBBFD30088725A /* SwiftUILearningsUnitTests.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = SwiftUILearningsUnitTests.xctestplan; sourceTree = "<group>"; };
+		B700BBF72BFBBFFA0088725A /* SwiftUILearningsUITests.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = SwiftUILearningsUITests.xctestplan; sourceTree = "<group>"; };
 		B7027C022A2A601A007D64D6 /* SelectableListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectableListModel.swift; sourceTree = "<group>"; };
 		B7046C842A967F5A00F9A95C /* AugmentedRealityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AugmentedRealityView.swift; sourceTree = "<group>"; };
 		B7046C862A9680D900F9A95C /* AugmentedRealityViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AugmentedRealityViewModel.swift; sourceTree = "<group>"; };
@@ -428,6 +430,8 @@
 		B787A2CC29B115920090FCF7 = {
 			isa = PBXGroup;
 			children = (
+				B700BBF72BFBBFFA0088725A /* SwiftUILearningsUITests.xctestplan */,
+				B700BBF62BFBBFD30088725A /* SwiftUILearningsUnitTests.xctestplan */,
 				B7EAE7592BF0BAE000206041 /* pushNotification.sh */,
 				B72A56462AD47BEC00301595 /* SwiftUILearningsWidgetExtension.entitlements */,
 				B7FAFB352A97C3F10009DE51 /* Plant.rcproject */,
