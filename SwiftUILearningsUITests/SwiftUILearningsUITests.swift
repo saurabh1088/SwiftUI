@@ -37,25 +37,42 @@ final class SwiftUILearningsUITests: XCTestCase {
         XCTAssertTrue(app.navigationBars["Learnings"].staticTexts["Learnings"].exists)
     }
     
+    func testLandingPageOptions() {
+        let app = XCUIApplication()
+        app.launch()
+        
+        let firstOption = app.collectionViews.buttons["Animations"]
+        XCTAssertTrue(firstOption.waitForExistence(timeout: 2))
+        
+        let expectedNumberOfLearningOptions = 16
+        let optionsOnScreen = app.collectionViews.buttons.count
+        
+        XCTAssertEqual(expectedNumberOfLearningOptions, optionsOnScreen)
+    }
+    
     func testAvailableOptions() throws {
         let app = XCUIApplication()
         app.launch()
         
-        let geometryReader = app.collectionViews.buttons["Augmented Reality"]
-        XCTAssertTrue(geometryReader.waitForExistence(timeout: 2))
+        let firstOption = app.collectionViews.buttons["Animations"]
+        XCTAssertTrue(firstOption.waitForExistence(timeout: 2))
         
+        XCTAssertTrue(app.collectionViews.buttons["Animations"].exists)
         XCTAssertTrue(app.collectionViews.buttons["Augmented Reality"].exists)
+        XCTAssertTrue(app.collectionViews.buttons["APIs"].exists)
         XCTAssertTrue(app.collectionViews.buttons["Charts"].exists)
         XCTAssertTrue(app.collectionViews.buttons["Data Essentials"].exists)
+        XCTAssertTrue(app.collectionViews.buttons["Debug"].exists)
         XCTAssertTrue(app.collectionViews.buttons["Events"].exists)
         XCTAssertTrue(app.collectionViews.buttons["Geometry Reader"].exists)
         XCTAssertTrue(app.collectionViews.buttons["Notifications"].exists)
         XCTAssertTrue(app.collectionViews.buttons["PDF Files"].exists)
+        XCTAssertTrue(app.collectionViews.buttons["Speech"].exists)
+        XCTAssertTrue(app.collectionViews.buttons["Test Pitch"].exists)
         XCTAssertTrue(app.collectionViews.buttons["UI Components"].exists)
         XCTAssertTrue(app.collectionViews.buttons["UI Gestures"].exists)
         XCTAssertTrue(app.collectionViews.buttons["Web Content Technologies"].exists)
-        
-        XCTAssertEqual(10, app.collectionViews.buttons.count)
+        XCTAssertTrue(app.collectionViews.buttons["Widget Extension"].exists)
     }
     
     func test_SelectOption_AugmentedReality() {
