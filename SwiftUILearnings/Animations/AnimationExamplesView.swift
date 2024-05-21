@@ -15,6 +15,7 @@ struct AnimationExamplesView: View {
                     NavigationLink(scenario.rawValue, value: scenario)
                 }
             }
+            .navigationTitle(Text("Scenarios"))
             .navigationDestination(for: AnimationScenarios.self) { scenario in
                 switch scenario {
                 case .swiftUI:

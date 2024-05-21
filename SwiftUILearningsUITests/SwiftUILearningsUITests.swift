@@ -75,6 +75,19 @@ final class SwiftUILearningsUITests: XCTestCase {
         XCTAssertTrue(app.collectionViews.buttons["Widget Extension"].exists)
     }
     
+    func test_SelectOption_Animations() {
+        let app = XCUIApplication()
+        app.launch()
+        
+        let animationsOption = app.collectionViews.buttons["Animations"]
+        XCTAssertTrue(animationsOption.exists)
+        animationsOption.tap()
+        
+        let backButtonToLearningsView = app.navigationBars["Scenarios"].buttons["Learnings"]
+        XCTAssertTrue(backButtonToLearningsView.exists)
+        backButtonToLearningsView.tap()
+    }
+    
     func test_SelectOption_AugmentedReality() {
         let app = XCUIApplication()
         app.launch()
