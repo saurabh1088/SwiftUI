@@ -1090,6 +1090,7 @@
 				CODE_SIGN_ENTITLEMENTS = SwiftUILearnings/SwiftUILearnings.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_ASSET_PATHS = "\"SwiftUILearnings/Preview Content\"";
 				DEVELOPMENT_TEAM = E7LWH9PU9H;
 				ENABLE_PREVIEWS = YES;
