@@ -16,6 +16,7 @@ struct DebugView: View {
             Button {
                 viewModel.createDebugModel()
                 viewModel.createSomeDebugable()
+                viewModel.createSomeDebugModelWithNoCustomStringConvertible()
             } label: {
                 Text("LLDB - po")
             }

@@ -22,3 +22,10 @@ extension DebugModel: CustomStringConvertible {
         return "\(id) \(value)"
     }
 }
+
+struct DebugModelWithNoCustomStringConvertible {
+    let id: Int
+    let value: String
+    let level: String
+    let issue: String
+}

@@ -11,6 +11,7 @@ class DebugViewModel: ObservableObject {
     var crash: Int?
     var debugModel: DebugModel?
     var someDebugable: Debugable?
+    var someDebugModelWithNoCustomStringConvertible: DebugModelWithNoCustomStringConvertible?
     
     func createDebugModel() {
         let debugModelId = 1
@@ -92,5 +93,16 @@ extension DebugViewModel {
         queue.async {
             _ = self.crash!
         }
+    }
+}
+
+extension DebugViewModel {
+    
+    func createSomeDebugModelWithNoCustomStringConvertible() {
+        let model = DebugModelWithNoCustomStringConvertible(id: 1,
+                                                            value: "value",
+                                                            level: "debug",
+                                                            issue: "crash")
+        someDebugModelWithNoCustomStringConvertible = model
     }
 }
