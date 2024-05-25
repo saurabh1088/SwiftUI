@@ -7,19 +7,23 @@
 
 import Foundation
 
-protocol Debugable {
+protocol Debuggable {
     var id: Int { get }
     var value: String { get }
 }
 
-struct DebugModel: Debugable {
+struct DebugModel: Debuggable {
     let id: Int
     let value: String
 }
 
 extension DebugModel: CustomStringConvertible {
     var description: String {
-        return "\(id) \(value)"
+        return  """
+                This is a debug model, used for exploring lldb debugging commands.
+                - Identifier : \(id)
+                - Value : \(value)
+                """
     }
 }
 

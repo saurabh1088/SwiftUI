@@ -10,23 +10,23 @@ import Foundation
 class DebugViewModel: ObservableObject {
     var crash: Int?
     var debugModel: DebugModel?
-    var someDebugable: Debugable?
+    var someDebuggable: Debuggable?
     var someDebugModelWithNoCustomStringConvertible: DebugModelWithNoCustomStringConvertible?
     
     func createDebugModel() {
         let debugModelId = 1
         let debugModelValue = "This is debug model of type DebugModel"
         let localDebugModel = DebugModel(id: debugModelId,
-                                    value: debugModelValue)
+                                         value: debugModelValue)
         debugModel = localDebugModel
     }
     
     func createSomeDebugable() {
         let debugModelId = 2
         let debugModelValue = "This is some debug model conforming to Debugable"
-        let localSomeDebugable = DebugModel(id: debugModelId,
-                                    value: debugModelValue)
-        someDebugable = localSomeDebugable
+        let localSomeDebuggable = DebugModel(id: debugModelId,
+                                             value: debugModelValue)
+        someDebuggable = localSomeDebuggable
     }
 }
 
@@ -84,8 +84,8 @@ extension DebugViewModel {
 extension DebugViewModel {
     /// Having a label for queue is great way to debug. Once app crashes when crashInBackgroundThread()
     /// gets called, one can see in the Xcode debugger that the thread which crashed is labeled as below.
-    /// It's great way to identify if crash is happening in any of the queue being created and maged in the app
-    /// itself. Then one can idenfiey the tasks performed on the queue leading to possibly root cause.
+    /// It's great way to identify if crash is happening in any of the queue being created and managed in the app
+    /// itself. Then one can identify the tasks performed on the queue leading to possibly root cause.
     func crashInBackgroundThread() {
         let queueIdentifier = "com.apple.saurabh.crash-in-background-thread.serial-queue"
         let queue = DispatchQueue(label: queueIdentifier,
