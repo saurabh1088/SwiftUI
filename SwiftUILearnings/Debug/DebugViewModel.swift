@@ -21,9 +21,9 @@ class DebugViewModel: ObservableObject {
         debugModel = localDebugModel
     }
     
-    func createSomeDebugable() {
+    func createSomeDebuggable() {
         let debugModelId = 2
-        let debugModelValue = "This is some debug model conforming to Debugable"
+        let debugModelValue = "This is some debug model conforming to Debuggable"
         let localSomeDebuggable = DebugModel(id: debugModelId,
                                              value: debugModelValue)
         someDebuggable = localSomeDebuggable

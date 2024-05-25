@@ -62,6 +62,7 @@
 		B796FDC129B5FC73004B5F87 /* webcontent in Resources */ = {isa = PBXBuildFile; fileRef = B796FDC029B5FC72004B5F87 /* webcontent */; };
 		B796FDC329B6029A004B5F87 /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = B796FDC229B6029A004B5F87 /* index.html */; };
 		B796FDC529B602C4004B5F87 /* style.css in Resources */ = {isa = PBXBuildFile; fileRef = B796FDC429B602C4004B5F87 /* style.css */; };
+		B798812E2C01789000F5A7D9 /* DebugViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B798812D2C01789000F5A7D9 /* DebugViewModelTests.swift */; };
 		B79C60AC2BD49BE8005C0226 /* SwiftUIViewsHelper in Frameworks */ = {isa = PBXBuildFile; productRef = B79C60AB2BD49BE8005C0226 /* SwiftUIViewsHelper */; };
 		B79E6F8629C723EC008B81BB /* ExternalInitStateObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79E6F8529C723EC008B81BB /* ExternalInitStateObject.swift */; };
 		B7A183E029C3856700B864DE /* DataEssentialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A183DF29C3856700B864DE /* DataEssentialView.swift */; };
@@ -203,6 +204,7 @@
 		B796FDC029B5FC72004B5F87 /* webcontent */ = {isa = PBXFileReference; lastKnownFileType = folder; path = webcontent; sourceTree = "<group>"; };
 		B796FDC229B6029A004B5F87 /* index.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = index.html; path = SwiftUILearnings/webcontent/index.html; sourceTree = "<group>"; };
 		B796FDC429B602C4004B5F87 /* style.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; name = style.css; path = SwiftUILearnings/webcontent/styles/style.css; sourceTree = "<group>"; };
+		B798812D2C01789000F5A7D9 /* DebugViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DebugViewModelTests.swift; path = SwiftUILearningsTests/DebugViewModelTests.swift; sourceTree = "<group>"; };
 		B79E6F8529C723EC008B81BB /* ExternalInitStateObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExternalInitStateObject.swift; sourceTree = "<group>"; };
 		B7A183DF29C3856700B864DE /* DataEssentialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataEssentialView.swift; sourceTree = "<group>"; };
 		B7A183E129C385A600B864DE /* DataEssentialStateObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataEssentialStateObject.swift; sourceTree = "<group>"; };
@@ -430,6 +432,7 @@
 		B787A2CC29B115920090FCF7 = {
 			isa = PBXGroup;
 			children = (
+				B798812D2C01789000F5A7D9 /* DebugViewModelTests.swift */,
 				B700BBF72BFBBFFA0088725A /* SwiftUILearningsUITests.xctestplan */,
 				B700BBF62BFBBFD30088725A /* SwiftUILearningsUnitTests.xctestplan */,
 				B7EAE7592BF0BAE000206041 /* pushNotification.sh */,
@@ -922,6 +925,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B798812E2C01789000F5A7D9 /* DebugViewModelTests.swift in Sources */,
 				B787A2EA29B115970090FCF7 /* SwiftUILearningsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

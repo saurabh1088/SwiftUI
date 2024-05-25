@@ -15,7 +15,7 @@ struct DebugView: View {
         VStack {
             Button {
                 viewModel.createDebugModel()
-                viewModel.createSomeDebugable()
+                viewModel.createSomeDebuggable()
                 viewModel.createSomeDebugModelWithNoCustomStringConvertible()
             } label: {
                 Text("LLDB - po")
