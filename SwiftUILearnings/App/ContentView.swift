@@ -16,6 +16,10 @@ struct ContentView: View {
         LearningOptionsView()
             .environmentObject(appStateData)
             .onAppear {
+                let category = UNNotificationCategory(identifier: "notificationExtensionCategory",
+                                                      actions: [],
+                                                      intentIdentifiers: [])
+                UNUserNotificationCenter.current().setNotificationCategories([category])
                 NotificationsManager.shared.requestPermission()
             }
     }

@@ -1,0 +1,13 @@
+{
+    "aps" : {
+        "alert" : {
+            "title" : "Rich Notification",
+            "body" : "This is a rich notification with an image."
+        },
+        "badge" : 7,
+        "category": "notificationExtensionCategory",
+        "mutable-content": 1,
+        "sound": "default"
+    },
+    "Simulator Target Bundle" : "com.saurabh.SwiftUILearnings"
+}
