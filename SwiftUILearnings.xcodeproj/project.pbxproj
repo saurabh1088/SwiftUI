@@ -26,6 +26,11 @@
 		B7493C442AD5B76A00D30D5F /* WidgetUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7493C432AD5B76900D30D5F /* WidgetUIView.swift */; };
 		B74A6B4F2ACDEC8200CA5C35 /* SpeechView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74A6B4E2ACDEC8200CA5C35 /* SpeechView.swift */; };
 		B74CEA7029B1D4A8002CB043 /* BasicGeometryReaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74CEA6F29B1D4A8002CB043 /* BasicGeometryReaderView.swift */; };
+		B74F76662C0C9BEC0090E373 /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B74F76652C0C9BEC0090E373 /* UserNotifications.framework */; };
+		B74F76682C0C9BEC0090E373 /* UserNotificationsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B74F76672C0C9BEC0090E373 /* UserNotificationsUI.framework */; };
+		B74F766B2C0C9BEC0090E373 /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74F766A2C0C9BEC0090E373 /* NotificationViewController.swift */; };
+		B74F766E2C0C9BEC0090E373 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = B74F766D2C0C9BEC0090E373 /* Base */; };
+		B74F76722C0C9BEC0090E373 /* SwiftUILearningsNotificationsContentExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = B74F76642C0C9BEC0090E373 /* SwiftUILearningsNotificationsContentExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		B753A85E2A358469003958AE /* AnyLayoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B753A85D2A358469003958AE /* AnyLayoutView.swift */; };
 		B75C13E22AF40F880065F0C4 /* HTTPMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75C13E12AF40F880065F0C4 /* HTTPMethods.swift */; };
 		B75C13E42AF410600065F0C4 /* ServiceRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75C13E32AF410600065F0C4 /* ServiceRequest.swift */; };
@@ -108,6 +113,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		B74F76702C0C9BEC0090E373 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B787A2CD29B115920090FCF7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B74F76632C0C9BEC0090E373;
+			remoteInfo = SwiftUILearningsNotificationsContentExtension;
+		};
 		B787A2E629B115970090FCF7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = B787A2CD29B115920090FCF7 /* Project object */;
@@ -147,6 +159,7 @@
 			files = (
 				B7A963ED2AC82B2200EB6A12 /* SwiftUILearningsWidgetExtension.appex in Embed Foundation Extensions */,
 				B7EE00752C0AD9C20073D7AF /* SwiftUILearningsNotificationsServiceExtension.appex in Embed Foundation Extensions */,
+				B74F76722C0C9BEC0090E373 /* SwiftUILearningsNotificationsContentExtension.appex in Embed Foundation Extensions */,
 			);
 			name = "Embed Foundation Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -176,6 +189,12 @@
 		B7493C432AD5B76900D30D5F /* WidgetUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetUIView.swift; sourceTree = "<group>"; };
 		B74A6B4E2ACDEC8200CA5C35 /* SpeechView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechView.swift; sourceTree = "<group>"; };
 		B74CEA6F29B1D4A8002CB043 /* BasicGeometryReaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicGeometryReaderView.swift; sourceTree = "<group>"; };
+		B74F76642C0C9BEC0090E373 /* SwiftUILearningsNotificationsContentExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = SwiftUILearningsNotificationsContentExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		B74F76652C0C9BEC0090E373 /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
+		B74F76672C0C9BEC0090E373 /* UserNotificationsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotificationsUI.framework; path = System/Library/Frameworks/UserNotificationsUI.framework; sourceTree = SDKROOT; };
+		B74F766A2C0C9BEC0090E373 /* NotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
+		B74F766D2C0C9BEC0090E373 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		B74F766F2C0C9BEC0090E373 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B753A85D2A358469003958AE /* AnyLayoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyLayoutView.swift; sourceTree = "<group>"; };
 		B75C13E12AF40F880065F0C4 /* HTTPMethods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethods.swift; sourceTree = "<group>"; };
 		B75C13E32AF410600065F0C4 /* ServiceRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceRequest.swift; sourceTree = "<group>"; };
@@ -264,6 +283,15 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		B74F76612C0C9BEC0090E373 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B74F76682C0C9BEC0090E373 /* UserNotificationsUI.framework in Frameworks */,
+				B74F76662C0C9BEC0090E373 /* UserNotifications.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B787A2D229B115920090FCF7 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -341,6 +369,16 @@
 				B74CEA6F29B1D4A8002CB043 /* BasicGeometryReaderView.swift */,
 			);
 			path = GeometryReader;
+			sourceTree = "<group>";
+		};
+		B74F76692C0C9BEC0090E373 /* SwiftUILearningsNotificationsContentExtension */ = {
+			isa = PBXGroup;
+			children = (
+				B74F766A2C0C9BEC0090E373 /* NotificationViewController.swift */,
+				B74F766C2C0C9BEC0090E373 /* MainInterface.storyboard */,
+				B74F766F2C0C9BEC0090E373 /* Info.plist */,
+			);
+			path = SwiftUILearningsNotificationsContentExtension;
 			sourceTree = "<group>";
 		};
 		B75C13E52AF8B2CF0065F0C4 /* Examples */ = {
@@ -469,6 +507,7 @@
 				B787A2F229B115970090FCF7 /* SwiftUILearningsUITests */,
 				B7A963DF2AC82B2100EB6A12 /* SwiftUILearningsWidget */,
 				B7EE006F2C0AD9C20073D7AF /* SwiftUILearningsNotificationsServiceExtension */,
+				B74F76692C0C9BEC0090E373 /* SwiftUILearningsNotificationsContentExtension */,
 				B787A2D629B115920090FCF7 /* Products */,
 				B7B04BED29E72A000015EA8D /* Frameworks */,
 			);
@@ -482,6 +521,7 @@
 				B787A2EF29B115970090FCF7 /* SwiftUILearningsUITests.xctest */,
 				B7A963DA2AC82B2100EB6A12 /* SwiftUILearningsWidgetExtension.appex */,
 				B7EE006E2C0AD9C20073D7AF /* SwiftUILearningsNotificationsServiceExtension.appex */,
+				B74F76642C0C9BEC0090E373 /* SwiftUILearningsNotificationsContentExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -624,6 +664,8 @@
 				B7B04BEE29E72A010015EA8D /* AVKit.framework */,
 				B7A963DB2AC82B2100EB6A12 /* WidgetKit.framework */,
 				B7A963DD2AC82B2100EB6A12 /* SwiftUI.framework */,
+				B74F76652C0C9BEC0090E373 /* UserNotifications.framework */,
+				B74F76672C0C9BEC0090E373 /* UserNotificationsUI.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -711,6 +753,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		B74F76632C0C9BEC0090E373 /* SwiftUILearningsNotificationsContentExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B74F76752C0C9BEC0090E373 /* Build configuration list for PBXNativeTarget "SwiftUILearningsNotificationsContentExtension" */;
+			buildPhases = (
+				B74F76602C0C9BEC0090E373 /* Sources */,
+				B74F76612C0C9BEC0090E373 /* Frameworks */,
+				B74F76622C0C9BEC0090E373 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SwiftUILearningsNotificationsContentExtension;
+			productName = SwiftUILearningsNotificationsContentExtension;
+			productReference = B74F76642C0C9BEC0090E373 /* SwiftUILearningsNotificationsContentExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		B787A2D429B115920090FCF7 /* SwiftUILearnings */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = B787A2F929B115970090FCF7 /* Build configuration list for PBXNativeTarget "SwiftUILearnings" */;
@@ -725,6 +784,7 @@
 			dependencies = (
 				B7A963EC2AC82B2200EB6A12 /* PBXTargetDependency */,
 				B7EE00742C0AD9C20073D7AF /* PBXTargetDependency */,
+				B74F76712C0C9BEC0090E373 /* PBXTargetDependency */,
 			);
 			name = SwiftUILearnings;
 			packageProductDependencies = (
@@ -814,6 +874,9 @@
 				LastSwiftUpdateCheck = 1530;
 				LastUpgradeCheck = 1420;
 				TargetAttributes = {
+					B74F76632C0C9BEC0090E373 = {
+						CreatedOnToolsVersion = 15.3;
+					};
 					B787A2D429B115920090FCF7 = {
 						CreatedOnToolsVersion = 14.2;
 					};
@@ -855,11 +918,20 @@
 				B787A2EE29B115970090FCF7 /* SwiftUILearningsUITests */,
 				B7A963D92AC82B2100EB6A12 /* SwiftUILearningsWidgetExtension */,
 				B7EE006D2C0AD9C20073D7AF /* SwiftUILearningsNotificationsServiceExtension */,
+				B74F76632C0C9BEC0090E373 /* SwiftUILearningsNotificationsContentExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		B74F76622C0C9BEC0090E373 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B74F766E2C0C9BEC0090E373 /* Base in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B787A2D329B115920090FCF7 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -909,6 +981,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		B74F76602C0C9BEC0090E373 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B74F766B2C0C9BEC0090E373 /* NotificationViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B787A2D129B115920090FCF7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1027,6 +1107,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		B74F76712C0C9BEC0090E373 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B74F76632C0C9BEC0090E373 /* SwiftUILearningsNotificationsContentExtension */;
+			targetProxy = B74F76702C0C9BEC0090E373 /* PBXContainerItemProxy */;
+		};
 		B787A2E729B115970090FCF7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = B787A2D429B115920090FCF7 /* SwiftUILearnings */;
@@ -1049,7 +1134,79 @@
 		};
 /* End PBXTargetDependency section */
 
+/* Begin PBXVariantGroup section */
+		B74F766C2C0C9BEC0090E373 /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B74F766D2C0C9BEC0090E373 /* Base */,
+			);
+			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
+		B74F76732C0C9BEC0090E373 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = E7LWH9PU9H;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SwiftUILearningsNotificationsContentExtension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = SwiftUILearningsNotificationsContentExtension;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.saurabh.SwiftUILearnings.SwiftUILearningsNotificationsContentExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B74F76742C0C9BEC0090E373 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = E7LWH9PU9H;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SwiftUILearningsNotificationsContentExtension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = SwiftUILearningsNotificationsContentExtension;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.saurabh.SwiftUILearnings.SwiftUILearningsNotificationsContentExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		B787A2F729B115970090FCF7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1442,6 +1599,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		B74F76752C0C9BEC0090E373 /* Build configuration list for PBXNativeTarget "SwiftUILearningsNotificationsContentExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B74F76732C0C9BEC0090E373 /* Debug */,
+				B74F76742C0C9BEC0090E373 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		B787A2D029B115920090FCF7 /* Build configuration list for PBXProject "SwiftUILearnings" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
