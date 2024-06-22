@@ -19,8 +19,7 @@ struct TestPitchView: View {
     var body: some View {
         VStack(spacing: 24) {
             Image(systemName: "smiley")
-                .resizable()
-                .frame(width: 20, height: 20)
+                .font(.system(size: 100))
                 .offset(x: 0.0, y: offset)
             
             Button {
@@ -72,8 +71,7 @@ struct SampleTestPitchView: View {
     var body: some View {
         VStack(spacing: 24) {
             Image(systemName: "smiley")
-                .resizable()
-                .frame(width: 50, height: 50)
+                .font(.system(size: 50))
             
             Text("Sample Test Pitch View")
                 .font(.system(size: 20))

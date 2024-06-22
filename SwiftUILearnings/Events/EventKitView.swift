@@ -102,9 +102,8 @@ struct EventKitView: View {
             ForEach(eventManager.allEventsInRange(), id: \.self) { event in
                 HStack(alignment: .top, spacing: 20) {
                     Image(systemName: "calendar")
-                        .resizable()
-                        .frame(width: 100, height: 100)
-                        .foregroundColor(.primaryRed)
+                        .font(.system(size: 100))
+                        .foregroundStyle(Color.primaryRed)
                     Spacer()
                     VStack(alignment: .leading) {
                         Text(event.title)
