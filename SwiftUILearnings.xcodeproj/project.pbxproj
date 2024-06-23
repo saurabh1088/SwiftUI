@@ -105,6 +105,7 @@
 		B7E24D632A8901A600790D1A /* ChartsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E24D622A8901A600790D1A /* ChartsModel.swift */; };
 		B7E24D652A89037900790D1A /* ChartsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E24D642A89037900790D1A /* ChartsViewModel.swift */; };
 		B7E9414529D89C820021B952 /* NotificationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E9414429D89C820021B952 /* NotificationsView.swift */; };
+		B7EC81A42C27ACBA00014957 /* SFSymbolsMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7EC81A32C27ACBA00014957 /* SFSymbolsMainView.swift */; };
 		B7EE00712C0AD9C20073D7AF /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7EE00702C0AD9C20073D7AF /* NotificationService.swift */; };
 		B7EE00752C0AD9C20073D7AF /* SwiftUILearningsNotificationsServiceExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = B7EE006E2C0AD9C20073D7AF /* SwiftUILearningsNotificationsServiceExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		B7F3FB082BF316C7001E8093 /* silent_payload.apns in Resources */ = {isa = PBXBuildFile; fileRef = B7F3FB072BF316C7001E8093 /* silent_payload.apns */; };
@@ -274,6 +275,7 @@
 		B7E24D642A89037900790D1A /* ChartsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsViewModel.swift; sourceTree = "<group>"; };
 		B7E9414429D89C820021B952 /* NotificationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsView.swift; sourceTree = "<group>"; };
 		B7EAE7592BF0BAE000206041 /* pushNotification.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; name = pushNotification.sh; path = Scripts/pushNotification.sh; sourceTree = "<group>"; };
+		B7EC81A32C27ACBA00014957 /* SFSymbolsMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFSymbolsMainView.swift; sourceTree = "<group>"; };
 		B7EE006E2C0AD9C20073D7AF /* SwiftUILearningsNotificationsServiceExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = SwiftUILearningsNotificationsServiceExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7EE00702C0AD9C20073D7AF /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
 		B7EE00722C0AD9C20073D7AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -546,6 +548,7 @@
 				B77651F42AF11C9300656B45 /* Networking */,
 				B76FE8AE29D7516D00BCAF51 /* Notifications */,
 				B7D9AAEB29FAF095001F5BFC /* PDF */,
+				B7EC81A22C27AC8800014957 /* SFSymbols */,
 				B74A6B4D2ACDEC3300CA5C35 /* Speech */,
 				B77950A02ABB572900DFC92F /* TestPitch */,
 				B7A76AB229B25FA500163BDC /* WebContentTechnologies */,
@@ -732,6 +735,14 @@
 				B76A07002A07407700974AD3 /* ViewBuilderMaxLimitView.swift */,
 			);
 			path = Stacks;
+			sourceTree = "<group>";
+		};
+		B7EC81A22C27AC8800014957 /* SFSymbols */ = {
+			isa = PBXGroup;
+			children = (
+				B7EC81A32C27ACBA00014957 /* SFSymbolsMainView.swift */,
+			);
+			path = SFSymbols;
 			sourceTree = "<group>";
 		};
 		B7EE006F2C0AD9C20073D7AF /* SwiftUILearningsNotificationsServiceExtension */ = {
@@ -1028,6 +1039,7 @@
 				B7B04BF329E72CA30015EA8D /* PDFFilesView.swift in Sources */,
 				B74CEA7029B1D4A8002CB043 /* BasicGeometryReaderView.swift in Sources */,
 				B7FAFB362A97C3F10009DE51 /* Plant.rcproject in Sources */,
+				B7EC81A42C27ACBA00014957 /* SFSymbolsMainView.swift in Sources */,
 				B7E24D5F2A89000700790D1A /* ChartsView.swift in Sources */,
 				B75D6AC72BE3CF6B0047BB21 /* DebugModel.swift in Sources */,
 				B72C5D2D2A30CA2600E77866 /* HorizontalStackView.swift in Sources */,
