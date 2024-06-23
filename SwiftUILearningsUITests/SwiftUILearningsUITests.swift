@@ -44,7 +44,7 @@ final class SwiftUILearningsUITests: XCTestCase {
         let firstOption = app.collectionViews.buttons["Animations"]
         XCTAssertTrue(firstOption.waitForExistence(timeout: 2))
         
-        let expectedNumberOfLearningOptions = 16
+        let expectedNumberOfLearningOptions = 17
         let optionsOnScreen = app.collectionViews.buttons.count
         
         XCTAssertEqual(expectedNumberOfLearningOptions, optionsOnScreen)
@@ -67,6 +67,7 @@ final class SwiftUILearningsUITests: XCTestCase {
         XCTAssertTrue(app.collectionViews.buttons["Geometry Reader"].exists)
         XCTAssertTrue(app.collectionViews.buttons["Notifications"].exists)
         XCTAssertTrue(app.collectionViews.buttons["PDF Files"].exists)
+        XCTAssertTrue(app.collectionViews.buttons["SF Symbols"].exists)
         XCTAssertTrue(app.collectionViews.buttons["Speech"].exists)
         XCTAssertTrue(app.collectionViews.buttons["Test Pitch"].exists)
         XCTAssertTrue(app.collectionViews.buttons["UI Components"].exists)

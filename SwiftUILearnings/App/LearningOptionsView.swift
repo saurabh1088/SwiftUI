@@ -107,6 +107,8 @@ extension LearningOptionsView {
             NotificationsView()
         case .pdfFiles:
             PDFDocumentView(viewModel: PDFDocumentViewModel())
+        case .sfSymbols:
+            SFSymbolsMainView()
         case .speech:
             SpeechView()
         case .testPitch:
