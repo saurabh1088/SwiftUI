@@ -63,3 +63,9 @@ enum SwiftUIAnimationScenarios: String, CaseIterable {
     case withAnimation = "With Animation"
     case withAnimationViewModifier = "Animation View Modifier"
 }
+
+enum SFSymbolScenarios: String, CaseIterable {
+    case animation = "Animations"
+    case scales = "Scales"
+    case size = "Size"
+}

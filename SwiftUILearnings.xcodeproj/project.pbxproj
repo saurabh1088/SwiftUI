@@ -32,6 +32,7 @@
 		B74F766E2C0C9BEC0090E373 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = B74F766D2C0C9BEC0090E373 /* Base */; };
 		B74F76722C0C9BEC0090E373 /* SwiftUILearningsNotificationsContentExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = B74F76642C0C9BEC0090E373 /* SwiftUILearningsNotificationsContentExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		B753A85E2A358469003958AE /* AnyLayoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B753A85D2A358469003958AE /* AnyLayoutView.swift */; };
+		B75A70BC2C27D1CC000EBCAD /* SFSymbolScalesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75A70BB2C27D1CC000EBCAD /* SFSymbolScalesView.swift */; };
 		B75C13E22AF40F880065F0C4 /* HTTPMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75C13E12AF40F880065F0C4 /* HTTPMethods.swift */; };
 		B75C13E42AF410600065F0C4 /* ServiceRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75C13E32AF410600065F0C4 /* ServiceRequest.swift */; };
 		B75C13E72AF8B3190065F0C4 /* TheCatAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75C13E62AF8B3190065F0C4 /* TheCatAPI.swift */; };
@@ -197,6 +198,7 @@
 		B74F766D2C0C9BEC0090E373 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		B74F766F2C0C9BEC0090E373 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B753A85D2A358469003958AE /* AnyLayoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyLayoutView.swift; sourceTree = "<group>"; };
+		B75A70BB2C27D1CC000EBCAD /* SFSymbolScalesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFSymbolScalesView.swift; sourceTree = "<group>"; };
 		B75C13E12AF40F880065F0C4 /* HTTPMethods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethods.swift; sourceTree = "<group>"; };
 		B75C13E32AF410600065F0C4 /* ServiceRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceRequest.swift; sourceTree = "<group>"; };
 		B75C13E62AF8B3190065F0C4 /* TheCatAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheCatAPI.swift; sourceTree = "<group>"; };
@@ -741,6 +743,7 @@
 			isa = PBXGroup;
 			children = (
 				B7EC81A32C27ACBA00014957 /* SFSymbolsMainView.swift */,
+				B75A70BB2C27D1CC000EBCAD /* SFSymbolScalesView.swift */,
 			);
 			path = SFSymbols;
 			sourceTree = "<group>";
@@ -1028,6 +1031,7 @@
 				B7008EF22A32254A003E2E01 /* VerticalStackView.swift in Sources */,
 				B7775E122A9F93E900DA37B2 /* GesturesView.swift in Sources */,
 				B7BDAB972AAC451A007D237B /* EmojiCard.swift in Sources */,
+				B75A70BC2C27D1CC000EBCAD /* SFSymbolScalesView.swift in Sources */,
 				B7B189E32AA6E3B00046AE65 /* Carousel.swift in Sources */,
 				B76E261929B34F6D007977AB /* OpenURLsExternalBrowserExamplesView.swift in Sources */,
 				B7046C872A9680D900F9A95C /* AugmentedRealityViewModel.swift in Sources */,
