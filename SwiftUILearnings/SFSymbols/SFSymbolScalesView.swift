@@ -42,6 +42,7 @@ struct SFSymbolScalesView: View {
             }
             .frame(height: 100)
         }
+        .navigationTitle(Text(SFSymbolScenarios.scales.rawValue))
     }
     
     @ViewBuilder

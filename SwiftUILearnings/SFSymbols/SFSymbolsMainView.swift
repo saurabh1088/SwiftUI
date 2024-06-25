@@ -34,11 +34,15 @@ struct SFSymbolsMainView: View {
         .navigationDestination(for: SFSymbolScenarios.self) { scenario in
             switch scenario {
             case .animation:
-                Text(scenario.rawValue)
+                if #available(iOS 17.0, *) {
+                    SFSymbolAnimationsView()
+                } else {
+                    Text("SF Symbol Animations need iOS 17.0 or higher")
+                }
             case .scales:
                 SFSymbolScalesView()
             case .size:
-                Text(scenario.rawValue)
+                SFSymbolSizeView()
             }
         }
     }
