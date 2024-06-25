@@ -32,6 +32,9 @@
 		B74F766E2C0C9BEC0090E373 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = B74F766D2C0C9BEC0090E373 /* Base */; };
 		B74F76722C0C9BEC0090E373 /* SwiftUILearningsNotificationsContentExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = B74F76642C0C9BEC0090E373 /* SwiftUILearningsNotificationsContentExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		B753A85E2A358469003958AE /* AnyLayoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B753A85D2A358469003958AE /* AnyLayoutView.swift */; };
+		B75430072C29D55300168793 /* SFSymbolSizeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75430062C29D55300168793 /* SFSymbolSizeView.swift */; };
+		B75430092C29DE6E00168793 /* SFSymbolAnimationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75430082C29DE6E00168793 /* SFSymbolAnimationsView.swift */; };
+		B75A70BC2C27D1CC000EBCAD /* SFSymbolScalesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75A70BB2C27D1CC000EBCAD /* SFSymbolScalesView.swift */; };
 		B75C13E22AF40F880065F0C4 /* HTTPMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75C13E12AF40F880065F0C4 /* HTTPMethods.swift */; };
 		B75C13E42AF410600065F0C4 /* ServiceRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75C13E32AF410600065F0C4 /* ServiceRequest.swift */; };
 		B75C13E72AF8B3190065F0C4 /* TheCatAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75C13E62AF8B3190065F0C4 /* TheCatAPI.swift */; };
@@ -197,6 +200,9 @@
 		B74F766D2C0C9BEC0090E373 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		B74F766F2C0C9BEC0090E373 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B753A85D2A358469003958AE /* AnyLayoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyLayoutView.swift; sourceTree = "<group>"; };
+		B75430062C29D55300168793 /* SFSymbolSizeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFSymbolSizeView.swift; sourceTree = "<group>"; };
+		B75430082C29DE6E00168793 /* SFSymbolAnimationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFSymbolAnimationsView.swift; sourceTree = "<group>"; };
+		B75A70BB2C27D1CC000EBCAD /* SFSymbolScalesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFSymbolScalesView.swift; sourceTree = "<group>"; };
 		B75C13E12AF40F880065F0C4 /* HTTPMethods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethods.swift; sourceTree = "<group>"; };
 		B75C13E32AF410600065F0C4 /* ServiceRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceRequest.swift; sourceTree = "<group>"; };
 		B75C13E62AF8B3190065F0C4 /* TheCatAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheCatAPI.swift; sourceTree = "<group>"; };
@@ -741,6 +747,9 @@
 			isa = PBXGroup;
 			children = (
 				B7EC81A32C27ACBA00014957 /* SFSymbolsMainView.swift */,
+				B75A70BB2C27D1CC000EBCAD /* SFSymbolScalesView.swift */,
+				B75430062C29D55300168793 /* SFSymbolSizeView.swift */,
+				B75430082C29DE6E00168793 /* SFSymbolAnimationsView.swift */,
 			);
 			path = SFSymbols;
 			sourceTree = "<group>";
@@ -1018,6 +1027,7 @@
 				B76A06FF2A07404100974AD3 /* SomeCustomRowView.swift in Sources */,
 				B75C13E72AF8B3190065F0C4 /* TheCatAPI.swift in Sources */,
 				B75C13E22AF40F880065F0C4 /* HTTPMethods.swift in Sources */,
+				B75430072C29D55300168793 /* SFSymbolSizeView.swift in Sources */,
 				B75D6AC52BE3C7EF0047BB21 /* DebugViewModel.swift in Sources */,
 				B782F7CF2AA8C10000FB7751 /* EventKitView.swift in Sources */,
 				B7AEDB6B29EABF35007D634E /* Color+Extension.swift in Sources */,
@@ -1028,6 +1038,7 @@
 				B7008EF22A32254A003E2E01 /* VerticalStackView.swift in Sources */,
 				B7775E122A9F93E900DA37B2 /* GesturesView.swift in Sources */,
 				B7BDAB972AAC451A007D237B /* EmojiCard.swift in Sources */,
+				B75A70BC2C27D1CC000EBCAD /* SFSymbolScalesView.swift in Sources */,
 				B7B189E32AA6E3B00046AE65 /* Carousel.swift in Sources */,
 				B76E261929B34F6D007977AB /* OpenURLsExternalBrowserExamplesView.swift in Sources */,
 				B7046C872A9680D900F9A95C /* AugmentedRealityViewModel.swift in Sources */,
@@ -1040,6 +1051,7 @@
 				B74CEA7029B1D4A8002CB043 /* BasicGeometryReaderView.swift in Sources */,
 				B7FAFB362A97C3F10009DE51 /* Plant.rcproject in Sources */,
 				B7EC81A42C27ACBA00014957 /* SFSymbolsMainView.swift in Sources */,
+				B75430092C29DE6E00168793 /* SFSymbolAnimationsView.swift in Sources */,
 				B7E24D5F2A89000700790D1A /* ChartsView.swift in Sources */,
 				B75D6AC72BE3CF6B0047BB21 /* DebugModel.swift in Sources */,
 				B72C5D2D2A30CA2600E77866 /* HorizontalStackView.swift in Sources */,

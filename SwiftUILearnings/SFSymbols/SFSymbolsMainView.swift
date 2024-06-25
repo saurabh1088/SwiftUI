@@ -13,16 +13,37 @@ struct SFSymbolsMainView: View {
     var body: some View {
         VStack {
             if #available(iOS 17.0, *) {
-                Image(systemName: "fan.desk")
+                Image(systemName: "rainbow")
                     .font(.system(size: 100))
+                    .symbolRenderingMode(.multicolor)
                     .symbolEffect(.bounce, value: animate)
+                Text("SF Symbols")
+                    .font(.system(size: 50))
             } else {
-                Image(systemName: "fan.desk")
+                Image(systemName: "rainbow")
                     .font(.system(size: 100))
+            }
+            
+            List(SFSymbolScenarios.allCases, id: \.rawValue) { scenario in
+                NavigationLink(scenario.rawValue, value: scenario)
             }
         }
         .onAppear {
             animate.toggle()
+        }
+        .navigationDestination(for: SFSymbolScenarios.self) { scenario in
+            switch scenario {
+            case .animation:
+                if #available(iOS 17.0, *) {
+                    SFSymbolAnimationsView()
+                } else {
+                    Text("SF Symbol Animations need iOS 17.0 or higher")
+                }
+            case .scales:
+                SFSymbolScalesView()
+            case .size:
+                SFSymbolSizeView()
+            }
         }
     }
 }
