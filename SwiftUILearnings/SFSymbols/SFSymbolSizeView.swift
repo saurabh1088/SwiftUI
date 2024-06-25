@@ -9,6 +9,8 @@ import SwiftUI
 
 struct SFSymbolSizeView: View {
     @State private var fontSize: CGFloat = 10.0
+    private var maxFontSize = 100.0
+    private var minFontSize = 10.0
     
     var body: some View {
         VStack {
@@ -20,7 +22,9 @@ struct SFSymbolSizeView: View {
             
             HStack {
                 Button {
-                    fontSize += 10.0
+                    if fontSize < maxFontSize {
+                        fontSize += 10.0
+                    }
                 } label: {
                     Image(systemName: "plus.circle.fill")
                         .font(.system(size: 40))
@@ -28,7 +32,9 @@ struct SFSymbolSizeView: View {
                 }
                 
                 Button {
-                    fontSize -= 10.0
+                    if fontSize > minFontSize {
+                        fontSize -= 10.0
+                    }
                 } label: {
                     Image(systemName: "minus.circle.fill")
                         .font(.system(size: 40))
