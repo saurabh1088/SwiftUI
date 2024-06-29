@@ -46,8 +46,8 @@ extension SFSymbolAnimationsView {
         VStack {
             Image(systemName: "snowflake.circle.fill")
                 .font(.system(size: 100))
-                .symbolRenderingMode(.multicolor)
-                .symbolEffect(.appear, isActive: appear)
+                .foregroundStyle(Color.primaryRed)
+                .symbolEffect(.appear, isActive: !appear)
             
             Button {
                 appear.toggle()
@@ -65,7 +65,7 @@ extension SFSymbolAnimationsView {
         VStack {
             Image(systemName: "snowflake.circle")
                 .font(.system(size: 100))
-                .symbolRenderingMode(.multicolor)
+                .foregroundStyle(Color.primaryGreen)
                 .symbolEffect(.disappear, isActive: disappear)
             
             Button {
@@ -101,7 +101,7 @@ extension SFSymbolAnimationsView {
     @ViewBuilder
     private var animationScale: some View {
         VStack {
-            Image(systemName: "message.badge.filled.fill")
+            Image(systemName: "message.badge")
                 .font(.system(size: 100))
                 .symbolRenderingMode(.multicolor)
                 .symbolEffect(.scale.down, isActive: scale)
