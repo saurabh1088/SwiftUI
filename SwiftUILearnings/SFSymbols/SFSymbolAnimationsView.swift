@@ -9,6 +9,7 @@ import SwiftUI
 
 @available(iOS 17.0, *)
 struct SFSymbolAnimationsView: View {
+    // TODO: Find better solution for managing multiple state properties in view.
     @State private var appear = false
     @State private var disappear = false
     @State private var bounce = false

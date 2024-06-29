@@ -31,9 +31,9 @@ struct ContentView_Previews: PreviewProvider {
     }
 }
 
-//TODO: Private Click Measurement
+// TODO: Private Click Measurement
 // https://webkit.org/blog/11529/introducing-private-click-measurement-pcm/
 
-//TODO: Result Builder
+// TODO: Result Builder
 // https://www.avanderlee.com/swift/result-builders/
 // https://www.swiftbysundell.com/articles/deep-dive-into-swift-function-builders/

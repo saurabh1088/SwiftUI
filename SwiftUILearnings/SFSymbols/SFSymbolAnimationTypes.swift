@@ -8,6 +8,7 @@
 import Foundation
 import SwiftUI
 
+// TODO: Add unit tests for SFSymbolAnimationType
 enum SFSymbolAnimationType: CaseIterable {
     case appear
     case bounce
