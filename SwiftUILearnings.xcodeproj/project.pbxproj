@@ -17,6 +17,7 @@
 		B716462A2BEDE0E0000FAD76 /* LottieAnimationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71646292BEDE0E0000FAD76 /* LottieAnimationsView.swift */; };
 		B72067672A333394009A785D /* TextInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72067662A333394009A785D /* TextInputView.swift */; };
 		B72395BE2A98FDB1005BD060 /* sampleScene.scn in Resources */ = {isa = PBXBuildFile; fileRef = B72395BD2A98FDB1005BD060 /* sampleScene.scn */; };
+		B72598C42C30438B008D4CF7 /* AnimatingSFSymbol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72598C32C30438B008D4CF7 /* AnimatingSFSymbol.swift */; };
 		B7299E9B29E5D73800A3A989 /* AudioVideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7299E9A29E5D73800A3A989 /* AudioVideoView.swift */; };
 		B72C59A52AA6273300C9824E /* CarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72C59A42AA6273300C9824E /* CarouselView.swift */; };
 		B72C5D2D2A30CA2600E77866 /* HorizontalStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72C5D2C2A30CA2600E77866 /* HorizontalStackView.swift */; };
@@ -59,6 +60,7 @@
 		B77651F62AF16D5300656B45 /* NetworkingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77651F52AF16D5300656B45 /* NetworkingService.swift */; };
 		B7775E122A9F93E900DA37B2 /* GesturesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7775E112A9F93E900DA37B2 /* GesturesView.swift */; };
 		B77950A42ABB579300DFC92F /* TestPitchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77950A32ABB579300DFC92F /* TestPitchView.swift */; };
+		B77974142C300A8F005A267A /* SFSymbolAnimationTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77974132C300A8F005A267A /* SFSymbolAnimationTypes.swift */; };
 		B782F7CF2AA8C10000FB7751 /* EventKitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B782F7CE2AA8C10000FB7751 /* EventKitView.swift */; };
 		B782F7D12AA8C5AB00FB7751 /* EventsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B782F7D02AA8C5AB00FB7751 /* EventsManager.swift */; };
 		B787A2D929B115920090FCF7 /* SwiftUILearningsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B787A2D829B115920090FCF7 /* SwiftUILearningsApp.swift */; };
@@ -182,6 +184,7 @@
 		B71646292BEDE0E0000FAD76 /* LottieAnimationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieAnimationsView.swift; sourceTree = "<group>"; };
 		B72067662A333394009A785D /* TextInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextInputView.swift; sourceTree = "<group>"; };
 		B72395BD2A98FDB1005BD060 /* sampleScene.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = sampleScene.scn; sourceTree = "<group>"; };
+		B72598C32C30438B008D4CF7 /* AnimatingSFSymbol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatingSFSymbol.swift; sourceTree = "<group>"; };
 		B7299E9A29E5D73800A3A989 /* AudioVideoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioVideoView.swift; sourceTree = "<group>"; };
 		B72A56452AD47BA800301595 /* SwiftUILearnings.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SwiftUILearnings.entitlements; sourceTree = "<group>"; };
 		B72A56462AD47BEC00301595 /* SwiftUILearningsWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SwiftUILearningsWidgetExtension.entitlements; sourceTree = "<group>"; };
@@ -227,6 +230,7 @@
 		B77651F52AF16D5300656B45 /* NetworkingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingService.swift; sourceTree = "<group>"; };
 		B7775E112A9F93E900DA37B2 /* GesturesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GesturesView.swift; sourceTree = "<group>"; };
 		B77950A32ABB579300DFC92F /* TestPitchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestPitchView.swift; sourceTree = "<group>"; };
+		B77974132C300A8F005A267A /* SFSymbolAnimationTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFSymbolAnimationTypes.swift; sourceTree = "<group>"; };
 		B782F7CE2AA8C10000FB7751 /* EventKitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventKitView.swift; sourceTree = "<group>"; };
 		B782F7D02AA8C5AB00FB7751 /* EventsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsManager.swift; sourceTree = "<group>"; };
 		B787A2D529B115920090FCF7 /* SwiftUILearnings.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUILearnings.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -750,6 +754,8 @@
 				B75A70BB2C27D1CC000EBCAD /* SFSymbolScalesView.swift */,
 				B75430062C29D55300168793 /* SFSymbolSizeView.swift */,
 				B75430082C29DE6E00168793 /* SFSymbolAnimationsView.swift */,
+				B77974132C300A8F005A267A /* SFSymbolAnimationTypes.swift */,
+				B72598C32C30438B008D4CF7 /* AnimatingSFSymbol.swift */,
 			);
 			path = SFSymbols;
 			sourceTree = "<group>";
@@ -1046,6 +1052,7 @@
 				B7B1DCBD29B3C20700FFC805 /* OpenURLsInAppBrowserExamplesView.swift in Sources */,
 				B79E6F8629C723EC008B81BB /* ExternalInitStateObject.swift in Sources */,
 				B7A183E029C3856700B864DE /* DataEssentialView.swift in Sources */,
+				B72598C42C30438B008D4CF7 /* AnimatingSFSymbol.swift in Sources */,
 				B7046C852A967F5A00F9A95C /* AugmentedRealityView.swift in Sources */,
 				B7B04BF329E72CA30015EA8D /* PDFFilesView.swift in Sources */,
 				B74CEA7029B1D4A8002CB043 /* BasicGeometryReaderView.swift in Sources */,
@@ -1086,6 +1093,7 @@
 				B7D9AAED29FAF0C2001F5BFC /* PDFDocumentView.swift in Sources */,
 				B7A2D3B82A925CE0004E2988 /* AugmentedRealityContainerView.swift in Sources */,
 				B7724CB62BEDAE450077F650 /* AnimationExamplesView.swift in Sources */,
+				B77974142C300A8F005A267A /* SFSymbolAnimationTypes.swift in Sources */,
 				B7E9414529D89C820021B952 /* NotificationsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
