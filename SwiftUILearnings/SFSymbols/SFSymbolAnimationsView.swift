@@ -18,18 +18,22 @@ struct SFSymbolAnimationsView: View {
     @State private var variableColor = false
     
     var body: some View {
-        VStack {
+        ScrollView {
             HStack {
                 animationAppear
                 animationDisappear
                 animationBounce
             }
             
+            Divider()
+            
             HStack {
                 animationScale
                 animationPulse
                 animationReplace
             }
+            
+            Divider()
             
             HStack {
                 animationVariableColor
@@ -43,18 +47,8 @@ struct SFSymbolAnimationsView: View {
 extension SFSymbolAnimationsView {
     @ViewBuilder
     private var animationAppear: some View {
-        VStack {
-            Image(systemName: "snowflake.circle.fill")
-                .font(.system(size: 100))
-                .foregroundStyle(Color.primaryRed)
-                .symbolEffect(.appear, isActive: !appear)
-            
-            Button {
-                appear.toggle()
-            } label: {
-                Text("Appear")
-            }
-        }
+        AnimatingSFSymbol(type: .appear, shouldAnimate: $appear)
+            .symbolEffect(.appear, isActive: !appear)
     }
 }
 
@@ -62,18 +56,8 @@ extension SFSymbolAnimationsView {
 extension SFSymbolAnimationsView {
     @ViewBuilder
     private var animationDisappear: some View {
-        VStack {
-            Image(systemName: "snowflake.circle")
-                .font(.system(size: 100))
-                .foregroundStyle(Color.primaryGreen)
-                .symbolEffect(.disappear, isActive: disappear)
-            
-            Button {
-                disappear.toggle()
-            } label: {
-                Text("Disappear")
-            }
-        }
+        AnimatingSFSymbol(type: .disappear, shouldAnimate: $disappear)
+            .symbolEffect(.disappear, isActive: disappear)
     }
 }
 
@@ -81,18 +65,9 @@ extension SFSymbolAnimationsView {
 extension SFSymbolAnimationsView {
     @ViewBuilder
     private var animationBounce: some View {
-        VStack {
-            Image(systemName: "message.badge.filled.fill")
-                .font(.system(size: 100))
-                .symbolRenderingMode(.multicolor)
-                .symbolEffect(.bounce, value: bounce)
-            
-            Button {
-                bounce.toggle()
-            } label: {
-                Text("Bounce")
-            }
-        }
+        AnimatingSFSymbol(type: .bounce, shouldAnimate: $bounce)
+            .symbolRenderingMode(.multicolor)
+            .symbolEffect(.bounce, value: bounce)
     }
 }
 
@@ -100,18 +75,9 @@ extension SFSymbolAnimationsView {
 extension SFSymbolAnimationsView {
     @ViewBuilder
     private var animationScale: some View {
-        VStack {
-            Image(systemName: "message.badge")
-                .font(.system(size: 100))
-                .symbolRenderingMode(.multicolor)
-                .symbolEffect(.scale.down, isActive: scale)
-            
-            Button {
-                scale.toggle()
-            } label: {
-                Text("Scale")
-            }
-        }
+        AnimatingSFSymbol(type: .scale, shouldAnimate: $scale)
+            .symbolRenderingMode(.multicolor)
+            .symbolEffect(.scale.down, isActive: scale)
     }
 }
 
@@ -119,18 +85,9 @@ extension SFSymbolAnimationsView {
 extension SFSymbolAnimationsView {
     @ViewBuilder
     private var animationPulse: some View {
-        VStack {
-            Image(systemName: "bonjour")
-                .font(.system(size: 100))
-                .symbolRenderingMode(.multicolor)
-                .symbolEffect(.pulse, isActive: pulse)
-            
-            Button {
-                pulse.toggle()
-            } label: {
-                Text("Pulse")
-            }
-        }
+        AnimatingSFSymbol(type: .pulse, shouldAnimate: $pulse)
+            .symbolRenderingMode(.multicolor)
+            .symbolEffect(.pulse, isActive: pulse)
     }
 }
 
@@ -138,18 +95,8 @@ extension SFSymbolAnimationsView {
 extension SFSymbolAnimationsView {
     @ViewBuilder
     private var animationReplace: some View {
-        VStack {
-            Image(systemName: replace ? "figure.walk" : "figure.run")
-                .font(.system(size: 100))
-                .foregroundStyle(Color.primaryOrange)
-                .contentTransition(.symbolEffect(.replace))
-            
-            Button {
-                replace.toggle()
-            } label: {
-                Text("Replace")
-            }
-        }
+        AnimatingSFSymbol(type: .replace(replace), shouldAnimate: $replace)
+            .contentTransition(.symbolEffect(.replace))
     }
 }
 
@@ -157,18 +104,9 @@ extension SFSymbolAnimationsView {
 extension SFSymbolAnimationsView {
     @ViewBuilder
     private var animationVariableColor: some View {
-        VStack {
-            Image(systemName: "touchid")
-                .font(.system(size: 100))
-                .symbolRenderingMode(.multicolor)
-                .symbolEffect(.variableColor, isActive: variableColor)
-            
-            Button {
-                variableColor.toggle()
-            } label: {
-                Text("Variable Color")
-            }
-        }
+        AnimatingSFSymbol(type: .variableColor, shouldAnimate: $variableColor)
+            .symbolRenderingMode(.multicolor)
+            .symbolEffect(.variableColor, isActive: variableColor)
     }
 }
 
