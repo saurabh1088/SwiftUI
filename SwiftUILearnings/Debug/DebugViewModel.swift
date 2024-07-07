@@ -106,3 +106,31 @@ extension DebugViewModel {
         someDebugModelWithNoCustomStringConvertible = model
     }
 }
+
+extension DebugViewModel {
+    
+    /// Creates memory leak to observe in memory graph debugger and in Instruments leaks.
+    func createMemoryLeak() {
+        let objectA = ObjectA(objectB: nil)
+        let objectB = ObjectB(objectA: nil)
+        
+        objectA.objectB = objectB
+        objectB.objectA = objectA
+    }
+    
+    private class ObjectA {
+        var objectB: ObjectB?
+        
+        init(objectB: ObjectB?) {
+            self.objectB = objectB
+        }
+    }
+    
+    private class ObjectB {
+        var objectA: ObjectA?
+        
+        init(objectA: ObjectA?) {
+            self.objectA = objectA
+        }
+    }
+}

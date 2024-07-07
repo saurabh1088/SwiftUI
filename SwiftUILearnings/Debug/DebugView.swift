@@ -28,6 +28,13 @@ struct DebugView: View {
                 Text("Crash")
             }
             .buttonStyle(.fullScreenWide)
+            
+            Button {
+                viewModel.createMemoryLeak()
+            } label: {
+                Text("Memory Leaks")
+            }
+            .buttonStyle(.fullScreenWide)
         }
     }
 }
