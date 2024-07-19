@@ -105,6 +105,7 @@
 		B7C05D392A12A90C00AD7912 /* Enumerations.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C05D382A12A90C00AD7912 /* Enumerations.swift */; };
 		B7C795A82A022D3D0092619B /* UIComponentsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C795A72A022D3D0092619B /* UIComponentsView.swift */; };
 		B7D9AAED29FAF0C2001F5BFC /* PDFDocumentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D9AAEC29FAF0C2001F5BFC /* PDFDocumentView.swift */; };
+		B7DF337E2C4A09B700974A7B /* LearningOptionAnimationsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7DF337D2C4A09B700974A7B /* LearningOptionAnimationsUITests.swift */; };
 		B7E129F729B4DEA7002E6B54 /* SwiftUIWKWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E129F629B4DEA7002E6B54 /* SwiftUIWKWebView.swift */; };
 		B7E136EC2AB33D0300674C1F /* CarouselViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E136EB2AB33D0300674C1F /* CarouselViewModel.swift */; };
 		B7E24D5F2A89000700790D1A /* ChartsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E24D5E2A89000700790D1A /* ChartsView.swift */; };
@@ -280,6 +281,7 @@
 		B7C05D382A12A90C00AD7912 /* Enumerations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enumerations.swift; sourceTree = "<group>"; };
 		B7C795A72A022D3D0092619B /* UIComponentsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIComponentsView.swift; sourceTree = "<group>"; };
 		B7D9AAEC29FAF0C2001F5BFC /* PDFDocumentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFDocumentView.swift; sourceTree = "<group>"; };
+		B7DF337D2C4A09B700974A7B /* LearningOptionAnimationsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearningOptionAnimationsUITests.swift; sourceTree = "<group>"; };
 		B7E129F629B4DEA7002E6B54 /* SwiftUIWKWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIWKWebView.swift; sourceTree = "<group>"; };
 		B7E136EB2AB33D0300674C1F /* CarouselViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselViewModel.swift; sourceTree = "<group>"; };
 		B7E24D5E2A89000700790D1A /* ChartsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsView.swift; sourceTree = "<group>"; };
@@ -595,6 +597,7 @@
 		B787A2F229B115970090FCF7 /* SwiftUILearningsUITests */ = {
 			isa = PBXGroup;
 			children = (
+				B7DF337D2C4A09B700974A7B /* LearningOptionAnimationsUITests.swift */,
 				B787A2F329B115970090FCF7 /* SwiftUILearningsUITests.swift */,
 				B787A2F529B115970090FCF7 /* SwiftUILearningsUITestsLaunchTests.swift */,
 			);
@@ -1117,6 +1120,7 @@
 			files = (
 				B787A2F629B115970090FCF7 /* SwiftUILearningsUITestsLaunchTests.swift in Sources */,
 				B787A2F429B115970090FCF7 /* SwiftUILearningsUITests.swift in Sources */,
+				B7DF337E2C4A09B700974A7B /* LearningOptionAnimationsUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
