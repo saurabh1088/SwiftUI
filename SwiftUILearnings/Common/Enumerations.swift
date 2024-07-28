@@ -69,3 +69,11 @@ enum SFSymbolScenarios: String, CaseIterable {
     case scales = "Scales"
     case size = "Size"
 }
+
+enum ScrollViewScenarios: String, CaseIterable, Identifiable {
+    case simple = "Simple"
+    case readable = "Readable"
+    case pinned = "Pinned"
+    
+    var id: String { rawValue }
+}
