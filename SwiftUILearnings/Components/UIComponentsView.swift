@@ -36,7 +36,7 @@ struct UIComponentsView: View {
                 case .anyLayout:
                     AnyLayoutView()
                 case .scrollView:
-                    ComponentScrollView()
+                    ScrollViewOptions()
                 case .carousel:
                     CarouselView()
                 case .buttons:

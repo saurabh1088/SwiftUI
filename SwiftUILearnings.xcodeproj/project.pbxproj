@@ -104,6 +104,10 @@
 		B7BDAB972AAC451A007D237B /* EmojiCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7BDAB962AAC451A007D237B /* EmojiCard.swift */; };
 		B7C05D392A12A90C00AD7912 /* Enumerations.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C05D382A12A90C00AD7912 /* Enumerations.swift */; };
 		B7C795A82A022D3D0092619B /* UIComponentsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C795A72A022D3D0092619B /* UIComponentsView.swift */; };
+		B7C8D3C22C54F2830069C88B /* ScrollViewOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C8D3C12C54F2830069C88B /* ScrollViewOptions.swift */; };
+		B7C8D3C52C54F7B90069C88B /* SimpleScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C8D3C42C54F7B90069C88B /* SimpleScrollView.swift */; };
+		B7C8D3C72C5503290069C88B /* PinnedScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C8D3C62C5503290069C88B /* PinnedScrollView.swift */; };
+		B7C8D3C92C55160A0069C88B /* ReadableScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C8D3C82C55160A0069C88B /* ReadableScrollView.swift */; };
 		B7D9AAED29FAF0C2001F5BFC /* PDFDocumentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D9AAEC29FAF0C2001F5BFC /* PDFDocumentView.swift */; };
 		B7DF337E2C4A09B700974A7B /* LearningOptionAnimationsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7DF337D2C4A09B700974A7B /* LearningOptionAnimationsUITests.swift */; };
 		B7E129F729B4DEA7002E6B54 /* SwiftUIWKWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E129F629B4DEA7002E6B54 /* SwiftUIWKWebView.swift */; };
@@ -280,6 +284,10 @@
 		B7BDAB962AAC451A007D237B /* EmojiCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiCard.swift; sourceTree = "<group>"; };
 		B7C05D382A12A90C00AD7912 /* Enumerations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enumerations.swift; sourceTree = "<group>"; };
 		B7C795A72A022D3D0092619B /* UIComponentsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIComponentsView.swift; sourceTree = "<group>"; };
+		B7C8D3C12C54F2830069C88B /* ScrollViewOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewOptions.swift; sourceTree = "<group>"; };
+		B7C8D3C42C54F7B90069C88B /* SimpleScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleScrollView.swift; sourceTree = "<group>"; };
+		B7C8D3C62C5503290069C88B /* PinnedScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinnedScrollView.swift; sourceTree = "<group>"; };
+		B7C8D3C82C55160A0069C88B /* ReadableScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadableScrollView.swift; sourceTree = "<group>"; };
 		B7D9AAEC29FAF0C2001F5BFC /* PDFDocumentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFDocumentView.swift; sourceTree = "<group>"; };
 		B7DF337D2C4A09B700974A7B /* LearningOptionAnimationsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearningOptionAnimationsUITests.swift; sourceTree = "<group>"; };
 		B7E129F629B4DEA7002E6B54 /* SwiftUIWKWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIWKWebView.swift; sourceTree = "<group>"; };
@@ -607,8 +615,8 @@
 		B796C7752ABD5E0500E70028 /* ScrollViews */ = {
 			isa = PBXGroup;
 			children = (
-				B73FBB382A780D47004A5334 /* ComponentScrollView.swift */,
-				B796C7762ABD5E5E00E70028 /* ScrollWithReaderView.swift */,
+				B7C8D3C32C54F4FA0069C88B /* ScenarioViews */,
+				B7C8D3C12C54F2830069C88B /* ScrollViewOptions.swift */,
 			);
 			path = ScrollViews;
 			sourceTree = "<group>";
@@ -718,6 +726,18 @@
 				B7B30A6B2BE6231000C08830 /* ButtonsView.swift */,
 			);
 			path = Buttons;
+			sourceTree = "<group>";
+		};
+		B7C8D3C32C54F4FA0069C88B /* ScenarioViews */ = {
+			isa = PBXGroup;
+			children = (
+				B73FBB382A780D47004A5334 /* ComponentScrollView.swift */,
+				B796C7762ABD5E5E00E70028 /* ScrollWithReaderView.swift */,
+				B7C8D3C42C54F7B90069C88B /* SimpleScrollView.swift */,
+				B7C8D3C62C5503290069C88B /* PinnedScrollView.swift */,
+				B7C8D3C82C55160A0069C88B /* ReadableScrollView.swift */,
+			);
+			path = ScenarioViews;
 			sourceTree = "<group>";
 		};
 		B7D9AAEB29FAF095001F5BFC /* PDF */ = {
@@ -1034,8 +1054,11 @@
 				B782F7D12AA8C5AB00FB7751 /* EventsManager.swift in Sources */,
 				B7B30A6C2BE6231000C08830 /* ButtonsView.swift in Sources */,
 				B7605AD229C35D0A00602F8A /* AppStateObjectModel.swift in Sources */,
+				B7C8D3C22C54F2830069C88B /* ScrollViewOptions.swift in Sources */,
+				B7C8D3C72C5503290069C88B /* PinnedScrollView.swift in Sources */,
 				B7493C442AD5B76A00D30D5F /* WidgetUIView.swift in Sources */,
 				B72C59A52AA6273300C9824E /* CarouselView.swift in Sources */,
+				B7C8D3C92C55160A0069C88B /* ReadableScrollView.swift in Sources */,
 				B76A06FF2A07404100974AD3 /* SomeCustomRowView.swift in Sources */,
 				B75C13E72AF8B3190065F0C4 /* TheCatAPI.swift in Sources */,
 				B75C13E22AF40F880065F0C4 /* HTTPMethods.swift in Sources */,
@@ -1053,6 +1076,7 @@
 				B75A70BC2C27D1CC000EBCAD /* SFSymbolScalesView.swift in Sources */,
 				B7B189E32AA6E3B00046AE65 /* Carousel.swift in Sources */,
 				B76E261929B34F6D007977AB /* OpenURLsExternalBrowserExamplesView.swift in Sources */,
+				B7C8D3C52C54F7B90069C88B /* SimpleScrollView.swift in Sources */,
 				B7046C872A9680D900F9A95C /* AugmentedRealityViewModel.swift in Sources */,
 				B75C13E92AF92F840065F0C4 /* TheCatModel.swift in Sources */,
 				B7B1DCBD29B3C20700FFC805 /* OpenURLsInAppBrowserExamplesView.swift in Sources */,
