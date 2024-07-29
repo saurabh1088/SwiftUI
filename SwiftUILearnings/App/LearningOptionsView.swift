@@ -76,7 +76,7 @@ extension LearningOptionsView {
             // Here if these NavigationLink's aren't put inside VStack and are
             // directly inside NavigationView then only one will show up.
             VStack {
-                NavigationLink("Geometry Reader", destination: BasicGeometryReaderView())
+                NavigationLink("Geometry Reader", destination: GeometryReaderScenarios())
                 NavigationLink("Web Content Technologies", destination: BasicWebContentTechnologiesView())
             }
         }
@@ -102,7 +102,7 @@ extension LearningOptionsView {
         case .eventsKit:
             EventKitView()
         case .geometryReader:
-            BasicGeometryReaderView()
+            GeometryReaderScenarios()
         case .notifications:
             NotificationsView()
         case .pdfFiles:

@@ -71,6 +71,9 @@
 		B787A2EA29B115970090FCF7 /* SwiftUILearningsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B787A2E929B115970090FCF7 /* SwiftUILearningsTests.swift */; };
 		B787A2F429B115970090FCF7 /* SwiftUILearningsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B787A2F329B115970090FCF7 /* SwiftUILearningsUITests.swift */; };
 		B787A2F629B115970090FCF7 /* SwiftUILearningsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B787A2F529B115970090FCF7 /* SwiftUILearningsUITestsLaunchTests.swift */; };
+		B78AC7EF2C5669BC00991C42 /* GeometryReaderScenarios.swift in Sources */ = {isa = PBXBuildFile; fileRef = B78AC7EE2C5669BC00991C42 /* GeometryReaderScenarios.swift */; };
+		B78AC7F22C56765B00991C42 /* GeometryReaderCoordinatesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B78AC7F12C56765B00991C42 /* GeometryReaderCoordinatesView.swift */; };
+		B78AC7F42C5677A200991C42 /* GeometryReaderParentChildExampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B78AC7F32C5677A200991C42 /* GeometryReaderParentChildExampleView.swift */; };
 		B796C7772ABD5E5E00E70028 /* ScrollWithReaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B796C7762ABD5E5E00E70028 /* ScrollWithReaderView.swift */; };
 		B796FDC129B5FC73004B5F87 /* webcontent in Resources */ = {isa = PBXBuildFile; fileRef = B796FDC029B5FC72004B5F87 /* webcontent */; };
 		B796FDC329B6029A004B5F87 /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = B796FDC229B6029A004B5F87 /* index.html */; };
@@ -250,6 +253,9 @@
 		B787A2EF29B115970090FCF7 /* SwiftUILearningsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftUILearningsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B787A2F329B115970090FCF7 /* SwiftUILearningsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUILearningsUITests.swift; sourceTree = "<group>"; };
 		B787A2F529B115970090FCF7 /* SwiftUILearningsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUILearningsUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		B78AC7EE2C5669BC00991C42 /* GeometryReaderScenarios.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeometryReaderScenarios.swift; sourceTree = "<group>"; };
+		B78AC7F12C56765B00991C42 /* GeometryReaderCoordinatesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeometryReaderCoordinatesView.swift; sourceTree = "<group>"; };
+		B78AC7F32C5677A200991C42 /* GeometryReaderParentChildExampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeometryReaderParentChildExampleView.swift; sourceTree = "<group>"; };
 		B796C7762ABD5E5E00E70028 /* ScrollWithReaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollWithReaderView.swift; sourceTree = "<group>"; };
 		B796FDC029B5FC72004B5F87 /* webcontent */ = {isa = PBXFileReference; lastKnownFileType = folder; path = webcontent; sourceTree = "<group>"; };
 		B796FDC229B6029A004B5F87 /* index.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = index.html; path = SwiftUILearnings/webcontent/index.html; sourceTree = "<group>"; };
@@ -390,7 +396,9 @@
 		B74CEA6C29B1CF31002CB043 /* GeometryReader */ = {
 			isa = PBXGroup;
 			children = (
+				B78AC7F02C56763C00991C42 /* ExampleViews */,
 				B74CEA6F29B1D4A8002CB043 /* BasicGeometryReaderView.swift */,
+				B78AC7EE2C5669BC00991C42 /* GeometryReaderScenarios.swift */,
 			);
 			path = GeometryReader;
 			sourceTree = "<group>";
@@ -610,6 +618,15 @@
 				B787A2F529B115970090FCF7 /* SwiftUILearningsUITestsLaunchTests.swift */,
 			);
 			path = SwiftUILearningsUITests;
+			sourceTree = "<group>";
+		};
+		B78AC7F02C56763C00991C42 /* ExampleViews */ = {
+			isa = PBXGroup;
+			children = (
+				B78AC7F12C56765B00991C42 /* GeometryReaderCoordinatesView.swift */,
+				B78AC7F32C5677A200991C42 /* GeometryReaderParentChildExampleView.swift */,
+			);
+			path = ExampleViews;
 			sourceTree = "<group>";
 		};
 		B796C7752ABD5E0500E70028 /* ScrollViews */ = {
@@ -1088,6 +1105,7 @@
 				B74CEA7029B1D4A8002CB043 /* BasicGeometryReaderView.swift in Sources */,
 				B7FAFB362A97C3F10009DE51 /* Plant.rcproject in Sources */,
 				B7EC81A42C27ACBA00014957 /* SFSymbolsMainView.swift in Sources */,
+				B78AC7F42C5677A200991C42 /* GeometryReaderParentChildExampleView.swift in Sources */,
 				B75430092C29DE6E00168793 /* SFSymbolAnimationsView.swift in Sources */,
 				B7E24D5F2A89000700790D1A /* ChartsView.swift in Sources */,
 				B75D6AC72BE3CF6B0047BB21 /* DebugModel.swift in Sources */,
@@ -1104,6 +1122,7 @@
 				B7299E9B29E5D73800A3A989 /* AudioVideoView.swift in Sources */,
 				B72067672A333394009A785D /* TextInputView.swift in Sources */,
 				B7A183E229C385A600B864DE /* DataEssentialStateObject.swift in Sources */,
+				B78AC7EF2C5669BC00991C42 /* GeometryReaderScenarios.swift in Sources */,
 				B7A76AB429B2601F00163BDC /* BasicWebContentTechnologiesView.swift in Sources */,
 				B77950A42ABB579300DFC92F /* TestPitchView.swift in Sources */,
 				B75C13EF2AF9E9FB0065F0C4 /* TheCatAPIViewModel.swift in Sources */,
@@ -1125,6 +1144,7 @@
 				B7724CB62BEDAE450077F650 /* AnimationExamplesView.swift in Sources */,
 				B77974142C300A8F005A267A /* SFSymbolAnimationTypes.swift in Sources */,
 				B7E9414529D89C820021B952 /* NotificationsView.swift in Sources */,
+				B78AC7F22C56765B00991C42 /* GeometryReaderCoordinatesView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
