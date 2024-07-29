@@ -27,7 +27,6 @@
 		B7493C442AD5B76A00D30D5F /* WidgetUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7493C432AD5B76900D30D5F /* WidgetUIView.swift */; };
 		B74A6B4F2ACDEC8200CA5C35 /* SpeechView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74A6B4E2ACDEC8200CA5C35 /* SpeechView.swift */; };
 		B74CDB2B2C312EA5005D5064 /* SFSymbolAnimationTypeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74CDB2A2C312EA5005D5064 /* SFSymbolAnimationTypeTests.swift */; };
-		B74CEA7029B1D4A8002CB043 /* BasicGeometryReaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74CEA6F29B1D4A8002CB043 /* BasicGeometryReaderView.swift */; };
 		B74F76662C0C9BEC0090E373 /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B74F76652C0C9BEC0090E373 /* UserNotifications.framework */; };
 		B74F76682C0C9BEC0090E373 /* UserNotificationsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B74F76672C0C9BEC0090E373 /* UserNotificationsUI.framework */; };
 		B74F766B2C0C9BEC0090E373 /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74F766A2C0C9BEC0090E373 /* NotificationViewController.swift */; };
@@ -205,7 +204,6 @@
 		B7493C432AD5B76900D30D5F /* WidgetUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetUIView.swift; sourceTree = "<group>"; };
 		B74A6B4E2ACDEC8200CA5C35 /* SpeechView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechView.swift; sourceTree = "<group>"; };
 		B74CDB2A2C312EA5005D5064 /* SFSymbolAnimationTypeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFSymbolAnimationTypeTests.swift; sourceTree = "<group>"; };
-		B74CEA6F29B1D4A8002CB043 /* BasicGeometryReaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicGeometryReaderView.swift; sourceTree = "<group>"; };
 		B74F76642C0C9BEC0090E373 /* SwiftUILearningsNotificationsContentExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = SwiftUILearningsNotificationsContentExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		B74F76652C0C9BEC0090E373 /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
 		B74F76672C0C9BEC0090E373 /* UserNotificationsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotificationsUI.framework; path = System/Library/Frameworks/UserNotificationsUI.framework; sourceTree = SDKROOT; };
@@ -397,7 +395,6 @@
 			isa = PBXGroup;
 			children = (
 				B78AC7F02C56763C00991C42 /* ExampleViews */,
-				B74CEA6F29B1D4A8002CB043 /* BasicGeometryReaderView.swift */,
 				B78AC7EE2C5669BC00991C42 /* GeometryReaderScenarios.swift */,
 			);
 			path = GeometryReader;
@@ -1102,7 +1099,6 @@
 				B72598C42C30438B008D4CF7 /* AnimatingSFSymbol.swift in Sources */,
 				B7046C852A967F5A00F9A95C /* AugmentedRealityView.swift in Sources */,
 				B7B04BF329E72CA30015EA8D /* PDFFilesView.swift in Sources */,
-				B74CEA7029B1D4A8002CB043 /* BasicGeometryReaderView.swift in Sources */,
 				B7FAFB362A97C3F10009DE51 /* Plant.rcproject in Sources */,
 				B7EC81A42C27ACBA00014957 /* SFSymbolsMainView.swift in Sources */,
 				B78AC7F42C5677A200991C42 /* GeometryReaderParentChildExampleView.swift in Sources */,
