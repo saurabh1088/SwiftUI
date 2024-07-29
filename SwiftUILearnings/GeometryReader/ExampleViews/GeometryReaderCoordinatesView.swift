@@ -1,12 +1,9 @@
 //
+//  GeometryReaderCoordinatesView.swift
+//  SwiftUILearnings
 //
-// BasicGeometryReaderView.swift
-// SwiftUILearnings
+//  Created by Saurabh Verma on 28/07/24.
 //
-// Created by Saurabh Verma on 03/03/23
-// Copyright © 2023 Saurabh Verma, (saurabh1088@gmail.com). All rights reserved.
-//
-        
 
 import SwiftUI
 
@@ -20,7 +17,7 @@ import SwiftUI
 /// GeometryReader fills into its parent container with a default alignment of the content as topLeading.
 /// In the example below one can see for view `viewWrappedInGeometryReader` GeometryReader fills up the
 /// entire screen and the width, height label/value views get alligned to top left corner unlikey to center alignment in `viewWithoutGeometryReader`
-struct BasicGeometryReaderView: View {
+struct GeometryReaderCoordinatesView: View {
     @State private var useGeometry: Bool = false
     
     private var geometryStatus: String {
@@ -76,11 +73,8 @@ struct BasicGeometryReaderView: View {
         }
         .background(Color.red)
     }
-    
 }
 
-struct BasicGeometryReaderView_Previews: PreviewProvider {
-    static var previews: some View {
-        BasicGeometryReaderView()
-    }
+#Preview {
+    GeometryReaderCoordinatesView()
 }

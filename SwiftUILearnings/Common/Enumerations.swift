@@ -77,3 +77,19 @@ enum ScrollViewScenarios: String, CaseIterable, Identifiable {
     
     var id: String { rawValue }
 }
+
+enum GeometryReaderExamples: String, CaseIterable, Identifiable {
+    case defaultCoordinates
+    case parentAndChild
+    
+    var displayName: String {
+        switch self {
+        case .defaultCoordinates:
+            "Default Coordinate space"
+        case .parentAndChild:
+            "Parent & Child Scenario"
+        }
+    }
+    
+    var id: String { rawValue }
+}
