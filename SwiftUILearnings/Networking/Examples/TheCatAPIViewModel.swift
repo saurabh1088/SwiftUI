@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import OSLog
 
 class TheCatAPIViewModel: ObservableObject {
     @Published var cats: [TheCatModel]?
@@ -22,7 +23,7 @@ class TheCatAPIViewModel: ObservableObject {
             case .success(let response):
                 cats = response
             case .failure(let error):
-                print(error.localizedDescription)
+                Logger.apis.error("Fetch cats failed with error : \(error.localizedDescription)")
             }
         }
     }

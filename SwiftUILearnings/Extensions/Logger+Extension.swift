@@ -16,6 +16,7 @@ extension Logger {
 }
 
 extension Logger {
+    static let apis = Logger(subsystem: subsystem, category: "apis")
     static let appCycle = Logger(subsystem: subsystem, category: "appCycle")
     static let augmentedReality = Logger(subsystem: subsystem, category: "augmentedReality")
     static let eventKit = Logger(subsystem: subsystem, category: "eventKit")

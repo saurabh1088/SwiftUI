@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import OSLog
 
 struct GesturesView: View {
     @State private var offsetY = 20.0
@@ -24,7 +25,7 @@ struct GesturesView: View {
                 }
                     .onEnded({ value in
                         if abs(value.translation.height) > 20 {
-                            print("GesturesView height :: \(value.translation.height)")
+                            Logger.view.info("GesturesView onEnded called with height value : \(value.translation.height.description)")
                             withAnimation {
                                 offsetY = value.translation.height
                             }
