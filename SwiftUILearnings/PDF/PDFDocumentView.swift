@@ -10,6 +10,7 @@
 
 import SwiftUI
 import PDFKit
+import OSLog
 
 struct PDFDocumentView: View {
     @ObservedObject var viewModel: PDFDocumentViewModel
@@ -28,7 +29,7 @@ struct PDFDocumentView: View {
         }
         .searchable(text: $searchText)
         .onSubmit(of: .search, {
-            print("Searched :: \(searchText)")
+            Logger.view.info("PDFDocumentView :: Searched text in PDF : \(searchText)")
             viewModel.pdfDocument?.findString(searchText)
         })
         .navigationTitle(SwiftUI.Text(LearningTopics.pdfFiles.rawValue))

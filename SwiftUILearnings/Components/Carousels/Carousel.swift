@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import OSLog
 
 struct Carousel<Cards: View>: View {
     @ObservedObject var viewModel: CarouselViewModel
@@ -27,7 +28,8 @@ struct Carousel<Cards: View>: View {
             .gesture(
                 DragGesture()
                     .onChanged({ value in
-                        print(value)
+                        Logger.view.info("Carousel onChanged called with drag width value : \(value.translation.width.description)")
+                        Logger.view.info("Carousel onChanged called with drag height value : \(value.translation.height.description)")
                     })
                     .onEnded({ value in
                         if value.translation.width > 20 {
