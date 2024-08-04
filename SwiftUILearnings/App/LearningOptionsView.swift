@@ -65,6 +65,7 @@ extension LearningOptionsView {
                 return learningDestinationViewFor(topic: topic)
             }
             .navigationTitle("Learnings")
+            .logsViewer()
         }
     }
 }
