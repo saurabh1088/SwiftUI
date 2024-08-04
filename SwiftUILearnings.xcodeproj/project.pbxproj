@@ -123,6 +123,10 @@
 		B7EE00752C0AD9C20073D7AF /* SwiftUILearningsNotificationsServiceExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = B7EE006E2C0AD9C20073D7AF /* SwiftUILearningsNotificationsServiceExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		B7F3FB082BF316C7001E8093 /* silent_payload.apns in Resources */ = {isa = PBXBuildFile; fileRef = B7F3FB072BF316C7001E8093 /* silent_payload.apns */; };
 		B7F70FF42BEFA0A500320691 /* AnimationModifierExampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F70FF32BEFA0A500320691 /* AnimationModifierExampleView.swift */; };
+		B7F98F882C5E623C0039DB57 /* OSLogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F98F872C5E623C0039DB57 /* OSLogView.swift */; };
+		B7F98F8A2C5E68990039DB57 /* View+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F98F892C5E68990039DB57 /* View+Extension.swift */; };
+		B7F98F8C2C5E76EE0039DB57 /* OSLogViewerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F98F8B2C5E76EE0039DB57 /* OSLogViewerModel.swift */; };
+		B7F98F8E2C5E8FAB0039DB57 /* OSLogsDisplayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F98F8D2C5E8FAB0039DB57 /* OSLogsDisplayView.swift */; };
 		B7FAFB362A97C3F10009DE51 /* Plant.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = B7FAFB352A97C3F10009DE51 /* Plant.rcproject */; };
 /* End PBXBuildFile section */
 
@@ -307,6 +311,10 @@
 		B7EE00722C0AD9C20073D7AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B7F3FB072BF316C7001E8093 /* silent_payload.apns */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = silent_payload.apns; sourceTree = "<group>"; };
 		B7F70FF32BEFA0A500320691 /* AnimationModifierExampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationModifierExampleView.swift; sourceTree = "<group>"; };
+		B7F98F872C5E623C0039DB57 /* OSLogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OSLogView.swift; sourceTree = "<group>"; };
+		B7F98F892C5E68990039DB57 /* View+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extension.swift"; sourceTree = "<group>"; };
+		B7F98F8B2C5E76EE0039DB57 /* OSLogViewerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OSLogViewerModel.swift; sourceTree = "<group>"; };
+		B7F98F8D2C5E8FAB0039DB57 /* OSLogsDisplayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OSLogsDisplayView.swift; sourceTree = "<group>"; };
 		B7FAFB352A97C3F10009DE51 /* Plant.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = Plant.rcproject; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -570,6 +578,7 @@
 				B7AEDB6929EABF09007D634E /* Extensions */,
 				B74CEA6C29B1CF31002CB043 /* GeometryReader */,
 				B7775E102A9F93CB00DA37B2 /* Gestures */,
+				B7F98F862C5E61DF0039DB57 /* Logger */,
 				B7605AD029C35CC700602F8A /* Models */,
 				B77651F42AF11C9300656B45 /* Networking */,
 				B76FE8AE29D7516D00BCAF51 /* Notifications */,
@@ -694,6 +703,7 @@
 			children = (
 				B7AEDB6A29EABF35007D634E /* Color+Extension.swift */,
 				B772B3C62A517A2D00B78E73 /* Logger+Extension.swift */,
+				B7F98F892C5E68990039DB57 /* View+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -807,6 +817,16 @@
 				B7EE00722C0AD9C20073D7AF /* Info.plist */,
 			);
 			path = SwiftUILearningsNotificationsServiceExtension;
+			sourceTree = "<group>";
+		};
+		B7F98F862C5E61DF0039DB57 /* Logger */ = {
+			isa = PBXGroup;
+			children = (
+				B7F98F872C5E623C0039DB57 /* OSLogView.swift */,
+				B7F98F8B2C5E76EE0039DB57 /* OSLogViewerModel.swift */,
+				B7F98F8D2C5E8FAB0039DB57 /* OSLogsDisplayView.swift */,
+			);
+			path = Logger;
 			sourceTree = "<group>";
 		};
 		B7FAFB322A97C0DF0009DE51 /* Reality */ = {
@@ -1068,6 +1088,7 @@
 				B782F7D12AA8C5AB00FB7751 /* EventsManager.swift in Sources */,
 				B7B30A6C2BE6231000C08830 /* ButtonsView.swift in Sources */,
 				B7605AD229C35D0A00602F8A /* AppStateObjectModel.swift in Sources */,
+				B7F98F8C2C5E76EE0039DB57 /* OSLogViewerModel.swift in Sources */,
 				B7C8D3C22C54F2830069C88B /* ScrollViewOptions.swift in Sources */,
 				B7C8D3C72C5503290069C88B /* PinnedScrollView.swift in Sources */,
 				B7493C442AD5B76A00D30D5F /* WidgetUIView.swift in Sources */,
@@ -1112,9 +1133,11 @@
 				B7E136EC2AB33D0300674C1F /* CarouselViewModel.swift in Sources */,
 				B787A2DB29B115920090FCF7 /* ContentView.swift in Sources */,
 				B7C05D392A12A90C00AD7912 /* Enumerations.swift in Sources */,
+				B7F98F8E2C5E8FAB0039DB57 /* OSLogsDisplayView.swift in Sources */,
 				B7B8F7EC2A26744F00FE32A7 /* ListView.swift in Sources */,
 				B76A06FB2A073FC100974AD3 /* BottomSheetView.swift in Sources */,
 				B7B531462BE5F9A900678328 /* LearningOptionsView.swift in Sources */,
+				B7F98F882C5E623C0039DB57 /* OSLogView.swift in Sources */,
 				B7299E9B29E5D73800A3A989 /* AudioVideoView.swift in Sources */,
 				B72067672A333394009A785D /* TextInputView.swift in Sources */,
 				B7A183E229C385A600B864DE /* DataEssentialStateObject.swift in Sources */,
@@ -1140,6 +1163,7 @@
 				B7724CB62BEDAE450077F650 /* AnimationExamplesView.swift in Sources */,
 				B77974142C300A8F005A267A /* SFSymbolAnimationTypes.swift in Sources */,
 				B7E9414529D89C820021B952 /* NotificationsView.swift in Sources */,
+				B7F98F8A2C5E68990039DB57 /* View+Extension.swift in Sources */,
 				B78AC7F22C56765B00991C42 /* GeometryReaderCoordinatesView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
