@@ -83,6 +83,9 @@
 		B7A183E029C3856700B864DE /* DataEssentialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A183DF29C3856700B864DE /* DataEssentialView.swift */; };
 		B7A183E229C385A600B864DE /* DataEssentialStateObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A183E129C385A600B864DE /* DataEssentialStateObject.swift */; };
 		B7A2D3B82A925CE0004E2988 /* AugmentedRealityContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A2D3B72A925CE0004E2988 /* AugmentedRealityContainerView.swift */; };
+		B7A38A492C67395C00FC9A30 /* ViewVSViewModifierExampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A38A482C67395C00FC9A30 /* ViewVSViewModifierExampleView.swift */; };
+		B7A38A4B2C6765C600FC9A30 /* HorizontallyDividedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A38A4A2C6765C600FC9A30 /* HorizontallyDividedView.swift */; };
+		B7A38A4D2C676BE100FC9A30 /* HorizontallyDividedViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A38A4C2C676BE100FC9A30 /* HorizontallyDividedViewModifier.swift */; };
 		B7A6F2C12BEF024300112BEF /* WithAnimationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A6F2C02BEF024300112BEF /* WithAnimationsView.swift */; };
 		B7A76AB429B2601F00163BDC /* BasicWebContentTechnologiesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A76AB329B2601F00163BDC /* BasicWebContentTechnologiesView.swift */; };
 		B7A963DC2AC82B2100EB6A12 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7A963DB2AC82B2100EB6A12 /* WidgetKit.framework */; };
@@ -267,6 +270,9 @@
 		B7A183DF29C3856700B864DE /* DataEssentialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataEssentialView.swift; sourceTree = "<group>"; };
 		B7A183E129C385A600B864DE /* DataEssentialStateObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataEssentialStateObject.swift; sourceTree = "<group>"; };
 		B7A2D3B72A925CE0004E2988 /* AugmentedRealityContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AugmentedRealityContainerView.swift; sourceTree = "<group>"; };
+		B7A38A482C67395C00FC9A30 /* ViewVSViewModifierExampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewVSViewModifierExampleView.swift; sourceTree = "<group>"; };
+		B7A38A4A2C6765C600FC9A30 /* HorizontallyDividedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontallyDividedView.swift; sourceTree = "<group>"; };
+		B7A38A4C2C676BE100FC9A30 /* HorizontallyDividedViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontallyDividedViewModifier.swift; sourceTree = "<group>"; };
 		B7A6F2C02BEF024300112BEF /* WithAnimationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WithAnimationsView.swift; sourceTree = "<group>"; };
 		B7A76AB329B2601F00163BDC /* BasicWebContentTechnologiesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicWebContentTechnologiesView.swift; sourceTree = "<group>"; };
 		B7A963DA2AC82B2100EB6A12 /* SwiftUILearningsWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = SwiftUILearningsWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -504,6 +510,9 @@
 			isa = PBXGroup;
 			children = (
 				B77950A32ABB579300DFC92F /* TestPitchView.swift */,
+				B7A38A482C67395C00FC9A30 /* ViewVSViewModifierExampleView.swift */,
+				B7A38A4A2C6765C600FC9A30 /* HorizontallyDividedView.swift */,
+				B7A38A4C2C676BE100FC9A30 /* HorizontallyDividedViewModifier.swift */,
 			);
 			path = TestPitch;
 			sourceTree = "<group>";
@@ -1082,6 +1091,7 @@
 				B753A85E2A358469003958AE /* AnyLayoutView.swift in Sources */,
 				B7E24D652A89037900790D1A /* ChartsViewModel.swift in Sources */,
 				B796C7772ABD5E5E00E70028 /* ScrollWithReaderView.swift in Sources */,
+				B7A38A4B2C6765C600FC9A30 /* HorizontallyDividedView.swift in Sources */,
 				B77651F62AF16D5300656B45 /* NetworkingService.swift in Sources */,
 				B7C795A82A022D3D0092619B /* UIComponentsView.swift in Sources */,
 				B71646282BEDE0BA000FAD76 /* SwiftUIAnimationsView.swift in Sources */,
@@ -1134,6 +1144,7 @@
 				B787A2DB29B115920090FCF7 /* ContentView.swift in Sources */,
 				B7C05D392A12A90C00AD7912 /* Enumerations.swift in Sources */,
 				B7F98F8E2C5E8FAB0039DB57 /* OSLogsDisplayView.swift in Sources */,
+				B7A38A492C67395C00FC9A30 /* ViewVSViewModifierExampleView.swift in Sources */,
 				B7B8F7EC2A26744F00FE32A7 /* ListView.swift in Sources */,
 				B76A06FB2A073FC100974AD3 /* BottomSheetView.swift in Sources */,
 				B7B531462BE5F9A900678328 /* LearningOptionsView.swift in Sources */,
@@ -1146,6 +1157,7 @@
 				B77950A42ABB579300DFC92F /* TestPitchView.swift in Sources */,
 				B75C13EF2AF9E9FB0065F0C4 /* TheCatAPIViewModel.swift in Sources */,
 				B74A6B4F2ACDEC8200CA5C35 /* SpeechView.swift in Sources */,
+				B7A38A4D2C676BE100FC9A30 /* HorizontallyDividedViewModifier.swift in Sources */,
 				B75C13ED2AF9E8CB0065F0C4 /* TheCatAPIView.swift in Sources */,
 				B73FBB392A780D47004A5334 /* ComponentScrollView.swift in Sources */,
 				B787A2D929B115920090FCF7 /* SwiftUILearningsApp.swift in Sources */,
