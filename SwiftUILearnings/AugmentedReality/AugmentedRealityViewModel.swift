@@ -31,6 +31,8 @@ class AugmentedRealityViewModel: ObservableObject {
         /// Here Plant refers to Plant.rcproject file added to project. Plant.rcproject is file generated from
         /// Reality Composer. When added to Xcode a boilerplate code is generated which gives below APIs
         /// which is called bellow(Plant.loadSceneAsync) to load a scene as designed in the file.
+        // TODO: Not working in Xcode 16, need to explore and find solution
+        /*
         Plant.loadSceneAsync { result in
             do {
                 Logger.augmentedReality.info("Loaded plant scene")
@@ -40,6 +42,7 @@ class AugmentedRealityViewModel: ObservableObject {
                 Logger.augmentedReality.error("Failed to load plant scene")
             }
         }
+        */
     }
     
     func addTapGesture() {
