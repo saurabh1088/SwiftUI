@@ -41,6 +41,8 @@ struct UIComponentsView: View {
                     CarouselView()
                 case .buttons:
                     ButtonsView()
+                case .tables:
+                    RowColumnTableView()
                 }
             }
         }

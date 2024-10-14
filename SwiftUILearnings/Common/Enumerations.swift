@@ -41,6 +41,7 @@ enum Components: String, CaseIterable {
     case anyLayout = "Any Layout"
     case scrollView = "Scroll View"
     case carousel = "Carousels"
+    case tables = "Tables"
 }
 
 enum ListViewTypes: String, CaseIterable {
