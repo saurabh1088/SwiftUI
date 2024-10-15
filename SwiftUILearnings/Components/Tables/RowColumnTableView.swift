@@ -17,6 +17,9 @@ struct Employee: Identifiable {
 
 struct RowColumnTableView: View {
     
+    @State private var showAlert: Bool = false
+    @State private var alertMessage: String = ""
+    
     @State private var employees: [Employee] = [
         Employee(id: 0,
                  name: "Batman",
@@ -41,13 +44,39 @@ struct RowColumnTableView: View {
             set: { self.employees = $0 }
         )
         
-        Table(employees) {
-            TableColumn("Name", value: \.name)
-            TableColumn("Role", value: \.role)
-            TableColumn("Power", value: \.power)
-            TableColumn("Test") { employee in
-                Toggle("Should Show", isOn: binding[employee.id].shouldShowPower)
+        VStack {
+            Table(employees) {
+                TableColumn("Name", value: \.name)
+                TableColumn("Role", value: \.role)
+                TableColumn("Power", value: \.power)
+                TableColumn("Test") { employee in
+                    Toggle("Should Show", isOn: binding[employee.id].shouldShowPower)
+                }
             }
+            
+            HStack {
+                Button("Add Employee") {
+                    self.employees.append(Employee(id: self.employees.count,
+                                                   name: "Test",
+                                                   role: "Test",
+                                                   power: "Test",
+                                                   shouldShowPower: false))
+                }
+                
+                Button("Show alert") {
+                    employees.map { employee in
+                        alertMessage = alertMessage + "\(employee.name) " + (employee.shouldShowPower ? "has" : "does not have") + " power"
+                    }
+                    showAlert.toggle()
+                }
+                .alert("Alert", isPresented: $showAlert) {
+                    Button("OK", role: .cancel) {}
+                } message: {
+                    Text(alertMessage)
+                }
+
+            }
+            
         }
     }
 }
