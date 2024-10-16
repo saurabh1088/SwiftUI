@@ -13,6 +13,7 @@ struct Employee: Identifiable {
     let role: String
     let power: String
     var shouldShowPower: Bool
+    var comment: String = ""
 }
 
 struct RowColumnTableView: View {
@@ -49,8 +50,11 @@ struct RowColumnTableView: View {
                 TableColumn("Name", value: \.name)
                 TableColumn("Role", value: \.role)
                 TableColumn("Power", value: \.power)
-                TableColumn("Test") { employee in
+                TableColumn("Toggle") { employee in
                     Toggle("Should Show", isOn: binding[employee.id].shouldShowPower)
+                }
+                TableColumn("Text") { employee in
+                    TextField("", text: binding[employee.id].comment)
                 }
             }
             
@@ -64,9 +68,7 @@ struct RowColumnTableView: View {
                 }
                 
                 Button("Show alert") {
-                    employees.map { employee in
-                        alertMessage = alertMessage + "\(employee.name) " + (employee.shouldShowPower ? "has" : "does not have") + " power"
-                    }
+                    configureAlertMessage()
                     showAlert.toggle()
                 }
                 .alert("Alert", isPresented: $showAlert) {
@@ -77,6 +79,12 @@ struct RowColumnTableView: View {
 
             }
             
+        }
+    }
+    
+    private func configureAlertMessage() {
+        employees.map { employee in
+            alertMessage = alertMessage + "\n\(employee.name)" + (employee.shouldShowPower ? "\nhas" : "\ndoes not have") + " power" + "\n\n\(employee.comment)"
         }
     }
 }
