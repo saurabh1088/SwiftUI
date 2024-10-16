@@ -43,6 +43,8 @@ struct UIComponentsView: View {
                     ButtonsView()
                 case .tables:
                     RowColumnTableView()
+                case .photosPicker:
+                    PhotoPickerView()
                 }
             }
         }
