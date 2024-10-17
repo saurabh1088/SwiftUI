@@ -45,6 +45,8 @@ struct UIComponentsView: View {
                     RowColumnTableView()
                 case .photosPicker:
                     PhotoPickerView()
+                case .cameraCapture:
+                    CameraCaptureView()
                 }
             }
         }
