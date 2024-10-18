@@ -117,6 +117,7 @@
 		B7DB8B302CBD825300ECF2EB /* RowColumnTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7DB8B2F2CBD825300ECF2EB /* RowColumnTableView.swift */; };
 		B7DB8B332CC00BAE00ECF2EB /* PhotoPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7DB8B322CC00BAE00ECF2EB /* PhotoPickerView.swift */; };
 		B7DD17CD2CC146970015F03C /* CameraCaptureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7DD17CC2CC146970015F03C /* CameraCaptureView.swift */; };
+		B7DD17D02CC2A82E0015F03C /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7DD17CF2CC2A82E0015F03C /* CameraView.swift */; };
 		B7DF337E2C4A09B700974A7B /* LearningOptionAnimationsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7DF337D2C4A09B700974A7B /* LearningOptionAnimationsUITests.swift */; };
 		B7E129F729B4DEA7002E6B54 /* SwiftUIWKWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E129F629B4DEA7002E6B54 /* SwiftUIWKWebView.swift */; };
 		B7E136EC2AB33D0300674C1F /* CarouselViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E136EB2AB33D0300674C1F /* CarouselViewModel.swift */; };
@@ -309,6 +310,7 @@
 		B7DB8B2F2CBD825300ECF2EB /* RowColumnTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowColumnTableView.swift; sourceTree = "<group>"; };
 		B7DB8B322CC00BAE00ECF2EB /* PhotoPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPickerView.swift; sourceTree = "<group>"; };
 		B7DD17CC2CC146970015F03C /* CameraCaptureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraCaptureView.swift; sourceTree = "<group>"; };
+		B7DD17CF2CC2A82E0015F03C /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
 		B7DF337D2C4A09B700974A7B /* LearningOptionAnimationsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearningOptionAnimationsUITests.swift; sourceTree = "<group>"; };
 		B7E129F629B4DEA7002E6B54 /* SwiftUIWKWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIWKWebView.swift; sourceTree = "<group>"; };
 		B7E136EB2AB33D0300674C1F /* CarouselViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselViewModel.swift; sourceTree = "<group>"; };
@@ -811,9 +813,18 @@
 		B7DD17CB2CC146810015F03C /* Camera */ = {
 			isa = PBXGroup;
 			children = (
+				B7DD17CE2CC2A80E0015F03C /* UIKitRepresentables */,
 				B7DD17CC2CC146970015F03C /* CameraCaptureView.swift */,
 			);
 			path = Camera;
+			sourceTree = "<group>";
+		};
+		B7DD17CE2CC2A80E0015F03C /* UIKitRepresentables */ = {
+			isa = PBXGroup;
+			children = (
+				B7DD17CF2CC2A82E0015F03C /* CameraView.swift */,
+			);
+			path = UIKitRepresentables;
 			sourceTree = "<group>";
 		};
 		B7E24D5D2A88FFED00790D1A /* Charts */ = {
@@ -1190,6 +1201,7 @@
 				B78AC7EF2C5669BC00991C42 /* GeometryReaderScenarios.swift in Sources */,
 				B7A76AB429B2601F00163BDC /* BasicWebContentTechnologiesView.swift in Sources */,
 				B77950A42ABB579300DFC92F /* TestPitchView.swift in Sources */,
+				B7DD17D02CC2A82E0015F03C /* CameraView.swift in Sources */,
 				B75C13EF2AF9E9FB0065F0C4 /* TheCatAPIViewModel.swift in Sources */,
 				B74A6B4F2ACDEC8200CA5C35 /* SpeechView.swift in Sources */,
 				B7A38A4D2C676BE100FC9A30 /* HorizontallyDividedViewModifier.swift in Sources */,
