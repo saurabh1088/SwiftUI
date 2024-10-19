@@ -47,6 +47,8 @@ struct UIComponentsView: View {
                     PhotoPickerView()
                 case .cameraCapture:
                     CameraCaptureView()
+                case .radioButton:
+                    RadioButtonsView()
                 }
             }
         }

@@ -44,6 +44,7 @@ enum Components: String, CaseIterable {
     case tables = "Tables"
     case photosPicker = "Photos Picker"
     case cameraCapture = "Camera Capture"
+    case radioButton = "Radio Button"
 }
 
 enum ListViewTypes: String, CaseIterable {
