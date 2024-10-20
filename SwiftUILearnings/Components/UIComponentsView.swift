@@ -48,7 +48,7 @@ struct UIComponentsView: View {
                 case .cameraCapture:
                     CameraCaptureView()
                 case .radioButton:
-                    RadioButtonsView()
+                    RadioButtonExampleView()
                 }
             }
         }

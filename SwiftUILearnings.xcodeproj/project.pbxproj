@@ -16,6 +16,9 @@
 		B71646282BEDE0BA000FAD76 /* SwiftUIAnimationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71646272BEDE0BA000FAD76 /* SwiftUIAnimationsView.swift */; };
 		B716462A2BEDE0E0000FAD76 /* LottieAnimationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71646292BEDE0E0000FAD76 /* LottieAnimationsView.swift */; };
 		B72067672A333394009A785D /* TextInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72067662A333394009A785D /* TextInputView.swift */; };
+		B722FD602CC5112A005A7CF6 /* RadioButtonExampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B722FD5F2CC5112A005A7CF6 /* RadioButtonExampleView.swift */; };
+		B722FD622CC51153005A7CF6 /* RadioButtonForEach.swift in Sources */ = {isa = PBXBuildFile; fileRef = B722FD612CC51153005A7CF6 /* RadioButtonForEach.swift */; };
+		B722FD642CC51198005A7CF6 /* RadioButtonDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B722FD632CC51198005A7CF6 /* RadioButtonDataModel.swift */; };
 		B72395BE2A98FDB1005BD060 /* sampleScene.scn in Resources */ = {isa = PBXBuildFile; fileRef = B72395BD2A98FDB1005BD060 /* sampleScene.scn */; };
 		B72598C42C30438B008D4CF7 /* AnimatingSFSymbol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72598C32C30438B008D4CF7 /* AnimatingSFSymbol.swift */; };
 		B7299E9B29E5D73800A3A989 /* AudioVideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7299E9A29E5D73800A3A989 /* AudioVideoView.swift */; };
@@ -23,7 +26,6 @@
 		B72C5D2D2A30CA2600E77866 /* HorizontalStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72C5D2C2A30CA2600E77866 /* HorizontalStackView.swift */; };
 		B73A9EAB2ACF32760032E6E5 /* SpeechViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73A9EAA2ACF32760032E6E5 /* SpeechViewModel.swift */; };
 		B73FBB392A780D47004A5334 /* ComponentScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73FBB382A780D47004A5334 /* ComponentScrollView.swift */; };
-		B74080D72CC4018400434278 /* RadioButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74080D62CC4018400434278 /* RadioButton.swift */; };
 		B740FD712AB0E0C2009835D9 /* EventEditViewRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B740FD702AB0E0C2009835D9 /* EventEditViewRepresentable.swift */; };
 		B7493C442AD5B76A00D30D5F /* WidgetUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7493C432AD5B76900D30D5F /* WidgetUIView.swift */; };
 		B74A6B4F2ACDEC8200CA5C35 /* SpeechView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74A6B4E2ACDEC8200CA5C35 /* SpeechView.swift */; };
@@ -119,7 +121,6 @@
 		B7DB8B332CC00BAE00ECF2EB /* PhotoPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7DB8B322CC00BAE00ECF2EB /* PhotoPickerView.swift */; };
 		B7DD17CD2CC146970015F03C /* CameraCaptureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7DD17CC2CC146970015F03C /* CameraCaptureView.swift */; };
 		B7DD17D02CC2A82E0015F03C /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7DD17CF2CC2A82E0015F03C /* CameraView.swift */; };
-		B7DD17D32CC34D5C0015F03C /* RadioButtonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7DD17D22CC34D5C0015F03C /* RadioButtonsView.swift */; };
 		B7DF337E2C4A09B700974A7B /* LearningOptionAnimationsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7DF337D2C4A09B700974A7B /* LearningOptionAnimationsUITests.swift */; };
 		B7E129F729B4DEA7002E6B54 /* SwiftUIWKWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E129F629B4DEA7002E6B54 /* SwiftUIWKWebView.swift */; };
 		B7E136EC2AB33D0300674C1F /* CarouselViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E136EB2AB33D0300674C1F /* CarouselViewModel.swift */; };
@@ -204,6 +205,9 @@
 		B71646272BEDE0BA000FAD76 /* SwiftUIAnimationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIAnimationsView.swift; sourceTree = "<group>"; };
 		B71646292BEDE0E0000FAD76 /* LottieAnimationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieAnimationsView.swift; sourceTree = "<group>"; };
 		B72067662A333394009A785D /* TextInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextInputView.swift; sourceTree = "<group>"; };
+		B722FD5F2CC5112A005A7CF6 /* RadioButtonExampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioButtonExampleView.swift; sourceTree = "<group>"; };
+		B722FD612CC51153005A7CF6 /* RadioButtonForEach.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioButtonForEach.swift; sourceTree = "<group>"; };
+		B722FD632CC51198005A7CF6 /* RadioButtonDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioButtonDataModel.swift; sourceTree = "<group>"; };
 		B72395BD2A98FDB1005BD060 /* sampleScene.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = sampleScene.scn; sourceTree = "<group>"; };
 		B72598C32C30438B008D4CF7 /* AnimatingSFSymbol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatingSFSymbol.swift; sourceTree = "<group>"; };
 		B7299E9A29E5D73800A3A989 /* AudioVideoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioVideoView.swift; sourceTree = "<group>"; };
@@ -213,7 +217,6 @@
 		B72C5D2C2A30CA2600E77866 /* HorizontalStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalStackView.swift; sourceTree = "<group>"; };
 		B73A9EAA2ACF32760032E6E5 /* SpeechViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechViewModel.swift; sourceTree = "<group>"; };
 		B73FBB382A780D47004A5334 /* ComponentScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComponentScrollView.swift; sourceTree = "<group>"; };
-		B74080D62CC4018400434278 /* RadioButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioButton.swift; sourceTree = "<group>"; };
 		B740FD702AB0E0C2009835D9 /* EventEditViewRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventEditViewRepresentable.swift; sourceTree = "<group>"; };
 		B7493C432AD5B76900D30D5F /* WidgetUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetUIView.swift; sourceTree = "<group>"; };
 		B74A6B4E2ACDEC8200CA5C35 /* SpeechView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechView.swift; sourceTree = "<group>"; };
@@ -314,7 +317,6 @@
 		B7DB8B322CC00BAE00ECF2EB /* PhotoPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPickerView.swift; sourceTree = "<group>"; };
 		B7DD17CC2CC146970015F03C /* CameraCaptureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraCaptureView.swift; sourceTree = "<group>"; };
 		B7DD17CF2CC2A82E0015F03C /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
-		B7DD17D22CC34D5C0015F03C /* RadioButtonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioButtonsView.swift; sourceTree = "<group>"; };
 		B7DF337D2C4A09B700974A7B /* LearningOptionAnimationsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearningOptionAnimationsUITests.swift; sourceTree = "<group>"; };
 		B7E129F629B4DEA7002E6B54 /* SwiftUIWKWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIWKWebView.swift; sourceTree = "<group>"; };
 		B7E136EB2AB33D0300674C1F /* CarouselViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselViewModel.swift; sourceTree = "<group>"; };
@@ -835,8 +837,9 @@
 		B7DD17D12CC34D380015F03C /* RadioButtons */ = {
 			isa = PBXGroup;
 			children = (
-				B7DD17D22CC34D5C0015F03C /* RadioButtonsView.swift */,
-				B74080D62CC4018400434278 /* RadioButton.swift */,
+				B722FD5F2CC5112A005A7CF6 /* RadioButtonExampleView.swift */,
+				B722FD612CC51153005A7CF6 /* RadioButtonForEach.swift */,
+				B722FD632CC51198005A7CF6 /* RadioButtonDataModel.swift */,
 			);
 			path = RadioButtons;
 			sourceTree = "<group>";
@@ -1165,6 +1168,7 @@
 				B7C8D3C92C55160A0069C88B /* ReadableScrollView.swift in Sources */,
 				B76A06FF2A07404100974AD3 /* SomeCustomRowView.swift in Sources */,
 				B75C13E72AF8B3190065F0C4 /* TheCatAPI.swift in Sources */,
+				B722FD622CC51153005A7CF6 /* RadioButtonForEach.swift in Sources */,
 				B75C13E22AF40F880065F0C4 /* HTTPMethods.swift in Sources */,
 				B75430072C29D55300168793 /* SFSymbolSizeView.swift in Sources */,
 				B75D6AC52BE3C7EF0047BB21 /* DebugViewModel.swift in Sources */,
@@ -1182,7 +1186,6 @@
 				B76E261929B34F6D007977AB /* OpenURLsExternalBrowserExamplesView.swift in Sources */,
 				B7C8D3C52C54F7B90069C88B /* SimpleScrollView.swift in Sources */,
 				B7046C872A9680D900F9A95C /* AugmentedRealityViewModel.swift in Sources */,
-				B7DD17D32CC34D5C0015F03C /* RadioButtonsView.swift in Sources */,
 				B75C13E92AF92F840065F0C4 /* TheCatModel.swift in Sources */,
 				B7B1DCBD29B3C20700FFC805 /* OpenURLsInAppBrowserExamplesView.swift in Sources */,
 				B79E6F8629C723EC008B81BB /* ExternalInitStateObject.swift in Sources */,
@@ -1208,10 +1211,10 @@
 				B7B8F7EC2A26744F00FE32A7 /* ListView.swift in Sources */,
 				B76A06FB2A073FC100974AD3 /* BottomSheetView.swift in Sources */,
 				B7B531462BE5F9A900678328 /* LearningOptionsView.swift in Sources */,
-				B74080D72CC4018400434278 /* RadioButton.swift in Sources */,
 				B7F98F882C5E623C0039DB57 /* OSLogView.swift in Sources */,
 				B7DD17CD2CC146970015F03C /* CameraCaptureView.swift in Sources */,
 				B7299E9B29E5D73800A3A989 /* AudioVideoView.swift in Sources */,
+				B722FD642CC51198005A7CF6 /* RadioButtonDataModel.swift in Sources */,
 				B72067672A333394009A785D /* TextInputView.swift in Sources */,
 				B7A183E229C385A600B864DE /* DataEssentialStateObject.swift in Sources */,
 				B78AC7EF2C5669BC00991C42 /* GeometryReaderScenarios.swift in Sources */,
@@ -1219,6 +1222,7 @@
 				B77950A42ABB579300DFC92F /* TestPitchView.swift in Sources */,
 				B7DD17D02CC2A82E0015F03C /* CameraView.swift in Sources */,
 				B75C13EF2AF9E9FB0065F0C4 /* TheCatAPIViewModel.swift in Sources */,
+				B722FD602CC5112A005A7CF6 /* RadioButtonExampleView.swift in Sources */,
 				B74A6B4F2ACDEC8200CA5C35 /* SpeechView.swift in Sources */,
 				B7A38A4D2C676BE100FC9A30 /* HorizontallyDividedViewModifier.swift in Sources */,
 				B75C13ED2AF9E8CB0065F0C4 /* TheCatAPIView.swift in Sources */,
