@@ -99,6 +99,8 @@
 		B7A963E72AC82B2100EB6A12 /* AppIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A963E62AC82B2100EB6A12 /* AppIntent.swift */; };
 		B7A963E92AC82B2200EB6A12 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B7A963E82AC82B2200EB6A12 /* Assets.xcassets */; };
 		B7A963ED2AC82B2200EB6A12 /* SwiftUILearningsWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = B7A963DA2AC82B2100EB6A12 /* SwiftUILearningsWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		B7AA21902CC6B8D9000A14D5 /* ExternalJavaScriptFile.js in Resources */ = {isa = PBXBuildFile; fileRef = B7AA218E2CC6B8D9000A14D5 /* ExternalJavaScriptFile.js */; };
+		B7AA21912CC6B8D9000A14D5 /* html-with-javascript-in-separate-js-files.html in Resources */ = {isa = PBXBuildFile; fileRef = B7AA218F2CC6B8D9000A14D5 /* html-with-javascript-in-separate-js-files.html */; };
 		B7AB49DD2BF99367004551A1 /* PDFDocumentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7AB49DC2BF99367004551A1 /* PDFDocumentViewModel.swift */; };
 		B7AEDB6829EABD77007D634E /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B7AEDB6729EABD77007D634E /* Colors.xcassets */; };
 		B7AEDB6B29EABF35007D634E /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7AEDB6A29EABF35007D634E /* Color+Extension.swift */; };
@@ -294,6 +296,8 @@
 		B7A963E62AC82B2100EB6A12 /* AppIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIntent.swift; sourceTree = "<group>"; };
 		B7A963E82AC82B2200EB6A12 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B7A963EA2AC82B2200EB6A12 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B7AA218E2CC6B8D9000A14D5 /* ExternalJavaScriptFile.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = ExternalJavaScriptFile.js; sourceTree = "<group>"; };
+		B7AA218F2CC6B8D9000A14D5 /* html-with-javascript-in-separate-js-files.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "html-with-javascript-in-separate-js-files.html"; sourceTree = "<group>"; };
 		B7AB49DC2BF99367004551A1 /* PDFDocumentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFDocumentViewModel.swift; sourceTree = "<group>"; };
 		B7AEDB6729EABD77007D634E /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		B7AEDB6A29EABF35007D634E /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
@@ -482,6 +486,8 @@
 		B76FE8B229D7588E00BCAF51 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				B7AA218E2CC6B8D9000A14D5 /* ExternalJavaScriptFile.js */,
+				B7AA218F2CC6B8D9000A14D5 /* html-with-javascript-in-separate-js-files.html */,
 				B7FAFB322A97C0DF0009DE51 /* Reality */,
 				B76FE8B329D758C500BCAF51 /* payload.apns */,
 				B762B0AC2C0B24B800A9D228 /* rich_payload.apns */,
@@ -1100,6 +1106,8 @@
 				B796FDC329B6029A004B5F87 /* index.html in Resources */,
 				B787A2E029B115960090FCF7 /* Preview Assets.xcassets in Resources */,
 				B787A2DD29B115960090FCF7 /* Assets.xcassets in Resources */,
+				B7AA21902CC6B8D9000A14D5 /* ExternalJavaScriptFile.js in Resources */,
+				B7AA21912CC6B8D9000A14D5 /* html-with-javascript-in-separate-js-files.html in Resources */,
 				B796FDC129B5FC73004B5F87 /* webcontent in Resources */,
 				B7AEDB6829EABD77007D634E /* Colors.xcassets in Resources */,
 			);
