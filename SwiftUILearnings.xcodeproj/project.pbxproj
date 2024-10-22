@@ -486,8 +486,7 @@
 		B76FE8B229D7588E00BCAF51 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				B7AA218E2CC6B8D9000A14D5 /* ExternalJavaScriptFile.js */,
-				B7AA218F2CC6B8D9000A14D5 /* html-with-javascript-in-separate-js-files.html */,
+				B7AA21922CC7450A000A14D5 /* WebContent */,
 				B7FAFB322A97C0DF0009DE51 /* Reality */,
 				B76FE8B329D758C500BCAF51 /* payload.apns */,
 				B762B0AC2C0B24B800A9D228 /* rich_payload.apns */,
@@ -725,6 +724,15 @@
 				B7A963EA2AC82B2200EB6A12 /* Info.plist */,
 			);
 			path = SwiftUILearningsWidget;
+			sourceTree = "<group>";
+		};
+		B7AA21922CC7450A000A14D5 /* WebContent */ = {
+			isa = PBXGroup;
+			children = (
+				B7AA218E2CC6B8D9000A14D5 /* ExternalJavaScriptFile.js */,
+				B7AA218F2CC6B8D9000A14D5 /* html-with-javascript-in-separate-js-files.html */,
+			);
+			path = WebContent;
 			sourceTree = "<group>";
 		};
 		B7AEDB6929EABF09007D634E /* Extensions */ = {
