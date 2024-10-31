@@ -15,6 +15,7 @@
 		B712ED822A02C96700BF84D0 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B712ED812A02C96700BF84D0 /* AVFoundation.framework */; };
 		B71646282BEDE0BA000FAD76 /* SwiftUIAnimationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71646272BEDE0BA000FAD76 /* SwiftUIAnimationsView.swift */; };
 		B716462A2BEDE0E0000FAD76 /* LottieAnimationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71646292BEDE0E0000FAD76 /* LottieAnimationsView.swift */; };
+		B716A1042CD2987F0018B078 /* html-with-jquery.html in Resources */ = {isa = PBXBuildFile; fileRef = B716A1032CD2987F0018B078 /* html-with-jquery.html */; };
 		B72067672A333394009A785D /* TextInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72067662A333394009A785D /* TextInputView.swift */; };
 		B722FD602CC5112A005A7CF6 /* RadioButtonExampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B722FD5F2CC5112A005A7CF6 /* RadioButtonExampleView.swift */; };
 		B722FD622CC51153005A7CF6 /* RadioButtonForEach.swift in Sources */ = {isa = PBXBuildFile; fileRef = B722FD612CC51153005A7CF6 /* RadioButtonForEach.swift */; };
@@ -205,6 +206,7 @@
 		B712ED812A02C96700BF84D0 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		B71646272BEDE0BA000FAD76 /* SwiftUIAnimationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIAnimationsView.swift; sourceTree = "<group>"; };
 		B71646292BEDE0E0000FAD76 /* LottieAnimationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieAnimationsView.swift; sourceTree = "<group>"; };
+		B716A1032CD2987F0018B078 /* html-with-jquery.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "html-with-jquery.html"; sourceTree = "<group>"; };
 		B72067662A333394009A785D /* TextInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextInputView.swift; sourceTree = "<group>"; };
 		B722FD5F2CC5112A005A7CF6 /* RadioButtonExampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioButtonExampleView.swift; sourceTree = "<group>"; };
 		B722FD612CC51153005A7CF6 /* RadioButtonForEach.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioButtonForEach.swift; sourceTree = "<group>"; };
@@ -732,6 +734,7 @@
 				B7AA21942CC745F8000A14D5 /* styles */,
 				B7AA218E2CC6B8D9000A14D5 /* ExternalJavaScriptFile.js */,
 				B7AA218F2CC6B8D9000A14D5 /* html-with-javascript-in-separate-js-files.html */,
+				B716A1032CD2987F0018B078 /* html-with-jquery.html */,
 			);
 			path = WebContent;
 			sourceTree = "<group>";
@@ -1110,6 +1113,7 @@
 				B7F3FB082BF316C7001E8093 /* silent_payload.apns in Resources */,
 				B76FE8B429D758C500BCAF51 /* payload.apns in Resources */,
 				B72395BE2A98FDB1005BD060 /* sampleScene.scn in Resources */,
+				B716A1042CD2987F0018B078 /* html-with-jquery.html in Resources */,
 				B7AA21952CC745F8000A14D5 /* styles in Resources */,
 				B7AA21962CC745F8000A14D5 /* index.html in Resources */,
 				B762B0AD2C0B24B800A9D228 /* rich_payload.apns in Resources */,

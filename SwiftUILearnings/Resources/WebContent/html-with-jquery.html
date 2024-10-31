@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>JQuery AJAX Example</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 20px;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+    }
+
+    #result {
+      margin-top: 20px;
+      font-size: 18px;
+      color: #333;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>API Call Example</h1>
+  <button id="fetchButton">Fetch Data</button>
+  <div id="result">Press the button to fetch data</div>
+
+  <script>
+    $(document).ready(function () {
+      $("#fetchButton").click(function () {
+        $("#result").text("Loading...");
+        $.ajax({
+          url: "https://catfact.ninja/fact",
+          method: "GET",
+          success: function (response) {
+            $("#result").text("Quote: " + response.fact);
+          },
+          error: function () {
+            $("#result").text("Failed to fetch data.");
+          }
+        });
+      });
+    });
+  </script>
+</body>
+
+</html>

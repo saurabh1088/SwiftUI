@@ -29,6 +29,10 @@ struct OpenURLsInAppBrowserExamplesView: View {
         return Bundle.main.url(forResource: "ExternalJavaScriptFile", withExtension: "js")!
     }
     
+    private var localHtmlWithJQueryAndAjaxUrl: URL {
+        return Bundle.main.url(forResource: "html-with-jquery", withExtension: "html")!
+    }
+    
     var body: some View {
         VStack(alignment: .leading) {
             List {
@@ -38,6 +42,7 @@ struct OpenURLsInAppBrowserExamplesView: View {
                 embeddedWkWebview
                 wkWebViewLoadingLocalHTML
                 wkWebViewLoadingLocalHTMLandJavaScript
+                wkWebViewLoadingLocalHTMLWithJQueryAndAjax
             }
         }
     }
@@ -134,6 +139,14 @@ struct OpenURLsInAppBrowserExamplesView: View {
             SwiftUIWKWebView(url: localHtmlWithJSContentUrl, isLocal: true)
         } label: {
             Text("WKWebView loading local static html and javascript")
+        }
+    }
+    
+    private var wkWebViewLoadingLocalHTMLWithJQueryAndAjax: some View {
+        NavigationLink {
+            SwiftUIWKWebView(url: localHtmlWithJQueryAndAjaxUrl, isLocal: true)
+        } label: {
+            Text("WKWebView loading local static html containing JQuery and Ajax")
         }
     }
 }
