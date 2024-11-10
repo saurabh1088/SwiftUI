@@ -12,6 +12,8 @@ class DebugViewModel: ObservableObject {
     var debugModel: DebugModel?
     var someDebuggable: Debuggable?
     var someDebugModelWithNoCustomStringConvertible: DebugModelWithNoCustomStringConvertible?
+    var leakCreatingClosure: (() -> Void)?
+    var leakCreatingClosureProperty: String?
     
     func createDebugModel() {
         let debugModelId = 1
@@ -116,6 +118,14 @@ extension DebugViewModel {
         
         objectA.objectB = objectB
         objectB.objectA = objectA
+        
+        // This causes memory leak as even when one moves back from DebugView in
+        // Xcode's memory map one can see DebugViewModel still lying around.
+        leakCreatingClosure = {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
+                self.leakCreatingClosureProperty = "leak"
+            }
+        }
     }
     
     private class ObjectA {
