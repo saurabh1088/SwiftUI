@@ -15,6 +15,7 @@ struct GeometryReaderScenarios: View {
                 NavigationLink(example.displayName, value: example)
             }
         }
+        .navigationTitle(LearningTopics.geometryReader.rawValue)
         .navigationDestination(for: GeometryReaderExamples.self) { destination in
             switch destination {
             case .defaultCoordinates:
