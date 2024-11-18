@@ -28,7 +28,7 @@ class FaceIDAuthenticationManager: FaceIDAuthenticationManagerProtocol {
                 context.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: "Authenticate with FaceID") { success, error in
                     if success {
                         completion(.success(true))
-                    } else if let error {
+                    } else if error != nil {
                         completion(.failure(.failed))
                     } else {
                         completion(.failure(.cancelled))
