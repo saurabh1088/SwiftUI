@@ -1562,6 +1562,7 @@
 				INFOPLIST_FILE = SwiftUILearnings/Info.plist;
 				INFOPLIST_KEY_NSCalendarsUsageDescription = 1.0;
 				INFOPLIST_KEY_NSCameraUsageDescription = "Using camera to explore ARKit";
+				INFOPLIST_KEY_NSFaceIDUsageDescription = "Using Face ID to restric sensitive features.";
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Audio is recorded to convert speech to text.";
 				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Access photo library";
 				INFOPLIST_KEY_NSRemindersUsageDescription = "Reminders Usage Description";
@@ -1600,6 +1601,7 @@
 				INFOPLIST_FILE = SwiftUILearnings/Info.plist;
 				INFOPLIST_KEY_NSCalendarsUsageDescription = 1.0;
 				INFOPLIST_KEY_NSCameraUsageDescription = "Using camera to explore ARKit";
+				INFOPLIST_KEY_NSFaceIDUsageDescription = "Using Face ID to restric sensitive features.";
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Audio is recorded to convert speech to text.";
 				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Access photo library";
 				INFOPLIST_KEY_NSRemindersUsageDescription = "Reminders Usage Description";
