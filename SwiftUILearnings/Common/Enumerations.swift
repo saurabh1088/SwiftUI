@@ -18,6 +18,7 @@ enum LearningTopics: String, CaseIterable {
     case dataEssentials = "Data Essentials"
     case debug = "Debug"
     case eventsKit = "Events"
+    case faceId = "Face ID"
     case geometryReader = "Geometry Reader"
     case notifications = "Notifications"
     case pdfFiles = "PDF Files"

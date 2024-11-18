@@ -8,8 +8,21 @@
 import SwiftUI
 
 struct FaceIDLearningView: View {
+    @StateObject private var viewModel = FaceIDLearningViewModel(faceIdAuthManager: FaceIDAuthenticationManager())
+    
     var body: some View {
-        Text("Face ID Learning View")
+        VStack {
+            Text("Face ID Learning View")
+            
+            Button("Authenticate") {
+                viewModel.authenticate()
+            }
+            
+            if viewModel.faceIdAuthStatus {
+                Text("😎")
+                    .font(.system(size: 100))
+            }
+        }
     }
 }
 
