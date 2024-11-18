@@ -19,9 +19,15 @@ class FaceIDLearningViewModel: ObservableObject {
         faceIdAuthManager.authenticate { status in
             switch status {
                 case .success:
-                self.faceIdAuthStatus = true
+                // TODO: Can we leverage @MainActor here?
+                DispatchQueue.main.async {
+                    self.faceIdAuthStatus = true
+                }
             case .failure:
-                self.faceIdAuthStatus = false
+                // TODO: Can we leverage @MainActor here?
+                DispatchQueue.main.async {
+                    self.faceIdAuthStatus = false
+                }
             }
         }
     }
