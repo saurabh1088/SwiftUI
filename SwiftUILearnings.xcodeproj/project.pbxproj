@@ -56,6 +56,8 @@
 		B76A06FD2A07400A00974AD3 /* LazyVStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76A06FC2A07400A00974AD3 /* LazyVStackView.swift */; };
 		B76A06FF2A07404100974AD3 /* SomeCustomRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76A06FE2A07404100974AD3 /* SomeCustomRowView.swift */; };
 		B76A07012A07407700974AD3 /* ViewBuilderMaxLimitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76A07002A07407700974AD3 /* ViewBuilderMaxLimitView.swift */; };
+		B76CACFB2CEB1CD200075BF8 /* FaceIDLearningView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76CACFA2CEB1CD200075BF8 /* FaceIDLearningView.swift */; };
+		B76CACFD2CEB2AB000075BF8 /* FaceIDLearningViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76CACFC2CEB2AB000075BF8 /* FaceIDLearningViewModel.swift */; };
 		B76E261929B34F6D007977AB /* OpenURLsExternalBrowserExamplesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76E261829B34F6D007977AB /* OpenURLsExternalBrowserExamplesView.swift */; };
 		B76FE8B029D7518E00BCAF51 /* NotificationsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76FE8AF29D7518E00BCAF51 /* NotificationsManager.swift */; };
 		B76FE8B429D758C500BCAF51 /* payload.apns in Resources */ = {isa = PBXBuildFile; fileRef = B76FE8B329D758C500BCAF51 /* payload.apns */; };
@@ -89,6 +91,7 @@
 		B7A38A4D2C676BE100FC9A30 /* HorizontallyDividedViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A38A4C2C676BE100FC9A30 /* HorizontallyDividedViewModifier.swift */; };
 		B7A6F2C12BEF024300112BEF /* WithAnimationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A6F2C02BEF024300112BEF /* WithAnimationsView.swift */; };
 		B7A76AB429B2601F00163BDC /* BasicWebContentTechnologiesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A76AB329B2601F00163BDC /* BasicWebContentTechnologiesView.swift */; };
+		B7A7853A2CE9BE98007A6B02 /* FaceIDAuthenticationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A785392CE9BE98007A6B02 /* FaceIDAuthenticationManager.swift */; };
 		B7A963DC2AC82B2100EB6A12 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7A963DB2AC82B2100EB6A12 /* WidgetKit.framework */; };
 		B7A963DE2AC82B2100EB6A12 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7A963DD2AC82B2100EB6A12 /* SwiftUI.framework */; };
 		B7A963E12AC82B2100EB6A12 /* SwiftUILearningsWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A963E02AC82B2100EB6A12 /* SwiftUILearningsWidgetBundle.swift */; };
@@ -249,6 +252,8 @@
 		B76A06FC2A07400A00974AD3 /* LazyVStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyVStackView.swift; sourceTree = "<group>"; };
 		B76A06FE2A07404100974AD3 /* SomeCustomRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SomeCustomRowView.swift; sourceTree = "<group>"; };
 		B76A07002A07407700974AD3 /* ViewBuilderMaxLimitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewBuilderMaxLimitView.swift; sourceTree = "<group>"; };
+		B76CACFA2CEB1CD200075BF8 /* FaceIDLearningView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceIDLearningView.swift; sourceTree = "<group>"; };
+		B76CACFC2CEB2AB000075BF8 /* FaceIDLearningViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceIDLearningViewModel.swift; sourceTree = "<group>"; };
 		B76E261729B33D90007977AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		B76E261829B34F6D007977AB /* OpenURLsExternalBrowserExamplesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenURLsExternalBrowserExamplesView.swift; sourceTree = "<group>"; };
 		B76FE8AF29D7518E00BCAF51 /* NotificationsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsManager.swift; sourceTree = "<group>"; };
@@ -287,6 +292,7 @@
 		B7A38A4C2C676BE100FC9A30 /* HorizontallyDividedViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontallyDividedViewModifier.swift; sourceTree = "<group>"; };
 		B7A6F2C02BEF024300112BEF /* WithAnimationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WithAnimationsView.swift; sourceTree = "<group>"; };
 		B7A76AB329B2601F00163BDC /* BasicWebContentTechnologiesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicWebContentTechnologiesView.swift; sourceTree = "<group>"; };
+		B7A785392CE9BE98007A6B02 /* FaceIDAuthenticationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceIDAuthenticationManager.swift; sourceTree = "<group>"; };
 		B7A963DA2AC82B2100EB6A12 /* SwiftUILearningsWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = SwiftUILearningsWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7A963DB2AC82B2100EB6A12 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		B7A963DD2AC82B2100EB6A12 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
@@ -606,6 +612,7 @@
 				B75D6AC12BE3C30F0047BB21 /* Debug */,
 				B782F7CD2AA8C0DE00FB7751 /* Events */,
 				B7AEDB6929EABF09007D634E /* Extensions */,
+				B7A785382CE9BE54007A6B02 /* FaceID */,
 				B74CEA6C29B1CF31002CB043 /* GeometryReader */,
 				B7775E102A9F93CB00DA37B2 /* Gestures */,
 				B7F98F862C5E61DF0039DB57 /* Logger */,
@@ -712,6 +719,16 @@
 				B7E129F629B4DEA7002E6B54 /* SwiftUIWKWebView.swift */,
 			);
 			path = WebContentTechnologies;
+			sourceTree = "<group>";
+		};
+		B7A785382CE9BE54007A6B02 /* FaceID */ = {
+			isa = PBXGroup;
+			children = (
+				B7A785392CE9BE98007A6B02 /* FaceIDAuthenticationManager.swift */,
+				B76CACFA2CEB1CD200075BF8 /* FaceIDLearningView.swift */,
+				B76CACFC2CEB2AB000075BF8 /* FaceIDLearningViewModel.swift */,
+			);
+			path = FaceID;
 			sourceTree = "<group>";
 		};
 		B7A963DF2AC82B2100EB6A12 /* SwiftUILearningsWidget */ = {
@@ -1206,6 +1223,7 @@
 				B76E261929B34F6D007977AB /* OpenURLsExternalBrowserExamplesView.swift in Sources */,
 				B7C8D3C52C54F7B90069C88B /* SimpleScrollView.swift in Sources */,
 				B7046C872A9680D900F9A95C /* AugmentedRealityViewModel.swift in Sources */,
+				B76CACFD2CEB2AB000075BF8 /* FaceIDLearningViewModel.swift in Sources */,
 				B75C13E92AF92F840065F0C4 /* TheCatModel.swift in Sources */,
 				B7B1DCBD29B3C20700FFC805 /* OpenURLsInAppBrowserExamplesView.swift in Sources */,
 				B79E6F8629C723EC008B81BB /* ExternalInitStateObject.swift in Sources */,
@@ -1228,6 +1246,7 @@
 				B7C05D392A12A90C00AD7912 /* Enumerations.swift in Sources */,
 				B7F98F8E2C5E8FAB0039DB57 /* OSLogsDisplayView.swift in Sources */,
 				B7A38A492C67395C00FC9A30 /* ViewVSViewModifierExampleView.swift in Sources */,
+				B7A7853A2CE9BE98007A6B02 /* FaceIDAuthenticationManager.swift in Sources */,
 				B7B8F7EC2A26744F00FE32A7 /* ListView.swift in Sources */,
 				B76A06FB2A073FC100974AD3 /* BottomSheetView.swift in Sources */,
 				B7B531462BE5F9A900678328 /* LearningOptionsView.swift in Sources */,
@@ -1248,6 +1267,7 @@
 				B75C13ED2AF9E8CB0065F0C4 /* TheCatAPIView.swift in Sources */,
 				B73FBB392A780D47004A5334 /* ComponentScrollView.swift in Sources */,
 				B787A2D929B115920090FCF7 /* SwiftUILearningsApp.swift in Sources */,
+				B76CACFB2CEB1CD200075BF8 /* FaceIDLearningView.swift in Sources */,
 				B772B3C72A517A2D00B78E73 /* Logger+Extension.swift in Sources */,
 				B75D6AC32BE3C32F0047BB21 /* DebugView.swift in Sources */,
 				B7A6F2C12BEF024300112BEF /* WithAnimationsView.swift in Sources */,
@@ -1542,6 +1562,7 @@
 				INFOPLIST_FILE = SwiftUILearnings/Info.plist;
 				INFOPLIST_KEY_NSCalendarsUsageDescription = 1.0;
 				INFOPLIST_KEY_NSCameraUsageDescription = "Using camera to explore ARKit";
+				INFOPLIST_KEY_NSFaceIDUsageDescription = "Using Face ID to restric sensitive features.";
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Audio is recorded to convert speech to text.";
 				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Access photo library";
 				INFOPLIST_KEY_NSRemindersUsageDescription = "Reminders Usage Description";
@@ -1580,6 +1601,7 @@
 				INFOPLIST_FILE = SwiftUILearnings/Info.plist;
 				INFOPLIST_KEY_NSCalendarsUsageDescription = 1.0;
 				INFOPLIST_KEY_NSCameraUsageDescription = "Using camera to explore ARKit";
+				INFOPLIST_KEY_NSFaceIDUsageDescription = "Using Face ID to restric sensitive features.";
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Audio is recorded to convert speech to text.";
 				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Access photo library";
 				INFOPLIST_KEY_NSRemindersUsageDescription = "Reminders Usage Description";

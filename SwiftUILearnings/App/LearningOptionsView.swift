@@ -102,6 +102,8 @@ extension LearningOptionsView {
             DebugView(viewModel: DebugViewModel())
         case .eventsKit:
             EventKitView()
+        case .faceId:
+            FaceIDLearningView()
         case .geometryReader:
             GeometryReaderScenarios()
         case .notifications:
