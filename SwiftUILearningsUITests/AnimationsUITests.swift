@@ -41,6 +41,11 @@ final class AnimationsUITests: XCTestCase {
         let animateButton = app.buttons["Animate"]
         XCTAssertTrue(animateButton.waitForExistence(timeout: 2))
         animateButton.tap()
+        
+        // TODO: This is not working, need to find a solution
+        let popOverDismissRegion = app.windows.children(matching: .sheet).element(boundBy: 1).otherElements["PopoverDismissRegion"]
+        XCTAssertTrue(popOverDismissRegion.waitForExistence(timeout: 2))
+        popOverDismissRegion.tap()
     }
 
     func testLaunchPerformance() throws {
