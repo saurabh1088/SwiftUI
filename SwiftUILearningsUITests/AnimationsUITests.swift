@@ -22,7 +22,7 @@ final class AnimationsUITests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testExample() throws {
+    func test_SwiftUIAnimationsOptionWithAnimation() throws {
         let app = XCUIApplication()
         app.launch()
         
@@ -42,10 +42,9 @@ final class AnimationsUITests: XCTestCase {
         XCTAssertTrue(animateButton.waitForExistence(timeout: 2))
         animateButton.tap()
         
-        // TODO: This is not working, need to find a solution
-        let popOverDismissRegion = app.windows.children(matching: .sheet).element(boundBy: 1).otherElements["PopoverDismissRegion"]
-        XCTAssertTrue(popOverDismissRegion.waitForExistence(timeout: 2))
-        popOverDismissRegion.tap()
+        let dissmissPopoverButton = app.otherElements["dismiss popup"].firstMatch
+        XCTAssertTrue(dissmissPopoverButton.waitForExistence(timeout: 2))
+        dissmissPopoverButton.tap()
     }
 
     func testLaunchPerformance() throws {
