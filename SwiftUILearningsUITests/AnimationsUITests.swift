@@ -42,6 +42,10 @@ final class AnimationsUITests: XCTestCase {
         XCTAssertTrue(animateButton.waitForExistence(timeout: 2))
         animateButton.tap()
         
+        /// Code suggested while recording doesn't works. If UI is inspected using Accessibility inspector then
+        /// the UI behind sheet is shown in inspector having label as "dismiss popup". This is what used here
+        /// to dismiss the sheet.
+        /// firstMatch is used as there are multiple elements with "dismiss popup" label.
         let dissmissPopoverButton = app.otherElements["dismiss popup"].firstMatch
         XCTAssertTrue(dissmissPopoverButton.waitForExistence(timeout: 2))
         dissmissPopoverButton.tap()
