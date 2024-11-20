@@ -49,6 +49,18 @@ final class AnimationsUITests: XCTestCase {
         let dissmissPopoverButton = app.otherElements["dismiss popup"].firstMatch
         XCTAssertTrue(dissmissPopoverButton.waitForExistence(timeout: 2))
         dissmissPopoverButton.tap()
+        
+        let backButton = app.navigationBars.buttons["Back"]
+        XCTAssertTrue(backButton.waitForExistence(timeout: 2))
+        backButton.tap()
+        
+        let scenariosBackNavigationButton = app.navigationBars.buttons["Scenarios"]
+        XCTAssertTrue(scenariosBackNavigationButton.waitForExistence(timeout: 2))
+        scenariosBackNavigationButton.tap()
+        
+        let learningsBackNavigationButton = app.navigationBars.buttons["Learnings"]
+        XCTAssertTrue(learningsBackNavigationButton.waitForExistence(timeout: 2))
+        learningsBackNavigationButton.tap()
     }
 
     func testLaunchPerformance() throws {
