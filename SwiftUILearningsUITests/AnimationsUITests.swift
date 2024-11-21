@@ -98,6 +98,30 @@ final class AnimationsUITests: XCTestCase {
         XCTAssertTrue(learningsBackNavigationButton.waitForExistence(timeout: 2))
         learningsBackNavigationButton.tap()
     }
+    
+    func test_SwiftUIAnimationsOptionAnimationViewModifier_AnimateOption() {
+        let app = XCUIApplication()
+        app.launch()
+        
+        let animationsOption = app.collectionViews.buttons["Animations"]
+        XCTAssertTrue(animationsOption.waitForExistence(timeout: 2))
+        animationsOption.tap()
+        
+        let animationsOptionSwiftUI = app.collectionViews.buttons["SwiftUI"]
+        XCTAssertTrue(animationsOptionSwiftUI.waitForExistence(timeout: 2))
+        animationsOptionSwiftUI.tap()
+        
+        let swiftUIAnimationsScenarioAnimationViewModifier = app.collectionViews.buttons["Animation View Modifier"]
+        XCTAssertTrue(swiftUIAnimationsScenarioAnimationViewModifier.waitForExistence(timeout: 2))
+        swiftUIAnimationsScenarioAnimationViewModifier.tap()
+        
+        let animateButton = app.buttons["Animate"]
+        XCTAssertTrue(animateButton.waitForExistence(timeout: 2))
+        animateButton.tap()
+        
+        let animatedStaticText = app.staticTexts["🚴"]
+        XCTAssertTrue(animatedStaticText.exists)
+    }
 
     func testLaunchPerformance() throws {
         if #available(macOS 10.15, iOS 13.0, tvOS 13.0, watchOS 7.0, *) {
