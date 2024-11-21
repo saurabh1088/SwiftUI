@@ -83,6 +83,7 @@
 		B798812E2C01789000F5A7D9 /* DebugViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B798812D2C01789000F5A7D9 /* DebugViewModelTests.swift */; };
 		B79C60AC2BD49BE8005C0226 /* SwiftUIViewsHelper in Frameworks */ = {isa = PBXBuildFile; productRef = B79C60AB2BD49BE8005C0226 /* SwiftUIViewsHelper */; };
 		B79E6F8629C723EC008B81BB /* ExternalInitStateObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79E6F8529C723EC008B81BB /* ExternalInitStateObject.swift */; };
+		B79FD4E52CECF37F00324D7F /* AnimationsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79FD4E42CECF37F00324D7F /* AnimationsUITests.swift */; };
 		B7A183E029C3856700B864DE /* DataEssentialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A183DF29C3856700B864DE /* DataEssentialView.swift */; };
 		B7A183E229C385A600B864DE /* DataEssentialStateObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A183E129C385A600B864DE /* DataEssentialStateObject.swift */; };
 		B7A2D3B82A925CE0004E2988 /* AugmentedRealityContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A2D3B72A925CE0004E2988 /* AugmentedRealityContainerView.swift */; };
@@ -284,6 +285,7 @@
 		B796FDC429B602C4004B5F87 /* style.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; name = style.css; path = SwiftUILearnings/webcontent/styles/style.css; sourceTree = "<group>"; };
 		B798812D2C01789000F5A7D9 /* DebugViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugViewModelTests.swift; sourceTree = "<group>"; };
 		B79E6F8529C723EC008B81BB /* ExternalInitStateObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExternalInitStateObject.swift; sourceTree = "<group>"; };
+		B79FD4E42CECF37F00324D7F /* AnimationsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationsUITests.swift; sourceTree = "<group>"; };
 		B7A183DF29C3856700B864DE /* DataEssentialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataEssentialView.swift; sourceTree = "<group>"; };
 		B7A183E129C385A600B864DE /* DataEssentialStateObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataEssentialStateObject.swift; sourceTree = "<group>"; };
 		B7A2D3B72A925CE0004E2988 /* AugmentedRealityContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AugmentedRealityContainerView.swift; sourceTree = "<group>"; };
@@ -655,6 +657,7 @@
 		B787A2F229B115970090FCF7 /* SwiftUILearningsUITests */ = {
 			isa = PBXGroup;
 			children = (
+				B79FD4E42CECF37F00324D7F /* AnimationsUITests.swift */,
 				B7DF337D2C4A09B700974A7B /* LearningOptionAnimationsUITests.swift */,
 				B787A2F329B115970090FCF7 /* SwiftUILearningsUITests.swift */,
 				B787A2F529B115970090FCF7 /* SwiftUILearningsUITestsLaunchTests.swift */,
@@ -1304,6 +1307,7 @@
 			files = (
 				B787A2F629B115970090FCF7 /* SwiftUILearningsUITestsLaunchTests.swift in Sources */,
 				B787A2F429B115970090FCF7 /* SwiftUILearningsUITests.swift in Sources */,
+				B79FD4E52CECF37F00324D7F /* AnimationsUITests.swift in Sources */,
 				B7DF337E2C4A09B700974A7B /* LearningOptionAnimationsUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
