@@ -22,7 +22,7 @@ final class AnimationsUITests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func test_SwiftUIAnimationsOptionWithAnimation() throws {
+    func test_SwiftUIAnimationsOptionWithAnimation_AnimationTrigerred() throws {
         let app = XCUIApplication()
         app.launch()
         
@@ -52,6 +52,39 @@ final class AnimationsUITests: XCTestCase {
         
         let animatedStaticText = app.staticTexts["🤡"]
         XCTAssertTrue(animatedStaticText.exists)
+        
+        let backButton = app.navigationBars.buttons["Back"]
+        XCTAssertTrue(backButton.waitForExistence(timeout: 2))
+        backButton.tap()
+        
+        let scenariosBackNavigationButton = app.navigationBars.buttons["Scenarios"]
+        XCTAssertTrue(scenariosBackNavigationButton.waitForExistence(timeout: 2))
+        scenariosBackNavigationButton.tap()
+        
+        let learningsBackNavigationButton = app.navigationBars.buttons["Learnings"]
+        XCTAssertTrue(learningsBackNavigationButton.waitForExistence(timeout: 2))
+        learningsBackNavigationButton.tap()
+    }
+    
+    func test_SwiftUIAnimationsOptionWithAnimation_AnimationNotTrigerred() throws {
+        let app = XCUIApplication()
+        app.launch()
+        
+        let animationsOption = app.collectionViews.buttons["Animations"]
+        XCTAssertTrue(animationsOption.waitForExistence(timeout: 2))
+        animationsOption.tap()
+        
+        let animationsOptionSwiftUI = app.collectionViews.buttons["SwiftUI"]
+        XCTAssertTrue(animationsOptionSwiftUI.waitForExistence(timeout: 2))
+        animationsOptionSwiftUI.tap()
+        
+        let swiftUIAnimationsScenarioWithAnimation = app.collectionViews.buttons["With Animation"]
+        XCTAssertTrue(swiftUIAnimationsScenarioWithAnimation.waitForExistence(timeout: 2))
+        swiftUIAnimationsScenarioWithAnimation.tap()
+        
+        let dissmissPopoverButton = app.otherElements["dismiss popup"].firstMatch
+        XCTAssertTrue(dissmissPopoverButton.waitForExistence(timeout: 2))
+        dissmissPopoverButton.tap()
         
         let backButton = app.navigationBars.buttons["Back"]
         XCTAssertTrue(backButton.waitForExistence(timeout: 2))
