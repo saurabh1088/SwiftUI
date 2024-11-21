@@ -50,6 +50,9 @@ final class AnimationsUITests: XCTestCase {
         XCTAssertTrue(dissmissPopoverButton.waitForExistence(timeout: 2))
         dissmissPopoverButton.tap()
         
+        let animatedStaticText = app.staticTexts["🤡"]
+        XCTAssertTrue(animatedStaticText.exists)
+        
         let backButton = app.navigationBars.buttons["Back"]
         XCTAssertTrue(backButton.waitForExistence(timeout: 2))
         backButton.tap()
