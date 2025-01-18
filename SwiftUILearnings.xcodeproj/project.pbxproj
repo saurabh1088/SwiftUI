@@ -52,6 +52,7 @@
 		B7605AD229C35D0A00602F8A /* AppStateObjectModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7605AD129C35D0A00602F8A /* AppStateObjectModel.swift */; };
 		B762B0AD2C0B24B800A9D228 /* rich_payload.apns in Resources */ = {isa = PBXBuildFile; fileRef = B762B0AC2C0B24B800A9D228 /* rich_payload.apns */; };
 		B762B0AE2C0B51C700A9D228 /* Logger+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B772B3C62A517A2D00B78E73 /* Logger+Extension.swift */; };
+		B76390412D3C14F9000DCE63 /* SwiftNetworking in Frameworks */ = {isa = PBXBuildFile; productRef = B76390402D3C14F9000DCE63 /* SwiftNetworking */; };
 		B76A06FB2A073FC100974AD3 /* BottomSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76A06FA2A073FC100974AD3 /* BottomSheetView.swift */; };
 		B76A06FD2A07400A00974AD3 /* LazyVStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76A06FC2A07400A00974AD3 /* LazyVStackView.swift */; };
 		B76A06FF2A07404100974AD3 /* SomeCustomRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76A06FE2A07404100974AD3 /* SomeCustomRowView.swift */; };
@@ -366,6 +367,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B76390412D3C14F9000DCE63 /* SwiftNetworking in Frameworks */,
 				B79C60AC2BD49BE8005C0226 /* SwiftUIViewsHelper in Frameworks */,
 				B712ED822A02C96700BF84D0 /* AVFoundation.framework in Frameworks */,
 				B712ED802A02C95B00BF84D0 /* AVKit.framework in Frameworks */,
@@ -983,6 +985,7 @@
 			name = SwiftUILearnings;
 			packageProductDependencies = (
 				B79C60AB2BD49BE8005C0226 /* SwiftUIViewsHelper */,
+				B76390402D3C14F9000DCE63 /* SwiftNetworking */,
 			);
 			productName = SwiftUILearnings;
 			productReference = B787A2D529B115920090FCF7 /* SwiftUILearnings.app */;
@@ -1102,6 +1105,7 @@
 			packageReferences = (
 				B79C60AA2BD49BE8005C0226 /* XCRemoteSwiftPackageReference "swift-ui-views-helper" */,
 				B7E70E462BDFB3E9002760F1 /* XCRemoteSwiftPackageReference "swift-algorithms" */,
+				B763903F2D3C14F9000DCE63 /* XCRemoteSwiftPackageReference "swift-networking" */,
 			);
 			productRefGroup = B787A2D629B115920090FCF7 /* Products */;
 			projectDirPath = "";
@@ -1897,6 +1901,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		B763903F2D3C14F9000DCE63 /* XCRemoteSwiftPackageReference "swift-networking" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:saurabh1088/swift-networking.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
 		B79C60AA2BD49BE8005C0226 /* XCRemoteSwiftPackageReference "swift-ui-views-helper" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/saurabh1088/swift-ui-views-helper.git";
@@ -1916,6 +1928,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		B76390402D3C14F9000DCE63 /* SwiftNetworking */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B763903F2D3C14F9000DCE63 /* XCRemoteSwiftPackageReference "swift-networking" */;
+			productName = SwiftNetworking;
+		};
 		B79C60AB2BD49BE8005C0226 /* SwiftUIViewsHelper */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = B79C60AA2BD49BE8005C0226 /* XCRemoteSwiftPackageReference "swift-ui-views-helper" */;

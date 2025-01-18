@@ -1,5 +1,5 @@
 {
-  "originHash" : "0e1b2375ee40a4aa881bc31556c946f57ceb0743aedd427686f8ba5168f877d5",
+  "originHash" : "405c079a20e3ea0bc6df6eda560c194074f12473e61259667c2bea481c1c0328",
   "pins" : [
     {
       "identity" : "swift-algorithms",
@@ -8,6 +8,15 @@
       "state" : {
         "branch" : "main",
         "revision" : "70b5fc6c3beff4c81144a5f675f881575fda88ee"
+      }
+    },
+    {
+      "identity" : "swift-networking",
+      "kind" : "remoteSourceControl",
+      "location" : "git@github.com:saurabh1088/swift-networking.git",
+      "state" : {
+        "branch" : "main",
+        "revision" : "bdb0346e10169d1d9a2ac6572a0e07b316a083f9"
       }
     },
     {
