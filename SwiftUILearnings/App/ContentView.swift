@@ -15,13 +15,17 @@ struct ContentView: View {
     var body: some View {
         LearningOptionsView()
             .environmentObject(appStateData)
-            .onAppear {
-                let category = UNNotificationCategory(identifier: "notificationExtensionCategory",
-                                                      actions: [],
-                                                      intentIdentifiers: [])
-                UNUserNotificationCenter.current().setNotificationCategories([category])
-                NotificationsManager.shared.requestPermission()
-            }
+            .onAppear(perform: setupNotifications)
+    }
+}
+
+extension ContentView {
+    private func setupNotifications() {
+        let category = UNNotificationCategory(identifier: "notificationExtensionCategory",
+                                             actions: [],
+                                             intentIdentifiers: [])
+        UNUserNotificationCenter.current().setNotificationCategories([category])
+        NotificationsManager.shared.requestPermission()
     }
 }
 
