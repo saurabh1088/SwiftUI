@@ -57,6 +57,7 @@
 		B76A06FD2A07400A00974AD3 /* LazyVStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76A06FC2A07400A00974AD3 /* LazyVStackView.swift */; };
 		B76A06FF2A07404100974AD3 /* SomeCustomRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76A06FE2A07404100974AD3 /* SomeCustomRowView.swift */; };
 		B76A07012A07407700974AD3 /* ViewBuilderMaxLimitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76A07002A07407700974AD3 /* ViewBuilderMaxLimitView.swift */; };
+		B76BB9742D3F7741003298CA /* NotificationsSetupManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76BB9732D3F7741003298CA /* NotificationsSetupManager.swift */; };
 		B76CACFB2CEB1CD200075BF8 /* FaceIDLearningView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76CACFA2CEB1CD200075BF8 /* FaceIDLearningView.swift */; };
 		B76CACFD2CEB2AB000075BF8 /* FaceIDLearningViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76CACFC2CEB2AB000075BF8 /* FaceIDLearningViewModel.swift */; };
 		B76E261929B34F6D007977AB /* OpenURLsExternalBrowserExamplesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76E261829B34F6D007977AB /* OpenURLsExternalBrowserExamplesView.swift */; };
@@ -254,6 +255,7 @@
 		B76A06FC2A07400A00974AD3 /* LazyVStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyVStackView.swift; sourceTree = "<group>"; };
 		B76A06FE2A07404100974AD3 /* SomeCustomRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SomeCustomRowView.swift; sourceTree = "<group>"; };
 		B76A07002A07407700974AD3 /* ViewBuilderMaxLimitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewBuilderMaxLimitView.swift; sourceTree = "<group>"; };
+		B76BB9732D3F7741003298CA /* NotificationsSetupManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsSetupManager.swift; sourceTree = "<group>"; };
 		B76CACFA2CEB1CD200075BF8 /* FaceIDLearningView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceIDLearningView.swift; sourceTree = "<group>"; };
 		B76CACFC2CEB2AB000075BF8 /* FaceIDLearningViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceIDLearningViewModel.swift; sourceTree = "<group>"; };
 		B76E261729B33D90007977AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
@@ -491,6 +493,7 @@
 			children = (
 				B76FE8AF29D7518E00BCAF51 /* NotificationsManager.swift */,
 				B7E9414429D89C820021B952 /* NotificationsView.swift */,
+				B76BB9732D3F7741003298CA /* NotificationsSetupManager.swift */,
 			);
 			path = Notifications;
 			sourceTree = "<group>";
@@ -1273,6 +1276,7 @@
 				B7A38A4D2C676BE100FC9A30 /* HorizontallyDividedViewModifier.swift in Sources */,
 				B75C13ED2AF9E8CB0065F0C4 /* TheCatAPIView.swift in Sources */,
 				B73FBB392A780D47004A5334 /* ComponentScrollView.swift in Sources */,
+				B76BB9742D3F7741003298CA /* NotificationsSetupManager.swift in Sources */,
 				B787A2D929B115920090FCF7 /* SwiftUILearningsApp.swift in Sources */,
 				B76CACFB2CEB1CD200075BF8 /* FaceIDLearningView.swift in Sources */,
 				B772B3C72A517A2D00B78E73 /* Logger+Extension.swift in Sources */,

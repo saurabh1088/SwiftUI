@@ -21,11 +21,7 @@ struct ContentView: View {
 
 extension ContentView {
     private func setupNotifications() {
-        let category = UNNotificationCategory(identifier: "notificationExtensionCategory",
-                                             actions: [],
-                                             intentIdentifiers: [])
-        UNUserNotificationCenter.current().setNotificationCategories([category])
-        NotificationsManager.shared.requestPermission()
+        NotificationsSetupManager().setupNotifications()
     }
 }
 
