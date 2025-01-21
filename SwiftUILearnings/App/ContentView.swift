@@ -12,6 +12,8 @@ struct ContentView: View {
     
     @StateObject private var appStateData = AppStateObjectModel()
     
+    @EnvironmentObject var dependencies: DependenciesContainer
+    
     var body: some View {
         LearningOptionsView()
             .environmentObject(appStateData)
@@ -21,7 +23,7 @@ struct ContentView: View {
 
 extension ContentView {
     private func setupNotifications() {
-        NotificationsSetupManager().setupNotifications()
+        dependencies.notificationsSetupManager.setupNotifications()
     }
 }
 

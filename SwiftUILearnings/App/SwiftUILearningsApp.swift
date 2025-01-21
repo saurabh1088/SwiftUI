@@ -37,6 +37,8 @@ struct SwiftUILearningsApp: App {
     // TODO: Add comments and documentation for scene phase
     @Environment(\.scenePhase) var scenePhase
     
+    @StateObject private var dependenciesContainer = DependenciesContainer()
+    
     init() {
         UNUserNotificationCenter.current().delegate = NotificationsManager.shared
     }
@@ -44,6 +46,7 @@ struct SwiftUILearningsApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(dependenciesContainer)
         }
         .onChange(of: scenePhase) { (newScenePhase) in
             switch newScenePhase {
