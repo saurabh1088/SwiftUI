@@ -35,12 +35,14 @@ import OSLog
 @main
 struct SwiftUILearningsApp: App {
     // TODO: Add comments and documentation for scene phase
+    /// The current phase of the scene, used to react to app lifecycle events.
     @Environment(\.scenePhase) var scenePhase
     
+    /// A container for dependency injection, managing app-wide services.
     @StateObject private var dependenciesContainer = DependenciesContainer()
     
     init() {
-        UNUserNotificationCenter.current().delegate = NotificationsManager.shared
+        setupNotifications()
     }
     
     var body: some Scene {
@@ -60,5 +62,11 @@ struct SwiftUILearningsApp: App {
                 Logger.appCycle.info("SwiftUILearnings scenePhase : Unknown")
             }
         }
+    }
+}
+
+extension SwiftUILearningsApp {
+    private func setupNotifications() {
+        UNUserNotificationCenter.current().delegate = NotificationsManager.shared
     }
 }
