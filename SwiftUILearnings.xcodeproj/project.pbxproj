@@ -141,6 +141,7 @@
 		B7EE00712C0AD9C20073D7AF /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7EE00702C0AD9C20073D7AF /* NotificationService.swift */; };
 		B7EE00752C0AD9C20073D7AF /* SwiftUILearningsNotificationsServiceExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = B7EE006E2C0AD9C20073D7AF /* SwiftUILearningsNotificationsServiceExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		B7F3FB082BF316C7001E8093 /* silent_payload.apns in Resources */ = {isa = PBXBuildFile; fileRef = B7F3FB072BF316C7001E8093 /* silent_payload.apns */; };
+		B7F4ABBF2E62F8B500BE4ACB /* PickersExampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F4ABBE2E62F8B500BE4ACB /* PickersExampleView.swift */; };
 		B7F70FF42BEFA0A500320691 /* AnimationModifierExampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F70FF32BEFA0A500320691 /* AnimationModifierExampleView.swift */; };
 		B7F98F882C5E623C0039DB57 /* OSLogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F98F872C5E623C0039DB57 /* OSLogView.swift */; };
 		B7F98F8A2C5E68990039DB57 /* View+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F98F892C5E68990039DB57 /* View+Extension.swift */; };
@@ -349,6 +350,7 @@
 		B7EE00702C0AD9C20073D7AF /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
 		B7EE00722C0AD9C20073D7AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B7F3FB072BF316C7001E8093 /* silent_payload.apns */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = silent_payload.apns; sourceTree = "<group>"; };
+		B7F4ABBE2E62F8B500BE4ACB /* PickersExampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickersExampleView.swift; sourceTree = "<group>"; };
 		B7F70FF32BEFA0A500320691 /* AnimationModifierExampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationModifierExampleView.swift; sourceTree = "<group>"; };
 		B7F98F872C5E623C0039DB57 /* OSLogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OSLogView.swift; sourceTree = "<group>"; };
 		B7F98F892C5E68990039DB57 /* View+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extension.swift"; sourceTree = "<group>"; };
@@ -801,6 +803,7 @@
 		B7C7E24829E9C0920089E0C1 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				B7F4ABBD2E62F88800BE4ACB /* Pickers */,
 				B7DD17D12CC34D380015F03C /* RadioButtons */,
 				B7DD17CB2CC146810015F03C /* Camera */,
 				B7DB8B312CC00B8100ECF2EB /* PhotosPicker */,
@@ -933,6 +936,14 @@
 				B7EE00722C0AD9C20073D7AF /* Info.plist */,
 			);
 			path = SwiftUILearningsNotificationsServiceExtension;
+			sourceTree = "<group>";
+		};
+		B7F4ABBD2E62F88800BE4ACB /* Pickers */ = {
+			isa = PBXGroup;
+			children = (
+				B7F4ABBE2E62F8B500BE4ACB /* PickersExampleView.swift */,
+			);
+			path = Pickers;
 			sourceTree = "<group>";
 		};
 		B7F98F862C5E61DF0039DB57 /* Logger */ = {
@@ -1244,6 +1255,7 @@
 				B72598C42C30438B008D4CF7 /* AnimatingSFSymbol.swift in Sources */,
 				B7046C852A967F5A00F9A95C /* AugmentedRealityView.swift in Sources */,
 				B7B04BF329E72CA30015EA8D /* PDFFilesView.swift in Sources */,
+				B7F4ABBF2E62F8B500BE4ACB /* PickersExampleView.swift in Sources */,
 				B7FAFB362A97C3F10009DE51 /* Plant.rcproject in Sources */,
 				B7EC81A42C27ACBA00014957 /* SFSymbolsMainView.swift in Sources */,
 				B78AC7F42C5677A200991C42 /* GeometryReaderParentChildExampleView.swift in Sources */,

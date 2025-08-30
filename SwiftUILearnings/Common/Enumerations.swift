@@ -32,20 +32,21 @@ enum LearningTopics: String, CaseIterable {
 }
 
 enum Components: String, CaseIterable {
+    case anyLayout = "Any Layout"
     case bottomSheet = "Bottom Sheets"
     case buttons = "Buttons"
+    case cameraCapture = "Camera Capture"
+    case carousel = "Carousels"
+    case hStack = "HStack"
     case lazyVStack = "Lazy VStack"
     case lists = "Lists"
-    case hStack = "HStack"
-    case vStack = "VStack"
-    case textFields = "Text Fields"
-    case anyLayout = "Any Layout"
-    case scrollView = "Scroll View"
-    case carousel = "Carousels"
-    case tables = "Tables"
     case photosPicker = "Photos Picker"
-    case cameraCapture = "Camera Capture"
+    case pickers = "Pickers"
     case radioButton = "Radio Button"
+    case scrollView = "Scroll View"
+    case tables = "Tables"
+    case textFields = "Text Fields"
+    case vStack = "VStack"
 }
 
 enum ListViewTypes: String, CaseIterable {
@@ -98,3 +99,4 @@ enum GeometryReaderExamples: String, CaseIterable, Identifiable {
     
     var id: String { rawValue }
 }
+

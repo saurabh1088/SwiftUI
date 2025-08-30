@@ -21,34 +21,36 @@ struct UIComponentsView: View {
             }
             .navigationDestination(for: Components.self) { component in
                 switch component {
+                case .anyLayout:
+                    AnyLayoutView()
                 case .bottomSheet:
                     BottomSheetView()
+                case .buttons:
+                    ButtonsView()
+                case .cameraCapture:
+                    CameraCaptureView()
+                case .carousel:
+                    CarouselView()
+                case .hStack:
+                    HorizontalStackView()
                 case .lazyVStack:
                     LazyVStackView()
                 case .lists:
                     ListView()
-                case .hStack:
-                    HorizontalStackView()
-                case .vStack:
-                    VerticalStackView()
-                case .textFields:
-                    TextInputView()
-                case .anyLayout:
-                    AnyLayoutView()
-                case .scrollView:
-                    ScrollViewOptions()
-                case .carousel:
-                    CarouselView()
-                case .buttons:
-                    ButtonsView()
-                case .tables:
-                    RowColumnTableView()
                 case .photosPicker:
                     PhotoPickerView()
-                case .cameraCapture:
-                    CameraCaptureView()
+                case .pickers:
+                    PickersExampleView()
                 case .radioButton:
                     RadioButtonExampleView()
+                case .scrollView:
+                    ScrollViewOptions()
+                case .tables:
+                    RowColumnTableView()
+                case .textFields:
+                    TextInputView()
+                case .vStack:
+                    VerticalStackView()
                 }
             }
         }
