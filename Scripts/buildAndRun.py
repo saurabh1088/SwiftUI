@@ -132,7 +132,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Builds an Xcode project and launches it on a simulator.")
     parser.add_argument("project_path", help="Path to the .xcodeproj file.")
     parser.add_argument("scheme", help="The Xcode scheme to build.")
-    parser.add_argument("--simulator-name", default="iPhone 15", help="Name of the iOS Simulator to launch the app on (e.g., 'iPhone 15', 'iPad Pro (12.9-inch)').")
+    parser.add_argument("--simulator-name", default="iPhone 16 Pro Max", help="Name of the iOS Simulator to launch the app on (e.g., 'iPhone 15', 'iPad Pro (12.9-inch)').")
 
     args = parser.parse_args()
 
