@@ -129,14 +129,18 @@ def build_and_launch(project_path, scheme, simulator_name):
 
 
 if __name__ == "__main__":
+    print("-------------------------------------------------------------------")
+    print("Starting script to build and run xcode project...")
     parser = argparse.ArgumentParser(description="Builds an Xcode project and launches it on a simulator.")
     parser.add_argument("project_path", help="Path to the .xcodeproj file.")
     parser.add_argument("scheme", help="The Xcode scheme to build.")
     parser.add_argument("--simulator-name", default="iPhone 16 Pro Max", help="Name of the iOS Simulator to launch the app on (e.g., 'iPhone 15', 'iPad Pro (12.9-inch)').")
 
     args = parser.parse_args()
+    print(f"Arguments received :: '{args}'")
 
     # Check if the project file exists
+    print(f"Project path :: '{args.project_path}'")
     if not os.path.exists(args.project_path):
         print(f"Error: Project file not found at '{args.project_path}'", file=sys.stderr)
         sys.exit(1)
