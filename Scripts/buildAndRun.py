@@ -3,6 +3,7 @@ import argparse
 import sys
 import os
 import re
+import json
 
 def find_app_bundle_id(project_path, scheme):
     """
@@ -19,10 +20,10 @@ def find_app_bundle_id(project_path, scheme):
             '-scheme', scheme,
             '-showBuildSettings'
         ]
-        print("Executing command...")
+        print("Executing command xcodebuild...")
         print(cmd)
         result = subprocess.run(cmd, capture_output=True, text=True, check=True)
-        print("Result of command...")
+        print("Result of command xcodebuild...")
         print(result)
         
         # Regex to find the Info.plist file path
@@ -32,24 +33,18 @@ def find_app_bundle_id(project_path, scheme):
             return None
             
         plist_path = os.path.join(os.path.dirname(project_path), match.group(2).strip())
-
         print(f"Plist path :: '{plist_path}'")
-        
-        # Now, read the Info.plist file to find the bundle ID (CFBundleIdentifier)
-        cmd_plist = [
-            'plutil',
-            '-convert', 'json',
-            '-o', '-',
-            plist_path
-        ]
-        plist_result = subprocess.run(cmd_plist, capture_output=True, text=True, check=True)
-        
-        match = re.search(r'CFBundleIdentifier(.+)', plist_result.stdout)
-        if match:
-            # Simple regex to extract the quoted string, assumes single line
-            bundle_id_match = re.search(r'"(.+?)"', match.group(0))
-            if bundle_id_match:
-                return bundle_id_match.group(1)
+
+        # Regex to find the bundle identifier
+        bundle_id_match = re.search(r'(^|\n)\s*PRODUCT_BUNDLE_IDENTIFIER\s*=\s*(\S+)', result.stdout)
+        if not bundle_id_match:
+            print("Error: Could not find PRODUCT_BUNDLE_IDENTIFIER.", file=sys.stderr)
+            return None
+
+        bundle_id = os.path.join(os.path.dirname(project_path), bundle_id_match.group(2).strip())
+        print(f"Bundle ID :: '{bundle_id}'")
+
+        return bundle_id
 
     except subprocess.CalledProcessError as e:
         print(f"Error executing command: {e.cmd}", file=sys.stderr)
