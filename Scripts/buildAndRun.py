@@ -19,15 +19,21 @@ def find_app_bundle_id(project_path, scheme):
             '-scheme', scheme,
             '-showBuildSettings'
         ]
+        print("Executing command...")
+        print(cmd)
         result = subprocess.run(cmd, capture_output=True, text=True, check=True)
+        print("Result of command...")
+        print(result)
         
         # Regex to find the Info.plist file path
-        match = re.search(r'INFOPLIST_FILE = (.+)', result.stdout)
+        match = re.search(r'(^|\n)\s*INFOPLIST_FILE\s*=\s*(\S+)', result.stdout)
         if not match:
             print("Error: Could not find Info.plist path.", file=sys.stderr)
             return None
             
-        plist_path = os.path.join(os.path.dirname(project_path), match.group(1).strip())
+        plist_path = os.path.join(os.path.dirname(project_path), match.group(2).strip())
+
+        print(f"Plist path :: '{plist_path}'")
         
         # Now, read the Info.plist file to find the bundle ID (CFBundleIdentifier)
         cmd_plist = [
