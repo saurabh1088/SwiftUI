@@ -9,6 +9,8 @@ def find_app_bundle_id(project_path, scheme):
     Finds the app's bundle identifier from the project's Info.plist.
     This is an approximation and may not work for all projects.
     """
+    print("-------------------------------------------------------------------")
+    print("Executing find_app_bundle_id...")
     try:
         # Get the path to the Info.plist file from the build settings
         cmd = [
@@ -54,6 +56,8 @@ def build_and_launch(project_path, scheme, simulator_name):
     """
     Builds the specified Xcode project and launches it on a simulator.
     """
+    print("-------------------------------------------------------------------")
+    print("Executing build_and_launch...")
     print(f"1. Building scheme '{scheme}' for project at '{project_path}'...")
     
     # Use a workspace if .xcworkspace file exists, otherwise use .xcodeproj
