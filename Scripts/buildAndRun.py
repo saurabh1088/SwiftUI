@@ -121,8 +121,16 @@ def build_and_launch(project_path, scheme, simulator_name):
             print(f"Error: Simulator '{simulator_name}' not found or not available.", file=sys.stderr)
             return
 
+        # Boot simulator
+        boot_command = ['xcrun', 'simctl', 'boot', sim_udid]
+        print("Boot command...")
+        print(boot_command)
+        subprocess.run(boot_command, check=True)
+
         # Launch the app on the simulator
         launch_command = ['xcrun', 'simctl', 'launch', sim_udid, bundle_id]
+        print("Launch command...")
+        print(launch_command)
         subprocess.run(launch_command, check=True)
         print("5. App launched successfully.")
 
