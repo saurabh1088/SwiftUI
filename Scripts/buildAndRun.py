@@ -4,6 +4,7 @@ import sys
 import os
 import re
 import json
+import logging
 
 def find_app_bundle_id(project_path, scheme):
     """
@@ -144,13 +145,20 @@ def build_and_launch(project_path, scheme, simulator_name):
 if __name__ == "__main__":
     print("-------------------------------------------------------------------")
     print("Starting script to build and run xcode project...")
+
     parser = argparse.ArgumentParser(description="Builds an Xcode project and launches it on a simulator.")
     parser.add_argument("project_path", help="Path to the .xcodeproj file.")
     parser.add_argument("scheme", help="The Xcode scheme to build.")
     parser.add_argument("--simulator-name", default="iPhone 16 Pro Max", help="Name of the iOS Simulator to launch the app on (e.g., 'iPhone 15', 'iPad Pro (12.9-inch)').")
+    parser.add_argument("--debug", action="store_true", help="Enables debug logging for detailed output.")
 
     args = parser.parse_args()
     print(f"Arguments received :: '{args}'")
+
+    log_level = logging.DEBUG if args.debug else logging.INFO
+    logging.basicConfig(level=log_level, format='%(levelname)s: %(message)s', stream=sys.stderr)
+
+    logging.info("Testing logger...")
 
     # Check if the project file exists
     print(f"Project path :: '{args.project_path}'")
