@@ -11,8 +11,8 @@ def find_app_bundle_id(project_path, scheme):
     Finds the app's bundle identifier from the project's Info.plist.
     This is an approximation and may not work for all projects.
     """
-    print("-------------------------------------------------------------------")
-    print("Executing find_app_bundle_id...")
+    logging.info("--------------------------------------------------------------------------------")
+    logging.info("Method execution :: find_app_bundle_id...")
     try:
         # Get the path to the Info.plist file from the build settings
         cmd = [
@@ -21,36 +21,36 @@ def find_app_bundle_id(project_path, scheme):
             '-scheme', scheme,
             '-showBuildSettings'
         ]
-        print("Executing command xcodebuild...")
-        print(cmd)
+        logging.debug("Executing command xcodebuild...")
+        logging.debug(cmd)
         result = subprocess.run(cmd, capture_output=True, text=True, check=True)
-        print("Result of command xcodebuild...")
-        print(result)
+        logging.debug("Result of command xcodebuild...")
+        logging.debug(result)
         
         # Regex to find the Info.plist file path
         match = re.search(r'(^|\n)\s*INFOPLIST_FILE\s*=\s*(\S+)', result.stdout)
         if not match:
-            print("Error: Could not find Info.plist path.", file=sys.stderr)
+            logging.error("Error: Could not find Info.plist path.", file=sys.stderr)
             return None
             
         plist_path = os.path.join(os.path.dirname(project_path), match.group(2).strip())
-        print(f"Plist path :: '{plist_path}'")
+        logging.debug(f"Plist path :: '{plist_path}'")
 
         # Regex to find the bundle identifier
         bundle_id_match = re.search(r'(^|\n)\s*PRODUCT_BUNDLE_IDENTIFIER\s*=\s*(\S+)', result.stdout)
         if not bundle_id_match:
-            print("Error: Could not find PRODUCT_BUNDLE_IDENTIFIER.", file=sys.stderr)
+            logging.error("Error: Could not find PRODUCT_BUNDLE_IDENTIFIER.", file=sys.stderr)
             return None
 
         bundle_id = os.path.join(os.path.dirname(project_path), bundle_id_match.group(2).strip())
-        print(f"Bundle ID :: '{bundle_id}'")
+        logging.debug(f"Bundle ID :: '{bundle_id}'")
 
         return bundle_id
 
     except subprocess.CalledProcessError as e:
-        print(f"Error executing command: {e.cmd}", file=sys.stderr)
-        print(f"Stdout: {e.stdout}", file=sys.stderr)
-        print(f"Stderr: {e.stderr}", file=sys.stderr)
+        logging.error(f"Error executing command: {e.cmd}", file=sys.stderr)
+        logging.error(f"Stdout: {e.stdout}", file=sys.stderr)
+        logging.error(f"Stderr: {e.stderr}", file=sys.stderr)
     
     return None
 
@@ -58,9 +58,9 @@ def build_and_launch(project_path, scheme, simulator_name):
     """
     Builds the specified Xcode project and launches it on a simulator.
     """
-    print("-------------------------------------------------------------------")
-    print("Executing build_and_launch...")
-    print(f"1. Building scheme '{scheme}' for project at '{project_path}'...")
+    logging.info("--------------------------------------------------------------------------------")
+    logging.info("Method execution :: build_and_launch...")
+    logging.info(f"Building scheme '{scheme}' for project at '{project_path}'...")
     
     # Use a workspace if .xcworkspace file exists, otherwise use .xcodeproj
     base_name, ext = os.path.splitext(project_path)
@@ -88,20 +88,20 @@ def build_and_launch(project_path, scheme, simulator_name):
     try:
         # Build the project
         subprocess.run(build_command, check=True)
-        print("2. Build successful.")
+        logging.info("Build successful")
     except subprocess.CalledProcessError as e:
-        print(f"Error: Build failed with return code {e.returncode}", file=sys.stderr)
-        print(f"Stdout:\n{e.stdout}", file=sys.stderr)
-        print(f"Stderr:\n{e.stderr}", file=sys.stderr)
+        logging.error(f"Error: Build failed with return code {e.returncode}", file=sys.stderr)
+        logging.error(f"Stdout:\n{e.stdout}", file=sys.stderr)
+        logging.error(f"Stderr:\n{e.stderr}", file=sys.stderr)
         return
 
-    print("3. Finding app bundle identifier...")
+    logging.info("Finding app bundle identifier...")
     bundle_id = find_app_bundle_id(project_path, scheme)
     if not bundle_id:
-        print("Error: Could not find the app's bundle ID. Aborting launch.", file=sys.stderr)
+        logging.error("Error: Could not find the app's bundle ID. Aborting launch.", file=sys.stderr)
         return
 
-    print(f"4. Launching app with bundle ID '{bundle_id}' on simulator '{simulator_name}'...")
+    logging.info(f"Launching app with bundle ID '{bundle_id}' on simulator '{simulator_name}'...")
     
     # Find the simulator's ID
     try:
@@ -119,27 +119,27 @@ def build_and_launch(project_path, scheme, simulator_name):
                 break
 
         if not sim_udid:
-            print(f"Error: Simulator '{simulator_name}' not found or not available.", file=sys.stderr)
+            logging.error(f"Error: Simulator '{simulator_name}' not found or not available.", file=sys.stderr)
             return
 
         # Boot simulator
         boot_command = ['xcrun', 'simctl', 'boot', sim_udid]
-        print("Boot command...")
-        print(boot_command)
+        logging.debug("Boot command...")
+        logging.debug(boot_command)
         subprocess.run(boot_command, check=True)
 
         # Launch the app on the simulator
         launch_command = ['xcrun', 'simctl', 'launch', sim_udid, bundle_id]
-        print("Launch command...")
-        print(launch_command)
+        logging.debug("Launch command...")
+        logging.debug(launch_command)
         subprocess.run(launch_command, check=True)
-        print("5. App launched successfully.")
+        logging.info("App launched successfully.")
 
     except subprocess.CalledProcessError as e:
-        print(f"Error: Failed to launch app with return code {e.returncode}", file=sys.stderr)
-        print(f"Stderr:\n{e.stderr}", file=sys.stderr)
+        logging.error(f"Error: Failed to launch app with return code {e.returncode}", file=sys.stderr)
+        logging.error(f"Stderr:\n{e.stderr}", file=sys.stderr)
     except Exception as e:
-        print(f"An unexpected error occurred: {e}", file=sys.stderr)
+        logging.error(f"An unexpected error occurred: {e}", file=sys.stderr)
 
 
 if __name__ == "__main__":
