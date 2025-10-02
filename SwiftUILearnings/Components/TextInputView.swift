@@ -16,13 +16,16 @@ struct TextInputView: View {
     @State private var text = String()
     @State private var track = String()
     var body: some View {
-        Form {
-            textField
-            textFieldWithPrompt
-            textFieldWithPromptAndLabel
-            textEditorView
-            textFieldWithAxisVertical
-            textFieldWithTrackingChanges
+        VStack {
+            // Observation: Only using Form here without VStack breaks back button navigation
+            Form {
+                textField
+                textFieldWithPrompt
+                textFieldWithPromptAndLabel
+                textEditorView
+                textFieldWithAxisVertical
+                textFieldWithTrackingChanges
+            }
         }
     }
     
