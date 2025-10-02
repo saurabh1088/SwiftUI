@@ -9,7 +9,11 @@ import SwiftUI
 
 struct TextExamplesView: View {
     var body: some View {
-        Text("Text Examples View")
+        simpleConcatenation
+    }
+    
+    @ViewBuilder var simpleConcatenation: some View {
+        Text("Hello").bold() + Text(" World") + Text("!")
     }
 }
 
