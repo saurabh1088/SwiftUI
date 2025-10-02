@@ -47,6 +47,8 @@ struct UIComponentsView: View {
                     ScrollViewOptions()
                 case .tables:
                     RowColumnTableView()
+                case .text:
+                    TextExamplesView()
                 case .textFields:
                     TextInputView()
                 case .vStack:

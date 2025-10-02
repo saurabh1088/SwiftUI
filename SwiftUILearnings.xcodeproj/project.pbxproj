@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -16,7 +16,6 @@
 		B71646282BEDE0BA000FAD76 /* SwiftUIAnimationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71646272BEDE0BA000FAD76 /* SwiftUIAnimationsView.swift */; };
 		B716462A2BEDE0E0000FAD76 /* LottieAnimationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71646292BEDE0E0000FAD76 /* LottieAnimationsView.swift */; };
 		B716A1042CD2987F0018B078 /* html-with-jquery.html in Resources */ = {isa = PBXBuildFile; fileRef = B716A1032CD2987F0018B078 /* html-with-jquery.html */; };
-		B72067672A333394009A785D /* TextInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72067662A333394009A785D /* TextInputView.swift */; };
 		B722FD602CC5112A005A7CF6 /* RadioButtonExampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B722FD5F2CC5112A005A7CF6 /* RadioButtonExampleView.swift */; };
 		B722FD622CC51153005A7CF6 /* RadioButtonForEach.swift in Sources */ = {isa = PBXBuildFile; fileRef = B722FD612CC51153005A7CF6 /* RadioButtonForEach.swift */; };
 		B722FD642CC51198005A7CF6 /* RadioButtonDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B722FD632CC51198005A7CF6 /* RadioButtonDataModel.swift */; };
@@ -215,7 +214,6 @@
 		B71646272BEDE0BA000FAD76 /* SwiftUIAnimationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIAnimationsView.swift; sourceTree = "<group>"; };
 		B71646292BEDE0E0000FAD76 /* LottieAnimationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieAnimationsView.swift; sourceTree = "<group>"; };
 		B716A1032CD2987F0018B078 /* html-with-jquery.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "html-with-jquery.html"; sourceTree = "<group>"; };
-		B72067662A333394009A785D /* TextInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextInputView.swift; sourceTree = "<group>"; };
 		B722FD5F2CC5112A005A7CF6 /* RadioButtonExampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioButtonExampleView.swift; sourceTree = "<group>"; };
 		B722FD612CC51153005A7CF6 /* RadioButtonForEach.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioButtonForEach.swift; sourceTree = "<group>"; };
 		B722FD632CC51198005A7CF6 /* RadioButtonDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioButtonDataModel.swift; sourceTree = "<group>"; };
@@ -358,6 +356,10 @@
 		B7F98F8D2C5E8FAB0039DB57 /* OSLogsDisplayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OSLogsDisplayView.swift; sourceTree = "<group>"; };
 		B7FAFB352A97C3F10009DE51 /* Plant.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = Plant.rcproject; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		B7FF7EEA2E8E7509005AD5AE /* Text */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Text; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		B74F76612C0C9BEC0090E373 /* Frameworks */ = {
@@ -803,6 +805,7 @@
 		B7C7E24829E9C0920089E0C1 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				B7FF7EEA2E8E7509005AD5AE /* Text */,
 				B7F4ABBD2E62F88800BE4ACB /* Pickers */,
 				B7DD17D12CC34D380015F03C /* RadioButtons */,
 				B7DD17CB2CC146810015F03C /* Camera */,
@@ -814,7 +817,6 @@
 				B72C59A32AA6271200C9824E /* Carousels */,
 				B7B8F7EB2A26744F00FE32A7 /* ListView.swift */,
 				B7E4BE242AAE14F6003C8392 /* Stacks */,
-				B72067662A333394009A785D /* TextInputView.swift */,
 				B7C795A72A022D3D0092619B /* UIComponentsView.swift */,
 			);
 			path = Components;
@@ -998,6 +1000,9 @@
 				B7A963EC2AC82B2200EB6A12 /* PBXTargetDependency */,
 				B7EE00742C0AD9C20073D7AF /* PBXTargetDependency */,
 				B74F76712C0C9BEC0090E373 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				B7FF7EEA2E8E7509005AD5AE /* Text */,
 			);
 			name = SwiftUILearnings;
 			packageProductDependencies = (
@@ -1279,7 +1284,6 @@
 				B7DD17CD2CC146970015F03C /* CameraCaptureView.swift in Sources */,
 				B7299E9B29E5D73800A3A989 /* AudioVideoView.swift in Sources */,
 				B722FD642CC51198005A7CF6 /* RadioButtonDataModel.swift in Sources */,
-				B72067672A333394009A785D /* TextInputView.swift in Sources */,
 				B7A183E229C385A600B864DE /* DataEssentialStateObject.swift in Sources */,
 				B78AC7EF2C5669BC00991C42 /* GeometryReaderScenarios.swift in Sources */,
 				B7A76AB429B2601F00163BDC /* BasicWebContentTechnologiesView.swift in Sources */,

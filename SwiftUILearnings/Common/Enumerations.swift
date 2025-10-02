@@ -45,6 +45,7 @@ enum Components: String, CaseIterable {
     case radioButton = "Radio Button"
     case scrollView = "Scroll View"
     case tables = "Tables"
+    case text = "Text"
     case textFields = "Text Fields"
     case vStack = "VStack"
 }
