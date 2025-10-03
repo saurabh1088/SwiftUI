@@ -25,6 +25,7 @@
 		B72C59A52AA6273300C9824E /* CarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72C59A42AA6273300C9824E /* CarouselView.swift */; };
 		B72C5D2D2A30CA2600E77866 /* HorizontalStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72C5D2C2A30CA2600E77866 /* HorizontalStackView.swift */; };
 		B73A9EAB2ACF32760032E6E5 /* SpeechViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73A9EAA2ACF32760032E6E5 /* SpeechViewModel.swift */; };
+		B73E3A2C2E9025FD00293EF9 /* LayoutsExamplesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73E3A2B2E9025FD00293EF9 /* LayoutsExamplesView.swift */; };
 		B73FBB392A780D47004A5334 /* ComponentScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73FBB382A780D47004A5334 /* ComponentScrollView.swift */; };
 		B740FD712AB0E0C2009835D9 /* EventEditViewRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B740FD702AB0E0C2009835D9 /* EventEditViewRepresentable.swift */; };
 		B7493C442AD5B76A00D30D5F /* WidgetUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7493C432AD5B76900D30D5F /* WidgetUIView.swift */; };
@@ -225,6 +226,7 @@
 		B72C59A42AA6273300C9824E /* CarouselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselView.swift; sourceTree = "<group>"; };
 		B72C5D2C2A30CA2600E77866 /* HorizontalStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalStackView.swift; sourceTree = "<group>"; };
 		B73A9EAA2ACF32760032E6E5 /* SpeechViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechViewModel.swift; sourceTree = "<group>"; };
+		B73E3A2B2E9025FD00293EF9 /* LayoutsExamplesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutsExamplesView.swift; sourceTree = "<group>"; };
 		B73FBB382A780D47004A5334 /* ComponentScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComponentScrollView.swift; sourceTree = "<group>"; };
 		B740FD702AB0E0C2009835D9 /* EventEditViewRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventEditViewRepresentable.swift; sourceTree = "<group>"; };
 		B7493C432AD5B76900D30D5F /* WidgetUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetUIView.swift; sourceTree = "<group>"; };
@@ -424,6 +426,14 @@
 				B7E136EB2AB33D0300674C1F /* CarouselViewModel.swift */,
 			);
 			path = Carousels;
+			sourceTree = "<group>";
+		};
+		B73E3A2A2E9025EB00293EF9 /* Layouts */ = {
+			isa = PBXGroup;
+			children = (
+				B73E3A2B2E9025FD00293EF9 /* LayoutsExamplesView.swift */,
+			);
+			path = Layouts;
 			sourceTree = "<group>";
 		};
 		B7493C422AD5B73D00D30D5F /* Widget */ = {
@@ -805,6 +815,7 @@
 		B7C7E24829E9C0920089E0C1 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				B73E3A2A2E9025EB00293EF9 /* Layouts */,
 				B7FF7EEA2E8E7509005AD5AE /* Text */,
 				B7F4ABBD2E62F88800BE4ACB /* Pickers */,
 				B7DD17D12CC34D380015F03C /* RadioButtons */,
@@ -1276,6 +1287,7 @@
 				B7C05D392A12A90C00AD7912 /* Enumerations.swift in Sources */,
 				B7F98F8E2C5E8FAB0039DB57 /* OSLogsDisplayView.swift in Sources */,
 				B7A38A492C67395C00FC9A30 /* ViewVSViewModifierExampleView.swift in Sources */,
+				B73E3A2C2E9025FD00293EF9 /* LayoutsExamplesView.swift in Sources */,
 				B7A7853A2CE9BE98007A6B02 /* FaceIDAuthenticationManager.swift in Sources */,
 				B7B8F7EC2A26744F00FE32A7 /* ListView.swift in Sources */,
 				B76A06FB2A073FC100974AD3 /* BottomSheetView.swift in Sources */,

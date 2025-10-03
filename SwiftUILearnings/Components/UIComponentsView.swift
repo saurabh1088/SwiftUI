@@ -33,6 +33,8 @@ struct UIComponentsView: View {
                     CarouselView()
                 case .hStack:
                     HorizontalStackView()
+                case .layouts:
+                    LayoutsExamplesView()
                 case .lazyVStack:
                     LazyVStackView()
                 case .lists:

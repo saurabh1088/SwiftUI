@@ -38,6 +38,7 @@ enum Components: String, CaseIterable {
     case cameraCapture = "Camera Capture"
     case carousel = "Carousels"
     case hStack = "HStack"
+    case layouts = "Layouts"
     case lazyVStack = "Lazy VStack"
     case lists = "Lists"
     case photosPicker = "Photos Picker"
