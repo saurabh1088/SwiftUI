@@ -432,6 +432,7 @@
 			isa = PBXGroup;
 			children = (
 				B73E3A2B2E9025FD00293EF9 /* LayoutsExamplesView.swift */,
+				B753A85D2A358469003958AE /* AnyLayoutView.swift */,
 			);
 			path = Layouts;
 			sourceTree = "<group>";
@@ -922,7 +923,6 @@
 				B76A06FC2A07400A00974AD3 /* LazyVStackView.swift */,
 				B72C5D2C2A30CA2600E77866 /* HorizontalStackView.swift */,
 				B7008EF12A32254A003E2E01 /* VerticalStackView.swift */,
-				B753A85D2A358469003958AE /* AnyLayoutView.swift */,
 				B76A06FE2A07404100974AD3 /* SomeCustomRowView.swift */,
 				B76A07002A07407700974AD3 /* ViewBuilderMaxLimitView.swift */,
 			);
