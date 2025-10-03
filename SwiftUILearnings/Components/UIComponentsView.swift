@@ -21,8 +21,6 @@ struct UIComponentsView: View {
             }
             .navigationDestination(for: Components.self) { component in
                 switch component {
-                case .anyLayout:
-                    AnyLayoutView()
                 case .bottomSheet:
                     BottomSheetView()
                 case .buttons:

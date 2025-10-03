@@ -32,7 +32,6 @@ enum LearningTopics: String, CaseIterable {
 }
 
 enum Components: String, CaseIterable {
-    case anyLayout = "Any Layout"
     case bottomSheet = "Bottom Sheets"
     case buttons = "Buttons"
     case cameraCapture = "Camera Capture"
