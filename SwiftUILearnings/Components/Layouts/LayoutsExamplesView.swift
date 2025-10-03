@@ -19,6 +19,8 @@ struct LayoutsExamplesView: View {
             switch destination {
             case .anyLayout:
                 AnyLayoutView()
+            case .customLayout:
+                CustomLayoutExamplesView()
             }
         }
     }

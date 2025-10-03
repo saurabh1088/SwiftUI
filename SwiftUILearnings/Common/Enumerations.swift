@@ -103,6 +103,7 @@ enum GeometryReaderExamples: String, CaseIterable, Identifiable {
 
 enum LayoutExample: String, CaseIterable, Identifiable {
     case anyLayout = "Any Layout"
+    case customLayout = "Custom Layout"
     
     var id: String { rawValue }
 }
