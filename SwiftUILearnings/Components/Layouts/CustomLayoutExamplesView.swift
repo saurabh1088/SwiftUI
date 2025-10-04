@@ -10,7 +10,7 @@ import SwiftUI
 struct CustomLayoutExamplesView: View {
     var body: some View {
         VStack {
-            customLayout
+            scatteredLayout
         }
     }
     
@@ -31,6 +31,14 @@ struct CustomLayoutExamplesView: View {
             Image(systemName: "globe")
                 .resizable()
                 .frame(width: 25, height: 25)
+        }
+    }
+    
+    @ViewBuilder private var scatteredLayout: some View {
+        ScatteredLayout {
+            ForEach(1..<150) { _ in
+                Text("❄️")
+            }
         }
     }
 }
