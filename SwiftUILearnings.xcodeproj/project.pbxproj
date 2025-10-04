@@ -435,12 +435,20 @@
 		B73E3A2A2E9025EB00293EF9 /* Layouts */ = {
 			isa = PBXGroup;
 			children = (
+				B73E3A312E90E60300293EF9 /* CustomLayouts */,
 				B73E3A2B2E9025FD00293EF9 /* LayoutsExamplesView.swift */,
 				B753A85D2A358469003958AE /* AnyLayoutView.swift */,
-				B73E3A2D2E902DBC00293EF9 /* CustomGridLayout.swift */,
 				B73E3A2F2E902F6C00293EF9 /* CustomLayoutExamplesView.swift */,
 			);
 			path = Layouts;
+			sourceTree = "<group>";
+		};
+		B73E3A312E90E60300293EF9 /* CustomLayouts */ = {
+			isa = PBXGroup;
+			children = (
+				B73E3A2D2E902DBC00293EF9 /* CustomGridLayout.swift */,
+			);
+			path = CustomLayouts;
 			sourceTree = "<group>";
 		};
 		B7493C422AD5B73D00D30D5F /* Widget */ = {
