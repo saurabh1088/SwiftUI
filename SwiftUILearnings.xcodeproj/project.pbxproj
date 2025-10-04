@@ -28,6 +28,7 @@
 		B73E3A2C2E9025FD00293EF9 /* LayoutsExamplesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73E3A2B2E9025FD00293EF9 /* LayoutsExamplesView.swift */; };
 		B73E3A2E2E902DBC00293EF9 /* CustomThreeColumnGridLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73E3A2D2E902DBC00293EF9 /* CustomThreeColumnGridLayout.swift */; };
 		B73E3A302E902F6C00293EF9 /* CustomLayoutExamplesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73E3A2F2E902F6C00293EF9 /* CustomLayoutExamplesView.swift */; };
+		B73E3A332E90E76F00293EF9 /* CustomLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73E3A322E90E76F00293EF9 /* CustomLayout.swift */; };
 		B73FBB392A780D47004A5334 /* ComponentScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73FBB382A780D47004A5334 /* ComponentScrollView.swift */; };
 		B740FD712AB0E0C2009835D9 /* EventEditViewRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B740FD702AB0E0C2009835D9 /* EventEditViewRepresentable.swift */; };
 		B7493C442AD5B76A00D30D5F /* WidgetUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7493C432AD5B76900D30D5F /* WidgetUIView.swift */; };
@@ -231,6 +232,7 @@
 		B73E3A2B2E9025FD00293EF9 /* LayoutsExamplesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutsExamplesView.swift; sourceTree = "<group>"; };
 		B73E3A2D2E902DBC00293EF9 /* CustomThreeColumnGridLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomThreeColumnGridLayout.swift; sourceTree = "<group>"; };
 		B73E3A2F2E902F6C00293EF9 /* CustomLayoutExamplesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLayoutExamplesView.swift; sourceTree = "<group>"; };
+		B73E3A322E90E76F00293EF9 /* CustomLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLayout.swift; sourceTree = "<group>"; };
 		B73FBB382A780D47004A5334 /* ComponentScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComponentScrollView.swift; sourceTree = "<group>"; };
 		B740FD702AB0E0C2009835D9 /* EventEditViewRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventEditViewRepresentable.swift; sourceTree = "<group>"; };
 		B7493C432AD5B76900D30D5F /* WidgetUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetUIView.swift; sourceTree = "<group>"; };
@@ -447,6 +449,7 @@
 			isa = PBXGroup;
 			children = (
 				B73E3A2D2E902DBC00293EF9 /* CustomThreeColumnGridLayout.swift */,
+				B73E3A322E90E76F00293EF9 /* CustomLayout.swift */,
 			);
 			path = CustomLayouts;
 			sourceTree = "<group>";
@@ -1333,6 +1336,7 @@
 				B73E3A302E902F6C00293EF9 /* CustomLayoutExamplesView.swift in Sources */,
 				B716462A2BEDE0E0000FAD76 /* LottieAnimationsView.swift in Sources */,
 				B76FE8B029D7518E00BCAF51 /* NotificationsManager.swift in Sources */,
+				B73E3A332E90E76F00293EF9 /* CustomLayout.swift in Sources */,
 				B7B1DCBB29B3BFDB00FFC805 /* SafariWebView.swift in Sources */,
 				B7E129F729B4DEA7002E6B54 /* SwiftUIWKWebView.swift in Sources */,
 				B797DAC92D3FF9B3008C0DF7 /* DependenciesContainer.swift in Sources */,
