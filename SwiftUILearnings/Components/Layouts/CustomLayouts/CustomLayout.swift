@@ -14,8 +14,12 @@ struct CustomLayout: Layout {
     }
     
     func placeSubviews(in bounds: CGRect, proposal: ProposedViewSize, subviews: Subviews, cache: inout ()) {
+        var initialX: CGFloat = 0
+        var initialY: CGFloat = 0
         for subview in subviews {
-            subview.place(at: CGPoint(x: 0, y: 0), proposal: ProposedViewSize(width: 100, height: 100))
+            initialX = initialX + 100
+            initialY = initialY + 100
+            subview.place(at: CGPoint(x: initialX, y: initialY), proposal: ProposedViewSize(width: 100, height: 100))
         }
     }
 }
