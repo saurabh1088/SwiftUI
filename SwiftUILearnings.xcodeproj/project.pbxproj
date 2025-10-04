@@ -26,7 +26,7 @@
 		B72C5D2D2A30CA2600E77866 /* HorizontalStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72C5D2C2A30CA2600E77866 /* HorizontalStackView.swift */; };
 		B73A9EAB2ACF32760032E6E5 /* SpeechViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73A9EAA2ACF32760032E6E5 /* SpeechViewModel.swift */; };
 		B73E3A2C2E9025FD00293EF9 /* LayoutsExamplesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73E3A2B2E9025FD00293EF9 /* LayoutsExamplesView.swift */; };
-		B73E3A2E2E902DBC00293EF9 /* CustomGridLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73E3A2D2E902DBC00293EF9 /* CustomGridLayout.swift */; };
+		B73E3A2E2E902DBC00293EF9 /* CustomThreeColumnGridLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73E3A2D2E902DBC00293EF9 /* CustomThreeColumnGridLayout.swift */; };
 		B73E3A302E902F6C00293EF9 /* CustomLayoutExamplesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73E3A2F2E902F6C00293EF9 /* CustomLayoutExamplesView.swift */; };
 		B73FBB392A780D47004A5334 /* ComponentScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73FBB382A780D47004A5334 /* ComponentScrollView.swift */; };
 		B740FD712AB0E0C2009835D9 /* EventEditViewRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B740FD702AB0E0C2009835D9 /* EventEditViewRepresentable.swift */; };
@@ -229,7 +229,7 @@
 		B72C5D2C2A30CA2600E77866 /* HorizontalStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalStackView.swift; sourceTree = "<group>"; };
 		B73A9EAA2ACF32760032E6E5 /* SpeechViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechViewModel.swift; sourceTree = "<group>"; };
 		B73E3A2B2E9025FD00293EF9 /* LayoutsExamplesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutsExamplesView.swift; sourceTree = "<group>"; };
-		B73E3A2D2E902DBC00293EF9 /* CustomGridLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomGridLayout.swift; sourceTree = "<group>"; };
+		B73E3A2D2E902DBC00293EF9 /* CustomThreeColumnGridLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomThreeColumnGridLayout.swift; sourceTree = "<group>"; };
 		B73E3A2F2E902F6C00293EF9 /* CustomLayoutExamplesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLayoutExamplesView.swift; sourceTree = "<group>"; };
 		B73FBB382A780D47004A5334 /* ComponentScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComponentScrollView.swift; sourceTree = "<group>"; };
 		B740FD702AB0E0C2009835D9 /* EventEditViewRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventEditViewRepresentable.swift; sourceTree = "<group>"; };
@@ -446,7 +446,7 @@
 		B73E3A312E90E60300293EF9 /* CustomLayouts */ = {
 			isa = PBXGroup;
 			children = (
-				B73E3A2D2E902DBC00293EF9 /* CustomGridLayout.swift */,
+				B73E3A2D2E902DBC00293EF9 /* CustomThreeColumnGridLayout.swift */,
 			);
 			path = CustomLayouts;
 			sourceTree = "<group>";
@@ -1300,7 +1300,7 @@
 				B787A2DB29B115920090FCF7 /* ContentView.swift in Sources */,
 				B7C05D392A12A90C00AD7912 /* Enumerations.swift in Sources */,
 				B7F98F8E2C5E8FAB0039DB57 /* OSLogsDisplayView.swift in Sources */,
-				B73E3A2E2E902DBC00293EF9 /* CustomGridLayout.swift in Sources */,
+				B73E3A2E2E902DBC00293EF9 /* CustomThreeColumnGridLayout.swift in Sources */,
 				B7A38A492C67395C00FC9A30 /* ViewVSViewModifierExampleView.swift in Sources */,
 				B73E3A2C2E9025FD00293EF9 /* LayoutsExamplesView.swift in Sources */,
 				B7A7853A2CE9BE98007A6B02 /* FaceIDAuthenticationManager.swift in Sources */,

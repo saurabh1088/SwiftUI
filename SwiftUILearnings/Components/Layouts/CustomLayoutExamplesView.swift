@@ -9,7 +9,7 @@ import SwiftUI
 
 struct CustomLayoutExamplesView: View {
     var body: some View {
-        CustomGridLayout {
+        CustomThreeColumnGridLayout {
             ForEach(1..<33) { value in
                 Text("\(value)")
             }

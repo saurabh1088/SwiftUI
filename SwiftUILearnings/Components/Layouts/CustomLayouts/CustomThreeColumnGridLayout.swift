@@ -1,5 +1,5 @@
 //
-//  CustomGridLayout.swift
+//  CustomThreeColumnGridLayout.swift
 //  SwiftUILearnings
 //
 //  Created by Saurabh Verma on 03/10/25.
@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-struct CustomGridLayout: Layout {
+struct CustomThreeColumnGridLayout: Layout {
     func sizeThatFits(proposal: ProposedViewSize, subviews: Subviews, cache: inout ()) -> CGSize {
         let columns = 3
         let cellSize = 80.0
