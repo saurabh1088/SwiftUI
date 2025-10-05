@@ -38,7 +38,7 @@ struct CustomLayoutExamplesView: View {
     
     @ViewBuilder private var scatteredLayout: some View {
         ScatteredLayout {
-            ForEach(1..<150) { _ in
+            ForEach(1..<500) { _ in
                 Text("❄️")
             }
         }
@@ -46,19 +46,8 @@ struct CustomLayoutExamplesView: View {
     
     @ViewBuilder private var scatteredLayoutWithAnimation: some View {
         ScatteredLayout {
-            ForEach(1..<150) { _ in
-                VStack {
-                    if scatteredLayoutAnimate {
-                        Text("❄️")
-                    }
-                }
-                .onAppear {
-                    DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(Int.random(in: 1...5))) {
-                        withAnimation(.easeInOut) {
-                            scatteredLayoutAnimate.toggle()
-                        }
-                    }
-                }
+            ForEach(1..<500) { _ in
+                ScatteredText()
             }
         }
     }
