@@ -30,7 +30,9 @@ struct CustomLayoutExamplesView: View {
             }
         }
     }
-    
+}
+
+extension CustomLayoutExamplesView {
     @ViewBuilder private var customThreeColumnGridLayout: some View {
         CustomThreeColumnGridLayout {
             ForEach(1..<33) { value in
@@ -38,7 +40,9 @@ struct CustomLayoutExamplesView: View {
             }
         }
     }
-    
+}
+
+extension CustomLayoutExamplesView {
     @ViewBuilder private var customLayout: some View {
         CustomLayout {
             Image(systemName: "gearshift.layout.sixspeed")
@@ -50,7 +54,9 @@ struct CustomLayoutExamplesView: View {
                 .frame(width: 25, height: 25)
         }
     }
-    
+}
+
+extension CustomLayoutExamplesView {
     @ViewBuilder private var scatteredLayout: some View {
         ScatteredLayout {
             ForEach(1..<500) { _ in
@@ -58,7 +64,9 @@ struct CustomLayoutExamplesView: View {
             }
         }
     }
-    
+}
+
+extension CustomLayoutExamplesView {
     @ViewBuilder private var scatteredLayoutWithAnimation: some View {
         ScatteredLayout {
             ForEach(1..<500) { _ in
@@ -68,6 +76,8 @@ struct CustomLayoutExamplesView: View {
     }
 }
 
+
 #Preview {
     CustomLayoutExamplesView()
 }
+
