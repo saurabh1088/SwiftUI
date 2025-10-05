@@ -11,8 +11,23 @@ struct CustomLayoutExamplesView: View {
     @State private var scatteredLayoutAnimate: Bool = false
     
     var body: some View {
-        VStack {
-            scatteredLayoutWithAnimation
+        List {
+            ForEach(CustomLayoutExample.allCases) { example in
+                NavigationLink(example.rawValue, value: example)
+            }
+        }
+        .navigationTitle(Components.layouts.rawValue)
+        .navigationDestination(for: CustomLayoutExample.self) { destination in
+            switch destination {
+            case .simpleStackLayout:
+                customLayout
+            case .threeColumnGridLayout:
+                customThreeColumnGridLayout
+            case .scatteredLayout:
+                scatteredLayout
+            case .scatteredLayoutWithAnimation:
+                scatteredLayoutWithAnimation
+            }
         }
     }
     

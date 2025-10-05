@@ -108,3 +108,12 @@ enum LayoutExample: String, CaseIterable, Identifiable {
     var id: String { rawValue }
 }
 
+enum CustomLayoutExample: String, CaseIterable, Identifiable {
+    case simpleStackLayout = "Simple Stack Layout"
+    case threeColumnGridLayout = "Three Column Grid Layout"
+    case scatteredLayout = "Scattered Layout"
+    case scatteredLayoutWithAnimation = "Scattered Layout with Animation"
+    
+    var id: String { rawValue }
+}
+
