@@ -8,9 +8,11 @@
 import SwiftUI
 
 struct CustomLayoutExamplesView: View {
+    @State private var scatteredLayoutAnimate: Bool = false
+    
     var body: some View {
         VStack {
-            scatteredLayout
+            scatteredLayoutWithAnimation
         }
     }
     
@@ -38,6 +40,25 @@ struct CustomLayoutExamplesView: View {
         ScatteredLayout {
             ForEach(1..<150) { _ in
                 Text("❄️")
+            }
+        }
+    }
+    
+    @ViewBuilder private var scatteredLayoutWithAnimation: some View {
+        ScatteredLayout {
+            ForEach(1..<150) { _ in
+                VStack {
+                    if scatteredLayoutAnimate {
+                        Text("❄️")
+                    }
+                }
+                .onAppear {
+                    DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(Int.random(in: 1...5))) {
+                        withAnimation(.easeInOut) {
+                            scatteredLayoutAnimate.toggle()
+                        }
+                    }
+                }
             }
         }
     }
