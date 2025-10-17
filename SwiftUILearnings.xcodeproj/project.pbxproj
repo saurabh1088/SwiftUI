@@ -24,6 +24,8 @@
 		B7299E9B29E5D73800A3A989 /* AudioVideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7299E9A29E5D73800A3A989 /* AudioVideoView.swift */; };
 		B72C59A52AA6273300C9824E /* CarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72C59A42AA6273300C9824E /* CarouselView.swift */; };
 		B72C5D2D2A30CA2600E77866 /* HorizontalStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72C5D2C2A30CA2600E77866 /* HorizontalStackView.swift */; };
+		B73A7BA72EA2A22E00FB595E /* ReachabilityTestingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73A7BA62EA2A22E00FB595E /* ReachabilityTestingView.swift */; };
+		B73A7BA92EA2A24500FB595E /* NetworkMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73A7BA82EA2A24500FB595E /* NetworkMonitor.swift */; };
 		B73A9EAB2ACF32760032E6E5 /* SpeechViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73A9EAA2ACF32760032E6E5 /* SpeechViewModel.swift */; };
 		B73E3A2C2E9025FD00293EF9 /* LayoutsExamplesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73E3A2B2E9025FD00293EF9 /* LayoutsExamplesView.swift */; };
 		B73E3A2E2E902DBC00293EF9 /* CustomThreeColumnGridLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73E3A2D2E902DBC00293EF9 /* CustomThreeColumnGridLayout.swift */; };
@@ -230,6 +232,8 @@
 		B72A56462AD47BEC00301595 /* SwiftUILearningsWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SwiftUILearningsWidgetExtension.entitlements; sourceTree = "<group>"; };
 		B72C59A42AA6273300C9824E /* CarouselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselView.swift; sourceTree = "<group>"; };
 		B72C5D2C2A30CA2600E77866 /* HorizontalStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalStackView.swift; sourceTree = "<group>"; };
+		B73A7BA62EA2A22E00FB595E /* ReachabilityTestingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReachabilityTestingView.swift; sourceTree = "<group>"; };
+		B73A7BA82EA2A24500FB595E /* NetworkMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMonitor.swift; sourceTree = "<group>"; };
 		B73A9EAA2ACF32760032E6E5 /* SpeechViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechViewModel.swift; sourceTree = "<group>"; };
 		B73E3A2B2E9025FD00293EF9 /* LayoutsExamplesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutsExamplesView.swift; sourceTree = "<group>"; };
 		B73E3A2D2E902DBC00293EF9 /* CustomThreeColumnGridLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomThreeColumnGridLayout.swift; sourceTree = "<group>"; };
@@ -436,6 +440,15 @@
 				B7E136EB2AB33D0300674C1F /* CarouselViewModel.swift */,
 			);
 			path = Carousels;
+			sourceTree = "<group>";
+		};
+		B73A7BA52EA2A21400FB595E /* Reachability */ = {
+			isa = PBXGroup;
+			children = (
+				B73A7BA62EA2A22E00FB595E /* ReachabilityTestingView.swift */,
+				B73A7BA82EA2A24500FB595E /* NetworkMonitor.swift */,
+			);
+			path = Reachability;
 			sourceTree = "<group>";
 		};
 		B73E3A2A2E9025EB00293EF9 /* Layouts */ = {
@@ -657,6 +670,7 @@
 		B787A2D729B115920090FCF7 /* SwiftUILearnings */ = {
 			isa = PBXGroup;
 			children = (
+				B73A7BA52EA2A21400FB595E /* Reachability */,
 				B72A56452AD47BA800301595 /* SwiftUILearnings.entitlements */,
 				B782F7CC2AA8797100FB7751 /* App */,
 				B7724CB42BEDAE1B0077F650 /* Animations */,
@@ -1258,6 +1272,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B753A85E2A358469003958AE /* AnyLayoutView.swift in Sources */,
+				B73A7BA92EA2A24500FB595E /* NetworkMonitor.swift in Sources */,
 				B7E24D652A89037900790D1A /* ChartsViewModel.swift in Sources */,
 				B796C7772ABD5E5E00E70028 /* ScrollWithReaderView.swift in Sources */,
 				B7A38A4B2C6765C600FC9A30 /* HorizontallyDividedView.swift in Sources */,
@@ -1273,6 +1288,7 @@
 				B7493C442AD5B76A00D30D5F /* WidgetUIView.swift in Sources */,
 				B7DB8B302CBD825300ECF2EB /* RowColumnTableView.swift in Sources */,
 				B72C59A52AA6273300C9824E /* CarouselView.swift in Sources */,
+				B73A7BA72EA2A22E00FB595E /* ReachabilityTestingView.swift in Sources */,
 				B7C8D3C92C55160A0069C88B /* ReadableScrollView.swift in Sources */,
 				B76A06FF2A07404100974AD3 /* SomeCustomRowView.swift in Sources */,
 				B75C13E72AF8B3190065F0C4 /* TheCatAPI.swift in Sources */,

@@ -22,6 +22,7 @@ enum LearningTopics: String, CaseIterable {
     case geometryReader = "Geometry Reader"
     case notifications = "Notifications"
     case pdfFiles = "PDF Files"
+    case reachability = "Reachability"
     case sfSymbols = "SF Symbols"
     case speech = "Speech"
     case testPitch = "Test Pitch"
