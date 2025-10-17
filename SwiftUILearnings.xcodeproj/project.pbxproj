@@ -26,6 +26,7 @@
 		B72C5D2D2A30CA2600E77866 /* HorizontalStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72C5D2C2A30CA2600E77866 /* HorizontalStackView.swift */; };
 		B73A7BA72EA2A22E00FB595E /* ReachabilityTestingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73A7BA62EA2A22E00FB595E /* ReachabilityTestingView.swift */; };
 		B73A7BA92EA2A24500FB595E /* NetworkMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73A7BA82EA2A24500FB595E /* NetworkMonitor.swift */; };
+		B73A7BAB2EA2A56100FB595E /* NetworkStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73A7BAA2EA2A56100FB595E /* NetworkStatusView.swift */; };
 		B73A9EAB2ACF32760032E6E5 /* SpeechViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73A9EAA2ACF32760032E6E5 /* SpeechViewModel.swift */; };
 		B73E3A2C2E9025FD00293EF9 /* LayoutsExamplesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73E3A2B2E9025FD00293EF9 /* LayoutsExamplesView.swift */; };
 		B73E3A2E2E902DBC00293EF9 /* CustomThreeColumnGridLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73E3A2D2E902DBC00293EF9 /* CustomThreeColumnGridLayout.swift */; };
@@ -234,6 +235,7 @@
 		B72C5D2C2A30CA2600E77866 /* HorizontalStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalStackView.swift; sourceTree = "<group>"; };
 		B73A7BA62EA2A22E00FB595E /* ReachabilityTestingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReachabilityTestingView.swift; sourceTree = "<group>"; };
 		B73A7BA82EA2A24500FB595E /* NetworkMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMonitor.swift; sourceTree = "<group>"; };
+		B73A7BAA2EA2A56100FB595E /* NetworkStatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkStatusView.swift; sourceTree = "<group>"; };
 		B73A9EAA2ACF32760032E6E5 /* SpeechViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechViewModel.swift; sourceTree = "<group>"; };
 		B73E3A2B2E9025FD00293EF9 /* LayoutsExamplesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutsExamplesView.swift; sourceTree = "<group>"; };
 		B73E3A2D2E902DBC00293EF9 /* CustomThreeColumnGridLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomThreeColumnGridLayout.swift; sourceTree = "<group>"; };
@@ -447,6 +449,7 @@
 			children = (
 				B73A7BA62EA2A22E00FB595E /* ReachabilityTestingView.swift */,
 				B73A7BA82EA2A24500FB595E /* NetworkMonitor.swift */,
+				B73A7BAA2EA2A56100FB595E /* NetworkStatusView.swift */,
 			);
 			path = Reachability;
 			sourceTree = "<group>";
@@ -1346,6 +1349,7 @@
 				B7DD17CD2CC146970015F03C /* CameraCaptureView.swift in Sources */,
 				B7299E9B29E5D73800A3A989 /* AudioVideoView.swift in Sources */,
 				B722FD642CC51198005A7CF6 /* RadioButtonDataModel.swift in Sources */,
+				B73A7BAB2EA2A56100FB595E /* NetworkStatusView.swift in Sources */,
 				B7A183E229C385A600B864DE /* DataEssentialStateObject.swift in Sources */,
 				B78AC7EF2C5669BC00991C42 /* GeometryReaderScenarios.swift in Sources */,
 				B7A76AB429B2601F00163BDC /* BasicWebContentTechnologiesView.swift in Sources */,
