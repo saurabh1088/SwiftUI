@@ -11,6 +11,8 @@
 		B7027C032A2A601A007D64D6 /* SelectableListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7027C022A2A601A007D64D6 /* SelectableListModel.swift */; };
 		B7046C852A967F5A00F9A95C /* AugmentedRealityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7046C842A967F5A00F9A95C /* AugmentedRealityView.swift */; };
 		B7046C872A9680D900F9A95C /* AugmentedRealityViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7046C862A9680D900F9A95C /* AugmentedRealityViewModel.swift */; };
+		B704EB772EA93DB900D4FF1E /* CodeSampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B704EB762EA93DB900D4FF1E /* CodeSampleView.swift */; };
+		B704EB792EA93E2300D4FF1E /* CodeWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B704EB782EA93E2300D4FF1E /* CodeWebView.swift */; };
 		B712ED802A02C95B00BF84D0 /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7B04BEE29E72A010015EA8D /* AVKit.framework */; };
 		B712ED822A02C96700BF84D0 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B712ED812A02C96700BF84D0 /* AVFoundation.framework */; };
 		B71646282BEDE0BA000FAD76 /* SwiftUIAnimationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71646272BEDE0BA000FAD76 /* SwiftUIAnimationsView.swift */; };
@@ -222,6 +224,8 @@
 		B7027C022A2A601A007D64D6 /* SelectableListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectableListModel.swift; sourceTree = "<group>"; };
 		B7046C842A967F5A00F9A95C /* AugmentedRealityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AugmentedRealityView.swift; sourceTree = "<group>"; };
 		B7046C862A9680D900F9A95C /* AugmentedRealityViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AugmentedRealityViewModel.swift; sourceTree = "<group>"; };
+		B704EB762EA93DB900D4FF1E /* CodeSampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeSampleView.swift; sourceTree = "<group>"; };
+		B704EB782EA93E2300D4FF1E /* CodeWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeWebView.swift; sourceTree = "<group>"; };
 		B712ED812A02C96700BF84D0 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		B71646272BEDE0BA000FAD76 /* SwiftUIAnimationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIAnimationsView.swift; sourceTree = "<group>"; };
 		B71646292BEDE0E0000FAD76 /* LottieAnimationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieAnimationsView.swift; sourceTree = "<group>"; };
@@ -890,6 +894,8 @@
 				B7B8F7EB2A26744F00FE32A7 /* ListView.swift */,
 				B7E4BE242AAE14F6003C8392 /* Stacks */,
 				B7C795A72A022D3D0092619B /* UIComponentsView.swift */,
+				B704EB762EA93DB900D4FF1E /* CodeSampleView.swift */,
+				B704EB782EA93E2300D4FF1E /* CodeWebView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -1300,6 +1306,7 @@
 				B7493C442AD5B76A00D30D5F /* WidgetUIView.swift in Sources */,
 				B7DB8B302CBD825300ECF2EB /* RowColumnTableView.swift in Sources */,
 				B72C59A52AA6273300C9824E /* CarouselView.swift in Sources */,
+				B704EB792EA93E2300D4FF1E /* CodeWebView.swift in Sources */,
 				B73A7BA72EA2A22E00FB595E /* ReachabilityTestingView.swift in Sources */,
 				B7C8D3C92C55160A0069C88B /* ReadableScrollView.swift in Sources */,
 				B76A06FF2A07404100974AD3 /* SomeCustomRowView.swift in Sources */,
@@ -1314,6 +1321,7 @@
 				B7F70FF42BEFA0A500320691 /* AnimationModifierExampleView.swift in Sources */,
 				B740FD712AB0E0C2009835D9 /* EventEditViewRepresentable.swift in Sources */,
 				B7AB49DD2BF99367004551A1 /* PDFDocumentViewModel.swift in Sources */,
+				B704EB772EA93DB900D4FF1E /* CodeSampleView.swift in Sources */,
 				B7008EF22A32254A003E2E01 /* VerticalStackView.swift in Sources */,
 				B7775E122A9F93E900DA37B2 /* GesturesView.swift in Sources */,
 				B7BDAB972AAC451A007D237B /* EmojiCard.swift in Sources */,
