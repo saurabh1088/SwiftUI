@@ -12,9 +12,8 @@ import SwiftUI
 import OSLog
 
 struct TextInputView: View {
-    @State private var name = String()
-    @State private var text = String()
-    @State private var track = String()
+    @StateObject private var viewModel = TextInputViewModel()
+    
     var body: some View {
         VStack {
             // Observation: Only using Form here without VStack breaks back button navigation
@@ -26,12 +25,23 @@ struct TextInputView: View {
                 textFieldWithAxisVertical
                 textFieldWithTrackingChanges
             }
+            
+            Form {
+                textFieldWithDebounce
+                if viewModel.state == .loading {
+                    ProgressView()
+                        .scaleEffect(2.0)
+                        .progressViewStyle(.circular)
+                } else {
+                    Text(viewModel.debounceResult)
+                }
+            }
         }
     }
     
     @ViewBuilder
     private var textField: some View {
-        TextField("Name", text: $name)
+        TextField("Name", text: $viewModel.name)
             .padding(16)
             .background(Color.primaryYellow.opacity(0.5))
     }
@@ -42,13 +52,13 @@ struct TextInputView: View {
     /// on iOS.
     @ViewBuilder
     private var textFieldWithPrompt: some View {
-        TextField("Name", text: $name, prompt: Text("Prompt"))
+        TextField("Name", text: $viewModel.name, prompt: Text("Prompt"))
     }
     
     // TODO: This doesn't shows label in iOS, check this on macOS.
     @ViewBuilder
     private var textFieldWithPromptAndLabel: some View {
-        TextField(text: $name, prompt: Text("Prompt")) {
+        TextField(text: $viewModel.name, prompt: Text("Prompt")) {
             Text("Label")
         }
     }
@@ -60,25 +70,30 @@ struct TextInputView: View {
     /// to grow.
     @ViewBuilder
     private var textFieldWithAxisVertical: some View {
-        TextField("Axis", text: $name, axis: .vertical)
+        TextField("Axis", text: $viewModel.name, axis: .vertical)
     }
     
     @ViewBuilder
     private var textFieldWithTrackingChanges: some View {
-        TextField("Track", text: $track)
-            .onChange(of: track) { newValue in
+        TextField("Track", text: $viewModel.track)
+            .onChange(of: viewModel.track) { newValue in
                 Logger.view.info("Entered value :: \(newValue)")
             }
             .onSubmit {
-                Logger.view.info("Final value :: \(track)")
+                Logger.view.info("Final value :: \(viewModel.track)")
             }
     }
     
     private var textEditorView: some View {
-        TextEditor(text: $text)
+        TextEditor(text: $viewModel.text)
             .frame(height: 50)
             .padding(16)
             .background(Color.primaryYellow.opacity(0.5))
+    }
+    
+    private var textFieldWithDebounce: some View {
+        TextField("Debounce", text: $viewModel.debounceText)
+            .textFieldStyle(RoundedBorderTextFieldStyle())
     }
 }
 
