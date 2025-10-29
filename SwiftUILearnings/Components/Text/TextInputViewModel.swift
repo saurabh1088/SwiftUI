@@ -30,6 +30,7 @@ final class TextInputViewModel: ObservableObject {
     
     func setUpDebounce() {
         $debounceText
+            .dropFirst()
             .debounce(for: .seconds(1), scheduler: RunLoop.main)
             .sink(receiveValue: { [weak self] value in
                 self?.debounceResultingOperation()
