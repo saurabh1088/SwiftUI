@@ -14,6 +14,7 @@ enum TextInputViewState: Equatable {
     case loaded
 }
 
+@MainActor
 final class TextInputViewModel: ObservableObject {
     @Published var name = String()
     @Published var text = String()
@@ -33,28 +34,29 @@ final class TextInputViewModel: ObservableObject {
             .dropFirst()
             .debounce(for: .seconds(1), scheduler: RunLoop.main)
             .sink(receiveValue: { [weak self] value in
-                self?.debounceResultingOperation()
-                self?.debounceResult = "Hello, \(value)!"
+                if !value.isEmpty {
+                    self?.debounceResultingOperation()
+                    self?.debounceResult = "Hello, \(value)!"
+                }
             })
             .store(in: &cancellables)
     }
     
     func debounceResultingOperation() {
-        state = .loading
-        // MainActor here is added to guarantee the code is on main thread
-        // async mockAsyncOperation can however execute on background thread as per it's implementation
-        Task { @MainActor in
+        Task {
             do {
                 try await self.mockAsyncOperation()
             } catch {
                 print("Error during API call: \(error)")
             }
-            self.state = .loaded
+            
         }
     }
     
     func mockAsyncOperation() async throws {
+        state = .loading
         let delay: TimeInterval = 5.0
         try await Task.sleep(for: .seconds(delay))
+        self.state = .loaded
     }
 }
