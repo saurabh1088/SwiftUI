@@ -15,26 +15,31 @@ struct TextInputView: View {
     @StateObject private var viewModel = TextInputViewModel()
     
     var body: some View {
-        VStack {
-            // Observation: Only using Form here without VStack breaks back button navigation
-            Form {
-                textField
-                textFieldWithPrompt
-                textFieldWithPromptAndLabel
-                textEditorView
-                textFieldWithAxisVertical
-                textFieldWithTrackingChanges
+        ScrollView {
+            Section("Tex field examples") {
+                VStack(spacing: 16) {
+                    textField
+                    textFieldWithPrompt
+                    textFieldWithPromptAndLabel
+                    textEditorView
+                    textFieldWithAxisVertical
+                    textFieldWithTrackingChanges
+                }
+                .padding(16)
             }
             
-            Form {
-                textFieldWithDebounce
-                if viewModel.state == .loading {
-                    ProgressView()
-                        .scaleEffect(2.0)
-                        .progressViewStyle(.circular)
-                } else {
-                    Text(viewModel.debounceResult)
+            Section("Debounced text field") {
+                VStack(spacing: 16) {
+                    textFieldWithDebounce
+                    if viewModel.state == .loading {
+                        ProgressView()
+                            .scaleEffect(2.0)
+                            .progressViewStyle(.circular)
+                    } else {
+                        Text(viewModel.debounceResult)
+                    }
                 }
+                .padding(16)
             }
         }
     }
