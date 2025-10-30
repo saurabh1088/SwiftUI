@@ -41,15 +41,15 @@ final class TextInputViewModel: ObservableObject {
     
     func debounceResultingOperation() {
         state = .loading
-        Task {
+        // MainActor here is added to guarantee the code is on main thread
+        // async mockAsyncOperation can however execute on background thread as per it's implementation
+        Task { @MainActor in
             do {
                 try await self.mockAsyncOperation()
             } catch {
                 print("Error during API call: \(error)")
             }
-            DispatchQueue.main.async { [weak self] in
-                self?.state = .loaded
-            }
+            self.state = .loaded
         }
     }
     
